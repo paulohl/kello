@@ -1,0 +1,7 @@
+           SELECT CCD001 ASSIGN TO "\PROGRAMA\KELLO\PADRAO\CCD001"
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CHAVE-CC01 =
+                      NOME-REDUZ-CC01 TIPO-ACESSO-CC01
+                  STATUS IS ST-CCD001.

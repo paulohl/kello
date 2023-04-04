@@ -1,0 +1,7 @@
+           SELECT CCD110 ASSIGN TO PATH-CCD110
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS AUTOMATIC WITH LOCK ON RECORD
+                  STATUS IS ST-CCD110
+                  RECORD KEY IS CHAVE-CC110 = MESANO-BASE-CC110
+                         CODIGO-CC110 DOCTO-CC110.

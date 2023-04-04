@@ -1,0 +1,9 @@
+           SELECT CBD102 ASSIGN TO PATH-CBD102
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  STATUS IS ST-CBD102
+                  RECORD KEY IS CHAVE-CB102 = DATA-EXTRATO-CB102
+                        CONTA-BANCO-CB102
+                  ALTERNATE RECORD KEY IS ALT1-CB102 =
+                        CONTA-BANCO-CB102 DATA-EXTRATO-CB102.
