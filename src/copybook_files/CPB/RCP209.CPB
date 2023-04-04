@@ -1,0 +1,208 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 93.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 151.
+
+       01 GS-DATA-BLOCK.
+          03 GS-VECTO-INI                    PIC 9(8).
+          03 GS-VECTO-FIM                    PIC 9(8).
+          03 GS-MOVTO-INI                    PIC 9(8).
+          03 GS-MOVTO-FIM                    PIC 9(8).
+          03 GS-UF                           PIC X(2).
+          03 GS-CONTRATO                     PIC 9(4).
+          03 GS-VENDEDOR                     PIC 9(6).
+          03 GS-OPCAO                        PIC 9.
+             88 GS-OPCAO-TRUE                VALUE 1.
+          03 GS-DESCRICAO                    PIC X(15).
+          03 GS-DESC-VENDEDOR                PIC X(20).
+          03 GS-TAXA                         PIC 9(2)V9(2).
+          03 GS-FLAG-GROUP.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-CENTRALIZA                PIC 9.
+                88 GS-CENTRALIZA-TRUE        VALUE 1.
+             05 GS-PRINTER-FLG               PIC 9.
+                88 GS-PRINTER-FLG-TRUE       VALUE 1.
+             05 GS-INVERTE-DATA-FLG          PIC 9.
+                88 GS-INVERTE-DATA-FLG-TRUE  VALUE 1.
+             05 GS-CARREGA-LISTA-FLG         PIC 9.
+                88 GS-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 GS-GRAVA-WORK-FLG            PIC 9.
+                88 GS-GRAVA-WORK-FLG-TRUE    VALUE 1.
+             05 GS-ITEM-SELECIONADO          PIC 9.
+                88 GS-ITEM-SELECIONADO-TRUE  VALUE 1.
+             05 GS-LE-VENDEDOR               PIC 9.
+                88 GS-LE-VENDEDOR-TRUE       VALUE 1.
+             05 GS-POPUP-VENDEDOR            PIC 9.
+                88 GS-POPUP-VENDEDOR-TRUE    VALUE 1.
+             05 GS-GERAR-KAC                 PIC 9.
+                88 GS-GERAR-KAC-TRUE         VALUE 1.
+          03 GS-CONT                         PIC 9(3).
+          03 GS-TIPO-REL                     PIC 9.
+             88 GS-TIPO-REL-TRUE             VALUE 1.
+          03 GS-ORDEM                        PIC 9.
+             88 GS-ORDEM-TRUE                VALUE 1.
+          03 GS-DESCR-ORDEM                  PIC X(20).
+          03 GS-EXIBE-MOVTO                  PIC 9(8).
+          03 GS-LINDET                       PIC X(110).
+          03 GS-LINDET1                      PIC X(110).
+          03 GS-IMPR-RELATORIO               PIC 9.
+             88 GS-IMPR-RELATORIO-TRUE       VALUE 1.
+          03 GS-IMPR-RESUMO                  PIC 9.
+             88 GS-IMPR-RESUMO-TRUE          VALUE 1.
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-ERR-MSG                      PIC X(40).
+          03 GS-VENDA-INI                    PIC 9(8).
+          03 GS-VENDA-FIM                    PIC 9(8).
+          03 GS-SO-DVD                       PIC 9.
+             88 GS-SO-DVD-TRUE               VALUE 1.
+          03 GS-NOME-VENDEDOR                PIC X(30).
+          03 GS-SO-POSTER                    PIC 9.
+             88 GS-SO-POSTER-TRUE            VALUE 1.
+          03 GS-SO-FITA                      PIC 9.
+             88 GS-SO-FITA-TRUE              VALUE 1.
+          03 GS-SO-FOTOCD                    PIC 9.
+             88 GS-SO-FOTOCD-TRUE            VALUE 1.
+          03 GS-SO-PORTA-DVD                 PIC 9.
+             88 GS-SO-PORTA-DVD-TRUE         VALUE 1.
+          03 GS-SO-MOLDURA                   PIC 9.
+             88 GS-SO-MOLDURA-TRUE           VALUE 1.
+          03 GS-SO-PORTA-FITA                PIC 9.
+             88 GS-SO-PORTA-FITA-TRUE        VALUE 1.
+          03 GS-SO-COBERTURA-DVD             PIC 9.
+             88 GS-SO-COBERTURA-DVD-TRUE     VALUE 1.
+          03 GS-SO-COBERTURA-FITA            PIC 9.
+             88 GS-SO-COBERTURA-FITA-TRUE    VALUE 1.
+          03 GS-CONSIDERAR                   PIC 9.
+             88 GS-CONSIDERAR-TRUE           VALUE 1.
+          03 GS-LINHA                        PIC 9(5).
+          03 GS-SITUACAO                     PIC 9.
+             88 GS-SITUACAO-TRUE             VALUE 1.
+      ***
+          03 GS-CONFIG-FLAG                  PIC x(4) COMP-5.
+          03 GS-CONFIG-VALUE                 PIC x(4) COMP-5.
+          03 GS-PEDIDO-EXTRA                 PIC 9.
+             88 GS-PEDIDO-EXTRA-TRUE         VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-VECTO-INI             PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-VECTO-FIM             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-MOVTO-INI             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-MOVTO-FIM             PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-UF                    PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 GS-FLD-NO-CONTRATO              PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-VENDEDOR              PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-OPCAO                 PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 GS-FLD-NO-DESCRICAO             PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-DESC-VENDEDOR         PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-TAXA                  PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 GS-FLD-NO-CENTRALIZA            PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-PRINTER-FLG           PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-INVERTE-DATA-FLG      PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-CARREGA-LISTA-FLG     PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-GRAVA-WORK-FLG        PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 GS-FLD-NO-ITEM-SELECIONADO      PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 GS-FLD-NO-LE-VENDEDOR           PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 GS-FLD-NO-POPUP-VENDEDOR        PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 GS-FLD-NO-GERAR-KAC             PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 GS-FLD-NO-CONT                  PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 GS-FLD-NO-TIPO-REL              PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 GS-FLD-NO-ORDEM                 PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 GS-FLD-NO-DESCR-ORDEM           PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 GS-FLD-NO-EXIBE-MOVTO           PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 GS-FLD-NO-LINDET                PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 GS-FLD-NO-LINDET1               PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 GS-FLD-NO-IMPR-RELATORIO        PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 GS-FLD-NO-IMPR-RESUMO           PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 GS-FLD-NO-ERR-MSG               PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 GS-FLD-NO-VENDA-INI             PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 GS-FLD-NO-VENDA-FIM             PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 GS-FLD-NO-SO-DVD                PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 GS-FLD-NO-NOME-VENDEDOR         PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 GS-FLD-NO-SO-POSTER             PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 GS-FLD-NO-SO-FITA               PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 GS-FLD-NO-SO-FOTOCD             PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 GS-FLD-NO-SO-PORTA-DVD          PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 GS-FLD-NO-SO-MOLDURA            PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 GS-FLD-NO-SO-PORTA-FITA         PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 GS-FLD-NO-SO-COBERTURA-DVD      PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 GS-FLD-NO-SO-COBERTURA-FITA     PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 GS-FLD-NO-CONSIDERAR            PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 GS-FLD-NO-LINHA                 PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 GS-FLD-NO-SITUACAO              PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 GS-FLD-NO-CONFIG-FLAG           PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 GS-FLD-NO-CONFIG-VALUE          PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 GS-FLD-NO-PEDIDO-EXTRA          PIC 9(4) COMP-5 VALUE
+                                               51.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
