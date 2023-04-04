@@ -1,0 +1,221 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 3.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 14.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 FUN-COBOL                       PIC X.
+          03 DS-FOCO                         PIC x(8) COMP-X.
+          03 CAMPO-CRITICA                   PIC X(20).
+          03 FLAG-CRITICA                    PIC 9.
+             88 FLAG-CRITICA-TRUE            VALUE 1.
+          03 SELECAO1                        PIC X.
+          03 SELECAO2                        PIC X.
+          03 SELECAO3                        PIC X.
+          03 SELECAO4                        PIC X.
+          03 SELECAO5                        PIC X.
+          03 SELECAO6                        PIC X.
+          03 SELECAO7                        PIC X.
+          03 SELECAO8                        PIC X.
+          03 SELECAO9                        PIC X.
+          03 SELECAO10                       PIC X.
+          03 SELECAO11                       PIC X.
+          03 SELECAO12                       PIC X.
+          03 SELECAO13                       PIC X.
+          03 SELECAO14                       PIC X.
+          03 SELECAO15                       PIC X.
+          03 SELECAO16                       PIC X.
+          03 SELECAO17                       PIC X.
+          03 SELECAO18                       PIC X.
+          03 SELECAO19                       PIC X.
+          03 SELECAO20                       PIC X.
+          03 DESC-ETIQUETA1                  PIC X(9).
+          03 DESC-ETIQUETA2                  PIC X(9).
+          03 DESC-ETIQUETA3                  PIC X(9).
+          03 DESC-ETIQUETA4                  PIC X(9).
+          03 DESC-ETIQUETA5                  PIC X(9).
+          03 DESC-ETIQUETA6                  PIC X(9).
+          03 DESC-ETIQUETA7                  PIC X(9).
+          03 DESC-ETIQUETA8                  PIC X(9).
+          03 DESC-ETIQUETA9                  PIC X(9).
+          03 DESC-ETIQUETA10                 PIC X(9).
+          03 DESC-ETIQUETA11                 PIC X(9).
+          03 DESC-ETIQUETA12                 PIC X(9).
+          03 DESC-ETIQUETA13                 PIC X(9).
+          03 DESC-ETIQUETA14                 PIC X(9).
+          03 DESC-ETIQUETA15                 PIC X(9).
+          03 DESC-ETIQUETA16                 PIC X(9).
+          03 DESC-ETIQUETA17                 PIC X(9).
+          03 DESC-ETIQUETA18                 PIC X(9).
+          03 DESC-ETIQUETA19                 PIC X(9).
+          03 DESC-ETIQUETA20                 PIC X(9).
+          03 ARQ-EXPLORER                    PIC X(200).
+          03 ACP-CONTRATO                    PIC 9(4).
+          03 ACP-ALBUM-INI                   PIC 9(4).
+          03 ACP-ALBUM-FIM                   PIC 9(4).
+          03 LINHA-AVISO                     PIC X(100).
+          03 ACP-OPCAO                       PIC 9.
+             88 ACP-OPCAO-TRUE               VALUE 1.
+      ***
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+      ***
+          03 TIPO-ETIQUETA                   PIC 9.
+             88 TIPO-ETIQUETA-TRUE           VALUE 1.
+          03 QTDE-COPIAS                     PIC 9(2).
+      ***
+          03 ESTOJO                          PIC 9.
+             88 ESTOJO-TRUE                  VALUE 1.
+          03 DVD                             PIC 9.
+             88 DVD-TRUE                     VALUE 1.
+          03 FOTO-CD                         PIC 9.
+             88 FOTO-CD-TRUE                 VALUE 1.
+          03 BOOK                            PIC 9.
+             88 BOOK-TRUE                    VALUE 1.
+          03 POSTER                          PIC 9.
+             88 POSTER-TRUE                  VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-FUN-COBOL                PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-DS-FOCO                  PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-CAMPO-CRITICA            PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-FLAG-CRITICA             PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-SELECAO1                 PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-SELECAO2                 PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-SELECAO3                 PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-SELECAO4                 PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-SELECAO5                 PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-SELECAO6                 PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-SELECAO7                 PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-SELECAO8                 PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-SELECAO9                 PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-SELECAO10                PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-SELECAO11                PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-SELECAO12                PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-SELECAO13                PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-SELECAO14                PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-SELECAO15                PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-SELECAO16                PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-SELECAO17                PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FLD-NO-SELECAO18                PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FLD-NO-SELECAO19                PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-SELECAO20                PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-DESC-ETIQUETA1           PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-DESC-ETIQUETA2           PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-DESC-ETIQUETA3           PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-DESC-ETIQUETA4           PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-DESC-ETIQUETA5           PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FLD-NO-DESC-ETIQUETA6           PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FLD-NO-DESC-ETIQUETA7           PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FLD-NO-DESC-ETIQUETA8           PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FLD-NO-DESC-ETIQUETA9           PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FLD-NO-DESC-ETIQUETA10          PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 FLD-NO-DESC-ETIQUETA11          PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 FLD-NO-DESC-ETIQUETA12          PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 FLD-NO-DESC-ETIQUETA13          PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FLD-NO-DESC-ETIQUETA14          PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 FLD-NO-DESC-ETIQUETA15          PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 FLD-NO-DESC-ETIQUETA16          PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FLD-NO-DESC-ETIQUETA17          PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FLD-NO-DESC-ETIQUETA18          PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 FLD-NO-DESC-ETIQUETA19          PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FLD-NO-DESC-ETIQUETA20          PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FLD-NO-ARQ-EXPLORER             PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FLD-NO-ACP-CONTRATO             PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FLD-NO-ACP-ALBUM-INI            PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 FLD-NO-ACP-ALBUM-FIM            PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FLD-NO-LINHA-AVISO              PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 FLD-NO-ACP-OPCAO                PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 FLD-NO-TIPO-ETIQUETA            PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 FLD-NO-QTDE-COPIAS              PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 FLD-NO-ESTOJO                   PIC 9(4) COMP-5 VALUE
+                                               56.
+          03 FLD-NO-DVD                      PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 FLD-NO-FOTO-CD                  PIC 9(4) COMP-5 VALUE
+                                               58.
+          03 FLD-NO-BOOK                     PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 FLD-NO-POSTER                   PIC 9(4) COMP-5 VALUE
+                                               60.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
