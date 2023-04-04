@@ -1,0 +1,109 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CXP130-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 56.
+
+       01 CXP130-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CXP130-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 214.
+
+       01 CXP130-DATA-BLOCK.
+          03 CXP130-MOVTO-INI                PIC 9(8).
+          03 CXP130-MOVTO-FIM                PIC 9(8).
+          03 CXP130-FORNECEDOR               PIC 9(6).
+          03 CXP130-NOME-FORN                PIC X(30).
+          03 CXP130-SALDO-INI                PIC S9(8)V9(2).
+          03 CXP130-SALDO-INT                PIC S9(8)V9(2).
+          03 CXP130-SALDO-FIM                PIC S9(8)V9(2).
+          03 CXP130-FLAG-GROUP.
+             05 CXP130-EXIT-FLG              PIC 9.
+                88 CXP130-EXIT-FLG-TRUE      VALUE 1.
+             05 CXP130-PRINTER-FLG           PIC 9.
+                88 CXP130-PRINTER-FLG-TRUE   VALUE 1.
+             05 CXP130-CENTRALIZA            PIC 9.
+                88 CXP130-CENTRALIZA-TRUE    VALUE 1.
+             05 CXP130-CARREGA-LISTA-FLG     PIC 9.
+                88 CXP130-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 CXP130-LE-FORNECEDOR         PIC 9.
+                88 CXP130-LE-FORNECEDOR-TRUE VALUE 1.
+             05 CXP130-POPUP-FORNEC          PIC 9.
+                88 CXP130-POPUP-FORNEC-TRUE  VALUE 1.
+      ***
+             05 CXP130-LER-TIPOLCTO          PIC 9.
+                88 CXP130-LER-TIPOLCTO-TRUE  VALUE 1.
+             05 CXP130-POPUP-TIPOLCTO        PIC 9.
+                88 CXP130-POPUP-TIPOLCTO-TRUE VALUE 1.
+          03 CXP130-LINDET                   PIC X(120).
+          03 CXP130-MENSAGEM-ERRO            PIC X(40).
+          03 CXP130-ERR-MSG                  PIC X(40).
+          03 CXP130-COPIAS                   PIC 9(2).
+          03 CXP130-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CXP130-CONFIG-VALUE             PIC x(4) COMP-5.
+          03 CXP130-ACP-TIPOLCTO             PIC 9(2).
+          03 CXP130-DESC-TIPOLCTO            PIC X(60).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CXP130-FIELD-NUMBERS.
+          03 CXP130-FLD-NO-MOVTO-INI         PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CXP130-FLD-NO-MOVTO-FIM         PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CXP130-FLD-NO-FORNECEDOR        PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CXP130-FLD-NO-NOME-FORN         PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CXP130-FLD-NO-SALDO-INI         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CXP130-FLD-NO-SALDO-INT         PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CXP130-FLD-NO-SALDO-FIM         PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CXP130-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CXP130-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CXP130-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CXP130-FLD-NO-CARREGA-LISTA-FL  PIC 9(4) COMP-5 VALUE
+                                               12.
+      * Field CARREGA-LISTA-FLG has been truncated
+          03 CXP130-FLD-NO-LE-FORNECEDOR     PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CXP130-FLD-NO-POPUP-FORNEC      PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CXP130-FLD-NO-LER-TIPOLCTO      PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CXP130-FLD-NO-POPUP-TIPOLCTO    PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 CXP130-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CXP130-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CXP130-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CXP130-FLD-NO-COPIAS            PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CXP130-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CXP130-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CXP130-FLD-NO-ACP-TIPOLCTO      PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CXP130-FLD-NO-DESC-TIPOLCTO     PIC 9(4) COMP-5 VALUE
+                                               24.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
