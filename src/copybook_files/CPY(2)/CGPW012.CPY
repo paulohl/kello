@@ -7,11 +7,11 @@
            05  TAMANHO-BECA-CG12   PIC XX.
            05  FOTO-IDENTIFIC-CG12 PIC 9.
            05  CARGO-COMISSAO-CG12 PIC 9.
-      *> Essa documentaÁ„o È a correta identificada no dia 10/03/2016
-      *    CARGO-COMISSAO  1-PRESIDENTE   2-TESOUREIRO    3-SECRET¡RIO
+      *> Essa documenta√ß√£o √© a correta identificada no dia 10/03/2016
+      *    CARGO-COMISSAO  1-PRESIDENTE   2-TESOUREIRO    3-SECRET√ÅRIO
       *                    4-NORMAL
 
 
-      *> Essa documentaÁ„o est· incorreta identificada no dia 10/03/2016
+      *> Essa documenta√ß√£o est√° incorreta identificada no dia 10/03/2016
       *    CARGO-COMISSAO  1-PRESIDENTE   2-VICE-PRESID   3-TESOUREIRO
       *                    4-SECRETARIO   5-FORMANDO
