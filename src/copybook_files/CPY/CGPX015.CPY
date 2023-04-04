@@ -1,0 +1,6 @@
+           SELECT CGD015 ASSIGN TO PATH-CGD015
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CHAVE-CG15
+                  STATUS IS ST-CGD015.

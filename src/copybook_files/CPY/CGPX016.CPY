@@ -1,0 +1,6 @@
+           SELECT CGD016 ASSIGN TO PATH-CGD016
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS AUTOMATIC WITH LOCK ON RECORD
+                  RECORD KEY IS CHAVE-CG16
+                  STATUS IS ST-CGD016.

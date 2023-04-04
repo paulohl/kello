@@ -1,0 +1,6 @@
+           SELECT CGD013 ASSIGN TO PATH-CGD013
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS COD-COMPL-CG13
+                  STATUS IS ST-CGD013.
