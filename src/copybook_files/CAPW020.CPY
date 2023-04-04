@@ -1,0 +1,32 @@
+       FD  CAD020.
+       01  REG-CAD020.
+           05  CODIGO-020          PIC 9(05).
+           05  CLASSIF-020         PIC 9(10).
+           05  CONTRATO-020        PIC X(06).
+           05  ALBUM-020           PIC XXX.
+           05  FISJUR-020          PIC 9.
+           05  NOME-020            PIC X(30).
+           05  REDUZIDO-020        PIC X(15).
+           05  ENDERECO-020        PIC X(30).
+           05  BAIRRO-020          PIC X(20).
+           05  CIDADE-020          PIC 9(03).
+           05  CEP-020             PIC 9(08).
+           05  CAIXAP-020          PIC 9(05).
+           05  FONE-020            PIC 9(07).
+           05  FAX-020             PIC 9(07).
+           05  CPFCGC-020          PIC 9(16).
+           05  RGINSC-020          PIC X(15).
+           05  NASCIMENTO-020      PIC 9(06).
+           05  EMPRESA-020         PIC X(30).
+           05  CARGO-020           PIC X(15).
+           05  ENDERECO-EMP-020    PIC X(30).
+           05  BAIRRO-EMP-020      PIC X(20).
+           05  CIDADE-EMP-020      PIC 999.
+           05  CEP-EMP-020         PIC 9(08).
+           05  CAIXAP-EMP-020      PIC 9(05).
+           05  FONE-EMP-020        PIC 9(07).
+           05  FAX-EMP-020         PIC 9(07).
+           05  CGC-EMP-020         PIC 9(16).
+           05  INSCR-020           PIC X(15).
+           05  ALFA-020            PIC XXX.
+           05  FILLER              PIC X(04).
