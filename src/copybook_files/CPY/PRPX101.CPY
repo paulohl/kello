@@ -1,0 +1,9 @@
+           SELECT PRD101 ASSIGN TO PATH-PRD101
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-PRD101
+                  LOCK MODE IS AUTOMATIC WITH LOCK ON RECORD
+                  RECORD KEY IS CHAVE-PR101 = NR-PLAN-PR101
+                        SEQ-EVE-PR101
+                  ALTERNATE RECORD KEY IS ALT-PR101 = NR-PLAN-PR101
+                       CONTRATO-PR101  WITH DUPLICATES.

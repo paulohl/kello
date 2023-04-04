@@ -1,0 +1,6 @@
+           SELECT MTD060 ASSIGN TO PATH-MTD060
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-MTD060
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-MTD060.

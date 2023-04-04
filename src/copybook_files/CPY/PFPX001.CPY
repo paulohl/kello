@@ -1,0 +1,6 @@
+           SELECT PFD001 ASSIGN TO PATH-PFD001
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  STATUS IS ST-PFD001
+                  RECORD KEY IS DATA-PROGR-PF001.
