@@ -1,0 +1,7 @@
+           SELECT VID130 ASSIGN TO PATH-VID130
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-VID130
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CHAVE-V130 = DATA-V130 LOTE-V130
+                  NR-FITAS-V130.
