@@ -1,0 +1,6 @@
+           SELECT RCD203 ASSIGN TO PATH-RCD203
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-RCD203
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-RCD203.
