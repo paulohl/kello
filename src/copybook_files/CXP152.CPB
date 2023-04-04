@@ -1,0 +1,83 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CXP152-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 60.
+
+       01 CXP152-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CXP152-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 219.
+
+       01 CXP152-DATA-BLOCK.
+          03 CXP152-MESANO-1                 PIC 9(6).
+          03 CXP152-MESANO-2                 PIC 9(6).
+          03 CXP152-MESANO-3                 PIC 9(6).
+          03 CXP152-FLAG-GROUP.
+             05 CXP152-EXIT-FLG              PIC 9.
+                88 CXP152-EXIT-FLG-TRUE      VALUE 1.
+             05 CXP152-PRINTER-FLG           PIC 9.
+                88 CXP152-PRINTER-FLG-TRUE   VALUE 1.
+             05 CXP152-CARREGA-LISTA-FLG     PIC 9.
+                88 CXP152-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 CXP152-OPCAO-RETORNO         PIC 9.
+                88 CXP152-OPCAO-RETORNO-TRUE VALUE 1.
+             05 CXP152-OPCAO-AVANCAR         PIC 9.
+                88 CXP152-OPCAO-AVANCAR-TRUE VALUE 1.
+             05 CXP152-CENTRALIZA            PIC 9.
+                88 CXP152-CENTRALIZA-TRUE    VALUE 1.
+      ***
+          03 CXP152-LINDET                   PIC X(160).
+          03 CXP152-MENSAGEM-ERRO            PIC X(40).
+          03 CXP152-ERR-MSG                  PIC X(40).
+          03 CXP152-MENSAGEM-AGUARDA         PIC X(40).
+          03 CXP152-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CXP152-CONFIG-VALUE             PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CXP152-FIELD-NUMBERS.
+          03 CXP152-FLD-NO-MESANO-1          PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CXP152-FLD-NO-MESANO-2          PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CXP152-FLD-NO-MESANO-3          PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CXP152-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CXP152-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CXP152-FLD-NO-CARREGA-LISTA-FL  PIC 9(4) COMP-5 VALUE
+                                               7.
+      * Field CARREGA-LISTA-FLG has been truncated
+          03 CXP152-FLD-NO-OPCAO-RETORNO     PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CXP152-FLD-NO-OPCAO-AVANCAR     PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CXP152-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CXP152-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CXP152-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CXP152-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CXP152-FLD-NO-MENSAGEM-AGUARDA  PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CXP152-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CXP152-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               16.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
