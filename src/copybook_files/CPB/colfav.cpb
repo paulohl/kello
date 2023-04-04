@@ -1,0 +1,95 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 24.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 248.
+
+       01 DATA-BLOCK.
+          03 LINHA-STATUS                    PIC X(50).
+          03 DS-OPERACAO                     PIC X(10).
+          03 LINHA-AVISO                     PIC X(65).
+          03 OPERACAO                        PIC X.
+          03 WIN-ATUAL                       PIC 9.
+             88 WIN-ATUAL-TRUE               VALUE 1.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 FUN-COBOL                       PIC X.
+          03 CAMPO-CRITICA                   PIC X(50).
+          03 RETORNO                         PIC X.
+          03 FLAG-CRITICA                    PIC 9.
+             88 FLAG-CRITICA-TRUE            VALUE 1.
+          03 DS-FOCO                         PIC x(8) COMP-X.
+          03 FLAG-USU-CONS                   PIC X.
+          03 FLAG-USU-EXCL                   PIC X.
+          03 FLAG-USU-ALTE                   PIC X.
+          03 FLAG-USU-INCL                   PIC X.
+          03 ACP-LISTVIEW-COLUNAS OBJECT REFERENCE.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 ACP-TAMANHO                     PIC 9(9).
+          03 ACP-FONTE                       PIC X(30).
+          03 ACP-EVENTO                      PIC 9(5).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-LINHA-STATUS             PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-DS-OPERACAO              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-LINHA-AVISO              PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-OPERACAO                 PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-WIN-ATUAL                PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-FUN-COBOL                PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-CAMPO-CRITICA            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-RETORNO                  PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-FLAG-CRITICA             PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-DS-FOCO                  PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-FLAG-USU-CONS            PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-FLAG-USU-EXCL            PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-FLAG-USU-ALTE            PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-FLAG-USU-INCL            PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-ACP-LISTVIEW-COLUNAS     PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-ACP-TAMANHO              PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-ACP-FONTE                PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-ACP-EVENTO               PIC 9(4) COMP-5 VALUE
+                                               21.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

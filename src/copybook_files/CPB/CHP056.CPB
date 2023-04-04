@@ -1,0 +1,245 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 90.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 61.
+
+       01 GS-DATA-BLOCK.
+          03 GS-VENCTO-INI                   PIC 9(8).
+          03 GS-VENCTO-FIM                   PIC 9(8).
+          03 GS-VALOR-CH-DEV                 PIC 9(8)V9(2).
+          03 GS-CH-RECEBIDO                  PIC 9.
+             88 GS-CH-RECEBIDO-TRUE          VALUE 1.
+      * CH-RECEBIDO = 0(NÃO) 1(SIM)
+          03 GS-FLAG-GROUP.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-PRINTER-FLG               PIC 9.
+                88 GS-PRINTER-FLG-TRUE       VALUE 1.
+             05 GS-CENTRALIZA                PIC 9.
+                88 GS-CENTRALIZA-TRUE        VALUE 1.
+             05 GS-CARREGA-LISTA-FLG         PIC 9.
+                88 GS-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 GS-GRAVA-WORK-FLG            PIC 9.
+                88 GS-GRAVA-WORK-FLG-TRUE    VALUE 1.
+             05 GS-ITEM-SELECIONADO          PIC 9.
+                88 GS-ITEM-SELECIONADO-TRUE  VALUE 1.
+             05 GS-REGRAVA-DADOS             PIC 9.
+                88 GS-REGRAVA-DADOS-TRUE     VALUE 1.
+             05 GS-LE-PORTADOR               PIC 9.
+                88 GS-LE-PORTADOR-TRUE       VALUE 1.
+             05 GS-TRANSF-PORTADOR           PIC 9.
+                88 GS-TRANSF-PORTADOR-TRUE   VALUE 1.
+             05 GS-CHAMAR-POP-UP             PIC 9.
+                88 GS-CHAMAR-POP-UP-TRUE     VALUE 1.
+             05 GS-VERIF-RCTO-DEVOLV         PIC 9.
+                88 GS-VERIF-RCTO-DEVOLV-TRUE VALUE 1.
+             05 GS-VERIF-SENHA               PIC 9.
+                88 GS-VERIF-SENHA-TRUE       VALUE 1.
+             05 GS-RECTO-CH-DEVOLV           PIC 9.
+                88 GS-RECTO-CH-DEVOLV-TRUE   VALUE 1.
+             05 GS-VERIFICA-SITUACAO         PIC 9.
+                88 GS-VERIFICA-SITUACAO-TRUE VALUE 1.
+             05 GS-REVERTE                   PIC 9.
+                88 GS-REVERTE-TRUE           VALUE 1.
+      ***
+             05 GS-REVERTE-TODOS             PIC 9.
+                88 GS-REVERTE-TODOS-TRUE     VALUE 1.
+          03 GS-ERRO-RCTO-DEVOLVIDO          PIC 9.
+             88 GS-ERRO-RCTO-DEVOLVIDO-TRUE  VALUE 1.
+      *erro-rcto-devolvido = 0(não)  1(sim) 2-nao autorizado
+          03 GS-SENHA-AUTORIZADA             PIC 9.
+             88 GS-SENHA-AUTORIZADA-TRUE     VALUE 1.
+      * SENHA-AUTORIZADA = 0(SIM)  1(NÃO)
+          03 GS-BAIXADO                      PIC 9.
+             88 GS-BAIXADO-TRUE              VALUE 1.
+          03 GS-DEVOLVIDO                    PIC 9.
+             88 GS-DEVOLVIDO-TRUE            VALUE 1.
+          03 GS-PROBLEMATICO                 PIC 9.
+             88 GS-PROBLEMATICO-TRUE         VALUE 1.
+          03 GS-OPCAO-POP-UP                 PIC 9.
+             88 GS-OPCAO-POP-UP-TRUE         VALUE 1.
+          03 GS-ORDEM                        PIC 9.
+             88 GS-ORDEM-TRUE                VALUE 1.
+          03 GS-ORDEM-RADIO                  PIC 9.
+             88 GS-ORDEM-RADIO-TRUE          VALUE 1.
+          03 GS-DESCR-ORDEM                  PIC X(20).
+          03 GS-EXIBE-VENCTO                 PIC 9(8).
+          03 GS-LINDET                       PIC X(150).
+          03 GS-CABECALHO                    PIC X(30).
+          03 GS-ERR-MSG                      PIC X(40).
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-PORTADOR                     PIC 9(2).
+          03 GS-DESC-PORTADOR                PIC X(20).
+          03 GS-PORTADOR-T                   PIC 9(2).
+          03 GS-DESC-PORTADOR-T              PIC X(20).
+          03 GS-EXIBE-TRANSF                 PIC X(10).
+          03 GS-SENHA                        PIC 9(4).
+          03 GS-IMP-FORN                     PIC 9(6).
+          03 GS-IMP-DESC-FORN                PIC X(30).
+          03 GS-IMP-PORT                     PIC 9(2).
+          03 GS-IMP-DESC-PORT                PIC X(30).
+          03 GS-TOTAL-PERIODO                PIC 9(8)V9(2).
+          03 GS-QTDE-TITULOS                 PIC 9(4).
+          03 GS-ANOTACAO                     PIC X(640).
+          03 GS-ALINEA-D                     PIC 9(2).
+          03 GS-DATA-COMPRA-D                PIC 9(8).
+          03 GS-DATA-APRES-D                 PIC 9(8).
+          03 GS-DATA-REPRES-D                PIC 9(8).
+          03 GS-DATA-RECTO-D                 PIC 9(8).
+          03 GS-VLR-JUROS-D                  PIC 9(6)V9(2).
+          03 GS-VLR-MULTA-D                  PIC 9(6)V9(2).
+          03 GS-VLR-DESCONTO-D               PIC 9(6)V9(2).
+          03 GS-FORMA-PAGTO-D                PIC X(10).
+          03 GS-DATA-ENTRADA-D               PIC 9(8).
+          03 GS-DCR-MEM-D                    PIC 9(8).
+          03 GS-VALOR-TOTAL                  PIC 9(8)V9(2).
+          03 GS-CONFIG-FLAG                  PIC x(4) COMP-5.
+          03 GS-CONFIG-VALUE                 PIC x(4) COMP-5.
+          03 GS-LINHA                        PIC 9(5).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-VENCTO-INI            PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-VENCTO-FIM            PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-VALOR-CH-DEV          PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-CH-RECEBIDO           PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-PRINTER-FLG           PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-CENTRALIZA            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 GS-FLD-NO-CARREGA-LISTA-FLG     PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-GRAVA-WORK-FLG        PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-ITEM-SELECIONADO      PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-REGRAVA-DADOS         PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 GS-FLD-NO-LE-PORTADOR           PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 GS-FLD-NO-TRANSF-PORTADOR       PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-CHAMAR-POP-UP         PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-VERIF-RCTO-DEVOLV     PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-VERIF-SENHA           PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-RECTO-CH-DEVOLV       PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 GS-FLD-NO-VERIFICA-SITUACAO     PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 GS-FLD-NO-REVERTE               PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 GS-FLD-NO-REVERTE-TODOS         PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 GS-FLD-NO-ERRO-RCTO-DEVOLVIDO   PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 GS-FLD-NO-SENHA-AUTORIZADA      PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 GS-FLD-NO-BAIXADO               PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 GS-FLD-NO-DEVOLVIDO             PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 GS-FLD-NO-PROBLEMATICO          PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 GS-FLD-NO-OPCAO-POP-UP          PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 GS-FLD-NO-ORDEM                 PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 GS-FLD-NO-ORDEM-RADIO           PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 GS-FLD-NO-DESCR-ORDEM           PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 GS-FLD-NO-EXIBE-VENCTO          PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 GS-FLD-NO-LINDET                PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 GS-FLD-NO-CABECALHO             PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 GS-FLD-NO-ERR-MSG               PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 GS-FLD-NO-PORTADOR              PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 GS-FLD-NO-DESC-PORTADOR         PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 GS-FLD-NO-PORTADOR-T            PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 GS-FLD-NO-DESC-PORTADOR-T       PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 GS-FLD-NO-EXIBE-TRANSF          PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 GS-FLD-NO-SENHA                 PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 GS-FLD-NO-IMP-FORN              PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 GS-FLD-NO-IMP-DESC-FORN         PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 GS-FLD-NO-IMP-PORT              PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 GS-FLD-NO-IMP-DESC-PORT         PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 GS-FLD-NO-TOTAL-PERIODO         PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 GS-FLD-NO-QTDE-TITULOS          PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 GS-FLD-NO-ANOTACAO              PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 GS-FLD-NO-ALINEA-D              PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 GS-FLD-NO-DATA-COMPRA-D         PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 GS-FLD-NO-DATA-APRES-D          PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 GS-FLD-NO-DATA-REPRES-D         PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 GS-FLD-NO-DATA-RECTO-D          PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 GS-FLD-NO-VLR-JUROS-D           PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 GS-FLD-NO-VLR-MULTA-D           PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 GS-FLD-NO-VLR-DESCONTO-D        PIC 9(4) COMP-5 VALUE
+                                               56.
+          03 GS-FLD-NO-FORMA-PAGTO-D         PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 GS-FLD-NO-DATA-ENTRADA-D        PIC 9(4) COMP-5 VALUE
+                                               58.
+          03 GS-FLD-NO-DCR-MEM-D             PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 GS-FLD-NO-VALOR-TOTAL           PIC 9(4) COMP-5 VALUE
+                                               60.
+          03 GS-FLD-NO-CONFIG-FLAG           PIC 9(4) COMP-5 VALUE
+                                               61.
+          03 GS-FLD-NO-CONFIG-VALUE          PIC 9(4) COMP-5 VALUE
+                                               62.
+          03 GS-FLD-NO-LINHA                 PIC 9(4) COMP-5 VALUE
+                                               63.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
