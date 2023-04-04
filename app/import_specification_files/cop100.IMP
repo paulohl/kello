@@ -1,0 +1,3525 @@
+Form GS
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char '.'
+       Comma-Char ','
+       Currency-Sign '$'
+       Error-File "erros.err"
+       Icon-File "icones.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+   End Details
+
+   Form Data
+           CONTRATO Integer(4)
+           CONTRATOW Integer(4)
+           TAXA Decimal(2.2)
+           ORIGEM Character(3)
+           IDENTIFICACAO Character(15)
+           TURMAS Integer(2)
+           INSTITUICAO Character(10)
+           CIDADE Character(13)
+           MESANO Integer(6)
+           NR-FORM Integer(4)
+           PADRAO Character(1)
+           SERVICOS Character(5)
+           MESES Integer(3)
+           STATUS Character(30)
+           MENSAGEM Character(40)
+           REGIAO Character(12)
+           REPRESENTANTE Character(20)
+           PREPOSTO Character(30)
+           DATA-ASSINATURA Integer(8)
+           MULTA-CONT Character(20)
+           FORUM Character(13)
+           COMERCIALIZACAO Character(30)
+           NR-INIC-PAD Character(10)
+           ORGANIZER Character(35)
+           COMISSAO1 Character(40)
+           COMISSAO2 Character(40)
+           COMISSAO3 Character(40)
+           CONVITE Character(35)
+           BECA Character(35)
+           OUTRO Character(35)
+   *previsão financeira
+           ITEM-PF Integer(4)
+           VALOR-DOLAR-PF Decimal(8.2)
+           FORMA-PAGTO1-PF Character(60)
+           FORMA-PAGTO2-PF Character(60)
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           SAVE-FLG Integer(1)
+           CLR-FLG Integer(1)
+           EXCLUI-FLG Integer(1)
+           CARREGAR-DADOS Integer(1)
+           CARREGA-ULT Integer(1)
+           CARREGA-LIST-BOX Integer(1)
+           VERIFICA-CODIGO Integer(1)
+           VERIFICA-ACESSO Integer(1)
+           GRAVA-CONTATO Integer(1)
+           PRINTER-FLG Integer(1)
+           LE-CIDADE Integer(1)
+           TRAZER-CURSO Integer(1)
+           CENTRALIZA Integer(1)
+           PRINTER-PREV-FIN Integer(1)
+           PRINTER-BRINDE Integer(1)
+           EXCEL Integer(1)
+           ARQUIVO Integer(1)
+           CHAMAR-BRINDE Integer(1)
+           CHAMAR-BRINDE-OE Integer(1)
+           CHAMAR-CUSTEIO Integer(1)
+           CHAMAR-EVENTO Integer(1)
+           CHAMAR-CREDITO Integer(1)
+           VER-CONTRATO-ENCERRADO Integer(1)
+           POPUP-CONTRATO Integer(1)
+           LE-FORNECEDOR Integer(1)
+           LE-CONTA Integer(1)
+           POPUP-FORNECEDOR Integer(1)
+           POPUP-CONTA Integer(1)
+   ***
+           LER-ITEM Integer(1)
+       End Group # FLAG-GROUP
+
+           LIBERA-ACESSO Integer(1)
+   * LIBERA-ACESSO 0-NAO 1-SIM
+           TIPO-BRINDE Integer(1)
+   *TIPO-BRINDE = 1-BRINDE DE CONTRATO   2-COMPROM.ORG.
+           DISPLAY-OPCAO Character(20)
+           LINDET Character(130)
+           CONT-CURTUR Integer(3)
+           CONT-BRINDE Integer(3)
+           CONT-CUSTEIO Integer(3)
+           CONT-BRINDE-OE Integer(3)
+           CONT-EVENTO Integer(3)
+           CONT-CURSO Integer(3)
+           CONT-CONTATO Integer(3)
+           CONT-CREDITO Integer(3)
+           CONT-RESUMO Integer(3)
+           CONT-RESUMO-OE Integer(3)
+           CONT-REPORTAGEM Integer(3)
+           CONT-05 Integer(3)
+           CONT-CONVITE Integer(3)
+           ERR-MSG Character(40) Error-Field
+           MENSAGEM-ERRO Character(40)
+           ERRO-VALIDACAO Integer(1)
+           ORDER Integer(1)
+           ORDEM-IMPRESS Integer(1)
+           ORDEM-CIDADE Integer(1)
+           ANOTACAO Character(640)
+           DATA-AGENDADA Integer(8)
+           OE-PAGOS Decimal(8.2)
+           OE-MES-PAGOS Decimal(3.1)
+           OE-JR-PAGOS Decimal(8.2)
+           OE-TOT-PAGOS Decimal(8.2)
+           OE-ATRASADO Decimal(8.2)
+           OE-MES-ATRASADO Decimal(3.1)
+           OE-JR-ATRASADO Decimal(8.2)
+           OE-TOT-ATRASADO Decimal(8.2)
+           OE-RESTANTE Decimal(8.2)
+           OE-MES-RESTANTE Decimal(3.1)
+           OE-JR-RESTANTE Decimal(8.2)
+           OE-TOT-RESTANTE Decimal(8.2)
+           OE-TOTAL Decimal(8.2)
+           OE-JR-TOTAL Decimal(8.2)
+           OE-TOT-TOTAL Decimal(8.2)
+           OE-ASSINATURA Integer(8)
+           OE-DATA-ULT-EVENTO Integer(8)
+           OE-REPRESENTANTE Character(30)
+           OE-TIPO-RECTO Character(30)
+           OE-COND-RECTO Character(30)
+           OE-COND-REAJUSTE Character(30)
+           OE-MULTA Character(30)
+           OE-PRESIDENTE Character(30)
+           OE-FONE-PRESIDENTE Character(10)
+           OE-TESOUREIRO Character(30)
+           OE-FONE-TESOUREIRO Character(10)
+           OE-PAGOS-COMP Decimal(8.2)
+           OE-MES-PAGOS-COMP Decimal(3.1)
+           OE-JR-PAGOS-COMP Decimal(8.2)
+           OE-TOT-PAGOS-COMP Decimal(8.2)
+           OE-ATRASADO-COMP Decimal(8.2)
+           OE-MES-ATRASADO-COMP Decimal(3.1)
+           OE-JR-ATRASADO-COMP Decimal(8.2)
+           OE-TOT-ATRASADO-COMP Decimal(8.2)
+           OE-TOTAL-COMP Decimal(8.2)
+           OE-JR-TOTAL-COMP Decimal(8.2)
+           OE-TOT-TOTAL-COMP Decimal(8.2)
+
+       Group TAB-CURTUR Vertical Occurs 100
+           TAB-CURSO Character(30)
+           TAB-TURMA Character(2)
+       End Group # TAB-CURTUR
+
+           NAO-IDENTIFICADO Character(80)
+           BRINDES Integer(1)
+           CUSTEIOS Integer(1)
+           EVENTOS Integer(1)
+           CONTATOS Integer(1)
+           CURSOS Integer(1)
+           CONVITES Integer(1)
+           COMISSAO Integer(1)
+           CREDITOS Integer(1)
+           REPORTAGENS Integer(1)
+           RESUMO Integer(1)
+           FORNECEDOR Integer(6)
+           DESC-FORNECEDOR Character(40)
+           CONTA Integer(6)
+           DESC-CONTA Character(70)
+           BANCO Integer(4)
+           AGENCIA Character(9)
+           NR-CONTA Character(15)
+           EXCEL-BRINDES Integer(1)
+           EXCEL-CUSTEIOS Integer(1)
+           EXCEL-REPORTAGENS Integer(1)
+           EXCEL-RESUMO Integer(1)
+           FLAG-CRITICA Integer(1)
+           UF Character(2)
+           2VIA Integer(1)
+           SIGLA Character(4)
+           RELACAO-TURMAS Character(50)
+           ALERTA Character(30)
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+           QUAL-TAB Integer(2)
+           LIBERADO Character(1)
+           LIBERADO-C Character(1)
+   **
+           QTDE-COPIAS Integer(1)
+   End Data
+
+   Data Validation CONTRATO
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # CONTRATO
+
+   Font-Record Stylename {font-001}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-004}
+       Typeface "Times New Roman"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-005}
+       Typeface "System"
+       Pointsize 10
+       Attributes BITMAPPED PROPORTIONAL BOLD
+   End-Record
+
+   Font-Record Stylename {font-006}
+       Typeface "Times New Roman"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Font-Record Stylename {font-007}
+       Typeface "Courier New"
+       Pointsize 9
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-008}
+       Typeface "Courier New"
+       Pointsize 9
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-009}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-010}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-011}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (468,676)
+       Size  (3340,2156)
+       Display "COP100 - Consulta Contrato"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE MAXIMIZE CLIPPED
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Procedure @D-EXIT
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Procedure # @D-EXIT
+           Event MOUSE-OVER
+               CLEAR-OBJECT EF33 ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+       End Dialog
+   End Object  #PRINCIPAL
+
+   Menu
+       Parent PRINCIPAL
+       Item {NoName}
+           Level 0
+           Privilege 0
+           Display "~Arquivo"
+       End Item
+       Item D-EXIT
+           Level 1
+           Privilege 0
+           Display "~Fechar"
+           Key  "F3"
+       End Item
+   End Menu
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (36,54)
+       Display "Contrato"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1020,56)
+       Display "Qt.Turm."
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1272,56)
+       Display "Instituição"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1880,56)
+       Display "Cidade"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2500,58)
+       Display "Mês/ano"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2804,56)
+       Display "Nr.Form"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (3068,56)
+       Display "Pad"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2312,216)
+       Display "Serviços"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (44,216)
+       Display "Status Atual"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1056,216)
+       Display "Mensagem"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,445)
+       Display "Região"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,513)
+       Display "Representante"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (964,717)
+       Display "Assinatura"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,649)
+       Display "Multa Contratual"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,718)
+       Display "Fórum"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,786)
+       Display "Comercialização"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,857)
+       Display "Nr.Inic.Formando"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,444)
+       Display "Organizer"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,512)
+       Display "Membro Comiss."
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,578)
+       Display "Membro Comiss."
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,646)
+       Display "Membro Comiss."
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,717)
+       Display "Convites"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,785)
+       Display "Becas"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1664,856)
+       Display "Outro"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (300,54)
+       Display "Taxa"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (500,54)
+       Display "Identificação"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,1240)
+       Stylename {font-003}
+       Display "IT Brinde           Q.F FORM $.Unitário Custo-prev Vencimento \
+ Pagamento dias      Juros Custo-Total Fornec"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2672,220)
+       Display "Meses que faltam"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,581)
+       Display "Preposto"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (40,120)
+       Size  (176,52)
+       Masterfield CONTRATO
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Style COLOR("BLUE","")
+       Picture ZZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               MOVE CONTRATO CONTRATOW ;
+               CLEAR-OBJECT PRINCIPAL ;
+               CLEAR-OBJECT TAB1 ;
+               MOVE CONTRATOW CONTRATO ;
+               MOVE 3 TAXA ;
+               REFRESH-OBJECT PRINCIPAL ;
+               REFRESH-OBJECT TAB1 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Event F2
+               SET-FLAG POPUP-CONTRATO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF1 ;
+               MOVE 3 TAXA ;
+               REFRESH-OBJECT EF53 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF1
+
+   Object EF53
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (252,120)
+       Size  (216,52)
+       Masterfield TAXA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Style COLOR("BLUE","")
+       Picture ZZ.ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               VALIDATE PRINCIPAL ;
+               CLEAR-OBJECT LB1 ;
+               CLEAR-OBJECT LB2 ;
+               CLEAR-OBJECT LB3 ;
+               CLEAR-OBJECT LB4 ;
+               CLEAR-OBJECT LB5 ;
+               CLEAR-OBJECT LB11 ;
+               CLEAR-OBJECT LB6 ;
+               SET-FLAG CARREGAR-DADOS(1) ;
+               RETC ;
+               REFRESH-OBJECT PRINCIPAL ;
+               SET-FOCUS TABP1 ;
+           End Procedure # OPCAO
+           Event VAL-ERROR
+               SET-FOCUS $EVENT-DATA ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #EF53
+
+   Object TAB1
+       Type TAB-CONTROL
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (0,1124)
+       Size  (3336,1012)
+       Style INTERSECT(TOP-RIGHT) MAJOR-TAB-SIDE(TOP) BINDING(SOLID)
+       Style TAB-JUSTIFY(CENTER) TAB-SHAPE(ROUNDED) STATUS-JUSTIFY(LEFT)
+       Style FIT-TEXT WRAP-TABS MAJOR-TAB-SIZE(200,72) MINOR-TAB-SIZE(120,120)
+       Style PAGE-BUTTON-SIZE(64,64)
+   End Object  #TAB1
+
+   Object PB1
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (1107,1020)
+       Size  (88,84)
+       Bitmap-Name "Helpbtn"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW AJUDA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SHOW-WINDOW AJUDA ;
+           End Event # CR
+           Event MOUSE-OVER
+               MOVE "Ajuda" DISPLAY-OPCAO ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+       End Dialog
+   End Object  #PB1
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (1004,1016)
+       Size  (88,84)
+       Bitmap-Name "print1"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+           End Procedure # OPCAO
+           Event MOUSE-OVER
+               MOVE "imprime" DISPLAY-OPCAO ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+       End Dialog
+   End Object  #PB2
+
+   Object EF3
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (1004,116)
+       Size  (148,64)
+       Masterfield TURMAS
+       Style BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture ZZ
+   End Object  #EF3
+
+   Object EF4
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (1244,116)
+       Size  (388,64)
+       Masterfield INSTITUICAO
+       Style DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(10)
+   End Object  #EF4
+
+   Object EF5
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (1852,116)
+       Size  (464,64)
+       Masterfield CIDADE
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(13)
+   End Object  #EF5
+
+   Object EF6
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2492,116)
+       Size  (300,64)
+       Masterfield MESANO
+       Style BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture 99/9999
+   End Object  #EF6
+
+   Object EF7
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2784,116)
+       Size  (204,56)
+       Masterfield NR-FORM
+       Style BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture ZZZZ
+   End Object  #EF7
+
+   Object EF8
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (3048,116)
+       Size  (108,56)
+       Masterfield PADRAO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(1)
+   End Object  #EF8
+
+   Object EF9
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2304,276)
+       Size  (272,56)
+       Masterfield SERVICOS
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(5)
+   End Object  #EF9
+
+   Object EF10
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (36,276)
+       Size  (872,56)
+       Masterfield STATUS
+       Style FIT-PICTURE RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(30)
+   End Object  #EF10
+
+   Object EF11
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (1036,276)
+       Size  (1152,56)
+       Masterfield MENSAGEM
+       Style FIT-PICTURE RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(40)
+   End Object  #EF11
+
+   Object GBOX1
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (28,384)
+       Size  (1608,580)
+       Display "Informações do Contrato"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX1
+
+   Object EF12
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,444)
+       Size  (368,56)
+       Masterfield REGIAO
+       Style FIT-PICTURE RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(12)
+   End Object  #EF12
+
+   Object EF13
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,508)
+       Size  (636,64)
+       Masterfield REPRESENTANTE
+       Style FIT-PICTURE RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(20)
+   End Object  #EF13
+
+   Object EF14
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (1240,724)
+       Size  (368,64)
+       Masterfield DATA-ASSINATURA
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF14
+
+   Object EF15
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,652)
+       Size  (796,64)
+       Masterfield MULTA-CONT
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(20)
+   End Object  #EF15
+
+   Object EF16
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,724)
+       Size  (440,56)
+       Masterfield FORUM
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(13)
+   End Object  #EF16
+
+   Object EF17
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,788)
+       Size  (872,56)
+       Masterfield COMERCIALIZACAO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(30)
+   End Object  #EF17
+
+   Object EF18
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,852)
+       Size  (368,56)
+       Masterfield NR-INIC-PAD
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(10)
+   End Object  #EF18
+
+   Object GBOX2
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (1632,384)
+       Size  (1696,580)
+       Display "Contatos"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX2
+
+   Object EF19
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2069,440)
+       Size  (1072,56)
+       Masterfield ORGANIZER
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(35)
+   End Object  #EF19
+
+   Object EF20
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2067,509)
+       Size  (1068,56)
+       Masterfield COMISSAO1
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(40)
+   End Object  #EF20
+
+   Object EF21
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2067,573)
+       Size  (1068,56)
+       Masterfield COMISSAO2
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(40)
+   End Object  #EF21
+
+   Object EF22
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2067,641)
+       Size  (1068,56)
+       Masterfield COMISSAO3
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(40)
+   End Object  #EF22
+
+   Object EF23
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2067,713)
+       Size  (1068,56)
+       Masterfield CONVITE
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(35)
+   End Object  #EF23
+
+   Object EF24
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2067,781)
+       Size  (1068,56)
+       Masterfield BECA
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(35)
+   End Object  #EF24
+
+   Object EF25
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2067,852)
+       Size  (1068,56)
+       Masterfield OUTRO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(35)
+   End Object  #EF25
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (550,1016)
+       Size  (196,92)
+       Bitmap-Name "Edit"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               CLEAR-OBJECT MLE1 ;
+               REFRESH-OBJECT MLE1 ;
+               SHOW-WINDOW WIN6 ;
+               SET-FOCUS MLE1 ;
+           End Event # BUTTON-SELECTED
+           Event MOUSE-OVER
+               MOVE "Contato" DISPLAY-OPCAO ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+       End Dialog
+   End Object  #PB3
+
+   Object EF28
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (500,116)
+       Size  (464,64)
+       Masterfield IDENTIFICACAO
+       Style DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(15)
+   End Object  #EF28
+
+   Object PB6
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (311,1016)
+       Size  (196,92)
+       Bitmap-Name "foldrdoc"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG VERIFICA-ACESSO(1) ;
+               RETC ;
+               IF= LIBERA-ACESSO 0 SAIR ;
+               CLEAR-OBJECT WIN1 ;
+               XIF= QUAL-TAB 1 TABELA1 ;
+               XIF= QUAL-TAB 12 TABELA12 ;
+               XIF= QUAL-TAB 9 TABELA9 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG VER-CONTRATO-ENCERRADO(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               MOVE 1 QTDE-COPIAS ;
+               REFRESH-OBJECT WIN1 ;
+       *
+               XIF= QUAL-TAB 1 LER-TABELA1 ;
+               XIF= QUAL-TAB 12 LER-TABELA12 ;
+               XIF= QUAL-TAB 9 LER-TABELA9 ;
+       *
+               DISABLE-OBJECT RB1 ;
+               DISABLE-OBJECT RB2 ;
+               DISABLE-OBJECT RB3 ;
+       *
+               REFRESH-OBJECT WIN1 ;
+               SHOW-WINDOW WIN1 ;
+       *DISABLE-OBJECT PB17
+       *    DISABLE-OBJECT PB7
+               SET-FOCUS EF29 ;
+           End Event # BUTTON-SELECTED
+           Procedure LER-TABELA1
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+       *
+               SET-FLAG LER-ITEM(1) ;
+               RETC ;
+           End Procedure # LER-TABELA1
+           Procedure LER-TABELA9
+               GET-SELECTED-LIST-ITEM LB13 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB13 LINDET $REGISTER ;
+       *
+               SET-FLAG LER-ITEM(1) ;
+               RETC ;
+           End Procedure # LER-TABELA9
+           Procedure LER-TABELA12
+               GET-SELECTED-LIST-ITEM LB16 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB16 LINDET $REGISTER ;
+       *
+               SET-FLAG LER-ITEM(1) ;
+               RETC ;
+           End Procedure # LER-TABELA12
+           Procedure SAIR
+               SET-FOCUS PB6 ;
+           End Procedure # SAIR
+           Event MOUSE-OVER
+               MOVE "Progr.Financeira" DISPLAY-OPCAO ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+           Procedure FOCAR-CRITICA
+               SET-FOCUS LB1 ;
+           End Procedure # FOCAR-CRITICA
+           Procedure TABELA9
+               SET-BUTTON-STATE RB2 1 ;
+               MOVE 2 TIPO-BRINDE ;
+           End Procedure # TABELA9
+           Procedure TABELA1
+               SET-BUTTON-STATE RB1 1 ;
+               MOVE 1 TIPO-BRINDE ;
+           End Procedure # TABELA1
+           Procedure TABELA12
+               SET-BUTTON-STATE RB3 1 ;
+               MOVE 3 TIPO-BRINDE ;
+           End Procedure # TABELA12
+       End Dialog
+   End Object  #PB6
+
+   Object PB10
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-004}
+       Start (40,1016)
+       Size  (196,92)
+       Bitmap-Name "hide"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW WIN4 ;
+               SET-FOCUS WIN4 ;
+           End Event # BUTTON-SELECTED
+           Event MOUSE-OVER
+               MOVE "Impr.Itens" DISPLAY-OPCAO ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+       End Dialog
+   End Object  #PB10
+
+   Object EF33
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (20,1104)
+       Size  (600,64)
+       Masterfield DISPLAY-OPCAO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(20)
+   End Object  #EF33
+
+   Object GBOX3
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (24,964)
+       Size  (3308,228)
+       Display ""
+   End Object  #GBOX3
+
+   Object EF34
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2768,276)
+       Size  (176,64)
+       Masterfield MESES
+       Style BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture ZZZ
+   End Object  #EF34
+
+   Object PB11
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (772,1020)
+       Size  (196,92)
+       Bitmap-Name "picture"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               REFRESH-OBJECT WIN2 ;
+               SHOW-WINDOW WIN2 ;
+               SET-FOCUS PB12 ;
+           End Event # BUTTON-SELECTED
+           Event MOUSE-OVER
+               MOVE "Resumo Org.Evento" DISPLAY-OPCAO ;
+               REFRESH-OBJECT EF33 ;
+           End Event # MOUSE-OVER
+       End Dialog
+   End Object  #PB11
+
+   Object EF64
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (1260,1000)
+       Size  (1172,64)
+       Masterfield NAO-IDENTIFICADO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT RED","")
+       Picture X(80)
+   End Object  #EF64
+
+   Object EF77
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-009}
+       Start (2268,120)
+       Size  (160,64)
+       Masterfield UF
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(2)
+   End Object  #EF77
+
+   Object EF26
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-011}
+       Start (1672,124)
+       Size  (160,60)
+       Masterfield SIGLA
+       Style AUTOSCROLL FIT-PICTURE RESIZE-CHAR('X') DISPLAY-FIELD
+       Style COLOR("LIGHT RED","")
+       Picture X(4)
+   End Object  #EF26
+
+   Object EF80
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1260,1068)
+       Size  (1196,64)
+       Masterfield RELACAO-TURMAS
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(50)
+   End Object  #EF80
+
+   Object EF81
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (488,580)
+       Size  (796,64)
+       Masterfield PREPOSTO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture X(30)
+   End Object  #EF81
+
+   Object EF82
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (2376,1072)
+       Size  (352,64)
+       Masterfield ALERTA
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF82
+
+   Object TABP1
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "~Brindes"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+       *SET-FOCUS D-NOME
+           End Event # WINDOW-CREATED
+           Procedure DUPLICATE-EVENT-WINDOW-CREATED
+       *SET-FOCUS D-NOME
+           End Procedure # DUPLICATE-EVENT-WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 1 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP1
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP1
+       Start (24,56)
+       Stylename {font-003}
+       Display "ITEM Brinde           Q.F FORM $.Unitário Custo-prev Venciment\
+o  Pagamento dias      Juros Custo-Total Curso/Turma"
+   End Object  #{NoName}
+
+   Object LB1
+       Type LIST-BOX
+       Parent TABP1
+       Stylename {font-001}
+       Start (20,68)
+       Size  (3272,824)
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Event ITEM-SELECTED
+               MOVE 1 QUAL-TAB ;
+               SET-BUTTON-STATE RB1 1 ;
+               MOVE 1 TIPO-BRINDE ;
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+           End Event # ITEM-SELECTED
+           Procedure OPCAO
+               IF= LIBERADO "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               SET-FLAG CHAMAR-BRINDE(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+       End Dialog
+   End Object  #LB1
+
+   Object TABP1C
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "~Custeio"
+   End Object  #TABP1C
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP1C
+       Start (24,56)
+       Stylename {font-003}
+       Display "ITEM Insumo           Q.F FORM $.Unitário Custo-prev Venciment\
+o  Pagamento dias      Juros Custo-Total Curso/Turma"
+   End Object  #{NoName}
+
+   Object LB16
+       Type LIST-BOX
+       Parent TABP1C
+       Stylename {font-001}
+       Start (20,68)
+       Size  (3272,824)
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Event ITEM-SELECTED
+               MOVE 12 QUAL-TAB ;
+               SET-BUTTON-STATE RB3 1 ;
+               MOVE 3 TIPO-BRINDE ;
+               GET-SELECTED-LIST-ITEM LB16 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB16 LINDET $REGISTER ;
+           End Event # ITEM-SELECTED
+           Procedure OPCAO
+               IF= LIBERADO-C "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB16 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB16 LINDET $REGISTER ;
+               SET-FLAG CHAMAR-CUSTEIO(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+       End Dialog
+   End Object  #LB16
+
+   Object TABP3
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "~Eventos"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+       *     SET-FOCUS ENDF-D
+           End Event # WINDOW-CREATED
+           Event BUTTON-SELECTED
+       *SET-FOCUS ENDF-D
+           End Event # BUTTON-SELECTED
+           Procedure DUPLICATE-EVENT-WINDOW-CREATED
+       *     SET-FOCUS ENDF-D
+           End Procedure # DUPLICATE-EVENT-WINDOW-CREATED
+           Procedure DUPLICATE-EVENT-BUTTON-SELECTE
+       *SET-FOCUS ENDF-D
+           End Procedure # DUPLICATE-EVENT-BUTTON-SELECTE
+           Event GAINED-FOCUS
+               MOVE 2 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP3
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP3
+       Start (36,52)
+       Stylename {font-003}
+       Display "IT. Descrição-Evento     Nr.Form Data-Prev. Horário  FO VI TEL\
+ BE CL FX AP  Curso/Turma"
+   End Object  #{NoName}
+
+   Object LB2
+       Type LIST-BOX
+       Parent TABP3
+       Stylename {font-001}
+       Start (20,68)
+       Size  (3284,832)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Event ITEM-SELECTED
+               MOVE 9 QUAL-TAB ;
+               SET-BUTTON-STATE RB2 1 ;
+               MOVE 2 TIPO-BRINDE ;
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+           End Event # ITEM-SELECTED
+           Procedure OPCAO
+               IF= LIBERADO "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB2 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB2 LINDET $REGISTER ;
+               SET-FLAG CHAMAR-EVENTO(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+           Event F4
+               CLEAR-OBJECT LB14 ;
+               DELETE-LIST-ITEM LB14 1 100 ;
+               REFRESH-OBJECT LB14 ;
+               GET-SELECTED-LIST-ITEM LB2 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB2 LINDET $REGISTER ;
+               SET-FLAG TRAZER-CURSO(1) ;
+               RETC ;
+               SHOW-WINDOW WIN3 ;
+               REFRESH-OBJECT LB14 ;
+               REFRESH-OBJECT WIN3 ;
+               SET-FOCUS LB14 ;
+           End Event # F4
+       End Dialog
+   End Object  #LB2
+
+   Object TABP4
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "~Contatos"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 3 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP4
+
+   Object LB3
+       Type LIST-BOX
+       Parent TABP4
+       Stylename {font-001}
+       Start (16,40)
+       Size  (3280,860)
+       Style DISABLE-HORIZONTAL
+   End Object  #LB3
+
+   Object TABP5
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "C~ursos"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 4 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP5
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP5
+       Start (36,56)
+       Stylename {font-003}
+       Display "Descrição-Curso           Turma Turno      Form L Responsáv.  \
+Ft Mb Cor-faixa  Cor-Canudo T.Alb."
+   End Object  #{NoName}
+
+   Object LB4
+       Type LIST-BOX
+       Parent TABP5
+       Stylename {font-001}
+       Start (20,64)
+       Size  (3280,836)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Procedure OPCAO
+               IF= LIBERADO "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               SET-FLAG CARREGA-LIST-BOX(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+       End Dialog
+   End Object  #LB4
+
+   Object TABP2
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "~Reportagem"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 5 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP2
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP2
+       Start (28,64)
+       Stylename {font-003}
+       Display "DOCTO  DATA-REPOR EVENTO               QT-FILM QT-FITA VLR-DES\
+PES VLR-REPORT    P.M.      JUROS     VLR-TOTAL"
+   End Object  #{NoName}
+
+   Object LB5
+       Type LIST-BOX
+       Parent TABP2
+       Stylename {font-001}
+       Start (8,80)
+       Size  (3292,812)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Procedure OPCAO
+               IF= LIBERADO "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               SET-FLAG CARREGA-LIST-BOX(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+       End Dialog
+   End Object  #LB5
+
+   Object TABP11
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "Re~latório 05"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 6 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP11
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP11
+       Start (16,48)
+       Stylename {font-003}
+       Display "CONT IDENTIFIC.    REPRES    MÊS/ANO FORM P   FOTOS FITA    PA\
+TROCINIO      PAT/FORM         PREV.VENDA"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP11
+       Start (20,104)
+       Display "DATA ---FORMANDO---- ---------FOTOGRAFIAS--------- VEND -RESUL\
+T.FOTOS %--"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP11
+       Start (16,152)
+       Stylename {font-003}
+       Display "REAL. PROD VEND SALD DISP. COMIS FOGO VENDA DEVOL SALDO FITA V\
+ENDA DEVOL SALDO   P.M. VDA.LIQ  P/FOTO V.MED.CLI"
+   End Object  #{NoName}
+
+   Object LB11
+       Type LIST-BOX
+       Parent TABP11
+       Stylename {font-001}
+       Start (0,164)
+       Size  (3292,752)
+       Initial Text
+           "œ˜˜ "
+       End Text
+   End Object  #LB11
+
+   Object TABP6
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "Crédi~to"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 7 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP6
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP6
+       Start (32,56)
+       Stylename {font-003}
+       Display "IT Descrição                                Custo-prev Vencime\
+nto  Pagamento dias      Juros Custo-Total"
+   End Object  #{NoName}
+
+   Object LB6
+       Type LIST-BOX
+       Parent TABP6
+       Stylename {font-001}
+       Start (20,68)
+       Size  (3272,824)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Procedure OPCAO
+               IF= LIBERADO "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB6 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB6 LINDET $REGISTER ;
+               SET-FLAG CHAMAR-CREDITO(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+       End Dialog
+   End Object  #LB6
+
+   Object TABP12
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "Re~sumo"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 8 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP12
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP12
+       Start (52,64)
+       Stylename {font-003}
+       Display "Descrição                                     Valor R$        \
+ p.m.         Juros           Total"
+   End Object  #{NoName}
+
+   Object LB12
+       Type LIST-BOX
+       Parent TABP12
+       Stylename {font-003}
+       Start (32,76)
+       Size  (3272,820)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-SELECTED
+           End Event # ITEM-SELECTED
+       End Dialog
+   End Object  #LB12
+
+   Object TABP13
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "Compromissos ~O.E."
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 9 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP13
+
+   Object {NoName}
+       Type TEXT
+       Parent TABP13
+       Start (24,56)
+       Stylename {font-003}
+       Display "IT Brinde           Q.F FORM $.Unitário Custo-prev Vencimento \
+ Pagamento dias      Juros Custo-Total Fornec"
+   End Object  #{NoName}
+
+   Object LB13
+       Type LIST-BOX
+       Parent TABP13
+       Stylename {font-001}
+       Start (20,68)
+       Size  (3260,824)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-SELECTED
+               MOVE 9 QUAL-TAB ;
+               SET-BUTTON-STATE RB2 1 ;
+               MOVE 2 TIPO-BRINDE ;
+               RETRIEVE-LIST-ITEM LB13 LINDET $EVENT-DATA ;
+           End Event # ITEM-SELECTED
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+           End Event # ITEM-ACCEPTED
+           Procedure OPCAO
+               IF= LIBERADO "S" OK-SELECAO ;
+           End Procedure # OPCAO
+           Procedure OK-SELECAO
+               GET-SELECTED-LIST-ITEM LB13 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB13 LINDET $REGISTER ;
+               SET-FLAG CHAMAR-BRINDE-OE(1) ;
+               RETC ;
+           End Procedure # OK-SELECAO
+       End Dialog
+   End Object  #LB13
+
+   Object TABP14
+       Type TAB-CONTROL-PAGE
+       Parent TAB1
+       Style MAJOR-TAB
+       Tab-Text "Convites"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+           Event GAINED-FOCUS
+               MOVE 10 QUAL-TAB ;
+           End Event # GAINED-FOCUS
+       End Dialog
+   End Object  #TABP14
+
+   Object LB15
+       Type LIST-BOX
+       Parent TABP14
+       Stylename {font-001}
+       Start (0,8)
+       Size  (3300,916)
+   End Object  #LB15
+
+   Object MBOX6
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(YES-NO) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Exclui"
+       Message "Tem certeza que deseja excluir ???"
+   End Object  #MBOX6
+
+   Object MBOX-ERROS
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Validação de Campos"
+   End Object  #MBOX-ERROS
+
+   Object MBOX1
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Erro Manipulação Arquivo"
+   End Object  #MBOX1
+
+   Object AJUDA
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (840,508)
+       Size  (1468,964)
+       Display "Help"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+   End Object  #AJUDA
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (24,104)
+       Display "Consulta geral de Contrato."
+   End Object  #{NoName}
+
+   Object PB9
+       Type PUSH-BUTTON
+       Parent AJUDA
+       Start (556,912)
+       Size  (304,96)
+       Display "OK"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB9
+
+   Object WIN6
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (364,256)
+       Size  (2396,1004)
+       Display "Anotações"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "on-line"
+   End Object  #WIN6
+
+   Object MLE1
+       Type MLE
+       Parent WIN6
+       Stylename {font-001}
+       Start (28,100)
+       Size  (2336,728)
+       Masterfield ANOTACAO
+       Style WORDWRAP BORDER LENGTH(640)
+   End Object  #MLE1
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent WIN6
+       Start (88,900)
+       Size  (268,96)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               UNSHOW-WINDOW WIN6 PRINCIPAL ;
+               SET-FLAG GRAVA-CONTATO(1) ;
+               RETC ;
+               SET-FOCUS LB3 ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB5
+
+   Object PB14
+       Type PUSH-BUTTON
+       Parent WIN6
+       Start (432,900)
+       Size  (268,96)
+       Display "~Limpar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               CLEAR-OBJECT MLE1 ;
+               REFRESH-OBJECT MLE1 ;
+               SET-FOCUS MLE1 ;
+               RETC ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB14
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent WIN6
+       Start (788,900)
+       Size  (268,96)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               UNSHOW-WINDOW WIN6 PRINCIPAL ;
+               SET-FOCUS LB3 ;
+               RETC ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB4
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent WIN6
+       Start (1316,904)
+       Size  (632,64)
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture x(20)
+       Display "Data de Agendamento:"
+   End Object  #EF2
+
+   Object EF27
+       Type ENTRY-FIELD
+       Parent WIN6
+       Stylename {font-003}
+       Start (1973,896)
+       Size  (352,56)
+       Masterfield DATA-AGENDADA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W')
+       Style COLOR("LIGHT BLUE","")
+       Picture ZZ/ZZ/ZZZZ
+       Dialog CASE(OFF)
+           Event CR
+       *SET-FOCUS PB13
+           End Event # CR
+           Event TAB
+       *SET-FOCUS PB13
+           End Event # TAB
+       End Dialog
+   End Object  #EF27
+
+   Object WIN1
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (860,1140)
+       Size  (2380,1260)
+       Display "Programação Financeira"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "pnticon"
+       Dialog CASE(OFF)
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Event # CLOSED-WINDOW
+           Event ESC
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN1
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (300,352)
+       Display "Item:"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (192,442)
+       Display "Valor U$:"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (84,532)
+       Display "Forma Pagto:"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (960,432)
+       Display "Preecher somente em caso de pgto em DOLAR"
+       Stylename {font-004}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (116,726)
+       Display "Fornecedor:"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (244,822)
+       Display "Banco:"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (204,918)
+       Display "Agência:"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (184,1012)
+       Display "Nº Conta:"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (792,812)
+       Display "F2 - Consulta Conta Corrente"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (20,1112)
+       Display "Qtde de cópias:"
+   End Object  #{NoName}
+
+   Object RB1
+       Type RADIO-BUTTON
+       Parent WIN1
+       Control-Group 1
+       Start (52,200)
+       Display "~Brinde de Contrato"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+       *DISABLE-OBJECT PB17
+               MOVE 1 TIPO-BRINDE ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB1
+
+   Object RB2
+       Type RADIO-BUTTON
+       Parent WIN1
+       Control-Group 1
+       Start (1128,200)
+       Display "~Compromisso de Org.Eventos"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+       *DISABLE-OBJECT PB17
+               MOVE 2 TIPO-BRINDE ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB2
+
+   Object RB3
+       Type RADIO-BUTTON
+       Parent WIN1
+       Control-Group 1
+       Start (734,200)
+       Display "Custeio"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+       *DISABLE-OBJECT PB17
+               MOVE 3 TIPO-BRINDE ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB3
+
+   Object EF29
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,340)
+       Size  (144,56)
+       Masterfield ITEM-PF
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Picture ZZZZ
+   End Object  #EF29
+
+   Object EF30
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,436)
+       Size  (448,56)
+       Masterfield VALOR-DOLAR-PF
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W')
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF30
+
+   Object EF31
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,532)
+       Size  (1776,56)
+       Masterfield FORMA-PAGTO1-PF
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(60)
+   End Object  #EF31
+
+   Object EF32
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,628)
+       Size  (1776,56)
+       Masterfield FORMA-PAGTO2-PF
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W')
+       Picture X(60)
+   End Object  #EF32
+
+   Object EF68
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,722)
+       Size  (228,56)
+       Masterfield FORNECEDOR
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ,ZZ9
+       Dialog CASE(OFF)
+           Event F2
+               DISABLE-OBJECT PB7 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG POPUP-FORNECEDOR(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               ENABLE-OBJECT PB7 ;
+               REFRESH-OBJECT EF68 ;
+               REFRESH-OBJECT EF71 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Event CR
+               DISABLE-OBJECT PB7 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG LE-FORNECEDOR(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               ENABLE-OBJECT PB7 ;
+               REFRESH-OBJECT EF68 ;
+               REFRESH-OBJECT EF71 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+           Event TAB
+               DISABLE-OBJECT PB7 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG LE-FORNECEDOR(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               ENABLE-OBJECT PB7 ;
+               REFRESH-OBJECT EF68 ;
+               REFRESH-OBJECT EF71 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # TAB
+           Procedure FOCAR-CRITICA
+               SET-FOCUS EF68 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #EF68
+
+   Object EF71
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (708,716)
+       Size  (1380,56)
+       Masterfield DESC-FORNECEDOR
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') READ-ONLY
+       Picture X(40)
+   End Object  #EF71
+
+   Object EF74
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,820)
+       Size  (144,56)
+       Masterfield BANCO
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ9
+       Dialog CASE(OFF)
+           Event F2
+               SET-FLAG POPUP-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Event CR
+               SET-FLAG LE-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+       End Dialog
+   End Object  #EF74
+
+   Object EF78
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,916)
+       Size  (284,56)
+       Masterfield AGENCIA
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('X')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event F2
+               SET-FLAG POPUP-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Event CR
+               SET-FLAG LE-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+       End Dialog
+   End Object  #EF78
+
+   Object EF79
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (448,1008)
+       Size  (452,56)
+       Masterfield NR-CONTA
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('X') AUTOSWIPE
+       Picture X(15)
+       Dialog CASE(OFF)
+           Event F2
+               SET-FLAG POPUP-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Event CR
+               SET-FLAG LE-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+       End Dialog
+   End Object  #EF79
+
+   Object EF-QTDE-COPIAS
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (448,1108)
+       Size  (64,64)
+       Masterfield QTDE-COPIAS
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z')
+       Picture 9
+       Display "1"
+       Dialog CASE(OFF)
+           Event CR
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+           Event TAB
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # TAB
+       End Dialog
+   End Object  #EF-QTDE-COPIAS
+
+   Object PB7
+       Type PUSH-BUTTON
+       Parent WIN1
+       Start (748,1220)
+       Size  (372,96)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               DISABLE-OBJECT PB7 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG PRINTER-PREV-FIN(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+               ENABLE-OBJECT PB7 ;
+           End Procedure # OPCAO
+           Procedure FOCAR-CRITICA
+               SET-FOCUS EF68 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #PB7
+
+   Object PB8
+       Type PUSH-BUTTON
+       Parent WIN1
+       Start (1256,1220)
+       Size  (372,96)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+           End Event # CR
+       End Dialog
+   End Object  #PB8
+
+   Object GBOX5
+       Type GROUP-BOX
+       Parent WIN1
+       Start (16,96)
+       Size  (2340,232)
+       Display "Tipo de Brinde"
+       Style COLOR("LIGHT BLUE","")
+   End Object  #GBOX5
+
+   Object CB11
+       Type CHECK-BOX
+       Parent WIN1
+       Start (2102,200)
+       Display "~2ª Via"
+       Masterfield 2VIA
+       Style FIT-TEXT
+   End Object  #CB11
+
+   Object PB17
+       Type PUSH-BUTTON
+       Parent WIN1
+       Stylename {font-002}
+       Start (632,824)
+       Display "?"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG POPUP-CONTA(1) ;
+               RETC ;
+               REFRESH-OBJECT EF74 ;
+               REFRESH-OBJECT EF78 ;
+               REFRESH-OBJECT EF79 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB17
+
+   Object MBOX2
+       Type MESSAGE-BOX
+       Parent $WINDOW
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) INFORMATION
+       Display "Atenção"
+       Message "Acesso não permitido."
+   End Object  #MBOX2
+
+   Object WIN2
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (488,-68)
+       Size  (2196,2144)
+       Display "Resumo de Organização de Eventos"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+   End Object  #WIN2
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (136,96)
+       Display "Data de Assinatura"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (208,187)
+       Display "Data Últ.Evento"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (232,280)
+       Display "Representante"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (252,372)
+       Display "Tipo de Recto"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (192,465)
+       Display "Condições Recto"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (64,559)
+       Display "Condições de Reajuste"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (156,651)
+       Display "Multa de Rescisão"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (312,744)
+       Display "Presidente"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (304,836)
+       Display "Tesoureiro"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (512,1008)
+       Display "Valor-R$"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (808,1008)
+       Display "pm/Mês"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (1344,1008)
+       Display "Juros"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (1772,1008)
+       Display "Total-R$"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (92,1092)
+       Display "Recebido"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (92,1186)
+       Display "Atrasado"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (92,1280)
+       Display "Restante"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (92,1374)
+       Display "Total"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (516,1600)
+       Display "Valor-R$"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (812,1600)
+       Display "pm/Mês"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (1348,1600)
+       Display "Juros"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (1776,1600)
+       Display "Total-R$"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (96,1692)
+       Display "Pagos"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (96,1786)
+       Display "A pagar"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (96,1888)
+       Display "Total"
+       Stylename {font-006}
+   End Object  #{NoName}
+
+   Object GBOX4
+       Type GROUP-BOX
+       Parent WIN2
+       Stylename {font-006}
+       Start (44,936)
+       Size  (2096,572)
+       Display "Resumo de Contas a Receber"
+       Style COLOR("LIGHT BLUE","")
+   End Object  #GBOX4
+
+   Object EF35
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (304,1068)
+       Size  (444,64)
+       Masterfield OE-PAGOS
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF35
+
+   Object EF36
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (304,1168)
+       Size  (444,64)
+       Masterfield OE-ATRASADO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF36
+
+   Object EF37
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (304,1269)
+       Size  (444,64)
+       Masterfield OE-RESTANTE
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF37
+
+   Object EF38
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (304,1372)
+       Size  (444,64)
+       Masterfield OE-TOTAL
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF38
+
+   Object EF39
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (816,1068)
+       Size  (244,64)
+       Masterfield OE-MES-PAGOS
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZZ.Z
+   End Object  #EF39
+
+   Object EF40
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (816,1168)
+       Size  (244,64)
+       Masterfield OE-MES-ATRASADO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZZ.Z
+   End Object  #EF40
+
+   Object EF41
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (816,1268)
+       Size  (244,64)
+       Masterfield OE-MES-RESTANTE
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZZ.Z
+   End Object  #EF41
+
+   Object EF43
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1100,1068)
+       Size  (460,64)
+       Masterfield OE-JR-PAGOS
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF43
+
+   Object EF44
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1100,1168)
+       Size  (460,64)
+       Masterfield OE-JR-ATRASADO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF44
+
+   Object EF45
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1100,1268)
+       Size  (460,64)
+       Masterfield OE-JR-RESTANTE
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF45
+
+   Object EF47
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1604,1066)
+       Size  (448,64)
+       Masterfield OE-TOT-PAGOS
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF47
+
+   Object EF48
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1604,1170)
+       Size  (448,56)
+       Masterfield OE-TOT-ATRASADO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF48
+
+   Object EF49
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1604,1271)
+       Size  (448,56)
+       Masterfield OE-TOT-RESTANTE
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF49
+
+   Object EF50
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1604,1374)
+       Size  (448,56)
+       Masterfield OE-TOT-TOTAL
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF50
+
+   Object EF51
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,92)
+       Size  (368,64)
+       Masterfield OE-ASSINATURA
+       Style AUTOSCROLL BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("LIGHT BLUE","")
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF51
+
+   Object EF52
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,184)
+       Size  (364,64)
+       Masterfield OE-DATA-ULT-EVENTO
+       Style AUTOSCROLL BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("LIGHT BLUE","")
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF52
+
+   Object EF54
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,276)
+       Size  (952,64)
+       Masterfield OE-REPRESENTANTE
+       Style AUTOSCROLL FIT-PICTURE RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF54
+
+   Object EF55
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,464)
+       Size  (952,56)
+       Masterfield OE-COND-RECTO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF55
+
+   Object EF56
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,557)
+       Size  (952,56)
+       Masterfield OE-COND-REAJUSTE
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF56
+
+   Object EF57
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,651)
+       Size  (952,56)
+       Masterfield OE-MULTA
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF57
+
+   Object EF58
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,744)
+       Size  (952,56)
+       Masterfield OE-PRESIDENTE
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF58
+
+   Object EF59
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1520,744)
+       Size  (388,64)
+       Masterfield OE-FONE-PRESIDENTE
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(10)
+   End Object  #EF59
+
+   Object EF60
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,836)
+       Size  (952,56)
+       Masterfield OE-TESOUREIRO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF60
+
+   Object EF61
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1524,836)
+       Size  (388,64)
+       Masterfield OE-FONE-TESOUREIRO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(10)
+   End Object  #EF61
+
+   Object EF62
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (544,372)
+       Size  (952,64)
+       Masterfield OE-TIPO-RECTO
+       Style AUTOSCROLL DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture X(30)
+   End Object  #EF62
+
+   Object PB12
+       Type PUSH-BUTTON
+       Parent WIN2
+       Start (936,2080)
+       Size  (336,96)
+       Display "~Fechar"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+               SET-FOCUS PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+               SET-FOCUS PRINCIPAL ;
+           End Event # CR
+       End Dialog
+   End Object  #PB12
+
+   Object EF42
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1100,1370)
+       Size  (460,64)
+       Masterfield OE-JR-TOTAL
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF42
+
+   Object GBOX6
+       Type GROUP-BOX
+       Parent WIN2
+       Stylename {font-006}
+       Start (44,1536)
+       Size  (2096,500)
+       Display "Resumo de Compromisso de Org.Eventos"
+       Style COLOR("LIGHT BLUE","")
+   End Object  #GBOX6
+
+   Object EF46
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (296,1668)
+       Size  (444,64)
+       Masterfield OE-PAGOS-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF46
+
+   Object EF63
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (296,1759)
+       Size  (444,64)
+       Masterfield OE-ATRASADO-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF63
+
+   Object EF65
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (292,1876)
+       Size  (444,64)
+       Masterfield OE-TOTAL-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF65
+
+   Object EF66
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (820,1668)
+       Size  (244,64)
+       Masterfield OE-MES-PAGOS-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZZ.Z
+   End Object  #EF66
+
+   Object EF67
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (820,1768)
+       Size  (244,64)
+       Masterfield OE-MES-ATRASADO-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZZ.Z
+   End Object  #EF67
+
+   Object EF69
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1104,1668)
+       Size  (460,64)
+       Masterfield OE-JR-PAGOS-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF69
+
+   Object EF70
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1104,1768)
+       Size  (460,64)
+       Masterfield OE-JR-ATRASADO-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF70
+
+   Object EF72
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1608,1666)
+       Size  (448,64)
+       Masterfield OE-TOT-PAGOS-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF72
+
+   Object EF73
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1608,1770)
+       Size  (448,56)
+       Masterfield OE-TOT-ATRASADO-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF73
+
+   Object EF75
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1612,1884)
+       Size  (448,56)
+       Masterfield OE-TOT-TOTAL-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF75
+
+   Object EF76
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (1108,1876)
+       Size  (460,64)
+       Masterfield OE-JR-TOTAL-COMP
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("LIGHT BLUE","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF76
+
+   Object WIN3
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (596,1012)
+       Size  (1988,760)
+       Display "Curso/Turma dos Eventos"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+       Dialog CASE(OFF)
+           Event ESC
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FOCUS LB2 ;
+           End Event # ESC
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FOCUS LB2 ;
+           End Event # CLOSED-WINDOW
+           Event WINDOW-SHOWN
+               REFRESH-OBJECT LB14 ;
+               SET-FOCUS LB14 ;
+           End Event # WINDOW-SHOWN
+       End Dialog
+   End Object  #WIN3
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (44,72)
+       Display "Curso"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (928,72)
+       Display "Turma"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object LB14
+       Type LIST-BOX
+       Parent WIN3
+       Control-Group 1
+       Stylename {font-007}
+       Start (8,96)
+       Size  (1964,644)
+       Masterfield TAB-CURTUR
+       Style DISABLE-HORIZONTAL
+       Field
+           Masterfield TAB-CURSO
+           Picture X(30)
+           Padding 1
+       End Field
+       Field
+           Masterfield TAB-TURMA
+           Picture X(2)
+           Padding 1
+       End Field
+   End Object  #LB14
+
+   Object WIN4
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (616,720)
+       Size  (1948,628)
+       Display "Impressão dos Itens"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+       Dialog CASE(OFF)
+           Event ESC
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # ESC
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # CLOSED-WINDOW
+       End Dialog
+   End Object  #WIN4
+
+   Object CB1
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (56,128)
+       Display "Brindes"
+       Masterfield BRINDES
+       Style FIT-TEXT
+   End Object  #CB1
+
+   Object CB2
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (56,326)
+       Display "Eventos"
+       Masterfield EVENTOS
+       Style FIT-TEXT
+   End Object  #CB2
+
+   Object CB3
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (56,428)
+       Display "Contatos"
+       Masterfield CONTATOS
+       Style FIT-TEXT
+   End Object  #CB3
+
+   Object CB4
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (484,128)
+       Display "Cursos"
+       Masterfield CURSOS
+       Style FIT-TEXT
+   End Object  #CB4
+
+   Object CB5
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (484,228)
+       Display "Convites"
+       Masterfield CONVITES
+       Style FIT-TEXT
+   End Object  #CB5
+
+   Object PB13
+       Type PUSH-BUTTON
+       Parent WIN4
+       Stylename {font-002}
+       Start (492,552)
+       Size  (312,96)
+       Display "~Imprimir"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # CR
+       End Dialog
+   End Object  #PB13
+
+   Object PB15
+       Type PUSH-BUTTON
+       Parent WIN4
+       Stylename {font-002}
+       Start (88,552)
+       Size  (312,96)
+       Display "~Arquivo"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG ARQUIVO(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG ARQUIVO(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # CR
+       End Dialog
+   End Object  #PB15
+
+   Object CB6
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (484,328)
+       Display "Comissão"
+       Masterfield COMISSAO
+       Style FIT-TEXT
+   End Object  #CB6
+
+   Object CB7
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (484,428)
+       Display "Créditos"
+       Masterfield CREDITOS
+       Style FIT-TEXT
+   End Object  #CB7
+
+   Object PB16
+       Type PUSH-BUTTON
+       Parent WIN4
+       Stylename {font-009}
+       Start (1500,552)
+       Size  (312,96)
+       Display "~Excel"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG EXCEL(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG EXCEL(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+           End Event # CR
+       End Dialog
+   End Object  #PB16
+
+   Object GBOX7
+       Type GROUP-BOX
+       Parent WIN4
+       Stylename {font-009}
+       Start (20,64)
+       Size  (1348,612)
+       Display ""
+   End Object  #GBOX7
+
+   Object GBOX8
+       Type GROUP-BOX
+       Parent WIN4
+       Stylename {font-009}
+       Start (1388,64)
+       Size  (536,612)
+       Display ""
+   End Object  #GBOX8
+
+   Object CB8
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-009}
+       Start (1452,128)
+       Display "Brindes"
+       Masterfield EXCEL-BRINDES
+       Style FIT-TEXT
+   End Object  #CB8
+
+   Object CB9
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-009}
+       Start (1452,328)
+       Display "Reportagens"
+       Masterfield EXCEL-REPORTAGENS
+       Style FIT-TEXT
+   End Object  #CB9
+
+   Object CB10
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-009}
+       Start (1452,428)
+       Display "Resumo"
+       Masterfield EXCEL-RESUMO
+       Style FIT-TEXT
+   End Object  #CB10
+
+   Object CB12
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (916,128)
+       Display "Reportagens"
+       Masterfield REPORTAGENS
+       Style FIT-TEXT
+   End Object  #CB12
+
+   Object CB13
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (916,236)
+       Display "Resumo"
+       Masterfield RESUMO
+       Style FIT-TEXT
+   End Object  #CB13
+
+   Object CB14
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-002}
+       Start (56,225)
+       Display "Custeios"
+       Masterfield CUSTEIOS
+       Style FIT-TEXT
+   End Object  #CB14
+
+   Object CB15
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {font-009}
+       Start (1452,228)
+       Display "Custeios"
+       Masterfield EXCEL-BRINDES
+       Style FIT-TEXT
+   End Object  #CB15
+
+
+   Global Dialog CASE(OFF)
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event CR
+           SKIP-TO-NEXT-OBJECT 1 ;
+           RETC ;
+       End Event # CR
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           SET-FLAG CENTRALIZA(1) ;
+           RETC ;
+       *
+           SET-PROPERTY PRINCIPAL "MOUSE-OVER" 1 ;
+           DELETE-PAGE TABP11 ;
+           SET-FOCUS EF1 ;
+           RETC ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure SET-POSICAO-CURSOR
+           SET-FOCUS EF1 ;
+           RETC ;
+       End Procedure # SET-POSICAO-CURSOR
+       Procedure EXIBE-ERRO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # EXIBE-ERRO
+       Procedure INSERE-LIST-CONVITE
+           INCREMENT CONT-CONVITE ;
+           INSERT-LIST-ITEM LB15 LINDET CONT-CONVITE ;
+           RETC ;
+       End Procedure # INSERE-LIST-CONVITE
+       Procedure INSERE-LIST-BRINDE-OE
+           INCREMENT CONT-BRINDE-OE ;
+           INSERT-LIST-ITEM LB13 LINDET CONT-BRINDE-OE ;
+           RETC ;
+       End Procedure # INSERE-LIST-BRINDE-OE
+       Procedure INSERE-LIST-BRINDE
+           INCREMENT CONT-BRINDE ;
+           INSERT-LIST-ITEM LB1 LINDET CONT-BRINDE ;
+           RETC ;
+       End Procedure # INSERE-LIST-BRINDE
+       Procedure INSERE-LIST-CUSTEIO
+           INCREMENT CONT-CUSTEIO ;
+           INSERT-LIST-ITEM LB16 LINDET CONT-CUSTEIO ;
+           RETC ;
+       End Procedure # INSERE-LIST-CUSTEIO
+       Procedure INSERE-LIST-REPORTAGEM
+           INCREMENT CONT-REPORTAGEM ;
+           INSERT-LIST-ITEM LB5 LINDET CONT-REPORTAGEM ;
+           RETC ;
+       End Procedure # INSERE-LIST-REPORTAGEM
+       Procedure INSERE-LIST-EVENTO
+           INCREMENT CONT-EVENTO ;
+           INSERT-LIST-ITEM LB2 LINDET CONT-EVENTO ;
+           RETC ;
+       End Procedure # INSERE-LIST-EVENTO
+       Procedure INSERE-LIST-CONTATO
+           INCREMENT CONT-CONTATO ;
+           INSERT-LIST-ITEM LB3 LINDET CONT-CONTATO ;
+           RETC ;
+       End Procedure # INSERE-LIST-CONTATO
+       Procedure INSERE-LIST-CURSOS
+           INCREMENT CONT-CURSO ;
+           INSERT-LIST-ITEM LB4 LINDET CONT-CURSO ;
+           RETC ;
+       End Procedure # INSERE-LIST-CURSOS
+       Procedure INSERE-LIST-RESUMO
+           INCREMENT CONT-RESUMO ;
+           INSERT-LIST-ITEM LB12 LINDET CONT-RESUMO ;
+           RETC ;
+       End Procedure # INSERE-LIST-RESUMO
+       Procedure INSERE-LIST-05
+           INCREMENT CONT-05 ;
+           INSERT-LIST-ITEM LB11 LINDET CONT-05 ;
+           RETC ;
+       End Procedure # INSERE-LIST-05
+       Procedure INSERE-LIST-CREDITO
+           INCREMENT CONT-CREDITO ;
+           INSERT-LIST-ITEM LB6 LINDET CONT-CREDITO ;
+           RETC ;
+       End Procedure # INSERE-LIST-CREDITO
+       Procedure ATUALIZA-LIST-EVENTO
+           UPDATE-LIST-ITEM LB2 LINDET CONT-EVENTO ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-EVENTO
+       Procedure ATUALIZA-LIST-BRINDE
+           UPDATE-LIST-ITEM LB1 LINDET CONT-BRINDE ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-BRINDE
+       Procedure ATUALIZA-LIST-CUSTEIO
+           UPDATE-LIST-ITEM LB16 LINDET CONT-CUSTEIO ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-CUSTEIO
+       Procedure ATUALIZA-LIST-CONTATO
+           UPDATE-LIST-ITEM LB3 LINDET CONT-CONTATO ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-CONTATO
+       Procedure ATUALIZA-LIST-CURSO
+           UPDATE-LIST-ITEM LB4 LINDET CONT-CURSO ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-CURSO
+       Procedure ATUALIZA-LIST-RESUMO
+           UPDATE-LIST-ITEM LB12 LINDET CONT-RESUMO ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-RESUMO
+       Procedure ATUALIZA-LIST-CREDITO
+           UPDATE-LIST-ITEM LB6 LINDET CONT-CREDITO ;
+           RETC ;
+       End Procedure # ATUALIZA-LIST-CREDITO
+       Procedure CLEAR-LIST-CONVITE
+           CLEAR-OBJECT LB15 ;
+           REFRESH-OBJECT LB15 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-CONVITE
+       Procedure CLEAR-LIST-BOX-BRINDE-OE
+           CLEAR-OBJECT LB13 ;
+           REFRESH-OBJECT LB13 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-BRINDE-OE
+       Procedure CLEAR-LIST-BOX-BRINDE
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-BRINDE
+       Procedure CLEAR-LIST-BOX-CUSTEIO
+           CLEAR-OBJECT LB16 ;
+           REFRESH-OBJECT LB16 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-CUSTEIO
+       Procedure CLEAR-LIST-BOX-EVENTO
+           CLEAR-OBJECT LB2 ;
+           REFRESH-OBJECT LB2 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-EVENTO
+       Procedure CLEAR-LIST-BOX-CONTATO
+           CLEAR-OBJECT LB3 ;
+           REFRESH-OBJECT LB3 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-CONTATO
+       Procedure CLEAR-LIST-BOX-CREDITO
+           CLEAR-OBJECT LB6 ;
+           REFRESH-OBJECT LB6 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-CREDITO
+       Procedure CLEAR-LIST-BOX-05
+           CLEAR-OBJECT LB11 ;
+           REFRESH-OBJECT LB11 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-05
+       Procedure CLEAR-LIST-BOX-RESUMO
+           CLEAR-OBJECT LB12 ;
+           REFRESH-OBJECT LB12 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-RESUMO
+       Procedure CLEAR-LIST-BOX-REPORTAGEM
+           CLEAR-OBJECT LB5 ;
+           REFRESH-OBJECT LB5 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-REPORTAGEM
+       Procedure CLEAR-LIST-BOX-CURSO
+           CLEAR-OBJECT LB4 ;
+           REFRESH-OBJECT LB4 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX-CURSO
+       Procedure REFRESH-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           REFRESH-OBJECT TABP1 ;
+           REFRESH-OBJECT TABP1C ;
+           REFRESH-OBJECT TABP2 ;
+           REFRESH-OBJECT TABP3 ;
+           REFRESH-OBJECT TABP2 ;
+           REFRESH-OBJECT TABP5 ;
+           REFRESH-OBJECT TABP6 ;
+           REFRESH-OBJECT TABP11 ;
+           REFRESH-OBJECT TABP12 ;
+           REFRESH-OBJECT TABP13 ;
+           RETC ;
+       End Procedure # REFRESH-DATA
+       Procedure ACESSO-NAO-PERMITIDO
+           INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+           RETC ;
+       End Procedure # ACESSO-NAO-PERMITIDO
+       Procedure NAO-AUTORIZADO
+           HIDE-OBJECT TABP2 ;
+           HIDE-OBJECT TABP11 ;
+           HIDE-OBJECT TABP12 ;
+           RETC ;
+       End Procedure # NAO-AUTORIZADO
+       Procedure ERRO-DATA-RECEBER
+           INVOKE-MESSAGE-BOX MBOX-ERROS MENSAGEM-ERRO $REGISTER ;
+           RETC ;
+       End Procedure # ERRO-DATA-RECEBER
+       Procedure INSERIR-CUR
+           INSERT-MANY-LIST-ITEMS LB14 TAB-CURTUR CONT-CURTUR ;
+           RETC ;
+       End Procedure # INSERIR-CUR
+       Procedure LIMPAR-CUR
+           CLEAR-OBJECT LB14 ;
+           REFRESH-OBJECT LB14 ;
+           RETC ;
+       End Procedure # LIMPAR-CUR
+       Procedure LER-REPORTAGEM
+           RETRIEVE-LIST-ITEM LB5 LINDET CONT-REPORTAGEM ;
+           RETC ;
+       End Procedure # LER-REPORTAGEM
+       Procedure LER-RESUMO
+           RETRIEVE-LIST-ITEM LB12 LINDET CONT-RESUMO ;
+           RETC ;
+       End Procedure # LER-RESUMO
+       Procedure HABILITA-2VIA
+           ENABLE-OBJECT CB11 ;
+           RETC ;
+       End Procedure # HABILITA-2VIA
+       Procedure DESABILITA-2VIA
+           DISABLE-OBJECT CB11 ;
+           RETC ;
+       End Procedure # DESABILITA-2VIA
+       Procedure HABILITAR-BRINDES
+           MOVE "S" LIBERADO ;
+           ENABLE-OBJECT TABP1 ;
+           ENABLE-OBJECT TABP3 ;
+           RETC ;
+       End Procedure # HABILITAR-BRINDES
+       Procedure DESABILITAR-BRINDES
+           MOVE "N" LIBERADO ;
+           DISABLE-OBJECT TABP1 ;
+           DISABLE-OBJECT TABP3 ;
+           ENABLE-OBJECT LB1 ;
+           ENABLE-OBJECT LB2 ;
+           RETC ;
+       End Procedure # DESABILITAR-BRINDES
+       Procedure HABILITAR-CUSTEIO
+           MOVE "S" LIBERADO-C ;
+           ENABLE-OBJECT TABP1C ;
+           RETC ;
+       End Procedure # HABILITAR-CUSTEIO
+       Procedure DESABILITAR-CUSTEIO
+           MOVE "N" LIBERADO-C ;
+           DISABLE-OBJECT TABP1C ;
+           ENABLE-OBJECT LB16 ;
+           RETC ;
+       End Procedure # DESABILITAR-CUSTEIO
+   End Dialog
+
+End Form

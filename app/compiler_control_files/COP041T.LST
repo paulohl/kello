@@ -1,0 +1,9 @@
+* Micro Focus Net Express            V3.1 revision 255 18-Jul-11 10:13 Page   1
+* cop041t.CBL
+* Options: NOLIST NOASMLIST OMF(OBJ) GNT(.\) OBJ(.\) gnt"cop041t.OBJ"
+*          obj"cop041t.OBJ" list"COP041T.LST" ERRLIST
+* Micro Focus Net Express            V3.1 revision 255 Compiler
+* Copyright (C) 1984-2002 Micro Focus International Ltd. URN AXCGG/AA0/00000
+*                                                        REF GNR-165060004AC
+* Total Messages:     0
+* Data:        3484     Code:        3190

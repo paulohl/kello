@@ -1,0 +1,9 @@
+* Micro Focus Net Express            V3.1 revision 255 07-Apr-14 09:57 Page   1
+* rep008.CBL
+* Options: NOLIST NOASMLIST OMF(OBJ) GNT(.\) OBJ(.\) gnt"rep008.OBJ"
+*          obj"rep008.OBJ" list"REP008.LST" ERRLIST
+* Micro Focus Net Express            V3.1 revision 255 Compiler
+* Copyright (C) 1984-2002 Micro Focus International Ltd. URN AXCGG/AA0/00000
+*                                                        REF GNR-165060004AC
+* Total Messages:     0
+* Data:        4060     Code:        4207

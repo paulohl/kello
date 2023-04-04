@@ -1,0 +1,9 @@
+* Micro Focus Net Express            V3.1 revision 255 30-Jun-14 11:13 Page   1
+* ccp010e.CBL
+* Options: NOLIST NOASMLIST OMF(OBJ) GNT(.\) OBJ(.\) gnt"ccp010e.OBJ"
+*          obj"ccp010e.OBJ" list"CCP010E.LST" ERRLIST
+* Micro Focus Net Express            V3.1 revision 255 Compiler
+* Copyright (C) 1984-2002 Micro Focus International Ltd. URN AXCGG/AA0/00000
+*                                                        REF GNR-165060004AC
+* Total Messages:     0
+* Data:        4280     Code:        2849

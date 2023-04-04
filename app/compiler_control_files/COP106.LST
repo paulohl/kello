@@ -1,0 +1,9 @@
+* Micro Focus Net Express            V3.1 revision 255 20-Jul-16 11:56 Page   1
+* cop106.CBL
+* Options: NOLIST NOASMLIST OMF(OBJ) GNT(.\) OBJ(.\) gnt"cop106.OBJ"
+*          obj"cop106.OBJ" list"COP106.LST" ERRLIST
+* Micro Focus Net Express            V3.1 revision 255 Compiler
+* Copyright (C) 1984-2002 Micro Focus International Ltd. URN AXCGG/AA0/00000
+*                                                        REF GNR-165060004AC
+* Total Messages:     0
+* Data:       13204     Code:       25413

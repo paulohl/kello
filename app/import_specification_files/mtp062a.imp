@@ -1,0 +1,1120 @@
+Form ETIQUET
+   Screenset Details
+       First-Window WIN1
+       Decimal-Char ','
+       Comma-Char '.'
+       Currency-Sign '$'
+       Error-File "dserror.err"
+       Icon-File "\\Programa\\Biticon.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI GRID(1,1)
+       Stylename {Default-Font}
+   End Details
+
+   Form Data
+           EXIT-FLAG Integer(1)
+           FUN-COBOL Character(1)
+           DS-FOCO Integer(8) Computational
+           CAMPO-CRITICA Character(20)
+           FLAG-CRITICA Integer(1)
+           SELECAO1 Character(1)
+           SELECAO2 Character(1)
+           SELECAO3 Character(1)
+           SELECAO4 Character(1)
+           SELECAO5 Character(1)
+           SELECAO6 Character(1)
+           SELECAO7 Character(1)
+           SELECAO8 Character(1)
+           SELECAO9 Character(1)
+           SELECAO10 Character(1)
+           SELECAO11 Character(1)
+           SELECAO12 Character(1)
+           SELECAO13 Character(1)
+           SELECAO14 Character(1)
+           SELECAO15 Character(1)
+           SELECAO16 Character(1)
+           SELECAO17 Character(1)
+           SELECAO18 Character(1)
+           SELECAO19 Character(1)
+           SELECAO20 Character(1)
+           DESC-ETIQUETA1 Character(9)
+           DESC-ETIQUETA2 Character(9)
+           DESC-ETIQUETA3 Character(9)
+           DESC-ETIQUETA4 Character(9)
+           DESC-ETIQUETA5 Character(9)
+           DESC-ETIQUETA6 Character(9)
+           DESC-ETIQUETA7 Character(9)
+           DESC-ETIQUETA8 Character(9)
+           DESC-ETIQUETA9 Character(9)
+           DESC-ETIQUETA10 Character(9)
+           DESC-ETIQUETA11 Character(9)
+           DESC-ETIQUETA12 Character(9)
+           DESC-ETIQUETA13 Character(9)
+           DESC-ETIQUETA14 Character(9)
+           DESC-ETIQUETA15 Character(9)
+           DESC-ETIQUETA16 Character(9)
+           DESC-ETIQUETA17 Character(9)
+           DESC-ETIQUETA18 Character(9)
+           DESC-ETIQUETA19 Character(9)
+           DESC-ETIQUETA20 Character(9)
+           ARQ-EXPLORER Character(200)
+           ACP-CONTRATO Integer(4)
+           ACP-ALBUM-INI Integer(4)
+           ACP-ALBUM-FIM Integer(4)
+           LINHA-AVISO Character(100)
+           ACP-OPCAO Integer(1)
+   ***
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+   ***
+           TIPO-ETIQUETA Integer(1)
+   End Data
+
+   Font-Record Stylename {font-001}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Arial"
+       Pointsize 12
+       Attributes VECTOR PROPORTIONAL BOLD ITALIC
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "Arial"
+       Pointsize 20
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {Default-Font}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Object WIN1
+       Type WINDOW
+       Parent DESKTOP
+       Start (144,12)
+       Size  (2840,2172)
+       Display "MTP062a - Emissão de Etiquetas dos Contratos (Zebra)"
+       Style BORDER TITLEBAR SYSTEM-MENU CLIPPED
+       Icon "carro"
+   End Object  #WIN1
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (104,104)
+       Display "Selecionar as etiquetas que não serão impressas"
+       Stylename {font-002}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (124,1876)
+       Display "Do Álbum"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (124,1776)
+       Display "Contrato"
+       Stylename {font-001}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (13314,48132)
+       Display "ATÉ"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (25976,29700)
+       Display "Text" , 0003
+   End Object  #{NoName}
+
+   Object EF4
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (104,2128)
+       Size  (2596,64)
+       Masterfield LINHA-AVISO
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') READ-ONLY COLOR("LIGHT RED",""\
+)
+       Picture X(100)
+   End Object  #EF4
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent WIN1
+       Stylename {font-002}
+       Start (2156,2020)
+       Size  (516,104)
+       Display "Imprimir"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "P" FUN-COBOL ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               MOVE "P" FUN-COBOL ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB2
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent WIN1
+       Stylename {font-002}
+       Start (2100,108)
+       Display "~Limpar Etiquetas"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               EXECUTE-PROCEDURE LIMPAR ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               EXECUTE-PROCEDURE LIMPAR ;
+           End Event # CR
+           Procedure LIMPAR
+               MOVE "L" FUN-COBOL ;
+               RETC ;
+               SET-COLOR EF-ETIQUETA1 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA2 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA3 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA3 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA4 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA6 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA5 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA6 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA9 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA7 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA8 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA12 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA9 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA10 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA15 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA11 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA12 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA18 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA13 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA14 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA15 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA16 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA17 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA18 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA19 $NULL $NULL ;
+               SET-COLOR EF-ETIQUETA20 $NULL $NULL ;
+               MOVE " " DESC-ETIQUETA1 ;
+               MOVE " " DESC-ETIQUETA2 ;
+               MOVE " " DESC-ETIQUETA3 ;
+               MOVE " " DESC-ETIQUETA4 ;
+               MOVE " " DESC-ETIQUETA5 ;
+               MOVE " " DESC-ETIQUETA6 ;
+               MOVE " " DESC-ETIQUETA7 ;
+               MOVE " " DESC-ETIQUETA8 ;
+               MOVE " " DESC-ETIQUETA9 ;
+               MOVE " " DESC-ETIQUETA10 ;
+               MOVE " " DESC-ETIQUETA11 ;
+               MOVE " " DESC-ETIQUETA12 ;
+               MOVE " " DESC-ETIQUETA13 ;
+               MOVE " " DESC-ETIQUETA14 ;
+               MOVE " " DESC-ETIQUETA15 ;
+               MOVE " " DESC-ETIQUETA16 ;
+               MOVE " " DESC-ETIQUETA17 ;
+               MOVE " " DESC-ETIQUETA18 ;
+               MOVE " " DESC-ETIQUETA19 ;
+               MOVE " " DESC-ETIQUETA20 ;
+               REFRESH-OBJECT WIN1 ;
+               SET-FOCUS EF-CONTRATO ;
+           End Procedure # LIMPAR
+       End Dialog
+   End Object  #PB3
+
+   Object EF-ETIQUETA1
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,284)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA1
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO1 "N" SELECIONAR-PRETO ;
+               IF= SELECAO1 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA1 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO1 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA1 $NULL $NULL ;
+               MOVE "N" SELECAO1 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA1
+
+   Object EF-ETIQUETA2
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,284)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA2
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO2 "N" SELECIONAR-PRETO ;
+               IF= SELECAO2 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA2 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO2 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA2 $NULL $NULL ;
+               MOVE "N" SELECAO2 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA2
+
+   Object EF-ETIQUETA3
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,432)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA3
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO4 "N" SELECIONAR-PRETO ;
+               IF= SELECAO4 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA3 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO3 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA3 $NULL $NULL ;
+               MOVE "N" SELECAO3 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA3
+
+   Object EF-ETIQUETA4
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,432)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA4
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO4 "N" SELECIONAR-PRETO ;
+               IF= SELECAO4 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA4 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO4 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA4 $NULL $NULL ;
+               MOVE "N" SELECAO4 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA4
+
+   Object EF-ETIQUETA5
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,580)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA5
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO5 "N" SELECIONAR-PRETO ;
+               IF= SELECAO5 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA5 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO5 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA5 $NULL $NULL ;
+               MOVE "N" SELECAO5 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA5
+
+   Object EF-ETIQUETA6
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,580)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA6
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO6 "N" SELECIONAR-PRETO ;
+               IF= SELECAO6 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA6 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO6 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA6 $NULL $NULL ;
+               MOVE "N" SELECAO6 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA6
+
+   Object EF-ETIQUETA8
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,728)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA8
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO8 "N" SELECIONAR-PRETO ;
+               IF= SELECAO8 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA8 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO8 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA8 $NULL $NULL ;
+               MOVE "N" SELECAO8 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA8
+
+   Object EF-ETIQUETA7
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,728)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA7
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO7 "N" SELECIONAR-PRETO ;
+               IF= SELECAO7 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA7 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO7 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA7 $NULL $NULL ;
+               MOVE "N" SELECAO7 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA7
+
+   Object EF-ETIQUETA9
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,876)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA9
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO9 "N" SELECIONAR-PRETO ;
+               IF= SELECAO9 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA9 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO9 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA9 $NULL $NULL ;
+               MOVE "N" SELECAO9 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA9
+
+   Object EF-ETIQUETA10
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,876)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA10
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO10 "N" SELECIONAR-PRETO ;
+               IF= SELECAO10 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA10 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO10 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA10 $NULL $NULL ;
+               MOVE "N" SELECAO10 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA10
+
+   Object EF-ETIQUETA12
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,1024)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA12
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO12 "N" SELECIONAR-PRETO ;
+               IF= SELECAO12 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA12 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO12 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA12 $NULL $NULL ;
+               MOVE "N" SELECAO12 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA12
+
+   Object EF-ETIQUETA11
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,1024)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA11
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO11 "N" SELECIONAR-PRETO ;
+               IF= SELECAO11 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA11 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO11 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA11 $NULL $NULL ;
+               MOVE "N" SELECAO11 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA11
+
+   Object EF-ETIQUETA13
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,1172)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA13
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO13 "N" SELECIONAR-PRETO ;
+               IF= SELECAO13 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA13 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO13 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA13 $NULL $NULL ;
+               MOVE "N" SELECAO13 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA13
+
+   Object EF-ETIQUETA14
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,1172)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA14
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO14 "N" SELECIONAR-PRETO ;
+               IF= SELECAO14 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA14 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO14 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA14 $NULL $NULL ;
+               MOVE "N" SELECAO14 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA14
+
+   Object EF-ETIQUETA16
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,1320)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA16
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO16 "N" SELECIONAR-PRETO ;
+               IF= SELECAO16 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA16 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO16 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA16 $NULL $NULL ;
+               MOVE "N" SELECAO16 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA16
+
+   Object EF-ETIQUETA15
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,1320)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA15
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO15 "N" SELECIONAR-PRETO ;
+               IF= SELECAO15 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA15 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO15 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA15 $NULL $NULL ;
+               MOVE "N" SELECAO15 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA15
+
+   Object EF-ETIQUETA17
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,1468)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA17
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO17 "N" SELECIONAR-PRETO ;
+               IF= SELECAO17 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA17 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO17 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA17 $NULL $NULL ;
+               MOVE "N" SELECAO17 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA17
+
+   Object EF-ETIQUETA18
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,1468)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA18
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO18 "N" SELECIONAR-PRETO ;
+               IF= SELECAO18 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA18 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO18 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA18 $NULL $NULL ;
+               MOVE "N" SELECAO18 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA18
+
+   Object EF-ETIQUETA20
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (1586,1616)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA20
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO20 "N" SELECIONAR-PRETO ;
+               IF= SELECAO20 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA20 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO20 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA20 $NULL $NULL ;
+               MOVE "N" SELECAO20 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA20
+
+   Object EF-ETIQUETA19
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (780,1616)
+       Size  (428,60)
+       Masterfield DESC-ETIQUETA19
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(9)
+       Dialog CASE(OFF)
+           Event MOUSE-EVENT
+               MOVE $EVENT-DATA $REGISTER ;
+               IF= $EVENT-DATA 1 VER ;
+           End Event # MOUSE-EVENT
+           Procedure VER
+               IF= SELECAO19 "N" SELECIONAR-PRETO ;
+               IF= SELECAO19 "S" SELECIONAR-BRANCO ;
+           End Procedure # VER
+           Procedure SELECIONAR-PRETO
+               SET-COLOR EF-ETIQUETA19 "BLACK" "BLACK" ;
+               MOVE "S" SELECAO19 ;
+           End Procedure # SELECIONAR-PRETO
+           Procedure SELECIONAR-BRANCO
+               SET-COLOR EF-ETIQUETA19 $NULL $NULL ;
+               MOVE "N" SELECAO19 ;
+           End Procedure # SELECIONAR-BRANCO
+       End Dialog
+   End Object  #EF-ETIQUETA19
+
+   Object EF-CONTRATO
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (404,1776)
+       Size  (144,60)
+       Masterfield ACP-CONTRATO
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ9
+       Dialog CASE(OFF)
+           Event GAINED-FOCUS
+               MOVE-OBJECT-ID $CONTROL DS-FOCO ;
+               MOVE "EF-CONTRATO" CAMPO-CRITICA ;
+               MOVE "- Informar o contrato" LINHA-AVISO ;
+               REFRESH-OBJECT EF4 ;
+           End Event # GAINED-FOCUS
+           Event CR
+               EXECUTE-PROCEDURE CRITICAR-CAMPO ;
+           End Event # CR
+           Event TAB
+               EXECUTE-PROCEDURE CRITICAR-CAMPO ;
+           End Event # TAB
+           Procedure CRITICAR-CAMPO
+               EXECUTE-PROCEDURE CRITICAR ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # CRITICAR-CAMPO
+       End Dialog
+   End Object  #EF-CONTRATO
+
+   Object EF-ALBUM-INI
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (404,1876)
+       Size  (144,60)
+       Masterfield ACP-ALBUM-INI
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ9
+       Dialog CASE(OFF)
+           Event GAINED-FOCUS
+               MOVE-OBJECT-ID $CONTROL DS-FOCO ;
+               MOVE "EF-ALBUM-INI" CAMPO-CRITICA ;
+               MOVE "- Informar o Album Inicial do Contrato" LINHA-AVISO ;
+               REFRESH-OBJECT EF4 ;
+           End Event # GAINED-FOCUS
+           Event CR
+               EXECUTE-PROCEDURE CRITICAR-CAMPO ;
+           End Event # CR
+           Event TAB
+               EXECUTE-PROCEDURE CRITICAR-CAMPO ;
+           End Event # TAB
+           Procedure CRITICAR-CAMPO
+               EXECUTE-PROCEDURE CRITICAR ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # CRITICAR-CAMPO
+       End Dialog
+   End Object  #EF-ALBUM-INI
+
+   Object EF-ALBUM-FIM
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-001}
+       Start (580,1876)
+       Size  (144,60)
+       Masterfield ACP-ALBUM-FIM
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ9
+       Dialog CASE(OFF)
+           Event GAINED-FOCUS
+               MOVE-OBJECT-ID $CONTROL DS-FOCO ;
+               MOVE "EF-ALBUM-FIM" CAMPO-CRITICA ;
+               MOVE "- Informar o Album Final do Contrato" LINHA-AVISO ;
+               REFRESH-OBJECT EF4 ;
+           End Event # GAINED-FOCUS
+           Event CR
+               EXECUTE-PROCEDURE CRITICAR-CAMPO ;
+           End Event # CR
+           Event TAB
+               EXECUTE-PROCEDURE CRITICAR-CAMPO ;
+           End Event # TAB
+           Procedure CRITICAR-CAMPO
+               EXECUTE-PROCEDURE CRITICAR ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # CRITICAR-CAMPO
+       End Dialog
+   End Object  #EF-ALBUM-FIM
+
+   Object PB1
+       Type PUSH-BUTTON
+       Parent WIN1
+       Stylename {font-001}
+       Start (1580,2014)
+       Size  (500,92)
+       Display "~Incluir"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               EXECUTE-PROCEDURE INCLUIR ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               EXECUTE-PROCEDURE INCLUIR ;
+           End Event # CR
+           Procedure INCLUIR
+               MOVE "REGISTRO" CAMPO-CRITICA ;
+               EXECUTE-PROCEDURE CRITICAR ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               MOVE "I" FUN-COBOL ;
+               RETC ;
+               MOVE 0 ACP-CONTRATO ;
+               MOVE 0 ACP-ALBUM-INI ;
+               MOVE 0 ACP-ALBUM-FIM ;
+               REFRESH-OBJECT WIN1 ;
+               SET-FOCUS EF-CONTRATO ;
+           End Procedure # INCLUIR
+       End Dialog
+   End Object  #PB1
+
+   Object RB1
+       Type RADIO-BUTTON
+       Parent WIN1
+       Control-Group 1
+       Stylename {font-001}
+       Start (1604,1776)
+       Display "~Contrato"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 1 ACP-OPCAO ;
+               EXECUTE-PROCEDURE FOCAR-CRITICA ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB1
+
+   Object RB2
+       Type RADIO-BUTTON
+       Parent WIN1
+       Control-Group 1
+       Stylename {font-001}
+       Start (1604,1876)
+       Display "~Estoque Disponível"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 2 ACP-OPCAO ;
+               EXECUTE-PROCEDURE FOCAR-CRITICA ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB2
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent WIN1
+       Stylename {font-003}
+       Start (2260,1648)
+       Size  (220,92)
+       Display "<<"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "A" FUN-COBOL ;
+               RETC ;
+               REFRESH-OBJECT WIN1 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               MOVE "A" FUN-COBOL ;
+               RETC ;
+               REFRESH-OBJECT WIN1 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB4
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent WIN1
+       Stylename {font-003}
+       Start (2480,1648)
+       Size  (220,92)
+       Display ">>"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "F" FUN-COBOL ;
+               RETC ;
+               REFRESH-OBJECT WIN1 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               MOVE "F" FUN-COBOL ;
+               RETC ;
+               REFRESH-OBJECT WIN1 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB5
+
+   Object CB1
+       Type CHECK-BOX
+       Parent WIN1
+       Stylename {Default-Font}
+       Start (2264,1776)
+       Size  (516,92)
+       Display "~Etiqueta Numérica"
+       Masterfield TIPO-ETIQUETA
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS DS-FOCO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FOCUS DS-FOCO ;
+           End Event # CR
+           Event BUTTON-UNSELECTED
+               SET-FOCUS DS-FOCO ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB1
+
+
+   Global Dialog CASE(OFF)
+       Event ESC
+           SKIP-TO-PREV-OBJECT 1 ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           MOVE 1 EXIT-FLAG ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event F2
+           EXECUTE-PROCEDURE SUGESTAO ;
+       End Event # F2
+       Event F3
+           EXECUTE-PROCEDURE NAVEGACAO ;
+       End Event # F3
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           MOVE "a" FUN-COBOL ;
+           RETC ;
+       *
+           MOVE "N" SELECAO1 ;
+           MOVE "N" SELECAO2 ;
+           MOVE "N" SELECAO3 ;
+           MOVE "N" SELECAO4 ;
+           MOVE "N" SELECAO5 ;
+           MOVE "N" SELECAO6 ;
+           MOVE "N" SELECAO7 ;
+           MOVE "N" SELECAO8 ;
+           MOVE "N" SELECAO9 ;
+           MOVE "N" SELECAO10 ;
+           MOVE "N" SELECAO11 ;
+           MOVE "N" SELECAO12 ;
+           MOVE "N" SELECAO13 ;
+           MOVE "N" SELECAO14 ;
+           MOVE "N" SELECAO15 ;
+           MOVE "N" SELECAO16 ;
+           MOVE "N" SELECAO17 ;
+           MOVE "N" SELECAO18 ;
+           MOVE "N" SELECAO19 ;
+           MOVE "N" SELECAO20 ;
+           MOVE 1 ACP-OPCAO ;
+           SET-BUTTON-STATE RB1 1 ;
+           SET-FOCUS EF-CONTRATO ;
+           MOVE-OBJECT-ID EF-CONTRATO DS-FOCO ;
+           EXECUTE-PROCEDURE FOCAR-CRITICA ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure FOCAR-CRITICA
+           SET-FOCUS DS-FOCO ;
+       End Procedure # FOCAR-CRITICA
+       Procedure CRITICAR
+           MOVE 0 FLAG-CRITICA ;
+           MOVE "C" FUN-COBOL ;
+           RETC ;
+       End Procedure # CRITICAR
+       Procedure SUGESTAO
+           MOVE "S" FUN-COBOL ;
+           RETC ;
+           REFRESH-OBJECT WIN1 ;
+           EXECUTE-PROCEDURE FOCAR-CRITICA ;
+       End Procedure # SUGESTAO
+       Procedure NAVEGACAO
+           MOVE "N" FUN-COBOL ;
+           RETC ;
+           REFRESH-OBJECT WIN1 ;
+           EXECUTE-PROCEDURE FOCAR-CRITICA ;
+       End Procedure # NAVEGACAO
+       Procedure EXIBIR-TUDO
+           REFRESH-OBJECT WIN1 ;
+           RETC ;
+       End Procedure # EXIBIR-TUDO
+       Procedure CHAMAR-EXPLORER
+           CALLOUT ARQ-EXPLORER 4 $NULL ;
+           RETC ;
+       End Procedure # CHAMAR-EXPLORER
+   End Dialog
+
+End Form

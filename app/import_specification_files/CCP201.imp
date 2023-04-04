@@ -1,0 +1,870 @@
+Form GS
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char ','
+       Comma-Char '.'
+       Currency-Sign '$'
+       Error-File "Erros.err"
+       Icon-File "Icones.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+   End Details
+
+   Form Data
+           QUAL-FORMATO Integer(1)
+           CODIGO Integer(6)
+           NOME Character(30)
+           VENCTO-INI Integer(8)
+           VENCTO-FIM Integer(8)
+           DATA-BASE Integer(8)
+           TAXA Decimal(2.3)
+           TIPO-LCTO Character(12)
+           VENCTO-PROG Integer(8)
+           VALOR-PROG Decimal(8.2)
+           DESCRICAO-PROG Character(30)
+           CTA-APUR-PROG Integer(5)
+           DESCR-CTA-APUR Character(30)
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           PRINTER-FLG Integer(1)
+           CARREGA-LISTA-FLG Integer(1)
+           GERAR-RELATORIO Integer(1)
+           LER-FORNEC Integer(1)
+           POPUP-FORNEC Integer(1)
+           LER-CONTA-REDUZ Integer(1)
+           POPUP-CONTAREDUZ Integer(1)
+           GRAVA-WORK-FLG Integer(1)
+           ACHAR-VENCTO Integer(1)
+           VERIFICA-ACESSO Integer(1)
+           CENTRALIZA Integer(1)
+           PROGRAMA-APAGAR Integer(1)
+   ***
+           TRATAR-EVENTO Integer(1)
+       End Group # FLAG-GROUP
+
+           LIBERA-ACESSO Integer(1)
+   *LIBERA-ACESSO 0(NAO)  1(SIM)
+           OPCAO-POP-UP Integer(1)
+           ORDEM Integer(1)
+           DESCR-ORDEM Character(20)
+           TOTAL-VENCIDO Decimal(8.2) Implicit Sign
+           TOTAL-AVENCER Decimal(8.2) Implicit Sign
+           EXIBE-CODIGO Integer(6)
+           LINDET Character(170)
+           CABECALHO Character(30)
+           MENSAGEM-ERRO Character(40)
+           ERR-MSG Character(40) Error-Field
+           ACP-SITUACAO Character(15)
+           LIBERA Character(1)
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+   ****
+           ACP-LISTVIEW Object Reference
+           ACP-EVENTO Integer(5)
+   End Data
+
+   Data Validation CODIGO
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # CODIGO
+
+   Data Validation VENCTO-INI
+       Null Disallowed
+           ErrMsgNo 3
+       Date DDMMYYYY
+           ErrMsgNo 2
+   End Validation # VENCTO-INI
+
+   Data Validation VENCTO-FIM
+       Null Disallowed
+           ErrMsgNo 3
+       Date DDMMYYYY
+           ErrMsgNo 2
+   End Validation # VENCTO-FIM
+
+   Data Validation DATA-BASE
+       Date DDMMYYYY
+           ErrMsgNo 8
+   End Validation # DATA-BASE
+
+   Data Validation TIPO-LCTO
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # TIPO-LCTO
+
+   Data Validation VENCTO-PROG
+       Null Disallowed
+           ErrMsgNo 3
+       Date DDMMYYYY
+           ErrMsgNo 2
+   End Validation # VENCTO-PROG
+
+   Data Validation VALOR-PROG
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # VALOR-PROG
+
+   Data Validation DESCRICAO-PROG
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # DESCRICAO-PROG
+
+   Data Validation CTA-APUR-PROG
+       Null Disallowed
+   End Validation # CTA-APUR-PROG
+
+   Font-Record Stylename {font-001}
+       Typeface "MS Sans Serif"
+       Pointsize 8
+       Attributes BITMAPPED PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-004}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-005}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-006}
+       Typeface "Courier New"
+       Pointsize 7
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (256,256)
+       Size  (3404,2188)
+       Display "CCP201 - Extrato de Contas Correntes"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE CLIPPED
+       Icon "dsicon"
+   End Object  #PRINCIPAL
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (544,142)
+       Display "Fornecedor"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (544,238)
+       Display "Int.Vencto                                à"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (544,334)
+       Display "Taxa"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1452,334)
+       Display "Data Base"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (552,440)
+       Display "Situação"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object GBOX2
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (16,64)
+       Size  (3372,484)
+       Display ""
+       Style COLOR("RED","MAGENTA")
+   End Object  #GBOX2
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2872,164)
+       Size  (72,76)
+       Bitmap-Name "print1"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB4
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2760,160)
+       Size  (72,76)
+       Bitmap-Name "Helpbtn"
+       Style COLOR("","GRAY")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW WIN2 ;
+               SET-FOCUS PB3 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB5
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (872,138)
+       Size  (256,56)
+       Masterfield CODIGO
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W')
+       Picture ZZZ,ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               SET-FLAG LER-FORNEC(1) ;
+               RETC ;
+               REFRESH-OBJECT EF5 ;
+               SET-FLAG VERIFICA-ACESSO(1) ;
+               RETC ;
+               IF= LIBERA-ACESSO 0 NAO-LIBERA ;
+               SET-FOCUS EF6 ;
+           End Procedure # OPCAO
+           Event F2
+               SET-FLAG POPUP-FORNEC(1) ;
+               RETC ;
+               REFRESH-OBJECT EF2 ;
+               REFRESH-OBJECT EF5 ;
+               SET-FLAG VERIFICA-ACESSO(1) ;
+               RETC ;
+               IF= LIBERA-ACESSO 0 NAO-LIBERA ;
+               SET-FOCUS EF6 ;
+           End Event # F2
+           Procedure NAO-LIBERA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               RETC ;
+               CLEAR-OBJECT PRINCIPAL ;
+               SET-FOCUS EF2 ;
+           End Procedure # NAO-LIBERA
+       End Dialog
+   End Object  #EF2
+
+   Object EF5
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (1180,138)
+       Size  (872,56)
+       Masterfield NOME
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W') READ-ONLY
+       Picture X(30)
+   End Object  #EF5
+
+   Object EF6
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (872,234)
+       Size  (340,56)
+       Masterfield VENCTO-INI
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W')
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF6
+
+   Object EF7
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (1424,234)
+       Size  (344,56)
+       Masterfield VENCTO-FIM
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W')
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF7
+
+   Object EF11
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (872,336)
+       Size  (256,60)
+       Masterfield TAXA
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') AUTOSWIPE
+       Picture Z9.999
+   End Object  #EF11
+
+   Object EF12
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (1744,334)
+       Size  (344,60)
+       Masterfield DATA-BASE
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF12
+
+   Object SB1
+       Type SELECTION-BOX
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (872,436)
+       Size  (644,524)
+       Masterfield ACP-SITUACAO
+       Picture X(15)
+       Style DROP-DOWN-LIST AUTOSCROLL
+       Style NO-AUTO-INSERT
+       Initial Text
+           "0-Ok"
+           "1-Paga"
+           "2-Estornada"
+       End Text
+   End Object  #SB1
+
+   Object PB6
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2268,152)
+       Size  (452,92)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               VALIDATE PRINCIPAL ;
+               IF= LIBERA-ACESSO 0 NAO-LIBERA ;
+               SET-FLAG GERAR-RELATORIO(1) ;
+               RETC ;
+       *SET-FOCUS LB1
+           End Procedure # OPCAO
+           Event VAL-ERROR
+               SET-FOCUS $EVENT-DATA ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+           Procedure NAO-LIBERA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               RETC ;
+               CLEAR-OBJECT PRINCIPAL ;
+               SET-FOCUS EF2 ;
+           End Procedure # NAO-LIBERA
+       End Dialog
+   End Object  #PB6
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2268,272)
+       Size  (452,92)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB2
+
+   Object PB1
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (933,2123)
+       Size  (768,132)
+       Display "Programação a Pagar"
+       Style DISABLED
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               CLEAR-OBJECT WIN3 ;
+               REFRESH-OBJECT WIN3 ;
+               SHOW-WINDOW WIN3 ;
+               SET-FOCUS EF1 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               CLEAR-OBJECT WIN3 ;
+               REFRESH-OBJECT WIN3 ;
+               SHOW-WINDOW WIN3 ;
+               SET-FOCUS EF1 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB1
+
+   Object BMP1
+       Type BITMAP
+       Parent PRINCIPAL
+       Start (80,88)
+       Bitmap-Name "Contacor"
+   End Object  #BMP1
+
+   Object PB9
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (1703,2123)
+       Size  (768,132)
+       Display "~Mudar Formato"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               IF= QUAL-FORMATO 1 MUDAR-2 ;
+               HIDE-OBJECT WIN-FORMATO2 ;
+               SHOW-WINDOW WIN-FORMATO1 ;
+               MOVE 1 QUAL-FORMATO ;
+               SET-FOCUS LB1 ;
+           End Event # BUTTON-SELECTED
+           Procedure MUDAR-2
+               MOVE 2 QUAL-FORMATO ;
+               HIDE-OBJECT WIN-FORMATO1 ;
+               SHOW-WINDOW WIN-FORMATO2 ;
+               INVOKE ACP-LISTVIEW "SetFocus" $NULL ;
+           End Procedure # MUDAR-2
+       End Dialog
+   End Object  #PB9
+
+   Object WIN2
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (636,416)
+       Size  (1816,772)
+       Display "Help"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+       End Dialog
+   End Object  #WIN2
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (20,80)
+       Display "Relaciona os saldos pendentes de cada fornecedor."
+   End Object  #{NoName}
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent WIN2
+       Start (780,692)
+       Size  (240,96)
+       Display "OK"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB3
+
+   Object MBOX1
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "OCORREU UM ERRO"
+   End Object  #MBOX1
+
+   Object WIN1
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (1024,644)
+       Size  (1004,372)
+       Display "Aguarde"
+       Style BORDER TITLEBAR
+       Icon "dsicon"
+   End Object  #WIN1
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (40,120)
+       Display "Gerando arquivo temporário:"
+   End Object  #{NoName}
+
+   Object EF3
+       Type ENTRY-FIELD
+       Parent WIN1
+       Start (332,272)
+       Size  (324,64)
+       Masterfield EXIBE-CODIGO
+       Style BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture 9(6)
+   End Object  #EF3
+
+   Object MBOX-ERROS
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Validação de Campos"
+   End Object  #MBOX-ERROS
+
+   Object MBOX6
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(YES-NO) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Atenção"
+   End Object  #MBOX6
+
+   Object MBOX2
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Atenção"
+       Message "Acesso não liberado p/ este fornecedor."
+   End Object  #MBOX2
+
+   Object WIN3
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (780,612)
+       Size  (1744,716)
+       Display "Programação"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "trap-min-icon"
+   End Object  #WIN3
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (260,136)
+       Display "Vencto"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (300,227)
+       Display "Valor"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (172,319)
+       Display "Descrição"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (92,411)
+       Display "Cta Apuração"
+   End Object  #{NoName}
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-005}
+       Start (452,128)
+       Size  (348,56)
+       Masterfield VENCTO-PROG
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF1
+
+   Object EF4
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-005}
+       Start (452,224)
+       Size  (428,56)
+       Masterfield VALOR-PROG
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W')
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF4
+
+   Object EF8
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-005}
+       Start (452,320)
+       Size  (920,56)
+       Masterfield DESCRICAO-PROG
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(30)
+   End Object  #EF8
+
+   Object EF9
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-005}
+       Start (452,416)
+       Size  (172,56)
+       Masterfield CTA-APUR-PROG
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Picture ZZZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               SET-FLAG LER-CONTA-REDUZ(1) ;
+               RETC ;
+               REFRESH-OBJECT EF10 ;
+               SET-FOCUS PB7 ;
+           End Procedure # OPCAO
+           Event F2
+               SET-FLAG POPUP-CONTAREDUZ(1) ;
+               RETC ;
+               REFRESH-OBJECT EF9 ;
+               REFRESH-OBJECT EF10 ;
+               SET-FOCUS PB7 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF9
+
+   Object EF10
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-005}
+       Start (656,416)
+       Size  (872,56)
+       Masterfield DESCR-CTA-APUR
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W')
+       Picture X(30)
+   End Object  #EF10
+
+   Object PB7
+       Type PUSH-BUTTON
+       Parent WIN3
+       Start (470,632)
+       Size  (328,96)
+       Display "~Programar"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               VALIDATE WIN3 ;
+               SET-FLAG PROGRAMA-APAGAR(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FLAG GERAR-RELATORIO(1) ;
+               RETC ;
+           End Procedure # OPCAO
+           Event VAL-ERROR
+               SET-FOCUS $EVENT-DATA ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #PB7
+
+   Object PB8
+       Type PUSH-BUTTON
+       Parent WIN3
+       Start (946,632)
+       Size  (328,96)
+       Display "~Cancelar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+       *SET-FOCUS LB1
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+       *SET-FOCUS LB1
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB8
+
+   Object WIN-FORMATO1
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (-36,500)
+       Size  (3916,1520)
+       Style BORDER CLIPPED
+   End Object  #WIN-FORMATO1
+
+   Object LB1
+       Type LIST-BOX
+       Parent WIN-FORMATO1
+       Stylename {font-005}
+       Start (40,12)
+       Size  (3384,1484)
+       Style COLOR("LIGHT RED","")
+       Dialog CASE(OFF)
+       * ITEM-ACCEPTED
+       *     BRANCH-TO-PROCEDURE OPCAO
+       *   OPCAO
+       *     GET-SELECTED-LIST-ITEM LB1 $REGISTER 0
+       *     RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER
+       *     RETC
+       End Dialog
+   End Object  #LB1
+
+   Object WIN-FORMATO2
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (-44,504)
+       Size  (3496,1516)
+       Style BORDER CLIPPED
+       Dialog CASE(OFF)
+           Event USER-EVENT
+               MOVE $EVENT-DATA ACP-EVENTO ;
+               SET-FLAG TRATAR-EVENTO(1) ;
+               RETC ;
+           End Event # USER-EVENT
+       End Dialog
+   End Object  #WIN-FORMATO2
+
+   Object USER1
+       Type USER-CONTROL
+       Parent WIN-FORMATO2
+       Start (60,8)
+       Size  (3368,1500)
+       Masterfield ACP-LISTVIEW
+       Program-Name "lvctrl"
+   End Object  #USER1
+
+
+   Global Dialog CASE(OFF)
+       * COMANDOS PARA FECHAR A JANELA PRINCIPAL
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           CREATE-WINDOW WIN-FORMATO2 ;
+           CREATE-WINDOW WIN-FORMATO1 ;
+       *
+           SET-FLAG CENTRALIZA(1) ;
+           RETC ;
+       *
+           MOVE 1 QUAL-FORMATO ;
+           HIDE-OBJECT WIN-FORMATO2 ;
+           SHOW-WINDOW WIN-FORMATO1 ;
+       *
+           SET-FOCUS EF2 ;
+           SET-MOUSE-SHAPE PB1 "pencil-ptr" ;
+           MOVE "0-Ok" ACP-SITUACAO ;
+           XIF= LIBERA "S" HABILITA-SB-SITUACAO ;
+           XIF= LIBERA "N" DESABILITA-SB-SITUACAO ;
+           REFRESH-OBJECT PRINCIPAL ;
+           RETC ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure HABILITA-SB-SITUACAO
+           ENABLE-OBJECT SB1 ;
+       End Procedure # HABILITA-SB-SITUACAO
+       Procedure DESABILITA-SB-SITUACAO
+           DISABLE-OBJECT SB1 ;
+       End Procedure # DESABILITA-SB-SITUACAO
+       Procedure INSERE-LIST
+           REFRESH-OBJECT LB1 ;
+           INCREMENT $REGISTER ;
+           INSERT-LIST-ITEM LB1 LINDET $REGISTER ;
+           SET-TOP-LIST-ITEM LB1 $REGISTER ;
+           RETC ;
+       End Procedure # INSERE-LIST
+       Procedure EXIBE-ERRO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # EXIBE-ERRO
+       Procedure TELA-AGUARDA
+           SHOW-WINDOW WIN1 ;
+           RETC ;
+       End Procedure # TELA-AGUARDA
+       Procedure TELA-AGUARDA1
+           REFRESH-OBJECT EF3 ;
+           RETC ;
+       End Procedure # TELA-AGUARDA1
+       Procedure TELA-AGUARDA2
+           UNSHOW-WINDOW WIN1 PRINCIPAL ;
+           RETC ;
+       End Procedure # TELA-AGUARDA2
+       Procedure ATUALIZA-LISTA
+           UPDATE-LIST-ITEM LB1 LINDET $REGISTER ;
+           SET-LIST-ITEM-STATE LB1 1 $REGISTER ;
+           RETC ;
+       End Procedure # ATUALIZA-LISTA
+       Procedure LIMPAR-ENTR-DADOS
+       *CLEAR-OBJECT D-NOME
+       *CLEAR-OBJECT D-DESCRICAO
+       *CLEAR-OBJECT D-SALARIO1
+       *CLEAR-OBJECT D-SALARIO2
+       *REFRESH-OBJECT D-NOME
+       *REFRESH-OBJECT D-DESCRICAO
+       *REFRESH-OBJECT D-SALARIO1
+       *REFRESH-OBJECT D-SALARIO2
+       *ENTER MESMA FUNCAO DO TAB
+       End Procedure # LIMPAR-ENTR-DADOS
+       Event CR
+           SKIP-TO-NEXT-OBJECT 1 ;
+       End Event # CR
+       Procedure DUPLICATE-EVENT-ESC
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-ESC
+       Procedure DUPLICATE-EVENT-CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-CLOSED-WINDOW
+       Procedure REFRESH-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           RETC ;
+       End Procedure # REFRESH-DATA
+       Procedure CLEAR-LIST-BOX
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX
+   End Dialog
+
+End Form

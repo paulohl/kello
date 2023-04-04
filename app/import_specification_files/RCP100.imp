@@ -1,0 +1,2886 @@
+Form GS
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char ','
+       Comma-Char '.'
+       Currency-Sign '$'
+       Error-File "Erros.err"
+       Icon-File "Icones.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+       Stylename {Default-Font}
+   End Details
+
+   Form Data
+           DATA-MOVTO Integer(8)
+           TAXA Decimal(2.2)
+           NR-ALBUM Integer(4)
+           NR-FORM Integer(4)
+           DATA-VENDA Integer(8)
+           PARCELA Integer(2)
+           QT-PARCELA Integer(2)
+           CARTAO Integer(2)
+           DESC-CARTAO Character(30)
+           TAXA-ADMINIST-CREDITO Decimal(3.2)
+           TAXA-ADMINIST-PARCELA Decimal(3.2)
+           TIPO Character(1)
+           VISITA Integer(1)
+           COD-COMISS Integer(3)
+           QT-ENCADERN Integer(1)
+           QT-ESTOJO Integer(1)
+           QT-FOTO Integer(3)
+           QT-FOLHA Integer(3)
+           QT-FITA Integer(3)
+           QT-AVULSA Integer(3)
+           QT-POSTER Integer(2)
+           QT-ABERTURA Integer(1)
+           QT-COBERTURA Integer(2)
+           QT-PFITA Integer(1)
+           QT-FOTO-COMISSAO Integer(3)
+           QT-COBERTURA-DVD Integer(5)
+           QT-DVD Integer(3)
+           QT-PORTA-DVD Integer(2)
+           QT-FOTO-CD Integer(2)
+           QT-MOLDURA Integer(2)
+           QT-BOOK Integer(2)
+           QT-PORTA-RETRATO Integer(2)
+           QT-PENDRIVE Integer(2)
+           QT-VIDEO-HD Integer(2)
+           QT-REVISTA Integer(2)
+           QT-CALENDARIO Integer(2)
+           VENDEDOR Integer(6)
+           NOME-VENDEDOR Character(30)
+           PM Decimal(3.2)
+           TOTAL-REC Decimal(8.2)
+           TOTAL-DESCCOM Decimal(8.2)
+           TOTAL-DEF-REC Decimal(8.2)
+           NOME Character(30)
+           CIDADE Character(20)
+   * cheques
+           NR-CHEQUE Integer(6)
+           VENCTO-CH Integer(8)
+           VALOR-CH Decimal(8.2)
+           BANCO-CH Integer(3)
+           TIPO-CH Character(18)
+   * controla qtde da montagem c/ o recibo
+           ESTOJO-MTG Integer(2)
+           ENCADERN-MTG Integer(2)
+           FOLHA-MTG Integer(3)
+           FOTO-MTG Integer(3)
+           FITA-MTG Integer(3)
+           DVD-MTG Integer(3)
+           PFITA-MTG Integer(1)
+           POSTER-MTG Integer(2)
+           PORTA-DVD-MTG Integer(2)
+           FOTO-CD-MTG Integer(2)
+           MOLDURA-MTG Integer(2)
+           BOOK-MTG Integer(2)
+           PORTA-RETRATO-MTG Integer(2)
+           PENDRIVE-MTG Integer(2)
+           VIDEO-HD-MTG Integer(2)
+           REVISTA-MTG Integer(2)
+           CALENDARIO-MTG Integer(2)
+   *DIF-ESTOJO                       S      2.0
+   *DIF-ENCADERN                     S      2.0
+   *DIF-FOLHA                        S      3.0
+   *DIF-FOTO                         S      3.0
+   *DIF-FITA                         S      1.0
+   *DIF-DVD                          S      1.0
+   *DIF-PFITA                        S      1.0
+   *DIF-POSTER                       S      2.0
+   *DIF-PORTA-DVD                    S      2.0
+   *DIF-FOTO-CD                      S      2.0
+   *DIF-MOLDURA                      S      2.0
+   *DIF-BOOK                         S      2.0
+   *DIF-PORTA-RETRATO                S      2.0
+   *DIF-PENDRIVE                     S      2.0
+   *DIF-VIDEO-HD                     S      2.0
+   *DIF-REVISTA                      S      2.0
+   *DIF-CALENDARIO                   S      2.0
+           TOT-VENDA Decimal(8.2)
+           TOT-VENDA-DEF Decimal(8.2)
+           TOT-PM Decimal(4.2)
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           CENTRALIZA Integer(1)
+           SAVE-FLG Integer(1)
+           CLR-FLG Integer(1)
+           EXCLUI-FLG Integer(1)
+           EXCLUI-CHEQUE Integer(1)
+           LER-BANCO Integer(1)
+           VERIFICA-ALBUM Integer(1)
+           LOAD-FLG Integer(1)
+           INCLUI-CHEQUE Integer(1)
+           ADICIONA-CHEQUE Integer(1)
+           CARREGA-LIST-BOX Integer(1)
+           CARREGA-PARCELA Integer(1)
+           CARREGA-ULT Integer(1)
+           CARREGA-COMISSAO Integer(1)
+           PRINTER-FLG Integer(1)
+           CONFERE-RECIBO Integer(1)
+           LE-VENDEDOR Integer(1)
+           LE-CARTAO Integer(1)
+           LE-PORTADOR Integer(1)
+           POPUP-CARTAO Integer(1)
+           POPUP-PORTADOR Integer(1)
+           CHAMAR-POP-UP Integer(1)
+           ITEM-SELECIONADO Integer(1)
+           EXCLUIR-PARCELAS Integer(1)
+           IMPRIMIR-PARCELAS Integer(1)
+           VERIFICA-CONTRATO Integer(1)
+           VERIFICA-PERMISSAO Integer(1)
+           TRATAR-EVENTO Integer(1)
+       End Group # FLAG-GROUP
+
+           LIBERADO Integer(1)
+           TIPO-GRAVACAO Integer(1)
+           OPCAO-POP-UP Integer(1)
+           LINDET Character(110)
+           CONT Integer(3)
+           CONT1 Integer(3)
+           MENSAGEM-ERRO Character(40)
+           ERR-MSG Character(40) Error-Field
+           ERRO Integer(1)
+           ALTERA Integer(1)
+           POSICAO Integer(4)
+           PORTADOR Integer(4)
+           DESC-PORTADOR Character(30)
+           FLAG-CRITICA Integer(1)
+           POSTER-ABERTURA Integer(1)
+           POSTER-XEROX Integer(1)
+           EXTRA-FOTOS1 Integer(3)
+           EXTRA-FOTOS2 Integer(3)
+           EXTRA-ENVIADO1 Character(1)
+           EXTRA-ENVIADO2 Character(1)
+           TOTAL-COMISSAO Decimal(6.2)
+           LINHA-COMISSAO Character(50)
+   ***
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+           PEDIDO-EXTRA Integer(1)
+   **
+           PED-EXT-BOOK Integer(1)
+           PED-EXT-PORTA-RET Integer(1)
+           PED-EXT-PENDRIVE Integer(1)
+           PED-EXT-VIDEO-HD Integer(1)
+           PED-EXT-REVISTA Integer(1)
+           PED-EXT-CALENDARIO Integer(1)
+           MEMBRO-COMISSAO Integer(1)
+   ***
+   *VLUNI-ESCALA-ENCADERN            9      6.4
+   *VLUNI-ESCALA-ESTOJO              9      6.4
+   *VLUNI-ESCALA-FOLHA               9      6.4
+   *VLUNI-ESCALA-FOTO                9      6.4
+   *VLUNI-ESCALA-FITA                9      6.4
+   *VLUNI-ESCALA-PTFITA              9      6.4
+   *VLUNI-ESCALA-POSTER              9      6.4
+   *VLUNI-ESCALA-DVD                 9      6.4
+   *VLUNI-ESCALA-PTDVD               9      6.4
+   *VLUNI-ESCALA-FTCD                9      6.4
+   *VLUNI-ESCALA-MOLDURA             9      6.4
+   *VLUNI-ESCALA-BOOK                9      6.4
+   *VLUNI-ESCALA-PTRETRATO           9      6.4
+   *VLUNI-ESCALA-PENDRIVE            9      6.4
+   *VLUNI-ESCALA-VIDEOHD             9      6.4
+   *VLUNI-ESCALA-REVISTA             9      6.4
+   *VLUNI-ESCALA-CALENDARIO          9      6.4
+   ***
+   *VLTOT-ESCALA-ENCADERN            9      6.4
+   *VLTOT-ESCALA-ESTOJO              9      6.4
+   *VLTOT-ESCALA-FOLHA               9      6.4
+   *VLTOT-ESCALA-FOTO                9      6.4
+   *VLTOT-ESCALA-FITA                9      6.4
+   *VLTOT-ESCALA-PTFITA              9      6.4
+   *VLTOT-ESCALA-POSTER              9      6.4
+   *VLTOT-ESCALA-DVD                9      6.4
+   *VLTOT-ESCALA-PTDVD               9      6.4
+   *VLTOT-ESCALA-FTCD                9      6.4
+   *VLTOT-ESCALA-MOLDURA             9      6.4
+   *VLTOT-ESCALA-BOOK                9      6.4
+   *VLTOT-ESCALA-PTRETRATO           9      6.4
+   *VLTOT-ESCALA-PENDRIVE            9      6.4
+   *VLTOT-ESCALA-VIDEOHD             9      6.4
+   *VLTOT-ESCALA-REVISTA             9      6.4
+   *VLTOT-ESCALA-CALENDARIO          9      6.4
+   ***
+           TOTAL-ESCALA-BRUTO Decimal(6.2)
+           TOTAL-ESCALA-LIQUIDO Decimal(6.2)
+           TOTAL-DESCONTO Decimal(6.2)
+           TOTAL-JUROS Decimal(6.2)
+   ***
+           ACP-LISTVIEW Object Reference
+           ACP-EVENTO Integer(5)
+   **
+           ACP-CARENCIA Integer(4)
+           ACP-TAXA-JUROS Decimal(3.2)
+           ACP-TAXA-DESCONTO Decimal(3.2)
+   End Data
+
+   Data Validation DATA-MOVTO
+       Null Disallowed
+           ErrMsgNo 3
+       Date DDMMYYYY
+           ErrMsgNo 2
+   End Validation # DATA-MOVTO
+
+   Data Validation DATA-VENDA
+       Null Disallowed
+           ErrMsgNo 3
+       Date DDMMYYYY
+           ErrMsgNo 2
+   End Validation # DATA-VENDA
+
+   Data Validation CARTAO
+       Null Disallowed
+   End Validation # CARTAO
+
+   Data Validation COD-COMISS
+       Null Disallowed
+   End Validation # COD-COMISS
+
+   Data Validation VENCTO-CH
+       Date DDMMYYYY
+           ErrMsgNo 2
+   End Validation # VENCTO-CH
+
+   Data Validation PORTADOR
+       Null Disallowed
+   End Validation # PORTADOR
+
+   Font-Record Stylename {font-001}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "MS Sans Serif"
+       Pointsize 8
+       Attributes BITMAPPED PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-004}
+       Typeface "MS Sans Serif"
+       Pointsize 8
+       Attributes BITMAPPED PROPORTIONAL BOLD
+   End-Record
+
+   Font-Record Stylename {font-005}
+       Typeface "Courier New"
+       Pointsize 9
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-006}
+       Typeface "Verdana"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL BOLD ITALIC
+   End-Record
+
+   Font-Record Stylename {font-007}
+       Typeface "Arial"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-008}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {Default-Font}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Font-Record Stylename {font-009}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-010}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-011}
+       Typeface "Courier New"
+       Pointsize 12
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (-4,-8)
+       Size  (3160,2348)
+       Display "RCP100 - Movimento de Recibos de Vendas"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE MAXIMIZE CLIPPED
+       Icon "dsicon"
+   End Object  #PRINCIPAL
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,152)
+       Display "Data Movto"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,247)
+       Display "Nr.Álbum"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2252,342)
+       Display "Qt.Folhas"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,1050)
+       Display "Vendedor"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (92,1552)
+       Stylename {font-002}
+       Display "VENCTO             VALOR  NR.DOCTO      BANCO  PARC/QTDE  TIPO\
+               DATA-BAIXA   CARTÃO"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,1052)
+       Display "Data Venda"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,248)
+       Display "Cód.Comis."
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (892,152)
+       Display "Taxa"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (892,248)
+       Display "Visita 1/2"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,340)
+       Display "Qt.Fotos"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,532)
+       Display "Qt.Fitas"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,340)
+       Display "Qt.Encad."
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,628)
+       Display "Qt.Avulsas"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (892,628)
+       Display "Fotos Comis."
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2252,630)
+       Display "Cobertura DVD"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (892,532)
+       Display "Qt. DVD"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,1189)
+       Display "Nome"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,1189)
+       Display "Cidade"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (228,1368)
+       Display "VENCTO              VALOR    NR.DOCTO    BANCO  PARC/QTDE TIPO\
+"
+       Stylename {font-002}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (52,2156)
+       Stylename {font-001}
+       Display "Para excluir algum cheque, tecle \"Delete\" sobre a opção dese\
+jada na \"list-box\"."
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (892,340)
+       Display "Estojo"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (892,442)
+       Display "Poster"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,628)
+       Display "Cobertura VHS"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,532)
+       Display "Porta Fita"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2464,2186)
+       Display "TOTAL"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2252,534)
+       Display "Porta DVD"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,436)
+       Display "Foto CD"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2252,432)
+       Display "Moldura"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,144)
+       Display "Portador"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (100,722)
+       Display "Extra Fotos"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1592,722)
+       Display "Fotos"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (2464,2282)
+       Display "DESC.COM"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object GBOX1
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (48,72)
+       Size  (3068,1080)
+       Display "Dados do Recibo"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX1
+
+   Object D-MOVTO
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,148)
+       Size  (336,56)
+       Masterfield DATA-MOVTO
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ/ZZ/ZZZZ
+       Dialog CASE(OFF)
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # TAB
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               VALIDATE D-MOVTO ;
+               MOVE 0 ALTERA ;
+               ENABLE-OBJECT PRINCIPAL ;
+               SET-FLAG VERIFICA-PERMISSAO(1) ;
+               RETC ;
+               XIF= LIBERADO 1 DESABILITA-GRAVAR ;
+               SET-FOCUS EF9 ;
+           End Procedure # OPCAO-SELECIONADA
+           Event VAL-ERROR
+               DISABLE-OBJECT PRINCIPAL ;
+               ENABLE-OBJECT D-MOVTO ;
+               SET-FOCUS D-MOVTO ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #D-MOVTO
+
+   Object EF9
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1280,148)
+       Size  (208,56)
+       Masterfield TAXA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ.ZZ
+   End Object  #EF9
+
+   Object EF71
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (1984,148)
+       Size  (144,56)
+       Masterfield PORTADOR
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG LE-PORTADOR(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               REFRESH-OBJECT EF71 ;
+               REFRESH-OBJECT EF72 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Event F2
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG POPUP-PORTADOR(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               REFRESH-OBJECT EF71 ;
+               REFRESH-OBJECT EF72 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Procedure FOCAR-CRITICA
+               SET-FOCUS EF71 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #EF71
+
+   Object D-ALB
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,243)
+       Size  (176,56)
+       Masterfield NR-ALBUM
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZZ
+       Dialog CASE(OFF)
+           Event CR
+               EXECUTE-PROCEDURE VER ;
+           End Event # CR
+           Event TAB
+               EXECUTE-PROCEDURE VER ;
+           End Event # TAB
+           Procedure VER
+               SET-FLAG VERIFICA-CONTRATO(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # VER
+           Procedure FOCAR-CRITICA
+               SET-FOCUS D-ALB ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #D-ALB
+
+   Object EF19
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (612,243)
+       Size  (176,56)
+       Masterfield NR-FORM
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               SET-FLAG VERIFICA-ALBUM(1) ;
+               RETC ;
+               DISABLE-OBJECT PB1 ;
+               DISABLE-OBJECT PB3 ;
+               DISABLE-OBJECT PB4 ;
+               REFRESH-OBJECT PRINCIPAL ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               REFRESH-OBJECT PRINCIPAL ;
+               ENABLE-OBJECT PB1 ;
+               ENABLE-OBJECT PB3 ;
+               ENABLE-OBJECT PB4 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+       *    SET-FOCUS EF7
+           End Procedure # OPCAO
+           Procedure FOCAR-CRITICA
+               SET-FOCUS EF19 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #EF19
+
+   Object EF3
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1280,244)
+       Size  (92,56)
+       Masterfield VISITA
+       Style AUTOSCROLL BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Style AUTOSWIPE
+       Picture Z
+   End Object  #EF3
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,244)
+       Size  (116,56)
+       Masterfield COD-COMISS
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('9')
+       Style AUTOSWIPE
+       Picture ZZZ
+       Dialog CASE(OFF)
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # TAB
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               VALIDATE EF1 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO-SELECIONADA
+           Event VAL-ERROR
+               SET-FOCUS EF1 ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS "Codigo Comissao Nao Informado" $\
+EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #EF1
+
+   Object EF7
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,336)
+       Size  (92,56)
+       Masterfield QT-ENCADERN
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture Z
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF> QT-ENCADERN ENCADERN-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF7 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF7
+
+   Object EF20
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1280,338)
+       Size  (92,56)
+       Masterfield QT-ESTOJO
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture Z
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF> QT-ESTOJO ESTOJO-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF20 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF20
+
+   Object EF5
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,336)
+       Size  (144,56)
+       Masterfield QT-FOTO
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF> QT-FOTO FOTO-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF5 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF5
+
+   Object EF4
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2640,340)
+       Size  (144,56)
+       Masterfield QT-FOLHA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF> QT-FOLHA FOLHA-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF4 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF4
+
+   Object EF60
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,432)
+       Size  (88,56)
+       Masterfield QT-FOTO-CD
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('9')
+       Picture ZZ
+   End Object  #EF60
+
+   Object EF21
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1280,438)
+       Size  (116,56)
+       Masterfield QT-POSTER
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+       *     IF> QT-POSTER POSTER-MTG DIFERENCA
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF21 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF21
+
+   Object EF61
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2640,436)
+       Size  (88,56)
+       Masterfield QT-MOLDURA
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('9')
+       Picture ZZ
+   End Object  #EF61
+
+   Object EF6
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,528)
+       Size  (92,56)
+       Masterfield QT-FITA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W')
+       Picture Z
+       Dialog CASE(OFF)
+       * CR
+       *     BRANCH-TO-PROCEDURE OPCAO
+       * TAB
+       *     BRANCH-TO-PROCEDURE OPCAO
+       *   OPCAO
+       *     MOVE 0 QT-COBERTURA
+       *     REFRESH-OBJECT EF23
+       *     IF> QT-FITA 0 MOVER-1-COBERTURA-FITA
+       *     SKIP-TO-NEXT-OBJECT 1
+       *   DIFERENCA
+       *     INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER
+       *     SET-FOCUS EF6
+       *   MOVER-1-COBERTURA-FITA
+       *     MOVE 1 QT-COBERTURA
+       *     REFRESH-OBJECT EF23
+       *     SKIP-TO-NEXT-OBJECT 1
+       End Dialog
+   End Object  #EF6
+
+   Object EF11
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1280,528)
+       Size  (144,56)
+       Masterfield QT-DVD
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Picture ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               MOVE 0 QT-DVD ;
+               REFRESH-OBJECT EF10 ;
+               IF> QT-DVD 0 MOVER-1-COBERTURA-DVD ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+           Event TAB
+               MOVE 0 QT-DVD ;
+               REFRESH-OBJECT EF10 ;
+               IF> QT-DVD 0 MOVER-1-COBERTURA-DVD ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # TAB
+           Procedure MOVER-1-COBERTURA-DVD
+               MOVE 1 QT-COBERTURA-DVD ;
+               REFRESH-OBJECT EF10 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # MOVER-1-COBERTURA-DVD
+       End Dialog
+   End Object  #EF11
+
+   Object EF24
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,528)
+       Size  (92,56)
+       Masterfield QT-PFITA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture Z
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+       *    IF> QT-PFITA PFITA-MTG DIFERENCA
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF24 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF24
+
+   Object EF59
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2640,532)
+       Size  (88,56)
+       Masterfield QT-PORTA-DVD
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('9')
+       Picture ZZ
+   End Object  #EF59
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,624)
+       Size  (144,56)
+       Masterfield QT-AVULSA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZ
+   End Object  #EF2
+
+   Object EF8
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1280,624)
+       Size  (156,56)
+       Masterfield QT-FOTO-COMISSAO
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('W')
+       Style AUTOSWIPE
+       Picture ZZZ
+   End Object  #EF8
+
+   Object EF23
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,624)
+       Size  (112,56)
+       Masterfield QT-COBERTURA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ
+   End Object  #EF23
+
+   Object EF10
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2640,628)
+       Size  (232,56)
+       Masterfield QT-COBERTURA-DVD
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ,ZZZ
+   End Object  #EF10
+
+   Object EF22
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,722)
+       Size  (116,56)
+       Masterfield EXTRA-FOTOS1
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z')
+       Picture ZZ9
+   End Object  #EF22
+
+   Object EF73
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,722)
+       Size  (116,56)
+       Masterfield EXTRA-FOTOS2
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z')
+       Picture ZZ9
+   End Object  #EF73
+
+   Object PB14
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (100,956)
+       Size  (2964,96)
+       Display "Produtos Adicionais"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW WIN4 ;
+               SET-FOCUS EF75 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SHOW-WINDOW WIN4 ;
+               SET-FOCUS EF75 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB14
+
+   Object EF48
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,1048)
+       Size  (252,56)
+       Masterfield VENDEDOR
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZ,ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               SET-FLAG LE-VENDEDOR(1) ;
+               RETC ;
+               REFRESH-OBJECT EF52 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Procedure # OPCAO
+           Event F2
+               SET-FLAG CHAMAR-POP-UP(1) ;
+               RETC ;
+               REFRESH-OBJECT EF48 ;
+               REFRESH-OBJECT EF52 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF48
+
+   Object EF52
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (688,1048)
+       Size  (868,56)
+       Masterfield NOME-VENDEDOR
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('W') READ-ONLY
+       Picture X(30)
+   End Object  #EF52
+
+   Object EF15
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,1048)
+       Size  (340,56)
+       Masterfield DATA-VENDA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF15
+
+   Object EF12
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (404,1185)
+       Size  (908,56)
+       Masterfield NOME
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') AUTOSWIPE
+       Picture X(30)
+   End Object  #EF12
+
+   Object EF13
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,1185)
+       Size  (684,56)
+       Masterfield CIDADE
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') AUTOSWIPE
+       Picture X(20)
+   End Object  #EF13
+
+   Object EF14
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (116,1444)
+       Size  (348,52)
+       Masterfield VENCTO-CH
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ/ZZ/ZZZZ
+       Dialog CASE(OFF)
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # TAB
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               VALIDATE EF1 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO-SELECIONADA
+           Event VAL-ERROR
+               SET-FOCUS EF1 ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS "Codigo Comissao Nao Informado" $\
+EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #EF14
+
+   Object EF16
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (526,1444)
+       Size  (428,52)
+       Masterfield VALOR-CH
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF16
+
+   Object EF17
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1016,1444)
+       Size  (268,52)
+       Masterfield NR-CHEQUE
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZ,ZZZ
+   End Object  #EF17
+
+   Object EF18
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1346,1444)
+       Size  (148,52)
+       Masterfield BANCO-CH
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W') AUTOSWIPE
+       Picture ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG LER-BANCO(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure FOCAR-CRITICA
+               SET-FOCUS EF18 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #EF18
+
+   Object EF55
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1556,1444)
+       Size  (88,56)
+       Masterfield PARCELA
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('9')
+       Picture Z9
+   End Object  #EF55
+
+   Object EF56
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1706,1440)
+       Size  (88,56)
+       Masterfield QT-PARCELA
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('9') AUTOSWIPE
+       Picture Z9
+   End Object  #EF56
+
+   Object SB1
+       Type SELECTION-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1856,1440)
+       Size  (696,668)
+       Masterfield TIPO-CH
+       Picture X(18)
+       Style DROP-DOWN-LIST AUTOSCROLL
+       Style NO-AUTO-INSERT
+       Initial Text
+           "1-Cheque"
+           "2-Moeda"
+           "3-Antecip."
+           "4-Boleto/Prom"
+           "5-Deb.Autom."
+           "6-Cartao Cred."
+           "9-Desc.Comissão"
+       End Text
+       Dialog CASE(OFF)
+           Event CR
+               EXECUTE-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               EXECUTE-PROCEDURE OPCAO ;
+           End Event # TAB
+           Event ITEM-ACCEPTED
+               EXECUTE-PROCEDURE OPCAO ;
+           End Event # ITEM-ACCEPTED
+           Procedure OPCAO
+               MOVE TIPO-CH TIPO ;
+               IF= TIPO "6" CHAMAR-CARTAO ;
+               MOVE 0 CARTAO ;
+               MOVE 0 TAXA-ADMINIST-CREDITO ;
+               MOVE " " DESC-CARTAO ;
+               REFRESH-OBJECT EF57 ;
+               REFRESH-OBJECT EF58 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure CHAMAR-CARTAO
+               SHOW-WINDOW WIN2 ;
+               DISABLE-OBJECT PB5 ;
+               SET-FOCUS EF57 ;
+           End Procedure # CHAMAR-CARTAO
+       End Dialog
+   End Object  #SB1
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2604,1336)
+       Size  (484,88)
+       Display "~Inclui Cheque"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               ENABLE-OBJECT EF17 ;
+               ENABLE-OBJECT EF18 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG LER-BANCO(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               MOVE TIPO-CH TIPO ;
+               IF= TIPO "6" VER-CARTAO ;
+               MOVE 0 CARTAO ;
+               MOVE 0 TAXA-ADMINIST-CREDITO ;
+               MOVE " " DESC-CARTAO ;
+               REFRESH-OBJECT EF57 ;
+               REFRESH-OBJECT EF58 ;
+               VALIDATE EF14 ;
+               SET-FLAG INCLUI-CHEQUE(1) ;
+               RETC ;
+               EXECUTE-PROCEDURE CLEAR-CHEQUE ;
+               SET-FOCUS EF14 ;
+           End Procedure # OPCAO
+           Event CTPD
+               VALIDATE EF14 ;
+               SET-FLAG ADICIONA-CHEQUE(1) ;
+               RETC ;
+               REFRESH-OBJECT PRINCIPAL ;
+               SET-FOCUS PB4 ;
+           End Event # CTPD
+           Event VAL-ERROR
+               SET-FOCUS $EVENT-DATA ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+           Procedure VER-CARTAO
+               IF= CARTAO 0 CHAMAR-CARTAO ;
+               VALIDATE EF14 ;
+               SET-FLAG INCLUI-CHEQUE(1) ;
+               RETC ;
+               EXECUTE-PROCEDURE CLEAR-CHEQUE ;
+               SET-FOCUS EF14 ;
+           End Procedure # VER-CARTAO
+           Procedure CHAMAR-CARTAO
+               SHOW-WINDOW WIN2 ;
+               DISABLE-OBJECT PB5 ;
+               SET-FOCUS EF57 ;
+           End Procedure # CHAMAR-CARTAO
+           Procedure FOCAR-CRITICA
+               SET-FOCUS EF18 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #PB4
+
+   Object LB1
+       Type LIST-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (52,1556)
+       Size  (3048,552)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-SELECTED
+               MOVE $EVENT-DATA POSICAO ;
+           End Event # ITEM-SELECTED
+           Event ITEM-ACCEPTED
+               MOVE 1 ALTERA ;
+               GET-SELECTED-LIST-ITEM LB1 CONT1 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET CONT1 ;
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # ITEM-ACCEPTED
+           Procedure OPCAO
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG CARREGA-PARCELA(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               DISABLE-OBJECT EF17 ;
+               DISABLE-OBJECT EF18 ;
+               REFRESH-OBJECT PRINCIPAL ;
+               SET-FOCUS EF14 ;
+           End Procedure # OPCAO
+           Event DEL
+               MOVE 0 ALTERA ;
+               IF= LIBERADO 1 NADA ;
+               GET-SELECTED-LIST-ITEM LB1 CONT1 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET CONT1 ;
+               MOVE 0 FLAG-CRITICA ;
+               SET-FLAG EXCLUI-CHEQUE(1) ;
+               RETC ;
+               IF= FLAG-CRITICA 1 FOCAR-CRITICA ;
+               DELETE-LIST-ITEM LB1 CONT1 1 ;
+           End Event # DEL
+           Procedure NADA
+               RETC ;
+           End Procedure # NADA
+           Procedure FOCAR-CRITICA
+               SET-FOCUS LB1 ;
+           End Procedure # FOCAR-CRITICA
+       End Dialog
+   End Object  #LB1
+
+   Object PB1
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (52,2268)
+       Size  (364,96)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               VALIDATE PRINCIPAL ;
+               SET-FLAG CONFERE-RECIBO(1) ;
+               RETC ;
+               SET-FLAG SAVE-FLG(1) ;
+               RETC ;
+               SET-FOCUS EF19 ;
+           End Procedure # OPCAO-SELECIONADA
+           Event VAL-ERROR
+               SET-FOCUS $EVENT-DATA ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #PB1
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (444,2268)
+       Size  (364,96)
+       Display "~Limpar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               MOVE 0 ALTERA ;
+               SET-FLAG CLR-FLG(1) ;
+       *     ENABLE-OBJECT PRINCIPAL
+               RETC ;
+               SET-FOCUS D-ALB ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB2
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (836,2268)
+       Size  (364,96)
+       Display "~Estornar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               INVOKE-MESSAGE-BOX MBOX6 $NULL $REGISTER ;
+               IF= $REGISTER 6 EXCLUI-REGISTRO ;
+           End Procedure # OPCAO
+           Procedure EXCLUI-REGISTRO
+               SET-FLAG EXCLUI-FLG(1) ;
+               ENABLE-OBJECT PRINCIPAL ;
+               RETC ;
+               SET-FOCUS D-ALB ;
+           End Procedure # EXCLUI-REGISTRO
+       End Dialog
+   End Object  #PB3
+
+   Object PB11
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (1228,2268)
+       Size  (364,96)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB11
+
+   Object PB6
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2972,140)
+       Size  (80,76)
+       Bitmap-Name "Helpbtn"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW AJUDA ;
+               SET-FOCUS AJUDA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SHOW-WINDOW AJUDA ;
+               SET-FOCUS AJUDA ;
+           End Event # CR
+       End Dialog
+   End Object  #PB6
+
+   Object GBOX3
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (48,1288)
+       Size  (3068,264)
+       Display "Dados do Cheque"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX3
+
+   Object PB9
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-006}
+       Start (1620,2268)
+       Size  (364,96)
+       Display "~Confere"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO1 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO1 ;
+           End Event # CR
+           Procedure OPCAO1
+               SET-FLAG CONFERE-RECIBO(1) ;
+               RETC ;
+               REFRESH-OBJECT WIN1 ;
+               SHOW-WINDOW WIN1 ;
+               SET-FOCUS PB7 ;
+           End Procedure # OPCAO1
+       End Dialog
+   End Object  #PB9
+
+   Object EF54
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-008}
+       Start (2724,2184)
+       Size  (392,64)
+       Masterfield TOTAL-REC
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture ZZ,ZZZ,ZZ9.99
+   End Object  #EF54
+
+   Object PB10
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2604,1444)
+       Size  (484,88)
+       Display "Excluir ~Parcelas"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               MOVE 0 ALTERA ;
+               SET-FLAG EXCLUIR-PARCELAS(1) ;
+               RETC ;
+               SET-FOCUS EF14 ;
+           End Procedure # OPCAO-SELECIONADA
+       End Dialog
+   End Object  #PB10
+
+   Object GBOX2
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (48,1124)
+       Size  (3068,428)
+       Display ""
+   End Object  #GBOX2
+
+   Object EF72
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (2160,148)
+       Size  (760,56)
+       Masterfield DESC-PORTADOR
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('X') READ-ONLY
+       Picture X(30)
+   End Object  #EF72
+
+   Object CB1
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1592,442)
+       Display "~Abertura"
+       Masterfield POSTER-ABERTURA
+       Style FIT-TEXT
+   End Object  #CB1
+
+   Object CB2
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (1984,442)
+       Display "~Xerox"
+       Masterfield POSTER-XEROX
+       Style FIT-TEXT
+   End Object  #CB2
+
+   Object RB1
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-001}
+       Start (892,716)
+       Display "~Enviado"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "S" EXTRA-ENVIADO1 ;
+               SET-FOCUS EF73 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB1
+
+   Object RB2
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-001}
+       Start (892,837)
+       Display "~A Enviar"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "N" EXTRA-ENVIADO1 ;
+               SET-FOCUS EF73 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB2
+
+   Object RB3
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 2
+       Stylename {font-001}
+       Start (2252,734)
+       Display "Enviado"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "S" EXTRA-ENVIADO2 ;
+               SET-FOCUS EF73 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB3
+
+   Object RB4
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 2
+       Stylename {font-001}
+       Start (2252,837)
+       Display "A Enviar"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE "N" EXTRA-ENVIADO2 ;
+               SET-FOCUS EF73 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB4
+
+   Object PB12
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2032,1336)
+       Display "~Extrato Parcelas"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               CLEAR-OBJECT LB2 ;
+               SHOW-WINDOW WIN3 ;
+               SET-FLAG CARREGA-COMISSAO(0) ;
+               RETC ;
+               REFRESH-OBJECT WIN3 ;
+               SET-FOCUS LB2 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               CLEAR-OBJECT LB2 ;
+               SHOW-WINDOW WIN3 ;
+               SET-FLAG CARREGA-COMISSAO(0) ;
+               RETC ;
+               REFRESH-OBJECT WIN3 ;
+               SET-FOCUS LB2 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB12
+
+   Object CB3
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (2572,839)
+       Display "Pedido Extra"
+       Masterfield PEDIDO-EXTRA
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+       *SET-FOCUS EF75
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+       *SET-FOCUS EF75
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB3
+
+   Object EF79
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-008}
+       Start (2724,2280)
+       Size  (392,64)
+       Masterfield TOTAL-DESCCOM
+       Style RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture ZZ,ZZZ,ZZ9.99
+   End Object  #EF79
+
+   Object CB10
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (2572,736)
+       Display "Membro Comissão"
+       Masterfield MEMBRO-COMISSAO
+       Style FIT-TEXT COLOR("LIGHT RED","")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+       *SET-FOCUS EF75
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+       *SET-FOCUS EF75
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB10
+
+   Object MBOX1
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Erro Manipulação Arquivo"
+   End Object  #MBOX1
+
+   Object MBOX-ERROS
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Validação de Campos"
+   End Object  #MBOX-ERROS
+
+   Object MBOX6
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(YES-NO) DEFAULT-BUTTON(2) NOTIFICATION
+       Display "Confirme"
+       Message "Tem certeza que deseja excluir?"
+   End Object  #MBOX6
+
+   Object AJUDA
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (824,272)
+       Size  (1532,1584)
+       Display "Help"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+   End Object  #AJUDA
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (72,100)
+       Display "Digitação de recibos de vendas."
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (68,244)
+       Display "Qualquer alteração que for efetuada nas parcelas"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (68,332)
+       Display "não implicará na atualização automática nos cheques"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (68,420)
+       Display "ou contas a receber, sendo para isso necessária"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (68,508)
+       Display "o acerto manual nos mesmos. Para exclusão será da"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (68,596)
+       Display "mesma forma."
+   End Object  #{NoName}
+
+   Object PB8
+       Type PUSH-BUTTON
+       Parent AJUDA
+       Start (612,1500)
+       Size  (264,96)
+       Display "OK"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               SET-FOCUS D-ALB ;
+               RETC ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB8
+
+   Object MBOX5
+       Type MESSAGE-BOX
+       Parent $WINDOW
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) QUESTION
+       Display "Atenção"
+       Message "Data prevista entrega > data-prevista-venda do contrato, favor\
+ verificar."
+   End Object  #MBOX5
+
+   Object MBOX2
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) WARNING
+       Display "Atenção"
+       Message "Quantidade vendida maior que o da montagem."
+   End Object  #MBOX2
+
+   Object WIN1
+       Type WINDOW
+       Parent DESKTOP
+       Start (240,96)
+       Size  (2712,1920)
+       Display "Conferência"
+       Style BORDER TITLEBAR COLOR("","LIGHT CYAN")
+       Icon "dsdatdef"
+       Dialog CASE(OFF)
+           Event USER-EVENT
+               MOVE $EVENT-DATA ACP-EVENTO ;
+               SET-FLAG TRATAR-EVENTO(1) ;
+               RETC ;
+           End Event # USER-EVENT
+           Event ESC
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+               SET-FOCUS PB1 ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN1
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (4,1520)
+       Display "Total Venda"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (4,1632)
+       Display "P.M."
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (4,1736)
+       Display "Total Deflac."
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (1000,1520)
+       Display "Total Escala Bruto"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (1000,1619)
+       Display "Total Escala Líquido"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (1004,1718)
+       Display "Total Desconto"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (1004,1817)
+       Display "Total Juros"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (2156,1520)
+       Display "Carência"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (2156,1714)
+       Display "Taxa"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (2156,1802)
+       Display "Taxa"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object EF41
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (352,1524)
+       Size  (444,64)
+       Masterfield TOT-VENDA
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF41
+
+   Object EF49
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (576,1624)
+       Size  (220,64)
+       Masterfield TOT-PM
+       Style BLANK-WHEN-ZERO FIT-HEIGHT RIGHT-JUSTIFIED RESIZE-CHAR('W')
+       Style DISPLAY-FIELD COLOR("BLUE","LIGHT CYAN")
+       Picture Z,ZZ9.99
+   End Object  #EF49
+
+   Object EF50
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (352,1724)
+       Size  (444,64)
+       Masterfield TOT-VENDA-DEF
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF50
+
+   Object PB7
+       Type PUSH-BUTTON
+       Parent WIN1
+       Start (320,1856)
+       Size  (344,96)
+       Display "~Retornar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               UNSHOW-WINDOW WIN1 PRINCIPAL ;
+               SET-FOCUS PB1 ;
+           End Procedure # OPCAO-SELECIONADA
+       End Dialog
+   End Object  #PB7
+
+   Object EF134
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (1516,1508)
+       Size  (444,64)
+       Masterfield TOTAL-ESCALA-BRUTO
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZ,ZZZ.ZZ
+   End Object  #EF134
+
+   Object EF135
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (1516,1604)
+       Size  (444,64)
+       Masterfield TOTAL-ESCALA-LIQUIDO
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZ,ZZZ.ZZ
+   End Object  #EF135
+
+   Object EF136
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (1520,1708)
+       Size  (444,64)
+       Masterfield TOTAL-DESCONTO
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZ,ZZZ.ZZ
+   End Object  #EF136
+
+   Object EF137
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (1520,1796)
+       Size  (444,64)
+       Masterfield TOTAL-JUROS
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZ,ZZZ.ZZ
+   End Object  #EF137
+
+   Object USER1
+       Type USER-CONTROL
+       Parent WIN1
+       Stylename {Default-Font}
+       Start (4,0)
+       Size  (2696,1424)
+       Masterfield ACP-LISTVIEW
+       Program-Name "lvctrl"
+   End Object  #USER1
+
+   Object EF25
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (2388,1508)
+       Size  (244,64)
+       Masterfield ACP-CARENCIA
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZZ
+   End Object  #EF25
+
+   Object EF26
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (2332,1712)
+       Size  (300,64)
+       Masterfield ACP-TAXA-DESCONTO
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZ.ZZ
+   End Object  #EF26
+
+   Object EF27
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (2364,1796)
+       Size  (268,64)
+       Masterfield ACP-TAXA-JUROS
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("BLUE","LIGHT CYAN")
+       Picture ZZZ.ZZ
+   End Object  #EF27
+
+   Object WIN2
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (784,1456)
+       Size  (1480,212)
+       Display "Informar o Cartão de Crédito"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+       Dialog CASE(OFF)
+           Event ESC
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+               SET-FOCUS SB1 ;
+           End Event # ESC
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+               SET-FOCUS SB1 ;
+           End Event # CLOSED-WINDOW
+       End Dialog
+   End Object  #WIN2
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (24,116)
+       Display "Cartão"
+       Stylename SYSTEM-PROPORTIONAL
+   End Object  #{NoName}
+
+   Object EF57
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (212,112)
+       Size  (88,56)
+       Masterfield CARTAO
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('9') AUTOSWIPE
+       Picture Z9
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               SET-FLAG LE-CARTAO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF57 ;
+               REFRESH-OBJECT EF58 ;
+               VALIDATE EF57 ;
+               ENABLE-OBJECT PB5 ;
+               SET-FOCUS PB5 ;
+           End Procedure # OPCAO
+           Event F2
+               SET-FLAG POPUP-CARTAO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF57 ;
+               REFRESH-OBJECT EF58 ;
+               VALIDATE EF57 ;
+               ENABLE-OBJECT PB5 ;
+               SET-FOCUS PB5 ;
+           End Event # F2
+           Event VAL-ERROR
+               INVOKE-MESSAGE-BOX MBOX-ERROS "Cartão de Crédito Não Informado"\
+ $EVENT-DATA ;
+               SET-FOCUS EF57 ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #EF57
+
+   Object EF58
+       Type ENTRY-FIELD
+       Parent WIN2
+       Stylename {font-001}
+       Start (332,112)
+       Size  (312,56)
+       Masterfield DESC-CARTAO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture X(30)
+   End Object  #EF58
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent WIN2
+       Stylename SYSTEM-PROPORTIONAL
+       Start (1088,164)
+       Size  (368,96)
+       Display "~OK" , 0013
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+               SET-FOCUS PB4 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+               SET-FOCUS PB4 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB5
+
+   Object WIN3
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (744,524)
+       Size  (1448,924)
+       Display "Extrato das Parcelas"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+       Dialog CASE(OFF)
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FOCUS EF14 ;
+           End Event # CLOSED-WINDOW
+           Event ESC
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FOCUS EF14 ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN3
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (100,76)
+       Display "VENCTO"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (460,76)
+       Display "% COMISSÃO"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (928,76)
+       Display "VLR COMISSÃO"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,880)
+       Display "TOTAL COMISSÃO"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object LB2
+       Type LIST-BOX
+       Parent WIN3
+       Stylename {font-010}
+       Start (16,96)
+       Size  (1412,700)
+       Style DISABLE-HORIZONTAL COLOR("WHITE","BLACK")
+   End Object  #LB2
+
+   Object PB13
+       Type PUSH-BUTTON
+       Parent WIN3
+       Stylename {font-001}
+       Start (92,888)
+       Size  (116,84)
+       Bitmap-Name "PRINT1"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG IMPRIMIR-PARCELAS(0) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG IMPRIMIR-PARCELAS(0) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB13
+
+   Object EF74
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-011}
+       Start (848,876)
+       Size  (644,72)
+       Masterfield TOTAL-COMISSAO
+       Style AUTOSCROLL FIT-PICTURE RESIZE-CHAR('Z') DISPLAY-FIELD
+       Style COLOR("LIGHT RED","")
+       Picture ZZZ,ZZ9.99
+   End Object  #EF74
+
+   Object WIN4
+       Type WINDOW
+       Parent DESKTOP
+       Start (800,812)
+       Size  (1512,628)
+       Display "Produtos adicionais"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF48 ;
+           End Event # CLOSED-WINDOW
+           Event ESC
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF48 ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN4
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (32,92)
+       Display "Book"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (32,188)
+       Display "Porta retrato"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (32,284)
+       Display "Pendrive"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (32,380)
+       Display "Vídeo HD"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (32,476)
+       Display "Revista"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (32,572)
+       Display "Calendário"
+   End Object  #{NoName}
+
+   Object EF75
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-001}
+       Start (420,88)
+       Size  (88,56)
+       Masterfield QT-BOOK
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF= PED-EXT-BOOK 0 VERIFICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure VERIFICA
+               IF> QT-BOOK BOOK-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # VERIFICA
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF75 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF75
+
+   Object EF80
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-001}
+       Start (420,184)
+       Size  (88,56)
+       Masterfield QT-PORTA-RETRATO
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF= PED-EXT-PORTA-RET 0 VERIFICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure VERIFICA
+               IF> QT-PORTA-RETRATO PORTA-RETRATO-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # VERIFICA
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF80 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF80
+
+   Object EF81
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-001}
+       Start (420,280)
+       Size  (88,56)
+       Masterfield QT-PENDRIVE
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF= PED-EXT-PENDRIVE 0 VERIFICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure VERIFICA
+               IF> QT-PENDRIVE PENDRIVE-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # VERIFICA
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF81 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF81
+
+   Object EF82
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-001}
+       Start (420,376)
+       Size  (88,56)
+       Masterfield QT-VIDEO-HD
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF= PED-EXT-VIDEO-HD 0 VERIFICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure VERIFICA
+               IF> QT-VIDEO-HD VIDEO-HD-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # VERIFICA
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF82 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF82
+
+   Object EF83
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-001}
+       Start (420,472)
+       Size  (88,56)
+       Masterfield QT-REVISTA
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF= PED-EXT-REVISTA 0 VERIFICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure VERIFICA
+               IF> QT-REVISTA REVISTA-MTG DIFERENCA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # VERIFICA
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF83 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF83
+
+   Object EF84
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-001}
+       Start (420,568)
+       Size  (88,56)
+       Masterfield QT-CALENDARIO
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # TAB
+           Procedure OPCAO
+               IF= PED-EXT-CALENDARIO 0 VERIFICA ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Procedure # OPCAO
+           Procedure VERIFICA
+               IF> QT-CALENDARIO CALENDARIO-MTG DIFERENCA ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF48 ;
+           End Procedure # VERIFICA
+           Procedure DIFERENCA
+               INVOKE-MESSAGE-BOX MBOX2 $NULL $REGISTER ;
+               SET-FOCUS EF84 ;
+           End Procedure # DIFERENCA
+       End Dialog
+   End Object  #EF84
+
+   Object CB4
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {Default-Font}
+       Start (600,100)
+       Display "Pedido extra"
+       Masterfield PED-EXT-BOOK
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS EF75 ;
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+               SET-FOCUS EF75 ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB4
+
+   Object CB5
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {Default-Font}
+       Start (600,194)
+       Display "Pedido extra"
+       Masterfield PED-EXT-PORTA-RET
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS EF80 ;
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+               SET-FOCUS EF80 ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB5
+
+   Object CB6
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {Default-Font}
+       Start (600,288)
+       Display "Pedido extra"
+       Masterfield PED-EXT-PENDRIVE
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS EF81 ;
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+               SET-FOCUS EF81 ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB6
+
+   Object CB7
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {Default-Font}
+       Start (600,382)
+       Display "Pedido extra"
+       Masterfield PED-EXT-VIDEO-HD
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS EF82 ;
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+               SET-FOCUS EF82 ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB7
+
+   Object CB8
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {Default-Font}
+       Start (600,476)
+       Display "Pedido extra"
+       Masterfield PED-EXT-REVISTA
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS EF83 ;
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+               SET-FOCUS EF83 ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB8
+
+   Object CB9
+       Type CHECK-BOX
+       Parent WIN4
+       Stylename {Default-Font}
+       Start (600,570)
+       Display "Pedido extra"
+       Masterfield PED-EXT-CALENDARIO
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FOCUS EF84 ;
+           End Event # BUTTON-SELECTED
+           Event BUTTON-UNSELECTED
+               SET-FOCUS EF84 ;
+           End Event # BUTTON-UNSELECTED
+       End Dialog
+   End Object  #CB9
+
+
+   Global Dialog CASE(OFF)
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           CREATE-WINDOW WIN1 ;
+           CREATE-WINDOW WIN4 ;
+       *
+           SET-FLAG CENTRALIZA(1) ;
+           RETC ;
+       *
+           MOVE 0 ALTERA ;
+           DISABLE-OBJECT PRINCIPAL ;
+           ENABLE-OBJECT D-MOVTO ;
+           SET-FOCUS D-MOVTO ;
+           RETC ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure CARREGAR-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           SET-FOCUS D-MOVTO ;
+           RETC ;
+       End Procedure # CARREGAR-DATA
+       Event CURL
+           SKIP-TO-PREV-OBJECT 1 ;
+       End Event # CURL
+       Event CURR
+           SKIP-TO-NEXT-OBJECT 1 ;
+       End Event # CURR
+       Procedure ATUALIZA-LISTA
+           UPDATE-LIST-ITEM LB1 LINDET CONT ;
+           SET-LIST-ITEM-STATE LB1 1 CONT ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # ATUALIZA-LISTA
+       Procedure INSERE-LIST
+           INCREMENT CONT ;
+           INSERT-LIST-ITEM LB1 LINDET CONT ;
+           SET-TOP-LIST-ITEM LB1 CONT ;
+           RETC ;
+       End Procedure # INSERE-LIST
+       Procedure ALTERA-LIST
+           UPDATE-LIST-ITEM LB1 LINDET POSICAO ;
+           SET-TOP-LIST-ITEM LB1 POSICAO ;
+           RETC ;
+       End Procedure # ALTERA-LIST
+       Procedure EXIBE-ERRO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # EXIBE-ERRO
+       Event CR
+           SKIP-TO-NEXT-OBJECT 1 ;
+       End Event # CR
+       Procedure DUPLICATE-EVENT-ESC
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-ESC
+       Procedure DUPLICATE-EVENT-CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-CLOSED-WINDOW
+       Procedure REFRESH-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           RETC ;
+       End Procedure # REFRESH-DATA
+       Procedure CLEAR-CHEQUE
+           CLEAR-OBJECT EF14 ;
+           CLEAR-OBJECT EF16 ;
+           CLEAR-OBJECT EF17 ;
+           CLEAR-OBJECT EF55 ;
+           CLEAR-OBJECT EF57 ;
+           CLEAR-OBJECT EF58 ;
+           MOVE 0 TAXA-ADMINIST-CREDITO ;
+           REFRESH-OBJECT EF14 ;
+           REFRESH-OBJECT EF16 ;
+           REFRESH-OBJECT EF17 ;
+           REFRESH-OBJECT EF55 ;
+           REFRESH-OBJECT WIN2 ;
+       End Procedure # CLEAR-CHEQUE
+       Procedure CLEAR-LIST-BOX
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX
+       Procedure ERRO-GRAVACAO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           RETC ;
+       End Procedure # ERRO-GRAVACAO
+       Procedure DESABILITA-GRAVAR
+           DISABLE-OBJECT PB1 ;
+           DISABLE-OBJECT PB3 ;
+           DISABLE-OBJECT PB4 ;
+       *    DISABLE-OBJECT LB1
+       End Procedure # DESABILITA-GRAVAR
+       Procedure SETAR-ENVIADO1
+           SET-BUTTON-STATE RB1 1 ;
+           SET-BUTTON-STATE RB2 0 ;
+           RETC ;
+       End Procedure # SETAR-ENVIADO1
+       Procedure SETAR-ENVIAR1
+           SET-BUTTON-STATE RB1 0 ;
+           SET-BUTTON-STATE RB2 1 ;
+           RETC ;
+       End Procedure # SETAR-ENVIAR1
+       Procedure DESMARCAR1
+           SET-BUTTON-STATE RB1 0 ;
+           SET-BUTTON-STATE RB2 0 ;
+           RETC ;
+       End Procedure # DESMARCAR1
+       Procedure SETAR-ENVIADO2
+           SET-BUTTON-STATE RB3 1 ;
+           SET-BUTTON-STATE RB4 0 ;
+           RETC ;
+       End Procedure # SETAR-ENVIADO2
+       Procedure SETAR-ENVIAR2
+           SET-BUTTON-STATE RB3 0 ;
+           SET-BUTTON-STATE RB4 1 ;
+           RETC ;
+       End Procedure # SETAR-ENVIAR2
+       Procedure DESMARCAR2
+           SET-BUTTON-STATE RB3 0 ;
+           SET-BUTTON-STATE RB4 0 ;
+           RETC ;
+       End Procedure # DESMARCAR2
+       Procedure INSERIR-LB2
+           INSERT-LIST-ITEM LB2 LINHA-COMISSAO $REGISTER ;
+           RETC ;
+       End Procedure # INSERIR-LB2
+       Procedure LIMPAR-LB2
+           CLEAR-OBJECT LB2 ;
+           REFRESH-OBJECT LB2 ;
+           RETC ;
+       End Procedure # LIMPAR-LB2
+       Procedure DESABILITA-IMP
+           HIDE-OBJECT PB13 ;
+           RETC ;
+       End Procedure # DESABILITA-IMP
+       Procedure HABILITA-IMP
+           SHOW-OBJECT PB13 ;
+           RETC ;
+       End Procedure # HABILITA-IMP
+   End Dialog
+
+End Form
