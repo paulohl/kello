@@ -1,4 +1,0 @@
-           CALL   "CAP999T" using parametros-w lnk-impressora
-           CANCEL "CAP999T"
-
-           move lnk-mapeamento to nome-impressora
