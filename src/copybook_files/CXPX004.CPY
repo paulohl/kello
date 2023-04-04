@@ -1,8 +1,0 @@
-           SELECT CXD004 ASSIGN TO "\PROGRAMA\KELLO\PADRAO\CXD004"
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  LOCK MODE IS AUTOMATIC
-                  WITH LOCK ON RECORD
-                  STATUS IS ST-CXD004
-                  RECORD KEY IS CHAVE-CX004 = COD-USUARIO-CX004
-                      PROGRAMA-CX004.

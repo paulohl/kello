@@ -1,9 +1,0 @@
-           SELECT CAD020 ASSIGN TO path-cad020
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  RECORD KEY IS CODIGO-020
-                  ALTERNATE RECORD KEY IS CHAVE-20 = CONTRATO-020,
-                            ALBUM-020 WITH DUPLICATES
-                  ALTERNATE RECORD KEY IS ALFA-020 WITH DUPLICATES
-                  ALTERNATE RECORD KEY IS NOME-020 WITH DUPLICATES
-                  STATUS ST-CAD020.

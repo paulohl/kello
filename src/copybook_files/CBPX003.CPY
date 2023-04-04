@@ -1,8 +1,0 @@
-           SELECT CBD003 ASSIGN TO PATH-CBD003
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  LOCK MODE IS AUTOMATIC
-                  WITH LOCK ON RECORD
-                  STATUS IS ST-CBD003
-                  RECORD KEY IS SITUACAO-CB03
-                  ALTERNATE RECORD KEY IS NOME-SIT-CB03 WITH DUPLICATES.

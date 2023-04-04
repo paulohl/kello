@@ -1,6 +1,0 @@
-           SELECT COD106 ASSIGN TO PATH-COD106
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-COD106
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-COP106.

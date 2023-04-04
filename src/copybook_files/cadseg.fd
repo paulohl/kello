@@ -1,5 +1,0 @@
-      *  Cadastro de Segmentos
-       FD  CADSEG.
-       01  REG-CADSEG.
-           05  CADSEG-CODIGO            PIC 9(04).
-           05  CADSEG-NOME              PIC X(40).

@@ -1,6 +1,0 @@
-           SELECT COD104 ASSIGN TO PATH-COD104
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-COD104
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-COP104.

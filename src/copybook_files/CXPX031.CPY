@@ -1,8 +1,0 @@
-           SELECT CXD031 ASSIGN TO PATH-CXD031
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  LOCK MODE IS AUTOMATIC
-                  WITH LOCK ON RECORD
-                  STATUS IS ST-CXD031
-                  RECORD KEY IS TIPO-LCTO-CX31
-                  ALTERNATE RECORD KEY IS DESCRICAO-CX31.

@@ -1,5 +1,0 @@
-      *  Cadastro de Grupos
-       FD  CADGRU.
-       01  REG-CADGRU.
-           05  CADGRU-CODIGO            PIC 9(04).
-           05  CADGRU-NOME              PIC X(40).

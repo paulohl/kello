@@ -1,6 +1,0 @@
-           SELECT CAD013 ASSIGN TO PATH-CAD013
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-CAD013
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-CA13.

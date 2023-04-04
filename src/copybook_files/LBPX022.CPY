@@ -1,7 +1,0 @@
-           SELECT LBD022 ASSIGN TO DISK
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-LBD022
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-22
-                  ALTERNATE RECORD KEY IS NOME-22 WITH DUPLICATES.

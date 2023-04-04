@@ -1,7 +1,0 @@
-           SELECT  COD501 ASSIGN TO PATH-COD501
-                   ORGANIZATION IS INDEXED
-                   ACCESS MODE IS DYNAMIC
-                   STATUS IS ST-COD501
-                   LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                   RECORD KEY IS CHAVE-CO501 =
-                      NR-CONTRATO-CO501 ITEM-CO501 SUBITEM-CO501.

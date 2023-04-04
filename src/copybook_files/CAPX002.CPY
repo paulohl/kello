@@ -1,8 +1,0 @@
-           SELECT CAD002 ASSIGN TO "\PROGRAMA\KELLO\PADRAO\CAD002"
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  LOCK MODE IS AUTOMATIC
-                  WITH LOCK ON RECORD
-                  STATUS IS ST-CAD002
-                  RECORD KEY IS CODIGO-CA002
-                  ALTERNATE RECORD KEY IS NOME-REDUZ-CA002.

@@ -1,7 +1,0 @@
-           SELECT CGD030 ASSIGN TO PATH-CGD030
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  STATUS IS ST-CGD030
-                  RECORD KEY IS CODIGO-CG30
-                  ALTERNATE RECORD KEY IS NOME-CG30.
