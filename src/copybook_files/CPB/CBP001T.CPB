@@ -1,0 +1,63 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CBP001T-DATA-BLOCK-VERSION-NO      PIC 9(8) COMP-5
+                                             VALUE 7.
+
+       01 CBP001T-VERSION-NO                 PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CBP001T-SET-BUILD-NO               PIC 9(4) COMP-5
+                                             VALUE 76.
+
+       01 CBP001T-DATA-BLOCK.
+          03 CBP001T-CONFIG-FLAG             PIC x(4) COMP-5.
+          03 CBP001T-CONFIG-VALUE            PIC x(4) COMP-5.
+          03 CBP001T-CONT                    PIC 9(4).
+          03 CBP001T-MENSAGEM-ERRO           PIC X(40).
+          03 CBP001T-LINDET                  PIC X(60).
+          03 CBP001T-FLAG-GROUP.
+             05 CBP001T-EXIT-FLG             PIC 9.
+                88 CBP001T-EXIT-FLG-TRUE     VALUE 1.
+             05 CBP001T-CARREGA-LIST-BOX     PIC 9.
+                88 CBP001T-CARREGA-LIST-BOX-TRUE VALUE 1.
+             05 CBP001T-ITEM-SELECIONADO     PIC 9.
+                88 CBP001T-ITEM-SELECIONADO-TRUE VALUE 1.
+             05 CBP001T-CENTRALIZA           PIC 9.
+                88 CBP001T-CENTRALIZA-TRUE   VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CBP001T-FIELD-NUMBERS.
+          03 CBP001T-FLD-NO-CONFIG-FLAG      PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CBP001T-FLD-NO-CONFIG-VALUE     PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CBP001T-FLD-NO-CONT             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CBP001T-FLD-NO-MENSAGEM-ERRO    PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CBP001T-FLD-NO-LINDET           PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CBP001T-FLD-NO-EXIT-FLG         PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CBP001T-FLD-NO-CARREGA-LIST-BO  PIC 9(4) COMP-5 VALUE
+                                               8.
+      * Field CARREGA-LIST-BOX has been truncated
+          03 CBP001T-FLD-NO-ITEM-SELECIONAD  PIC 9(4) COMP-5 VALUE
+                                               9.
+      * Field ITEM-SELECIONADO has been truncated
+          03 CBP001T-FLD-NO-CENTRALIZA       PIC 9(4) COMP-5 VALUE
+                                               10.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
