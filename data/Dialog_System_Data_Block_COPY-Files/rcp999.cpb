@@ -1,0 +1,114 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 88.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 75.
+
+       01 GS-DATA-BLOCK.
+          03 GS-MOVTO-INI                    PIC 9(8).
+          03 GS-MOVTO-FIM                    PIC 9(8).
+          03 GS-CONTRATO                     PIC 9(4).
+          03 GS-VENDEDOR                     PIC 9(6).
+          03 GS-OPCAO                        PIC 9.
+             88 GS-OPCAO-TRUE                VALUE 1.
+          03 GS-DESCRICAO                    PIC X(15).
+          03 GS-DESC-VENDEDOR                PIC X(20).
+          03 GS-FLAG-GROUP.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-CENTRALIZA                PIC 9.
+                88 GS-CENTRALIZA-TRUE        VALUE 1.
+             05 GS-PRINTER-FLG               PIC 9.
+                88 GS-PRINTER-FLG-TRUE       VALUE 1.
+             05 GS-INVERTE-DATA-FLG          PIC 9.
+                88 GS-INVERTE-DATA-FLG-TRUE  VALUE 1.
+             05 GS-CARREGA-LISTA-FLG         PIC 9.
+                88 GS-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 GS-GRAVA-WORK-FLG            PIC 9.
+                88 GS-GRAVA-WORK-FLG-TRUE    VALUE 1.
+             05 GS-ITEM-SELECIONADO          PIC 9.
+                88 GS-ITEM-SELECIONADO-TRUE  VALUE 1.
+             05 GS-LE-VENDEDOR               PIC 9.
+                88 GS-LE-VENDEDOR-TRUE       VALUE 1.
+             05 GS-POPUP-VENDEDOR            PIC 9.
+                88 GS-POPUP-VENDEDOR-TRUE    VALUE 1.
+             05 GS-TRATAR-EVENTO             PIC 9.
+                88 GS-TRATAR-EVENTO-TRUE     VALUE 1.
+          03 GS-EXIBE-MOVTO                  PIC 9(8).
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-ERR-MSG                      PIC X(40).
+      ***
+          03 GS-CONFIG-FLAG                  PIC x(4) COMP-5.
+          03 GS-CONFIG-VALUE                 PIC x(4) COMP-5.
+          03 GS-ACP-LISTVIEW OBJECT REFERENCE.
+          03 GS-ACP-EVENTO                   PIC 9(5).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-MOVTO-INI             PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-MOVTO-FIM             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-CONTRATO              PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-VENDEDOR              PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-OPCAO                 PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 GS-FLD-NO-DESCRICAO             PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-DESC-VENDEDOR         PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-CENTRALIZA            PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-PRINTER-FLG           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-INVERTE-DATA-FLG      PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 GS-FLD-NO-CARREGA-LISTA-FLG     PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 GS-FLD-NO-GRAVA-WORK-FLG        PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-ITEM-SELECIONADO      PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-LE-VENDEDOR           PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-POPUP-VENDEDOR        PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-TRATAR-EVENTO         PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 GS-FLD-NO-EXIBE-MOVTO           PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 GS-FLD-NO-ERR-MSG               PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 GS-FLD-NO-CONFIG-FLAG           PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 GS-FLD-NO-CONFIG-VALUE          PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 GS-FLD-NO-ACP-LISTVIEW          PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 GS-FLD-NO-ACP-EVENTO            PIC 9(4) COMP-5 VALUE
+                                               25.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
