@@ -14,7 +14,7 @@
            05  SITUACAO-CC100           PIC 9.
       *    SITUACAO =   00-OK   01-PAGA  02-ESTORNADA
            05  LIBERADO-CC100           PIC 9.
-      *    LIBERADO =   00-N√O  01-SIM
+      *    LIBERADO =   00-N√ÉO  01-SIM
            05  TIPO-MOEDA-CC100         PIC 9.
       *    TIPO-MOEDA = 00-REAL 01-DOLAR
            05  NR-PARCELA-CC100.
