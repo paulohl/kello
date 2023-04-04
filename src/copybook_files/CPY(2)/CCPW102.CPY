@@ -1,4 +1,4 @@
-      * arquivo de valores de créditos liberados do conta corrente
+      * arquivo de valores de crÃ©ditos liberados do conta corrente
        FD  CCD102.
        01  REG-CCD102.
            05  MESANO-BASE-CC102        PIC 9(6).
