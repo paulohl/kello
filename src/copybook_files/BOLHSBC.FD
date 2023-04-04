@@ -1,0 +1,47 @@
+
+      *----------------------------------------------------------------*
+      *  FD DO ARQUIVO DE INSTRUÇÕES DO BOLETO do HSBC
+      *----------------------------------------------------------------*
+
+       fd BOLHSBC.
+       01 reg-BOLHSBC.
+          05 BOLHSBC-chave.
+             10 BOLHSBC-codigo      pic 9(06).
+
+          05 BOLHSBC-num-banco      pic 9(03).
+          05 BOLHSBC-nome-banco     pic x(30).
+          05 BOLHSBC-agencia        pic 9(04).
+          05 BOLHSBC-dig-agencia    pic 9(01).
+          05 BOLHSBC-conta          pic 9(06).
+          05 BOLHSBC-dig-conta      pic 9(02).
+          05 BOLHSBC-empresa        pic x(04).
+          05 BOLHSBC-cnpj           pic 9(14).
+          05 BOLHSBC-cod-cliente    pic 9(05).
+          05 BOLHSBC-nosso-num      pic 9(05).
+
+          05 BOLHSBC-qtde-dias      pic 9(02).
+          05 BOLHSBC-juros-1-dia    pic 9(03)v99.
+          05 BOLHSBC-desconto       pic 9(03)v99.
+          05 BOLHSBC-MULTA          pic 9(09)v99.
+          05 BOLHSBC-dias-desconto  pic 9(02).
+
+          05 BOLHSBC-carteira       pic x(03).
+          05 BOLHSBC-cod-carteira   pic x(01).
+          05 BOLHSBC-especie        pic x(02).
+
+          05 BOLHSBC-instrucao-1    pic 9(02).
+          05 BOLHSBC-instrucao-2    pic 9(02).
+
+          05 BOLHSBC-instrucao1     pic x(70).
+          05 BOLHSBC-instrucao2     pic x(70).
+          05 BOLHSBC-instrucao3     pic x(70).
+          05 BOLHSBC-instrucao4     pic x(70).
+          05 BOLHSBC-instrucao5     pic x(70).
+
+          05 BOLHSBC-local1         pic x(70).
+          05 BOLHSBC-local2         pic x(70).
+
+          05 BOLHSBC-cc             pic 9(006).
+          05 BOLHSBC-portador       pic 9(004).
+          05 BOLHSBC-convenio       pic 9(011).
+          05 filler                 pic x(179).

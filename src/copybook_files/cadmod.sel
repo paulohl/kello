@@ -1,0 +1,9 @@
+           SELECT CADMOD ASSIGN       TO   PATH-CADMOD
+                         ORGANIZATION IS       INDEXED
+                         ACCESS MODE  IS       DYNAMIC
+                         STATUS       IS     ST-CADMOD
+                         LOCK MODE    IS     AUTOMATIC
+                         WITH LOCK    ON        RECORD
+                         RECORD KEY   IS CADMOD-CODIGO
+                         ALTERNATE    RECORD       KEY
+                         IS                CADMOD-NOME.
