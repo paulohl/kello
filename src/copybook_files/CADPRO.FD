@@ -1,0 +1,31 @@
+      *  Cadastro de Produtos
+       FD  CADPRO.
+       01  REG-CADPRO.
+           05  CADPRO-CODIGO            PIC 9(04).
+           05  CADPRO-CODBARRAS         PIC 9(13).
+           05  CADPRO-NOME              PIC X(40).
+           05  CADPRO-MODELO            PIC 9(04).
+           05  CADPRO-UNIDADE           PIC X(03).
+           05  CADPRO-GRUPO             PIC 9(04).
+           05  CADPRO-SEGMENTO          PIC 9(04).
+           05  CADPRO-QTDE-MINIMA       PIC 9(06).
+           05  CADPRO-QTDE-ESTOQUE      PIC S9(09).
+           05  CADPRO-ICMS              PIC 9(03)V99.
+           05  CADPRO-IPI               PIC 9(03)V99.
+           05  CADPRO-ULT-COMPRA        PIC 9(08).
+           05  CADPRO-CUSTO-COMPRA      PIC 9(06)V99.
+           05  CADPRO-CUSTO-MEDIO       PIC 9(06)V99.
+           05  CADPRO-ULT-VENDA         PIC 9(08).
+           05  CADPRO-PRECO-VENDA       PIC 9(06)V99.
+           05  CADPRO-PERC-LUCRO        PIC 9(03)V99.
+           05  CADPRO-PESO              PIC 9(03)V999.
+           05  CADPRO-PERC-COMIS        PIC 9(03)V99.
+           05  CADPRO-VLR-COMIS         PIC 9(06)V99.
+           05  CADPRO-CLASSIF-FISCAL    PIC X(03).
+           05  CADPRO-FORN-PREF         PIC 9(06).
+           05  CADPRO-ULT-FORN          PIC 9(06).
+           05  CADPRO-APLICACAO         PIC X(500).
+           05  CADPRO-COMPRA            PIC 9(001).
+           05  CADPRO-VENDA             PIC 9(001).
+           05  CADPRO-REFERENCIA        PIC X(015).
+           05  FILLER                   PIC X(183).

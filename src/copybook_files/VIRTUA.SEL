@@ -1,0 +1,8 @@
+           SELECT VIRTUA ASSIGN       TO ARQUIVO-VIRTUA
+                         ORGANIZATION IS        INDEXED
+                         ACCESS MODE  IS        DYNAMIC
+                         RECORD KEY   IS   VIRTUA-CHAVE
+                         WITH                DUPLICATES
+                         LOCK MODE    IS      AUTOMATIC
+                         WITH LOCK    ON         RECORD
+                         FILE STATUS  IS      FS-VIRTUA.

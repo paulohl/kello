@@ -1,0 +1,4 @@
+       FD RETPORT.
+       01 REG-RETPORT.
+          05 RETPORT-PROGRAMA              PIC X(15).
+          05 RETPORT-PORTADOR              PIC 9(04).

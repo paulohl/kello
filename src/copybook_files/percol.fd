@@ -1,0 +1,24 @@
+      *----------------------------------------------------------------*
+      *  FD DO ARQUIVO DE PERMISSÃO DAS COLUNAS DO LISTVIEW	       *
+      *----------------------------------------------------------------*
+      * PERCOL-SITUACAO = 1 - ATIVO, 2 - INATIVO                       *
+      * PERCOL-USUARIO  = éltimo usu rio que mexeu no registro         *
+      * PERCOL-DTATUALIZACAO = éltima data de Atualiza‡Æo do registro  *
+      * PERCOL-liberado <S> SIM  - <N> Não
+      *----------------------------------------------------------------*
+       FD  PERCOL.  
+
+       01  REG-PERCOL.
+           05 PERCOL-chave.
+	      10 PERCOL-secao 	       pic x(100).
+	      10 PERCOL-coluna 	       pic x(100).
+              10 PERCOL-perfil         pic 9(006).
+           05 PERCOL-liberado          pic x(001).
+           05 PERCOL-dtcadastro        pic 9(008).
+           05 PERCOL-dtAtualizacao.
+              10 PERCOL-anoatu         pic 9(004).
+              10 PERCOL-mesatu         pic 9(002).
+              10 PERCOL-diaatu         pic 9(002).
+           05 PERCOL-usuario           pic x(015).
+           05 PERCOL-maquina           pic x(010).
+           05 filler                   pic x(100).

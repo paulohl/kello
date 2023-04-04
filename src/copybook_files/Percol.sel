@@ -1,0 +1,7 @@
+           SELECT PERCOL ASSIGN      TO ARQUIVO-PERCOL
+                         ORGANIZATION  IS      INDEXED
+                         ACCESS MODE   IS      DYNAMIC
+                         RECORD KEY    IS PERCOL-CHAVE
+                         LOCK MODE     IS    AUTOMATIC
+                         WITH LOCK     ON       RECORD
+                         FILE STATUS   IS    FS-PERCOL.

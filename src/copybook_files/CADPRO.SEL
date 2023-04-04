@@ -1,0 +1,14 @@
+           SELECT CADPRO ASSIGN       TO    PATH-CADPRO
+                         ORGANIZATION IS        INDEXED
+                         ACCESS MODE  IS        DYNAMIC
+                         STATUS       IS      ST-CADPRO
+                         LOCK MODE    IS      AUTOMATIC
+                         WITH LOCK    ON         RECORD
+                         RECORD KEY   IS CADPRO-CHAVE =
+                                          CADPRO-CODIGO
+                         ALTERNATE    RECORD        KEY
+                         IS   CADPRO-CH-NOME =
+                                            CADPRO-NOME
+                                       CADPRO-CODBARRAS
+                         ALTERNATE    RECORD        KEY
+                         IS            CADPRO-CODBARRAS.

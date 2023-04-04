@@ -1,0 +1,7 @@
+           SELECT RETPORT ASSIGN        TO     PATH-RETPORT
+                          ORGANIZATION  IS          INDEXED
+                          ACCESS MODE   IS          DYNAMIC
+                          RECORD KEY    IS RETPORT-PROGRAMA
+                          LOCK   MODE   IS        AUTOMATIC
+                          WITH   LOCK   ON           RECORD
+                          FILE   STATUS IS       FS-RETPORT.
