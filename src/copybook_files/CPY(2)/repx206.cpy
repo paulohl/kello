@@ -1,0 +1,6 @@
+           SELECT RED206 ASSIGN TO PATH-RED206
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-RED206
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-RED206.
