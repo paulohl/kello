@@ -1,0 +1,183 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CBP100-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 57.
+
+       01 CBP100-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CBP100-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 140.
+
+       01 CBP100-DATA-BLOCK.
+          03 CBP100-DATA-EXTRATO             PIC 9(8).
+          03 CBP100-BANCO                    PIC 9(6).
+          03 CBP100-DESC-BANCO               PIC X(30).
+          03 CBP100-NOMINAL-A                PIC 9(6).
+          03 CBP100-NOME-NOMINAL-A           PIC X(30).
+          03 CBP100-SITUACAO                 PIC 9(2).
+          03 CBP100-DESC-SITUACAO            PIC X(30).
+          03 CBP100-NR-CHEQUE                PIC 9(6).
+          03 CBP100-VALOR                    PIC 9(8)V9(2).
+          03 CBP100-DATA-EMISSAO             PIC 9(8).
+          03 CBP100-DATA-VENCTO              PIC 9(8).
+          03 CBP100-FLAG-GROUP.
+             05 CBP100-EXIT-FLG              PIC 9.
+                88 CBP100-EXIT-FLG-TRUE      VALUE 1.
+             05 CBP100-SAVE-FLG              PIC 9.
+                88 CBP100-SAVE-FLG-TRUE      VALUE 1.
+             05 CBP100-CENTRALIZA            PIC 9.
+                88 CBP100-CENTRALIZA-TRUE    VALUE 1.
+             05 CBP100-CLR-FLG               PIC 9.
+                88 CBP100-CLR-FLG-TRUE       VALUE 1.
+             05 CBP100-EXCLUI-FLG            PIC 9.
+                88 CBP100-EXCLUI-FLG-TRUE    VALUE 1.
+             05 CBP100-LOAD-FLG              PIC 9.
+                88 CBP100-LOAD-FLG-TRUE      VALUE 1.
+             05 CBP100-TELA-POP-UP           PIC 9.
+                88 CBP100-TELA-POP-UP-TRUE   VALUE 1.
+             05 CBP100-CARREGA-ULT           PIC 9.
+                88 CBP100-CARREGA-ULT-TRUE   VALUE 1.
+             05 CBP100-CARREGA-LIST-BOX      PIC 9.
+                88 CBP100-CARREGA-LIST-BOX-TRUE VALUE 1.
+             05 CBP100-INVERTE-DATA          PIC 9.
+                88 CBP100-INVERTE-DATA-TRUE  VALUE 1.
+             05 CBP100-PRINTER-FLG           PIC 9.
+                88 CBP100-PRINTER-FLG-TRUE   VALUE 1.
+             05 CBP100-OBTER-DATA-MOVTO      PIC 9.
+                88 CBP100-OBTER-DATA-MOVTO-TRUE VALUE 1.
+             05 CBP100-LE-APURACAO           PIC 9.
+                88 CBP100-LE-APURACAO-TRUE   VALUE 1.
+             05 CBP100-ITEM-SELEC-FORN       PIC 9.
+                88 CBP100-ITEM-SELEC-FORN-TRUE VALUE 1.
+             05 CBP100-POPUP-BANCO           PIC 9.
+                88 CBP100-POPUP-BANCO-TRUE   VALUE 1.
+             05 CBP100-POPUP-SITUACAO        PIC 9.
+                88 CBP100-POPUP-SITUACAO-TRUE VALUE 1.
+             05 CBP100-POPUP-NOMINAL-A       PIC 9.
+                88 CBP100-POPUP-NOMINAL-A-TRUE VALUE 1.
+             05 CBP100-LER-BANCO             PIC 9.
+                88 CBP100-LER-BANCO-TRUE     VALUE 1.
+             05 CBP100-LER-SITUACAO          PIC 9.
+                88 CBP100-LER-SITUACAO-TRUE  VALUE 1.
+             05 CBP100-LER-NOMINAL           PIC 9.
+                88 CBP100-LER-NOMINAL-TRUE   VALUE 1.
+          03 CBP100-ENCONTROU-CHEQUE         PIC 9.
+             88 CBP100-ENCONTROU-CHEQUE-TRUE VALUE 1.
+          03 CBP100-LINDET                   PIC X(105).
+          03 CBP100-LINDET1                  PIC X(80).
+          03 CBP100-LINDET-POPUP             PIC X(40).
+          03 CBP100-CONT                     PIC 9(3).
+          03 CBP100-MENSAGEM-ERRO            PIC X(40).
+          03 CBP100-ERR-MSG                  PIC X(40).
+          03 CBP100-ERRO                     PIC 9.
+             88 CBP100-ERRO-TRUE             VALUE 1.
+      * se erro=0 nao foi encontrado o brinde
+          03 CBP100-CHEQUE-INI               PIC 9(6).
+          03 CBP100-CHEQUE-FIM               PIC 9(6).
+      ***
+          03 CBP100-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CBP100-CONFIG-VALUE             PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CBP100-FIELD-NUMBERS.
+          03 CBP100-FLD-NO-DATA-EXTRATO      PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CBP100-FLD-NO-BANCO             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CBP100-FLD-NO-DESC-BANCO        PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CBP100-FLD-NO-NOMINAL-A         PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CBP100-FLD-NO-NOME-NOMINAL-A    PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CBP100-FLD-NO-SITUACAO          PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CBP100-FLD-NO-DESC-SITUACAO     PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CBP100-FLD-NO-NR-CHEQUE         PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CBP100-FLD-NO-VALOR             PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CBP100-FLD-NO-DATA-EMISSAO      PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CBP100-FLD-NO-DATA-VENCTO       PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CBP100-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CBP100-FLD-NO-SAVE-FLG          PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CBP100-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CBP100-FLD-NO-CLR-FLG           PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 CBP100-FLD-NO-EXCLUI-FLG        PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CBP100-FLD-NO-LOAD-FLG          PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CBP100-FLD-NO-TELA-POP-UP       PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CBP100-FLD-NO-CARREGA-ULT       PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CBP100-FLD-NO-CARREGA-LIST-BOX  PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CBP100-FLD-NO-INVERTE-DATA      PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CBP100-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CBP100-FLD-NO-OBTER-DATA-MOVTO  PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 CBP100-FLD-NO-LE-APURACAO       PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 CBP100-FLD-NO-ITEM-SELEC-FORN   PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 CBP100-FLD-NO-POPUP-BANCO       PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 CBP100-FLD-NO-POPUP-SITUACAO    PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 CBP100-FLD-NO-POPUP-NOMINAL-A   PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 CBP100-FLD-NO-LER-BANCO         PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 CBP100-FLD-NO-LER-SITUACAO      PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 CBP100-FLD-NO-LER-NOMINAL       PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 CBP100-FLD-NO-ENCONTROU-CHEQUE  PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 CBP100-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 CBP100-FLD-NO-LINDET1           PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 CBP100-FLD-NO-LINDET-POPUP      PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 CBP100-FLD-NO-CONT              PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 CBP100-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 CBP100-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 CBP100-FLD-NO-ERRO              PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 CBP100-FLD-NO-CHEQUE-INI        PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 CBP100-FLD-NO-CHEQUE-FIM        PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 CBP100-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 CBP100-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               44.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

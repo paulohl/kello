@@ -1,0 +1,136 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 37.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 193.
+
+       01 GS-DATA-BLOCK.
+          03 GS-TIPO-LCTO                    PIC 9(2).
+          03 GS-DESC-TIPO-LCTO               PIC X(20).
+          03 GS-BANCO1                       PIC 9(6).
+          03 GS-DESC-BANCO1                  PIC X(20).
+          03 GS-BANCO2                       PIC 9(6).
+          03 GS-DESC-BANCO2                  PIC X(20).
+          03 GS-FLAG-GROUP.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-SAVE-FLG                  PIC 9.
+                88 GS-SAVE-FLG-TRUE          VALUE 1.
+             05 GS-CENTRALIZA                PIC 9.
+                88 GS-CENTRALIZA-TRUE        VALUE 1.
+             05 GS-CLR-FLG                   PIC 9.
+                88 GS-CLR-FLG-TRUE           VALUE 1.
+             05 GS-EXCLUI-FLG                PIC 9.
+                88 GS-EXCLUI-FLG-TRUE        VALUE 1.
+             05 GS-LOAD-FLG                  PIC 9.
+                88 GS-LOAD-FLG-TRUE          VALUE 1.
+             05 GS-CARREGA-ULT               PIC 9.
+                88 GS-CARREGA-ULT-TRUE       VALUE 1.
+             05 GS-CARREGA-LIST-BOX          PIC 9.
+                88 GS-CARREGA-LIST-BOX-TRUE  VALUE 1.
+             05 GS-PRINTER-FLG               PIC 9.
+                88 GS-PRINTER-FLG-TRUE       VALUE 1.
+             05 GS-LER-BANCO                 PIC 9.
+                88 GS-LER-BANCO-TRUE         VALUE 1.
+             05 GS-LER-TIPO                  PIC 9.
+                88 GS-LER-TIPO-TRUE          VALUE 1.
+             05 GS-CHAMAR-POPUPBANCO         PIC 9.
+                88 GS-CHAMAR-POPUPBANCO-TRUE VALUE 1.
+             05 GS-CHAMAR-POPUPTIPO          PIC 9.
+                88 GS-CHAMAR-POPUPTIPO-TRUE  VALUE 1.
+      ***
+          03 GS-BANCOW                       PIC 9(6).
+          03 GS-DESC-BANCOW                  PIC X(20).
+          03 GS-LINDET                       PIC X(90).
+          03 GS-CONT                         PIC 9(3).
+          03 GS-CODIGO-SELECIONADO           PIC X(3).
+          03 GS-ORDER                        PIC 9.
+             88 GS-ORDER-TRUE                VALUE 1.
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-ERR-MSG                      PIC X(40).
+          03 GS-ERRO-VALIDACAO               PIC 9.
+             88 GS-ERRO-VALIDACAO-TRUE       VALUE 1.
+          03 GS-CONFIG-FLAG                  PIC x(4) COMP-5.
+          03 GS-CONFIG-VALUE                 PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-TIPO-LCTO             PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-DESC-TIPO-LCTO        PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-BANCO1                PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-DESC-BANCO1           PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-BANCO2                PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 GS-FLD-NO-DESC-BANCO2           PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 GS-FLD-NO-SAVE-FLG              PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-CENTRALIZA            PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-CLR-FLG               PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-EXCLUI-FLG            PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 GS-FLD-NO-LOAD-FLG              PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 GS-FLD-NO-CARREGA-ULT           PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-CARREGA-LIST-BOX      PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-PRINTER-FLG           PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-LER-BANCO             PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-LER-TIPO              PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 GS-FLD-NO-CHAMAR-POPUPBANCO     PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 GS-FLD-NO-CHAMAR-POPUPTIPO      PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 GS-FLD-NO-BANCOW                PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 GS-FLD-NO-DESC-BANCOW           PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 GS-FLD-NO-LINDET                PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 GS-FLD-NO-CONT                  PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 GS-FLD-NO-CODIGO-SELECIONADO    PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 GS-FLD-NO-ORDER                 PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 GS-FLD-NO-ERR-MSG               PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 GS-FLD-NO-ERRO-VALIDACAO        PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 GS-FLD-NO-CONFIG-FLAG           PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 GS-FLD-NO-CONFIG-VALUE          PIC 9(4) COMP-5 VALUE
+                                               31.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
