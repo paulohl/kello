@@ -19,9 +19,11 @@ The first package was retrieved from a Jump Drive and shared via OneDrive in .RA
   - Formulate initial hypothesis and take-away's
   - Look for further content (code, existing build, data, stand alone workstation dump)
 
-### Summary of Tech Stack: This business system was written using COBOL-85 syntax and most recently compiled using Micro Focus Net Express V3.1 revision 255 Compiler (Copyright (C) 1984-2002 Micro Focus International Ltd.). There is content generated with Micro Focus COBOL 2002 .NET extensions (the GUI and user interaction). The system was used in a file-sharing LAN environment - apparently using the VirtuOS network operating system - with executables and data repositories located in a standard configured F:\PROGRAMA\KELLO\ directory, a shared storage located in theserver, for every authenticated LAN user.
+### Summary of Tech Stack: 
+This business system was written using COBOL-85 syntax and most recently compiled using Micro Focus Net Express V3.1 revision 255 Compiler (Copyright (C) 1984-2002 Micro Focus International Ltd.). There is content generated with Micro Focus COBOL 2002 .NET extensions (the GUI and user interaction). The system was used in a file-sharing LAN environment - apparently using the VirtuOS network operating system - with executables and data repositories located in a standard configured F:\PROGRAMA\KELLO\ directory, a shared storage located in theserver, for every authenticated LAN user.
 
-### Functionality Highlights: The system generates automatic printed reports and has Bank specific EDI transactions to generate Bank specific file formats for Accounts Receivable process (CEF Bank), to generate standard SBP payment slips (Banks HSBC and Itaú). 
+### Functionality Highlights: 
+The system generates automatic printed reports and has Bank specific EDI transactions to generate Bank specific file formats for Accounts Receivable process (CEF Bank), to generate standard SBP payment slips (Banks HSBC and Itaú). 
 The application is an in-house developed CRM-like system, with detailed sales historic, prediction, seller, cash flow components, among others. 
 
 ## Original Developers and Development Date Ranges
