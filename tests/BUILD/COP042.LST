@@ -1,0 +1,63 @@
+* Micro Focus Net Express            V3.1 revision 255 04-Sep-14 10:38 Page   1
+* cop042.CBL
+* Options: NOLIST NOASMLIST OMF(OBJ) GNT(.\) OBJ(.\) gnt"cop042.OBJ"
+*          obj"cop042.OBJ" list"COP042.LST" ERRLIST
+*      FINALIZAR-PROGRAMA
+* 348-S******************                                              (   0)**
+**    Procedure name FINALIZAR-PROGRAMA undeclared, line 1218 (first usage)
+*      CARREGA-MENSAGEM-ERRO
+* 348-S*********************                                           (   1)**
+**    Procedure name CARREGA-MENSAGEM-ERRO undeclared, line 1248 (first usage)
+*      LOAD-SCREENSET
+* 348-S**************                                                  (   1)**
+**    Procedure name LOAD-SCREENSET undeclared, line 1264 (first usage)
+*      SALVAR-CONTRATO
+* 348-S***************                                                 (   1)**
+**    Procedure name SALVAR-CONTRATO undeclared, line 1272 (first usage)
+*      SALVAR-BRINDE
+* 348-S*************                                                   (   1)**
+**    Procedure name SALVAR-BRINDE undeclared, line 1274 (first usage)
+*      LIMPAR-DADOS-BRINDE
+* 348-S*******************                                             (   1)**
+**    Procedure name LIMPAR-DADOS-BRINDE undeclared, line 1275 (first usage)
+*      EXCLUI-CONTRATO
+* 348-S***************                                                 (   1)**
+**    Procedure name EXCLUI-CONTRATO undeclared, line 1278 (first usage)
+*      EXCLUI-BRINDE
+* 348-S*************                                                   (   1)**
+**    Procedure name EXCLUI-BRINDE undeclared, line 1280 (first usage)
+*      LIMPAR-DADOS-CONTRATO
+* 348-S*********************                                           (   1)**
+**    Procedure name LIMPAR-DADOS-CONTRATO undeclared, line 1282 (first usage)
+*      VERIFICA-SEQ-CONTRATO
+* 348-S*********************                                           (   1)**
+**    Procedure name VERIFICA-SEQ-CONTRATO undeclared, line 1290 (first usage)
+*      VERIFICA-CUSTO
+* 348-S**************                                                  (   1)**
+**    Procedure name VERIFICA-CUSTO undeclared, line 1292 (first usage)
+*      CALCULA-VLR-TOTAL
+* 348-S*****************                                               (   1)**
+**    Procedure name CALCULA-VLR-TOTAL undeclared, line 1294 (first usage)
+*      CARREGAR-DADOS-BRINDE
+* 348-S*********************                                           (   1)**
+**    Procedure name CARREGAR-DADOS-BRINDE undeclared, line 1298 (first usage)
+*      LE-BRINDE
+* 348-S*********                                                       (   1)**
+**    Procedure name LE-BRINDE undeclared, line 1300 (first usage)
+*      CLEAR-FLAGS
+* 348-S***********                                                     (   1)**
+**    Procedure name CLEAR-FLAGS undeclared, line 1312 (first usage)
+*      CALL-DIALOG-SYSTEM
+* 348-S******************                                              (   1)**
+**    Procedure name CALL-DIALOG-SYSTEM undeclared, line 1313 (first usage)
+* Micro Focus Net Express            V3.1 revision 255 Compiler
+* Copyright (C) 1984-2002 Micro Focus International Ltd. URN AXCGG/AA0/00000
+*                                                        REF GNR-165060004AC
+* Last message on page:    1
+* Total Messages:    16
+* Unrecoverable :     0                    Severe  :    16
+* Errors        :     0                    Warnings:     0
+* Informational :     0                    Flags   :     0
+* Micro Focus Net Express            V3.1 revision 255 04-Sep-14 10:38 Page   2
+* cop042.CBL
+* Data:        5686     Code:           0

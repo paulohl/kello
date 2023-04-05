@@ -1,0 +1,208 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 FIN001-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 99.
+
+       01 FIN001-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 FIN001-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 121.
+
+       01 FIN001-DATA-BLOCK.
+          03 FIN001-DATA1                    PIC 9(4).
+          03 FIN001-DATA2                    PIC 9(4).
+          03 FIN001-DATA3                    PIC 9(4).
+          03 FIN001-DATA4                    PIC 9(4).
+          03 FIN001-DATA5                    PIC 9(4).
+          03 FIN001-DATA6                    PIC 9(4).
+          03 FIN001-DATA7                    PIC 9(4).
+          03 FIN001-DATA8                    PIC 9(4).
+          03 FIN001-FLAG-GROUP.
+             05 FIN001-EXIT-FLG              PIC 9.
+                88 FIN001-EXIT-FLG-TRUE      VALUE 1.
+             05 FIN001-PRINTER-FLG           PIC 9.
+                88 FIN001-PRINTER-FLG-TRUE   VALUE 1.
+             05 FIN001-CARREGA-LISTA-FLG     PIC 9.
+                88 FIN001-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 FIN001-CENTRALIZA            PIC 9.
+                88 FIN001-CENTRALIZA-TRUE    VALUE 1.
+             05 FIN001-LER-PORTADOR          PIC 9.
+                88 FIN001-LER-PORTADOR-TRUE  VALUE 1.
+             05 FIN001-POPUP-PORTADOR        PIC 9.
+                88 FIN001-POPUP-PORTADOR-TRUE VALUE 1.
+             05 FIN001-SALVAR                PIC 9.
+                88 FIN001-SALVAR-TRUE        VALUE 1.
+             05 FIN001-SALVAR2               PIC 9.
+                88 FIN001-SALVAR2-TRUE       VALUE 1.
+             05 FIN001-CARREGAR-CONFIG       PIC 9.
+                88 FIN001-CARREGAR-CONFIG-TRUE VALUE 1.
+             05 FIN001-CARREGAR-CONFIG2      PIC 9.
+                88 FIN001-CARREGAR-CONFIG2-TRUE VALUE 1.
+             05 FIN001-PREENCHER-TIPO        PIC 9.
+                88 FIN001-PREENCHER-TIPO-TRUE VALUE 1.
+             05 FIN001-CARREGA-FERIADOS      PIC 9.
+                88 FIN001-CARREGA-FERIADOS-TRUE VALUE 1.
+             05 FIN001-INSERIR-FERIADO       PIC 9.
+                88 FIN001-INSERIR-FERIADO-TRUE VALUE 1.
+      ***
+             05 FIN001-EVENTO-FLG            PIC 9.
+                88 FIN001-EVENTO-FLG-TRUE    VALUE 1.
+             05 FIN001-EVENTO-FLG2           PIC 9.
+                88 FIN001-EVENTO-FLG2-TRUE   VALUE 1.
+             05 FIN001-EVENTO-FLG3           PIC 9.
+                88 FIN001-EVENTO-FLG3-TRUE   VALUE 1.
+             05 FIN001-CARREGAR-CPD020       PIC 9.
+                88 FIN001-CARREGAR-CPD020-TRUE VALUE 1.
+          03 FIN001-QUAL-TIPO                PIC 9.
+             88 FIN001-QUAL-TIPO-TRUE        VALUE 1.
+          03 FIN001-QUAL-PORTADOR            PIC 9.
+             88 FIN001-QUAL-PORTADOR-TRUE    VALUE 1.
+          03 FIN001-LINDET                   PIC X(130).
+          03 FIN001-LINDET1                  PIC X(130).
+          03 FIN001-MENSAGEM-ERRO            PIC X(40).
+          03 FIN001-ERR-MSG                  PIC X(40).
+          03 FIN001-MENSAGEM-AGUARDA         PIC X(40).
+      ***
+          03 FIN001-TIPO                     PIC X(20).
+          03 FIN001-PORTADOR-DEPOSITO        PIC 9(4).
+          03 FIN001-DESC-PORTADOR-DEP        PIC X(60).
+          03 FIN001-LISTVIEW-PORTADOR OBJECT REFERENCE.
+          03 FIN001-ACP-EVENTO               PIC 9(5).
+      ***
+          03 FIN001-CONSIDERAR-PREVIST       PIC 9.
+             88 FIN001-CONSIDERAR-PREVIST-TRUE VALUE 1.
+      * Field CONSIDERAR-PREVISTO has been truncated
+          03 FIN001-CONSIDERAR-VENCIDO       PIC 9.
+             88 FIN001-CONSIDERAR-VENCIDO-TRUE VALUE 1.
+          03 FIN001-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 FIN001-CONFIG-VALUE             PIC x(4) COMP-5.
+          03 FIN001-LISTVIEW-TIPODOC OBJECT REFERENCE.
+          03 FIN001-TIPO-DOCTO               PIC X(19).
+          03 FIN001-ACP-FERIADO              PIC 9(8).
+          03 FIN001-LISTVIEW-FERIADO OBJECT REFERENCE.
+          03 FIN001-EVENTOS                  PIC 9(5).
+          03 FIN001-ACP-DATA                 PIC 9(8).
+          03 FIN001-TIPO-SELECIONADO         PIC X(15).
+          03 FIN001-CAB-LINHA                PIC X(150).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIN001-FIELD-NUMBERS.
+          03 FIN001-FLD-NO-DATA1             PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FIN001-FLD-NO-DATA2             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FIN001-FLD-NO-DATA3             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FIN001-FLD-NO-DATA4             PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FIN001-FLD-NO-DATA5             PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FIN001-FLD-NO-DATA6             PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FIN001-FLD-NO-DATA7             PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FIN001-FLD-NO-DATA8             PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FIN001-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FIN001-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FIN001-FLD-NO-CARREGA-LISTA-FL  PIC 9(4) COMP-5 VALUE
+                                               12.
+      * Field CARREGA-LISTA-FLG has been truncated
+          03 FIN001-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FIN001-FLD-NO-LER-PORTADOR      PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FIN001-FLD-NO-POPUP-PORTADOR    PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FIN001-FLD-NO-SALVAR            PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FIN001-FLD-NO-SALVAR2           PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FIN001-FLD-NO-CARREGAR-CONFIG   PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FIN001-FLD-NO-CARREGAR-CONFIG2  PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FIN001-FLD-NO-PREENCHER-TIPO    PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FIN001-FLD-NO-CARREGA-FERIADOS  PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FIN001-FLD-NO-INSERIR-FERIADO   PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FIN001-FLD-NO-EVENTO-FLG        PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FIN001-FLD-NO-EVENTO-FLG2       PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FIN001-FLD-NO-EVENTO-FLG3       PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FIN001-FLD-NO-CARREGAR-CPD020   PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FIN001-FLD-NO-QUAL-TIPO         PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FIN001-FLD-NO-QUAL-PORTADOR     PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FIN001-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FIN001-FLD-NO-LINDET1           PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FIN001-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FIN001-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FIN001-FLD-NO-MENSAGEM-AGUARDA  PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FIN001-FLD-NO-TIPO              PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FIN001-FLD-NO-PORTADOR-DEPOSIT  PIC 9(4) COMP-5 VALUE
+                                               35.
+      * Field PORTADOR-DEPOSITO has been truncated
+          03 FIN001-FLD-NO-DESC-PORTADOR-DE  PIC 9(4) COMP-5 VALUE
+                                               36.
+      * Field DESC-PORTADOR-DEP has been truncated
+          03 FIN001-FLD-NO-LISTVIEW-PORTADO  PIC 9(4) COMP-5 VALUE
+                                               37.
+      * Field LISTVIEW-PORTADOR has been truncated
+          03 FIN001-FLD-NO-ACP-EVENTO        PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FIN001-FLD-NO-CONSIDERAR-PREVI  PIC 9(4) COMP-5 VALUE
+                                               39.
+      * Field CONSIDERAR-PREVISTO has been truncated
+          03 FIN001-FLD-NO-CONSIDERAR-VENCI  PIC 9(4) COMP-5 VALUE
+                                               40.
+      * Field CONSIDERAR-VENCIDO has been truncated
+          03 FIN001-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FIN001-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FIN001-FLD-NO-LISTVIEW-TIPODOC  PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 FIN001-FLD-NO-TIPO-DOCTO        PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FIN001-FLD-NO-ACP-FERIADO       PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FIN001-FLD-NO-LISTVIEW-FERIADO  PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FIN001-FLD-NO-EVENTOS           PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FIN001-FLD-NO-ACP-DATA          PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 FIN001-FLD-NO-TIPO-SELECIONADO  PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FIN001-FLD-NO-CAB-LINHA         PIC 9(4) COMP-5 VALUE
+                                               50.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

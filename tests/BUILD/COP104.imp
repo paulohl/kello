@@ -1,0 +1,2619 @@
+Form GS
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char '.'
+       Comma-Char ','
+       Currency-Sign '$'
+       Error-File "Erros.err"
+       Icon-File "Icones.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+       Stylename {Default-Font}
+   End Details
+
+   Form Data
+           DATA-INI Integer(8)
+           DATA-FIM Integer(8)
+           MESANO-INI Integer(6)
+           MESANO-FIM Integer(6)
+           STATUS Integer(2)
+           DESC-STATUS Character(60)
+           UF Character(2)
+           REGIAO Integer(6)
+           DESC-REGIAO Character(60)
+           REPRESENTANTE Integer(6)
+           DESC-REPRESENTANTE Character(60)
+           EXECUTADO Integer(1)
+           AEXECUTAR Integer(1)
+           TAXA Decimal(2.2)
+           ORDEM-REL Integer(1)
+   *variáveis p/ resumo
+           ALBUM-CLIENTE Integer(8)
+           PROD-FOTOG Integer(9)
+           PROD-FITA Integer(8)
+           VENDA-LIQUIDA Decimal(8.2)
+           PATROCINIO Decimal(8.2)
+           PAT-MED-CLIENTE Decimal(8.2)
+           FOTO-PRODUZ Integer(9)
+           PERC-FOTO-PRODUZ Decimal(3.2)
+           FOTO-PERD Integer(9)
+           PERC-FOTO-PERD Decimal(3.2)
+           FOTO-AVULSA Integer(9)
+           PERC-FOTO-AVULSA Decimal(3.2)
+           FOTO-COMISSAO Integer(9)
+           PERC-FOTO-COMISSAO Decimal(3.2)
+           FOTO-DISPON Integer(9)
+           PERC-FOTO-DISPON Decimal(3.2)
+           PERC-FOTO-DISPON1 Decimal(3.2)
+           FOTO-VEND Integer(9)
+           PERC-FOTO-VEND Decimal(3.2)
+           FOTO-DEVOL Integer(9)
+           PERC-FOTO-DEVOL Decimal(3.2)
+           FOTO-FOGO Integer(6)
+           PERC-FOTO-FOGO Decimal(3.2)
+           FOTO-SALDO Integer(9)
+           PERC-FOTO-SALDO Decimal(3.2)
+           ALBUM-PRODUZ Integer(9)
+           PERC-ALBUM-PRODUZ Decimal(3.2)
+           ALBUM-VEND Integer(9)
+           PERC-ALBUM-VEND Decimal(3.2)
+           ALBUM-SALDO Integer(9)
+           PERC-ALBUM-SALDO Decimal(3.2)
+           FITA-VENDIDA Integer(9)
+           PERC-FITA-VENDIDA Decimal(3.2)
+           VENDA-BRUTA Decimal(9.2)
+           PRAZO-MEDIO Decimal(5.2)
+           VENDA-LIQUIDA-FAT Decimal(9.2)
+           PRECO-MEDIO-FOTO Decimal(6.2)
+           PRECO-MEDIO-CLIENTE Decimal(8.2)
+           ALBUM-AEXECUTAR Integer(6)
+           PROD-FOTOGRAFIA Integer(9)
+           PROD-FITAS Integer(6)
+           VENDA-LIQ-AEXECUTAR Decimal(8.2)
+           PATROCINIO-AEXECUTAR Decimal(8.2)
+           PAT-FORM-AEXECUTAR Decimal(8.2)
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           PRINTER-FLG Integer(1)
+           CARREGA-LISTA-FLG Integer(1)
+           GRAVA-WORK-FLG Integer(1)
+           ITEM-SELECIONADO Integer(1)
+           GERAR-ORDEM Integer(1)
+           CHAMAR-POP-REGIAO Integer(1)
+           GRAVA-STATUS Integer(1)
+           LE-REGIAO Integer(1)
+           LE-REPRES Integer(1)
+           LE-STATUS Integer(1)
+           INCLUIR Integer(1)
+           CENTRALIZA Integer(1)
+           CHAMAR-POP-STATUS Integer(1)
+           CHAMAR-POP-REPRES Integer(1)
+           CARREGAR-STATUS Integer(1)
+   ***
+       End Group # FLAG-GROUP
+
+           ORDEM Integer(1)
+           DESCR-ORDEM Character(20)
+           EXIBE-CONTRATO Integer(4)
+           LINDET Character(160)
+           LINTOT Character(105)
+           MENSAGEM-ERRO Character(40)
+           ERR-MSG Character(40)
+           ALBUM-CLIENTE-INI Integer(8)
+           PROD-FOTOG-INI Integer(9)
+           PROD-FITA-INI Integer(8)
+           VENDA-LIQUIDA-INI Decimal(8.2)
+           PATROCINIO-INI Decimal(8.2)
+           PAT-MED-CLIENTE-INI Decimal(8.2)
+           ALBUM-CLIENTE-ATUAL Integer(8)
+           PROD-FOTOG-ATUAL Integer(9)
+           PROD-FITA-ATUAL Integer(8)
+           VENDA-LIQUIDA-ATUAL Decimal(8.2)
+           PATROCINIO-ATUAL Decimal(8.2)
+           PAT-MED-CLIENTE-ATUAL Decimal(8.2)
+           PATROCINIO-PAGO Decimal(8.2)
+           PATROCINIO-N-PAGO Decimal(8.2)
+           PATROCINIO-MEDIO Decimal(8.2)
+           PATROCINIO-PAGO-AEXEC Decimal(8.2)
+           PATROCINIO-N-PAGO-AEXEC Decimal(8.2)
+           PERC-VENDIDOS Decimal(3.2)
+           PERC-DEVOLVIDAS Decimal(3.2)
+           PROD-DVD-INI Integer(8)
+           PROD-DVD-ATUAL Integer(8)
+           PROD-DVD Integer(6)
+           PROD-POSTER-INI Integer(8)
+           PROD-POSTER-ATUAL Integer(8)
+           DVD-VENDIDO Integer(9)
+           PERC-DVD-VENDIDO Decimal(3.2)
+           POSTER-VENDIDO Integer(9)
+           PERC-POSTER-VENDIDO Decimal(3.2)
+           PROD-POSTER Integer(8)
+           COPIAS Integer(2)
+           LINHA-STATUS Character(70)
+           CONT Integer(4)
+           OP-DATA Integer(1)
+           OP-FILTRO Integer(1)
+           BRINDES Integer(1)
+           REPORTAGENS Integer(1)
+   ***
+           IMP-ANALITICO Integer(1)
+           IMP-RESUMO Integer(1)
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+   ***
+           ACP-VENDA Integer(1)
+   End Data
+
+   Data Validation DATA-INI
+       Date DDMMYYYY
+   End Validation # DATA-INI
+
+   Data Validation DATA-FIM
+       Date DDMMYYYY
+   End Validation # DATA-FIM
+
+   Data Validation MESANO-INI
+       Date MMYYYY
+           ErrMsgNo 1
+   End Validation # MESANO-INI
+
+   Data Validation MESANO-FIM
+       Date MMYYYY
+           ErrMsgNo 1
+   End Validation # MESANO-FIM
+
+   Font-Record Stylename {font-001}
+       Typeface "MS Sans Serif"
+       Pointsize 8
+       Attributes BITMAPPED PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {Default-Font}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Arial"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "Arial"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Font-Record Stylename {font-004}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-005}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-006}
+       Typeface "Courier New"
+       Pointsize 7
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-007}
+       Typeface "Arial"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL BOLD ITALIC
+   End-Record
+
+   Font-Record Stylename {font-008}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-009}
+       Typeface "Arial"
+       Pointsize 9
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Font-Record Stylename {font-010}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-011}
+       Typeface "Arial"
+       Pointsize 15
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (0,-12)
+       Size  (3632,2196)
+       Display "COP104 - Relatório 05"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE CLIPPED
+       Icon "dsicon"
+   End Object  #PRINCIPAL
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (76,375)
+       Display "Interv. Mês/Ano:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (864,384)
+       Display "à"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (996,1988)
+       Display "Ordem:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (76,470)
+       Display "Taxa Mensal:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1276,388)
+       Display "Nº Cópias"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1276,492)
+       Display "UF:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (76,565)
+       Display "Região:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (76,660)
+       Display "Representante:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (76,280)
+       Display "Intervalo Data:"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (864,282)
+       Display "à"
+       Stylename {font-009}
+   End Object  #{NoName}
+
+   Object EF33
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (472,280)
+       Size  (312,56)
+       Masterfield DATA-INI
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF33
+
+   Object EF34
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (940,280)
+       Size  (312,56)
+       Masterfield DATA-FIM
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZ/ZZ/ZZZZ
+   End Object  #EF34
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (472,376)
+       Size  (260,56)
+       Masterfield MESANO-INI
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO
+       Picture ZZ/ZZZZ
+   End Object  #EF1
+
+   Object EF11
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (940,384)
+       Size  (268,56)
+       Masterfield MESANO-FIM
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('W')
+       Picture ZZ/ZZZZ
+   End Object  #EF11
+
+   Object EF25
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (1584,388)
+       Size  (88,56)
+       Masterfield COPIAS
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture Z9
+   End Object  #EF25
+
+   Object EF6
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (472,472)
+       Size  (196,56)
+       Masterfield TAXA
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO
+       Picture ZZ.ZZ
+   End Object  #EF6
+
+   Object EF26
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (1584,484)
+       Size  (88,56)
+       Masterfield UF
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') UPPER AUTOSWIPE
+       Picture X(2)
+   End Object  #EF26
+
+   Object EF27
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (472,568)
+       Size  (228,56)
+       Masterfield REGIAO
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ,ZZ9
+       Dialog CASE(OFF)
+           Event F2
+               SET-FLAG CHAMAR-POP-REGIAO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF27 ;
+               REFRESH-OBJECT EF28 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Event CR
+               SET-FLAG LE-REGIAO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF27 ;
+               REFRESH-OBJECT EF28 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+       End Dialog
+   End Object  #EF27
+
+   Object EF29
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (472,664)
+       Size  (228,56)
+       Masterfield REPRESENTANTE
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('Z') AUTOSWIPE
+       Picture ZZZ,ZZ9
+       Dialog CASE(OFF)
+           Event F2
+               SET-FLAG CHAMAR-POP-REPRES(1) ;
+               RETC ;
+               REFRESH-OBJECT EF29 ;
+               REFRESH-OBJECT EF30 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # F2
+           Event CR
+               SET-FLAG LE-REPRES(1) ;
+               RETC ;
+               REFRESH-OBJECT EF29 ;
+               REFRESH-OBJECT EF30 ;
+               SKIP-TO-NEXT-OBJECT 1 ;
+           End Event # CR
+       End Dialog
+   End Object  #EF29
+
+   Object CB1
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (2724,188)
+       Size  (372,84)
+       Display "~Executado"
+       Masterfield EXECUTADO
+   End Object  #CB1
+
+   Object CB2
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (2724,296)
+       Size  (400,80)
+       Display "~A Executar"
+       Masterfield AEXECUTAR
+   End Object  #CB2
+
+   Object PB1
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (3288,268)
+       Size  (312,156)
+       Display "~Gerar"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE CONTINUE ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE CONTINUE ;
+           End Event # CR
+           Procedure CONTINUE
+               XIF= EXECUTADO 0 TESTA ;
+               GET-BUTTON-STATE CB1 EXECUTADO ;
+               GET-BUTTON-STATE CB2 AEXECUTAR ;
+               SET-FLAG GRAVA-WORK-FLG(1) ;
+               RETC ;
+               SET-FOCUS LB1 ;
+           End Procedure # CONTINUE
+           Procedure TESTA
+               XIF= AEXECUTAR 0 ERRO ;
+           End Procedure # TESTA
+           Procedure ERRO
+               SET-BUTTON-STATE CB2 1 ;
+               REFRESH-OBJECT CB2 ;
+           End Procedure # ERRO
+       End Dialog
+   End Object  #PB1
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (3288,442)
+       Size  (312,156)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB2
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (3336,116)
+       Size  (80,76)
+       Bitmap-Name "Helpbtn"
+       Style COLOR("","GRAY")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW WIN2 ;
+               SET-FOCUS PB3 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB5
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (3480,120)
+       Size  (80,76)
+       Bitmap-Name "print1"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 1 IMP-ANALITICO ;
+               MOVE 1 IMP-RESUMO ;
+               REFRESH-OBJECT WIN5 ;
+               SHOW-WINDOW WIN5 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB4
+
+   Object GBOX2
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (32,56)
+       Size  (3588,712)
+       Display ""
+       Style COLOR("RED","MAGENTA")
+   End Object  #GBOX2
+
+   Object LB1
+       Type LIST-BOX
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (0,716)
+       Size  (3624,1148)
+       Dialog CASE(OFF)
+       * ITEM-SELECTED
+       *     GET-SELECTED-LIST-ITEM LB1 $REGISTER 0
+       *     RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER
+       *     SET-FLAG ITEM-SELECIONADO(1)
+       *     RETC
+           Event ITEM-ACCEPTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # ITEM-ACCEPTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               IFNOT= LINDET "                " CONTINUE ;
+               RETC ;
+           End Procedure # OPCAO
+           Procedure CONTINUE
+               SET-FLAG ITEM-SELECIONADO(1) ;
+               RETC ;
+           End Procedure # CONTINUE
+       End Dialog
+   End Object  #LB1
+
+   Object GBOX1
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (32,56)
+       Size  (3232,712)
+       Display ""
+   End Object  #GBOX1
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (1172,1988)
+       Size  (888,64)
+       Masterfield DESCR-ORDEM
+       Style RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture X(20)
+   End Object  #EF2
+
+   Object GBOX4
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (2656,100)
+       Size  (596,324)
+       Display "Contratos"
+       Style COLOR("GREEN","")
+   End Object  #GBOX4
+
+   Object GBOX3
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (20,1928)
+       Size  (2752,316)
+       Display "Ordem"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX3
+
+   Object RB1
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-002}
+       Start (64,2007)
+       Display "Contrato"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 1 ORDEM ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB1
+
+   Object RB2
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-002}
+       Start (64,2078)
+       Display "Cidade"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 3 ORDEM ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB2
+
+   Object RB3
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-002}
+       Start (64,2149)
+       Display "Mês/Ano"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 2 ORDEM ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB3
+
+   Object RB4
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-002}
+       Start (440,2004)
+       Display "Região"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 4 ORDEM ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB4
+
+   Object RB5
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-002}
+       Start (440,2078)
+       Display "~Representante"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 5 ORDEM ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB5
+
+   Object RB6
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Stylename {font-002}
+       Start (440,2152)
+       Display "ABC"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 6 ORDEM ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB6
+
+   Object PB6
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-003}
+       Start (2252,2104)
+       Size  (480,140)
+       Display "Reordenar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               SET-FLAG CARREGA-LISTA-FLG(1) ;
+               RETC ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB6
+
+   Object PB7
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-007}
+       Start (2792,2056)
+       Size  (828,296)
+       Display "~RESUMO"
+       Style COLOR("LIGHT BLUE","")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               REFRESH-OBJECT WIN3 ;
+               SHOW-WINDOW WIN3 ;
+               SET-FOCUS EF4 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB7
+
+   Object EF28
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (728,556)
+       Size  (312,56)
+       Masterfield DESC-REGIAO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture X(60)
+   End Object  #EF28
+
+   Object EF30
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-005}
+       Start (732,648)
+       Size  (312,56)
+       Masterfield DESC-REPRESENTANTE
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture X(60)
+   End Object  #EF30
+
+   Object PB8
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (3288,616)
+       Size  (312,156)
+       Display "~Status"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               EXECUTE-PROCEDURE WIN-STATUS ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               EXECUTE-PROCEDURE WIN-STATUS ;
+           End Event # CR
+           Procedure WIN-STATUS
+               SHOW-WINDOW WIN4 ;
+               SET-FOCUS EF31 ;
+           End Procedure # WIN-STATUS
+       End Dialog
+   End Object  #PB8
+
+   Object CB3
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Start (2724,524)
+       Display "~Brindes"
+       Masterfield BRINDES
+       Style FIT-TEXT
+   End Object  #CB3
+
+   Object CB4
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Start (2724,636)
+       Display "Reportagens"
+       Masterfield REPORTAGENS
+       Style FIT-TEXT
+   End Object  #CB4
+
+   Object GBOX10
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (2656,428)
+       Size  (596,324)
+       Display "Custos"
+       Style COLOR("GREEN","")
+   End Object  #GBOX10
+
+   Object RB7
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 2
+       Stylename {font-005}
+       Start (1944,288)
+       Display "~Venda"
+       Style FIT-TEXT COLOR("LIGHT BLUE","")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 1 OP-DATA ;
+               SET-FOCUS EF33 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB7
+
+   Object RB8
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 2
+       Stylename {font-005}
+       Start (2320,288)
+       Display "~Produção"
+       Style FIT-TEXT COLOR("LIGHT BLUE","")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 2 OP-DATA ;
+               SET-FOCUS EF33 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB8
+
+   Object GBOX11
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (68,100)
+       Size  (2560,172)
+       Display "Filtro de Data"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX11
+
+   Object RB9
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 3
+       Stylename {font-004}
+       Start (88,168)
+       Display "Data (Venda/Produção)"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 1 OP-FILTRO ;
+               ENABLE-OBJECT EF33 ;
+               ENABLE-OBJECT EF34 ;
+               DISABLE-OBJECT EF1 ;
+               DISABLE-OBJECT EF11 ;
+               ENABLE-OBJECT RB7 ;
+               ENABLE-OBJECT RB8 ;
+               MOVE 1 OP-DATA ;
+               SET-BUTTON-STATE RB7 1 ;
+               SET-FOCUS EF33 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB9
+
+   Object RB10
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 3
+       Stylename {font-004}
+       Start (780,164)
+       Display "Mês/Ano (Prev.Contrato)"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 2 OP-FILTRO ;
+               DISABLE-OBJECT EF33 ;
+               DISABLE-OBJECT EF34 ;
+               ENABLE-OBJECT EF1 ;
+               ENABLE-OBJECT EF11 ;
+               MOVE 0 OP-DATA ;
+               DISABLE-OBJECT RB7 ;
+               DISABLE-OBJECT RB8 ;
+               SET-FOCUS EF1 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB10
+
+   Object CB7
+       Type
+       Parent PRINCIPAL
+       Control-Group 3
+       Stylename
+   Object CB8
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (2224,164)
+       Display "~Comissão s/ Venda"
+       Masterfield ACP-VENDA
+       Style FIT-TEXT
+   End Object  #CB8
+
+   Object WIN2
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (652,556)
+       Size  (1816,1148)
+       Display "Help"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+           End Event # WINDOW-CREATED
+       End Dialog
+   End Object  #WIN2
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (56,80)
+       Display "Lista todos os títulos que estiverem dentro do intervalo de ve\
+nci-"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (56,170)
+       Display "mento solicitado. As ordens são: Contrato, Curso, Instituição,\
+"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (56,260)
+       Display "Cidade, Região, Representante, Padrão, Mês/ano e Status."
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN2
+       Start (56,350)
+       Display "Para alterar a ordem basta clicar na orelha da ordem desejada.\
+"
+   End Object  #{NoName}
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent WIN2
+       Start (752,1060)
+       Size  (240,96)
+       Display "OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN2 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB3
+
+   Object LB2
+       Type LIST-BOX
+       Parent WIN2
+       Start (48,384)
+       Size  (1688,516)
+       Initial Text
+           "Relatório 05. "
+       End Text
+   End Object  #LB2
+
+   Object MBOX1
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "OCORREU UM ERRO"
+   End Object  #MBOX1
+
+   Object WIN1
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (1024,644)
+       Size  (892,372)
+       Display "Aguarde"
+       Style SIZE-BORDER TITLEBAR
+       Icon "dsicon"
+   End Object  #WIN1
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN1
+       Start (40,120)
+       Display "Gerando arquivo temporário:"
+   End Object  #{NoName}
+
+   Object EF3
+       Type ENTRY-FIELD
+       Parent WIN1
+       Start (264,272)
+       Size  (248,64)
+       Masterfield EXIBE-CONTRATO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture 9(4)
+   End Object  #EF3
+
+   Object MBOX-ERROS
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Validação de Campos"
+   End Object  #MBOX-ERROS
+
+   Object MBOX6
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(YES-NO) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Atenção"
+   End Object  #MBOX6
+
+   Object WIN3
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (8,4)
+       Size  (3120,2048)
+       Display "Resumo"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FOCUS LB1 ;
+               RETC ;
+           End Event # CLOSED-WINDOW
+           Event ESC
+               UNSHOW-WINDOW WIN3 PRINCIPAL ;
+               SET-FOCUS LB1 ;
+               RETC ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN3
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,244)
+       Display "Albuns/cliente"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,312)
+       Display "Produção Fotografias"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,384)
+       Display "Produção Fitas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,592)
+       Display "Venda Líquida"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,660)
+       Display "Patrocínio"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,728)
+       Display "Patrocínio médio cliente"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,124)
+       Display "Produzidas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,192)
+       Display "Perdidas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,396)
+       Display "Avulsas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,464)
+       Display "Comissão"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,260)
+       Display "Disponível"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,328)
+       Display "Vendidas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,532)
+       Display "Devolvidas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,600)
+       Display "Fogo"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1632,668)
+       Display "Saldo"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (60,1616)
+       Display "Venda Bruta"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (60,1684)
+       Display "Prazo-médio"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (60,1752)
+       Display "Venda Líquida (index)"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (60,1820)
+       Display "Preço médio por foto"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (60,1888)
+       Display "Preço médio por cliente"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1248,1616)
+       Display "Álbum/cliente"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1248,1684)
+       Display "Produção Fotografia"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1248,1754)
+       Display "Produção Fitas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (2272,1616)
+       Display "Venda Líquida"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (2272,1684)
+       Display "Patrocínio"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (2272,1754)
+       Display "Patrocínio/formando"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,852)
+       Display "Albuns/cliente"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,920)
+       Display "Produção Fotografias"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,988)
+       Display "Produção Fitas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,1192)
+       Display "Venda Líquida"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,1260)
+       Display "Patrocínio"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,1328)
+       Display "Patrocínio médio cliente"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (40,244)
+       Display "Iniciais"
+       Stylename SYSTEM-MONOSPACED
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (40,852)
+       Display "Atuais"
+       Stylename SYSTEM-MONOSPACED
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,856)
+       Display "Produzidos"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,924)
+       Display "Vendidos"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,992)
+       Display "Saldo"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,1060)
+       Display "Fitas vendidas"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,1276)
+       Display "Patrocínio Pago"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,1348)
+       Display "Patrocínio Não Pago"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,1420)
+       Display "Patrocínio Médio Produzido"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1252,1978)
+       Display "Patrocínio Pago"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (2272,1826)
+       Display "Patrocínio Não Pago"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,456)
+       Display "Produção de DVD"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,1056)
+       Display "Produção de DVD"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1248,1826)
+       Display "DVD"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,524)
+       Display "Produção de Poster"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (384,1124)
+       Display "Produção de Poster"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,1132)
+       Display "DVD vendidos"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1624,1200)
+       Display "Poster vendidos"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN3
+       Start (1252,1908)
+       Display "Poster"
+       Stylename {font-008}
+   End Object  #{NoName}
+
+   Object GBOX5
+       Type GROUP-BOX
+       Parent WIN3
+       Stylename {font-003}
+       Start (20,72)
+       Size  (1532,1448)
+       Display "Previsões"
+       Style COLOR("BLUE","")
+   End Object  #GBOX5
+
+   Object GBOX6
+       Type GROUP-BOX
+       Parent WIN3
+       Stylename {font-003}
+       Start (1584,76)
+       Size  (1504,700)
+       Display "Fotografias"
+       Style COLOR("BLUE","")
+   End Object  #GBOX6
+
+   Object GBOX8
+       Type GROUP-BOX
+       Parent WIN3
+       Start (20,1544)
+       Size  (1152,540)
+       Display "Faturamento"
+       Style COLOR("BLUE","")
+   End Object  #GBOX8
+
+   Object GBOX9
+       Type GROUP-BOX
+       Parent WIN3
+       Start (1212,1544)
+       Size  (1888,540)
+       Display "Contratos não executados"
+       Style COLOR("BLUE","")
+   End Object  #GBOX9
+
+   Object EF4
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,244)
+       Size  (312,60)
+       Masterfield ALBUM-CLIENTE-INI
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF4
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,312)
+       Size  (312,60)
+       Masterfield PROD-FOTOG-INI
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,380)
+       Size  (312,64)
+       Masterfield PROD-FITA-INI
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED RESIZE-CHAR('9') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,592)
+       Size  (312,60)
+       Masterfield VENDA-LIQUIDA-INI
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,660)
+       Size  (312,60)
+       Masterfield PATROCINIO-INI
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,728)
+       Size  (312,60)
+       Masterfield PAT-MED-CLIENTE-INI
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,124)
+       Size  (236,60)
+       Masterfield FOTO-PRODUZ
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2452,124)
+       Size  (152,60)
+       Masterfield PERC-FOTO-PRODUZ
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,192)
+       Size  (236,60)
+       Masterfield FOTO-PERD
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2452,192)
+       Size  (152,60)
+       Masterfield PERC-FOTO-PERD
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,396)
+       Size  (236,60)
+       Masterfield FOTO-AVULSA
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,396)
+       Size  (140,60)
+       Masterfield PERC-FOTO-AVULSA
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,464)
+       Size  (236,60)
+       Masterfield FOTO-COMISSAO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,464)
+       Size  (140,60)
+       Masterfield PERC-FOTO-COMISSAO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,260)
+       Size  (236,60)
+       Masterfield FOTO-DISPON
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2452,260)
+       Size  (152,60)
+       Masterfield PERC-FOTO-DISPON
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,328)
+       Size  (236,60)
+       Masterfield FOTO-VEND
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,328)
+       Size  (140,60)
+       Masterfield PERC-FOTO-VEND
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,532)
+       Size  (236,60)
+       Masterfield FOTO-DEVOL
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,532)
+       Size  (140,60)
+       Masterfield PERC-FOTO-DEVOL
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,600)
+       Size  (236,60)
+       Masterfield FOTO-FOGO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,600)
+       Size  (140,60)
+       Masterfield PERC-FOTO-FOGO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2100,668)
+       Size  (236,60)
+       Masterfield FOTO-SALDO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,668)
+       Size  (140,60)
+       Masterfield PERC-FOTO-SALDO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (792,1616)
+       Size  (296,60)
+       Masterfield VENDA-BRUTA
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (888,1684)
+       Size  (200,60)
+       Masterfield PRAZO-MEDIO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (792,1752)
+       Size  (296,60)
+       Masterfield VENDA-LIQUIDA-FAT
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (864,1820)
+       Size  (224,60)
+       Masterfield PRECO-MEDIO-FOTO
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (828,1888)
+       Size  (260,60)
+       Masterfield PRECO-MEDIO-CLIENTE
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1844,1616)
+       Size  (280,64)
+       Masterfield ALBUM-AEXECUTAR
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1844,1688)
+       Size  (280,64)
+       Masterfield PROD-FOTOGRAFIA
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1844,1760)
+       Size  (280,64)
+       Masterfield PROD-FITAS
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2764,1616)
+       Size  (280,60)
+       Masterfield VENDA-LIQ-AEXECUTAR
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2764,1684)
+       Size  (280,60)
+       Masterfield PATROCINIO-AEXECUTAR
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2764,1754)
+       Size  (280,60)
+       Masterfield PAT-FORM-AEXECUTAR
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2668,260)
+       Size  (140,60)
+       Masterfield PERC-FOTO-DISPON1
+       Style BLANK-WHEN-ZERO DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object EF5
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,852)
+       Size  (312,60)
+       Masterfield ALBUM-CLIENTE-ATUAL
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF5
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,920)
+       Size  (312,60)
+       Masterfield PROD-FOTOG-ATUAL
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,988)
+       Size  (312,60)
+       Masterfield PROD-FITA-ATUAL
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,1192)
+       Size  (312,60)
+       Masterfield VENDA-LIQUIDA-ATUAL
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,1260)
+       Size  (312,60)
+       Masterfield PATROCINIO-ATUAL
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,1328)
+       Size  (312,60)
+       Masterfield PAT-MED-CLIENTE-ATUAL
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object GBOX7
+       Type GROUP-BOX
+       Parent WIN3
+       Start (1584,796)
+       Size  (1512,728)
+       Display "Álbum/cliente"
+       Style COLOR("BLUE","")
+   End Object  #GBOX7
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,856)
+       Size  (240,60)
+       Masterfield ALBUM-PRODUZ
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2640,856)
+       Size  (168,60)
+       Masterfield PERC-ALBUM-PRODUZ
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,924)
+       Size  (240,60)
+       Masterfield ALBUM-VEND
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2640,924)
+       Size  (168,60)
+       Masterfield PERC-ALBUM-VEND
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,992)
+       Size  (240,60)
+       Masterfield ALBUM-SALDO
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2640,992)
+       Size  (168,60)
+       Masterfield PERC-ALBUM-SALDO
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,1060)
+       Size  (240,64)
+       Masterfield FITA-VENDIDA
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2640,1060)
+       Size  (168,60)
+       Masterfield PERC-FITA-VENDIDA
+       Style BLANK-WHEN-ZERO RIGHT-JUSTIFIED DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #{NoName}
+
+   Object EF7
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,1276)
+       Size  (240,64)
+       Masterfield PATROCINIO-PAGO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF7
+
+   Object EF8
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,1348)
+       Size  (240,64)
+       Masterfield PATROCINIO-N-PAGO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF8
+
+   Object EF9
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,1420)
+       Size  (240,64)
+       Masterfield PATROCINIO-MEDIO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF9
+
+   Object EF10
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1844,1976)
+       Size  (280,64)
+       Masterfield PATROCINIO-PAGO-AEXEC
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF10
+
+   Object EF12
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2764,1826)
+       Size  (280,60)
+       Masterfield PATROCINIO-N-PAGO-AEXEC
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF12
+
+   Object EF13
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2452,328)
+       Size  (152,60)
+       Masterfield PERC-VENDIDOS
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #EF13
+
+   Object EF14
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2452,532)
+       Size  (152,60)
+       Masterfield PERC-DEVOLVIDAS
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #EF14
+
+   Object EF15
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,452)
+       Size  (312,64)
+       Masterfield PROD-DVD-INI
+       Style AUTOSCROLL BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF15
+
+   Object EF16
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,1056)
+       Size  (312,60)
+       Masterfield PROD-DVD-ATUAL
+       Style AUTOSCROLL BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF16
+
+   Object EF17
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1844,1832)
+       Size  (280,64)
+       Masterfield PROD-DVD
+       Style AUTOSCROLL BLANK-WHEN-ZERO RESIZE-CHAR('W') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZZ,ZZZ
+   End Object  #EF17
+
+   Object EF18
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,524)
+       Size  (312,60)
+       Masterfield PROD-POSTER-INI
+       Style AUTOSCROLL FIT-PICTURE RESIZE-CHAR('Z') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF18
+
+   Object EF19
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (1084,1124)
+       Size  (312,60)
+       Masterfield PROD-POSTER-ATUAL
+       Style FIT-PICTURE RESIZE-CHAR('Z') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF19
+
+   Object EF20
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,1132)
+       Size  (240,60)
+       Masterfield DVD-VENDIDO
+       Style AUTOSCROLL BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('Z')
+       Style DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #EF20
+
+   Object EF21
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2640,1128)
+       Size  (168,60)
+       Masterfield PERC-DVD-VENDIDO
+       Style AUTOSCROLL FIT-PICTURE RESIZE-CHAR('Z') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #EF21
+
+   Object EF22
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2340,1200)
+       Size  (240,60)
+       Masterfield POSTER-VENDIDO
+       Style AUTOSCROLL FIT-PICTURE RESIZE-CHAR('Z') DISPLAY-FIELD
+       Style COLOR("RED","")
+       Picture ZZZ,ZZZ,ZZZ
+   End Object  #EF22
+
+   Object EF23
+       Type ENTRY-FIELD
+       Parent WIN3
+       Stylename {font-009}
+       Start (2640,1200)
+       Size  (168,60)
+       Masterfield PERC-POSTER-VENDIDO
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZZ.ZZ
+   End Object  #EF23
+
+   Object EF24
+       Type ENTRY-FIELD
+       Parent WIN3
+       Start (1844,1908)
+       Size  (280,64)
+       Masterfield PROD-POSTER
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("RED","")
+       Picture ZZ,ZZZ,ZZZ
+   End Object  #EF24
+
+   Object WIN4
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (228,660)
+       Size  (2540,912)
+       Display "Status do Contrato"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Event # CLOSED-WINDOW
+           Event ESC
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN4
+
+   Object {NoName}
+       Type TEXT
+       Parent WIN4
+       Start (28,96)
+       Display "Status"
+   End Object  #{NoName}
+
+   Object EF31
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-005}
+       Start (300,92)
+       Size  (88,56)
+       Masterfield STATUS
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('Z')
+       Style AUTOSWIPE
+       Picture Z9
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE LER-PORTADOR ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE LER-PORTADOR ;
+           End Event # TAB
+           Procedure LER-PORTADOR
+               SET-FLAG LE-STATUS(1) ;
+               RETC ;
+               REFRESH-OBJECT EF31 ;
+               REFRESH-OBJECT EF32 ;
+               SET-FOCUS PB10 ;
+           End Procedure # LER-PORTADOR
+           Event F2
+               SET-FLAG CHAMAR-POP-STATUS(1) ;
+               RETC ;
+               REFRESH-OBJECT EF31 ;
+               REFRESH-OBJECT EF32 ;
+               SET-FOCUS PB10 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF31
+
+   Object EF32
+       Type ENTRY-FIELD
+       Parent WIN4
+       Stylename {font-005}
+       Start (424,92)
+       Size  (1380,60)
+       Masterfield DESC-STATUS
+       Style BORDER RESIZE-CHAR('W') READ-ONLY
+       Picture X(60)
+   End Object  #EF32
+
+   Object PB10
+       Type PUSH-BUTTON
+       Parent WIN4
+       Start (1896,96)
+       Size  (312,96)
+       Display "~Inserir"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               SET-FLAG INCLUIR(0) ;
+               RETC ;
+               SET-FOCUS EF31 ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB10
+
+   Object LB3
+       Type LIST-BOX
+       Parent WIN4
+       Stylename {font-010}
+       Start (16,144)
+       Size  (2516,620)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-SELECTED
+           End Event # ITEM-SELECTED
+           Event DEL
+               DELETE-LIST-ITEM LB3 $EVENT-DATA 1 ;
+               REFRESH-OBJECT LB3 ;
+           End Event # DEL
+           Event ITEM-ACCEPTED
+               DELETE-LIST-ITEM LB3 $EVENT-DATA 1 ;
+               REFRESH-OBJECT LB3 ;
+           End Event # ITEM-ACCEPTED
+       End Dialog
+   End Object  #LB3
+
+   Object PB15
+       Type PUSH-BUTTON
+       Parent WIN4
+       Start (2208,96)
+       Size  (312,96)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO ;
+           End Event # CR
+           Procedure OPCAO
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Procedure # OPCAO
+       End Dialog
+   End Object  #PB15
+
+   Object PB9
+       Type PUSH-BUTTON
+       Parent WIN4
+       Start (16,864)
+       Size  (2512,96)
+       Display "~Gravar Status"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG GRAVA-STATUS(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG GRAVA-STATUS(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN4 PRINCIPAL ;
+               SET-FOCUS EF1 ;
+           End Event # CR
+       End Dialog
+   End Object  #PB9
+
+   Object WIN5
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (664,784)
+       Size  (1612,824)
+       Display "Impressão"
+       Style BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+       Dialog CASE(OFF)
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW WIN5 PRINCIPAL ;
+           End Event # CLOSED-WINDOW
+           Event ESC
+               UNSHOW-WINDOW WIN5 PRINCIPAL ;
+           End Event # ESC
+       End Dialog
+   End Object  #WIN5
+
+   Object CB5
+       Type CHECK-BOX
+       Parent WIN5
+       Stylename {font-011}
+       Start (328,288)
+       Display "~Analítico"
+       Masterfield IMP-ANALITICO
+       Style FIT-TEXT
+   End Object  #CB5
+
+   Object CB6
+       Type CHECK-BOX
+       Parent WIN5
+       Stylename {font-011}
+       Start (332,416)
+       Display "~Resumo"
+       Masterfield IMP-RESUMO
+       Style FIT-TEXT
+   End Object  #CB6
+
+   Object PB11
+       Type PUSH-BUTTON
+       Parent WIN5
+       Stylename {font-011}
+       Start (152,688)
+       Size  (612,192)
+       Display "~Imprimir"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+               UNSHOW-WINDOW WIN5 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB11
+
+   Object PB12
+       Type PUSH-BUTTON
+       Parent WIN5
+       Stylename {font-011}
+       Start (848,688)
+       Size  (612,192)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW WIN5 PRINCIPAL ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB12
+
+   Object GBOX12
+       Type GROUP-BOX
+       Parent WIN5
+       Stylename {font-011}
+       Start (24,124)
+       Size  (1572,460)
+       Display "Opções de Impressão"
+       Style COLOR("LIGHT RED","")
+   End Object  #GBOX12
+
+
+   Global Dialog CASE(OFF)
+       * COMANDOS PARA FECHAR A JANELA PRINCIPAL
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           SET-FLAG CENTRALIZA(1) ;
+           RETC ;
+       *
+           SET-BUTTON-STATE CB1 1 ;
+           SET-BUTTON-STATE CB2 1 ;
+           SET-BUTTON-STATE CB3 1 ;
+           SET-BUTTON-STATE RB3 1 ;
+           MOVE 2 ORDEM ;
+           EXECUTE-PROCEDURE PREV-CONTRATO ;
+           SET-FLAG CARREGAR-STATUS(1) ;
+           RETC ;
+           SET-FOCUS EF1 ;
+           RETC ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure PREV-CONTRATO
+           SET-BUTTON-STATE RB10 1 ;
+           MOVE 2 OP-FILTRO ;
+           DISABLE-OBJECT EF33 ;
+           DISABLE-OBJECT EF34 ;
+           ENABLE-OBJECT EF1 ;
+           ENABLE-OBJECT EF11 ;
+           MOVE 0 OP-DATA ;
+           DISABLE-OBJECT RB7 ;
+           DISABLE-OBJECT RB8 ;
+           SET-FOCUS EF1 ;
+       End Procedure # PREV-CONTRATO
+       Procedure INSERE-LIST
+           REFRESH-OBJECT LB1 ;
+           INCREMENT $REGISTER ;
+           INSERT-LIST-ITEM LB1 LINDET $REGISTER ;
+       *     SET-TOP-LIST-ITEM LB1 $REGISTER
+           RETC ;
+       End Procedure # INSERE-LIST
+       Procedure EXIBE-ERRO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # EXIBE-ERRO
+       Procedure TELA-AGUARDA
+           SHOW-WINDOW WIN1 ;
+           RETC ;
+       End Procedure # TELA-AGUARDA
+       Procedure TELA-AGUARDA1
+           REFRESH-OBJECT EF3 ;
+           RETC ;
+       End Procedure # TELA-AGUARDA1
+       Procedure TELA-AGUARDA2
+           UNSHOW-WINDOW WIN1 PRINCIPAL ;
+           RETC ;
+       End Procedure # TELA-AGUARDA2
+       Procedure ATUALIZA-LISTA
+           UPDATE-LIST-ITEM LB1 LINDET $REGISTER ;
+           SET-LIST-ITEM-STATE LB1 1 $REGISTER ;
+           RETC ;
+       *ENTER MESMA FUNCAO DO TAB
+       End Procedure # ATUALIZA-LISTA
+       Event CR
+           SKIP-TO-NEXT-OBJECT 1 ;
+       End Event # CR
+       Procedure DUPLICATE-EVENT-ESC
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-ESC
+       Procedure DUPLICATE-EVENT-CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-CLOSED-WINDOW
+       Procedure REFRESH-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           RETC ;
+       End Procedure # REFRESH-DATA
+       Procedure CLEAR-LIST-BOX
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX
+       Procedure LIMPAR-STATUS
+           CLEAR-OBJECT LB3 ;
+           RETC ;
+       End Procedure # LIMPAR-STATUS
+       Procedure INSERIR-LINHA
+           INSERT-LIST-ITEM LB3 LINHA-STATUS $REGISTER ;
+           RETC ;
+       End Procedure # INSERIR-LINHA
+       Procedure LER-LINHA
+           RETRIEVE-LIST-ITEM LB3 LINHA-STATUS CONT ;
+           RETC ;
+       End Procedure # LER-LINHA
+   End Dialog
+
+End Form

@@ -1,0 +1,580 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 111.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 225.
+
+       01 GS-DATA-BLOCK.
+          03 GS-CONTRATO                     PIC 9(4).
+          03 GS-CONTRATOW                    PIC 9(4).
+          03 GS-TAXA                         PIC 9(2)V9(2).
+          03 GS-ORIGEM                       PIC X(3).
+          03 GS-IDENTIFICACAO                PIC X(15).
+          03 GS-TURMAS                       PIC 9(2).
+          03 GS-INSTITUICAO                  PIC X(10).
+          03 GS-CIDADE                       PIC X(13).
+          03 GS-MESANO                       PIC 9(6).
+          03 GS-NR-FORM                      PIC 9(4).
+          03 GS-PADRAO                       PIC X.
+          03 GS-SERVICOS                     PIC X(5).
+          03 GS-MESES                        PIC 9(3).
+          03 GS-STATUS                       PIC X(30).
+          03 GS-MENSAGEM                     PIC X(40).
+          03 GS-REGIAO                       PIC X(12).
+          03 GS-REPRESENTANTE                PIC X(20).
+          03 GS-PREPOSTO                     PIC X(30).
+          03 GS-DATA-ASSINATURA              PIC 9(8).
+          03 GS-MULTA-CONT                   PIC X(20).
+          03 GS-FORUM                        PIC X(13).
+          03 GS-COMERCIALIZACAO              PIC X(30).
+          03 GS-NR-INIC-PAD                  PIC X(10).
+          03 GS-ORGANIZER                    PIC X(35).
+          03 GS-COMISSAO1                    PIC X(40).
+          03 GS-COMISSAO2                    PIC X(40).
+          03 GS-COMISSAO3                    PIC X(40).
+          03 GS-CONVITE                      PIC X(35).
+          03 GS-BECA                         PIC X(35).
+          03 GS-OUTRO                        PIC X(35).
+      *previsão financeira
+          03 GS-ITEM-PF                      PIC 9(4).
+          03 GS-VALOR-DOLAR-PF               PIC 9(8)V9(2).
+          03 GS-FORMA-PAGTO1-PF              PIC X(60).
+          03 GS-FORMA-PAGTO2-PF              PIC X(60).
+          03 GS-FLAG-GROUP.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-SAVE-FLG                  PIC 9.
+                88 GS-SAVE-FLG-TRUE          VALUE 1.
+             05 GS-CLR-FLG                   PIC 9.
+                88 GS-CLR-FLG-TRUE           VALUE 1.
+             05 GS-EXCLUI-FLG                PIC 9.
+                88 GS-EXCLUI-FLG-TRUE        VALUE 1.
+             05 GS-CARREGAR-DADOS            PIC 9.
+                88 GS-CARREGAR-DADOS-TRUE    VALUE 1.
+             05 GS-CARREGA-ULT               PIC 9.
+                88 GS-CARREGA-ULT-TRUE       VALUE 1.
+             05 GS-CARREGA-LIST-BOX          PIC 9.
+                88 GS-CARREGA-LIST-BOX-TRUE  VALUE 1.
+             05 GS-VERIFICA-CODIGO           PIC 9.
+                88 GS-VERIFICA-CODIGO-TRUE   VALUE 1.
+             05 GS-VERIFICA-ACESSO           PIC 9.
+                88 GS-VERIFICA-ACESSO-TRUE   VALUE 1.
+             05 GS-GRAVA-CONTATO             PIC 9.
+                88 GS-GRAVA-CONTATO-TRUE     VALUE 1.
+             05 GS-PRINTER-FLG               PIC 9.
+                88 GS-PRINTER-FLG-TRUE       VALUE 1.
+             05 GS-LE-CIDADE                 PIC 9.
+                88 GS-LE-CIDADE-TRUE         VALUE 1.
+             05 GS-TRAZER-CURSO              PIC 9.
+                88 GS-TRAZER-CURSO-TRUE      VALUE 1.
+             05 GS-CENTRALIZA                PIC 9.
+                88 GS-CENTRALIZA-TRUE        VALUE 1.
+             05 GS-PRINTER-PREV-FIN          PIC 9.
+                88 GS-PRINTER-PREV-FIN-TRUE  VALUE 1.
+             05 GS-PRINTER-BRINDE            PIC 9.
+                88 GS-PRINTER-BRINDE-TRUE    VALUE 1.
+             05 GS-EXCEL                     PIC 9.
+                88 GS-EXCEL-TRUE             VALUE 1.
+             05 GS-ARQUIVO                   PIC 9.
+                88 GS-ARQUIVO-TRUE           VALUE 1.
+             05 GS-CHAMAR-BRINDE             PIC 9.
+                88 GS-CHAMAR-BRINDE-TRUE     VALUE 1.
+             05 GS-CHAMAR-BRINDE-OE          PIC 9.
+                88 GS-CHAMAR-BRINDE-OE-TRUE  VALUE 1.
+             05 GS-CHAMAR-CUSTEIO            PIC 9.
+                88 GS-CHAMAR-CUSTEIO-TRUE    VALUE 1.
+             05 GS-CHAMAR-EVENTO             PIC 9.
+                88 GS-CHAMAR-EVENTO-TRUE     VALUE 1.
+             05 GS-CHAMAR-CREDITO            PIC 9.
+                88 GS-CHAMAR-CREDITO-TRUE    VALUE 1.
+             05 GS-VER-CONTRATO-ENCERRADO    PIC 9.
+                88 GS-VER-CONTRATO-ENCERRADO-TRUE VALUE 1.
+             05 GS-POPUP-CONTRATO            PIC 9.
+                88 GS-POPUP-CONTRATO-TRUE    VALUE 1.
+             05 GS-LE-FORNECEDOR             PIC 9.
+                88 GS-LE-FORNECEDOR-TRUE     VALUE 1.
+             05 GS-LE-CONTA                  PIC 9.
+                88 GS-LE-CONTA-TRUE          VALUE 1.
+             05 GS-POPUP-FORNECEDOR          PIC 9.
+                88 GS-POPUP-FORNECEDOR-TRUE  VALUE 1.
+             05 GS-POPUP-CONTA               PIC 9.
+                88 GS-POPUP-CONTA-TRUE       VALUE 1.
+      ***
+             05 GS-LER-ITEM                  PIC 9.
+                88 GS-LER-ITEM-TRUE          VALUE 1.
+          03 GS-LIBERA-ACESSO                PIC 9.
+             88 GS-LIBERA-ACESSO-TRUE        VALUE 1.
+      * LIBERA-ACESSO 0-NAO 1-SIM
+          03 GS-TIPO-BRINDE                  PIC 9.
+             88 GS-TIPO-BRINDE-TRUE          VALUE 1.
+      *TIPO-BRINDE = 1-BRINDE DE CONTRATO   2-COMPROM.ORG.
+          03 GS-DISPLAY-OPCAO                PIC X(20).
+          03 GS-LINDET                       PIC X(130).
+          03 GS-CONT-CURTUR                  PIC 9(3).
+          03 GS-CONT-BRINDE                  PIC 9(3).
+          03 GS-CONT-CUSTEIO                 PIC 9(3).
+          03 GS-CONT-BRINDE-OE               PIC 9(3).
+          03 GS-CONT-EVENTO                  PIC 9(3).
+          03 GS-CONT-CURSO                   PIC 9(3).
+          03 GS-CONT-CONTATO                 PIC 9(3).
+          03 GS-CONT-CREDITO                 PIC 9(3).
+          03 GS-CONT-RESUMO                  PIC 9(3).
+          03 GS-CONT-RESUMO-OE               PIC 9(3).
+          03 GS-CONT-REPORTAGEM              PIC 9(3).
+          03 GS-CONT-05                      PIC 9(3).
+          03 GS-CONT-CONVITE                 PIC 9(3).
+          03 GS-ERR-MSG                      PIC X(40).
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-ERRO-VALIDACAO               PIC 9.
+             88 GS-ERRO-VALIDACAO-TRUE       VALUE 1.
+          03 GS-ORDER                        PIC 9.
+             88 GS-ORDER-TRUE                VALUE 1.
+          03 GS-ORDEM-IMPRESS                PIC 9.
+             88 GS-ORDEM-IMPRESS-TRUE        VALUE 1.
+          03 GS-ORDEM-CIDADE                 PIC 9.
+             88 GS-ORDEM-CIDADE-TRUE         VALUE 1.
+          03 GS-ANOTACAO                     PIC X(640).
+          03 GS-DATA-AGENDADA                PIC 9(8).
+          03 GS-OE-PAGOS                     PIC 9(8)V9(2).
+          03 GS-OE-MES-PAGOS                 PIC 9(3)V9.
+          03 GS-OE-JR-PAGOS                  PIC 9(8)V9(2).
+          03 GS-OE-TOT-PAGOS                 PIC 9(8)V9(2).
+          03 GS-OE-ATRASADO                  PIC 9(8)V9(2).
+          03 GS-OE-MES-ATRASADO              PIC 9(3)V9.
+          03 GS-OE-JR-ATRASADO               PIC 9(8)V9(2).
+          03 GS-OE-TOT-ATRASADO              PIC 9(8)V9(2).
+          03 GS-OE-RESTANTE                  PIC 9(8)V9(2).
+          03 GS-OE-MES-RESTANTE              PIC 9(3)V9.
+          03 GS-OE-JR-RESTANTE               PIC 9(8)V9(2).
+          03 GS-OE-TOT-RESTANTE              PIC 9(8)V9(2).
+          03 GS-OE-TOTAL                     PIC 9(8)V9(2).
+          03 GS-OE-JR-TOTAL                  PIC 9(8)V9(2).
+          03 GS-OE-TOT-TOTAL                 PIC 9(8)V9(2).
+          03 GS-OE-ASSINATURA                PIC 9(8).
+          03 GS-OE-DATA-ULT-EVENTO           PIC 9(8).
+          03 GS-OE-REPRESENTANTE             PIC X(30).
+          03 GS-OE-TIPO-RECTO                PIC X(30).
+          03 GS-OE-COND-RECTO                PIC X(30).
+          03 GS-OE-COND-REAJUSTE             PIC X(30).
+          03 GS-OE-MULTA                     PIC X(30).
+          03 GS-OE-PRESIDENTE                PIC X(30).
+          03 GS-OE-FONE-PRESIDENTE           PIC X(10).
+          03 GS-OE-TESOUREIRO                PIC X(30).
+          03 GS-OE-FONE-TESOUREIRO           PIC X(10).
+          03 GS-OE-PAGOS-COMP                PIC 9(8)V9(2).
+          03 GS-OE-MES-PAGOS-COMP            PIC 9(3)V9.
+          03 GS-OE-JR-PAGOS-COMP             PIC 9(8)V9(2).
+          03 GS-OE-TOT-PAGOS-COMP            PIC 9(8)V9(2).
+          03 GS-OE-ATRASADO-COMP             PIC 9(8)V9(2).
+          03 GS-OE-MES-ATRASADO-COMP         PIC 9(3)V9.
+          03 GS-OE-JR-ATRASADO-COMP          PIC 9(8)V9(2).
+          03 GS-OE-TOT-ATRASADO-COMP         PIC 9(8)V9(2).
+          03 GS-OE-TOTAL-COMP                PIC 9(8)V9(2).
+          03 GS-OE-JR-TOTAL-COMP             PIC 9(8)V9(2).
+          03 GS-OE-TOT-TOTAL-COMP            PIC 9(8)V9(2).
+          03 GS-TAB-CURTUR.
+             04 GS-TAB-CURTUR-ITEM           OCCURS 100.
+                05 GS-TAB-CURSO              PIC X(30).
+                05 GS-TAB-TURMA              PIC X(2).
+          03 GS-NAO-IDENTIFICADO             PIC X(80).
+          03 GS-BRINDES                      PIC 9.
+             88 GS-BRINDES-TRUE              VALUE 1.
+          03 GS-CUSTEIOS                     PIC 9.
+             88 GS-CUSTEIOS-TRUE             VALUE 1.
+          03 GS-EVENTOS                      PIC 9.
+             88 GS-EVENTOS-TRUE              VALUE 1.
+          03 GS-CONTATOS                     PIC 9.
+             88 GS-CONTATOS-TRUE             VALUE 1.
+          03 GS-CURSOS                       PIC 9.
+             88 GS-CURSOS-TRUE               VALUE 1.
+          03 GS-CONVITES                     PIC 9.
+             88 GS-CONVITES-TRUE             VALUE 1.
+          03 GS-COMISSAO                     PIC 9.
+             88 GS-COMISSAO-TRUE             VALUE 1.
+          03 GS-CREDITOS                     PIC 9.
+             88 GS-CREDITOS-TRUE             VALUE 1.
+          03 GS-REPORTAGENS                  PIC 9.
+             88 GS-REPORTAGENS-TRUE          VALUE 1.
+          03 GS-RESUMO                       PIC 9.
+             88 GS-RESUMO-TRUE               VALUE 1.
+          03 GS-FORNECEDOR                   PIC 9(6).
+          03 GS-DESC-FORNECEDOR              PIC X(40).
+          03 GS-CONTA                        PIC 9(6).
+          03 GS-DESC-CONTA                   PIC X(70).
+          03 GS-BANCO                        PIC 9(4).
+          03 GS-AGENCIA                      PIC X(9).
+          03 GS-NR-CONTA                     PIC X(15).
+          03 GS-EXCEL-BRINDES                PIC 9.
+             88 GS-EXCEL-BRINDES-TRUE        VALUE 1.
+          03 GS-EXCEL-CUSTEIOS               PIC 9.
+             88 GS-EXCEL-CUSTEIOS-TRUE       VALUE 1.
+          03 GS-EXCEL-REPORTAGENS            PIC 9.
+             88 GS-EXCEL-REPORTAGENS-TRUE    VALUE 1.
+          03 GS-EXCEL-RESUMO                 PIC 9.
+             88 GS-EXCEL-RESUMO-TRUE         VALUE 1.
+          03 GS-FLAG-CRITICA                 PIC 9.
+             88 GS-FLAG-CRITICA-TRUE         VALUE 1.
+          03 GS-UF                           PIC X(2).
+          03 GS-2VIA                         PIC 9.
+             88 GS-2VIA-TRUE                 VALUE 1.
+          03 GS-SIGLA                        PIC X(4).
+          03 GS-RELACAO-TURMAS               PIC X(50).
+          03 GS-ALERTA                       PIC X(30).
+          03 GS-CONFIG-FLAG                  PIC x(4) COMP-5.
+          03 GS-CONFIG-VALUE                 PIC x(4) COMP-5.
+          03 GS-QUAL-TAB                     PIC 9(2).
+          03 GS-LIBERADO                     PIC X.
+          03 GS-LIBERADO-C                   PIC X.
+      **
+          03 GS-QTDE-COPIAS                  PIC 9.
+             88 GS-QTDE-COPIAS-TRUE          VALUE 1.
+          03 GS-TIPO-PGTO                    PIC X(20).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-CONTRATO              PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-CONTRATOW             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-TAXA                  PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-ORIGEM                PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-IDENTIFICACAO         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 GS-FLD-NO-TURMAS                PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-INSTITUICAO           PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-CIDADE                PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 GS-FLD-NO-MESANO                PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-NR-FORM               PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-PADRAO                PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-SERVICOS              PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 GS-FLD-NO-MESES                 PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 GS-FLD-NO-STATUS                PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-MENSAGEM              PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-REGIAO                PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-REPRESENTANTE         PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-PREPOSTO              PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 GS-FLD-NO-DATA-ASSINATURA       PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 GS-FLD-NO-MULTA-CONT            PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 GS-FLD-NO-FORUM                 PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 GS-FLD-NO-COMERCIALIZACAO       PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 GS-FLD-NO-NR-INIC-PAD           PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 GS-FLD-NO-ORGANIZER             PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 GS-FLD-NO-COMISSAO1             PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 GS-FLD-NO-COMISSAO2             PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 GS-FLD-NO-COMISSAO3             PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 GS-FLD-NO-CONVITE               PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 GS-FLD-NO-BECA                  PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 GS-FLD-NO-OUTRO                 PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 GS-FLD-NO-ITEM-PF               PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 GS-FLD-NO-VALOR-DOLAR-PF        PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 GS-FLD-NO-FORMA-PAGTO1-PF       PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 GS-FLD-NO-FORMA-PAGTO2-PF       PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 GS-FLD-NO-SAVE-FLG              PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 GS-FLD-NO-CLR-FLG               PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 GS-FLD-NO-EXCLUI-FLG            PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 GS-FLD-NO-CARREGAR-DADOS        PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 GS-FLD-NO-CARREGA-ULT           PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 GS-FLD-NO-CARREGA-LIST-BOX      PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 GS-FLD-NO-VERIFICA-CODIGO       PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 GS-FLD-NO-VERIFICA-ACESSO       PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 GS-FLD-NO-GRAVA-CONTATO         PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 GS-FLD-NO-PRINTER-FLG           PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 GS-FLD-NO-LE-CIDADE             PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 GS-FLD-NO-TRAZER-CURSO          PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 GS-FLD-NO-CENTRALIZA            PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 GS-FLD-NO-PRINTER-PREV-FIN      PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 GS-FLD-NO-PRINTER-BRINDE        PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 GS-FLD-NO-EXCEL                 PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 GS-FLD-NO-ARQUIVO               PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 GS-FLD-NO-CHAMAR-BRINDE         PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 GS-FLD-NO-CHAMAR-BRINDE-OE      PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 GS-FLD-NO-CHAMAR-CUSTEIO        PIC 9(4) COMP-5 VALUE
+                                               56.
+          03 GS-FLD-NO-CHAMAR-EVENTO         PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 GS-FLD-NO-CHAMAR-CREDITO        PIC 9(4) COMP-5 VALUE
+                                               58.
+          03 GS-FLD-NO-VER-CONTRATO-ENCERRA  PIC 9(4) COMP-5 VALUE
+                                               59.
+      * Field VER-CONTRATO-ENCERRADO has been truncated
+          03 GS-FLD-NO-POPUP-CONTRATO        PIC 9(4) COMP-5 VALUE
+                                               60.
+          03 GS-FLD-NO-LE-FORNECEDOR         PIC 9(4) COMP-5 VALUE
+                                               61.
+          03 GS-FLD-NO-LE-CONTA              PIC 9(4) COMP-5 VALUE
+                                               62.
+          03 GS-FLD-NO-POPUP-FORNECEDOR      PIC 9(4) COMP-5 VALUE
+                                               63.
+          03 GS-FLD-NO-POPUP-CONTA           PIC 9(4) COMP-5 VALUE
+                                               64.
+          03 GS-FLD-NO-LER-ITEM              PIC 9(4) COMP-5 VALUE
+                                               65.
+          03 GS-FLD-NO-LIBERA-ACESSO         PIC 9(4) COMP-5 VALUE
+                                               66.
+          03 GS-FLD-NO-TIPO-BRINDE           PIC 9(4) COMP-5 VALUE
+                                               67.
+          03 GS-FLD-NO-DISPLAY-OPCAO         PIC 9(4) COMP-5 VALUE
+                                               68.
+          03 GS-FLD-NO-LINDET                PIC 9(4) COMP-5 VALUE
+                                               69.
+          03 GS-FLD-NO-CONT-CURTUR           PIC 9(4) COMP-5 VALUE
+                                               70.
+          03 GS-FLD-NO-CONT-BRINDE           PIC 9(4) COMP-5 VALUE
+                                               71.
+          03 GS-FLD-NO-CONT-CUSTEIO          PIC 9(4) COMP-5 VALUE
+                                               72.
+          03 GS-FLD-NO-CONT-BRINDE-OE        PIC 9(4) COMP-5 VALUE
+                                               73.
+          03 GS-FLD-NO-CONT-EVENTO           PIC 9(4) COMP-5 VALUE
+                                               74.
+          03 GS-FLD-NO-CONT-CURSO            PIC 9(4) COMP-5 VALUE
+                                               75.
+          03 GS-FLD-NO-CONT-CONTATO          PIC 9(4) COMP-5 VALUE
+                                               76.
+          03 GS-FLD-NO-CONT-CREDITO          PIC 9(4) COMP-5 VALUE
+                                               77.
+          03 GS-FLD-NO-CONT-RESUMO           PIC 9(4) COMP-5 VALUE
+                                               78.
+          03 GS-FLD-NO-CONT-RESUMO-OE        PIC 9(4) COMP-5 VALUE
+                                               79.
+          03 GS-FLD-NO-CONT-REPORTAGEM       PIC 9(4) COMP-5 VALUE
+                                               80.
+          03 GS-FLD-NO-CONT-05               PIC 9(4) COMP-5 VALUE
+                                               81.
+          03 GS-FLD-NO-CONT-CONVITE          PIC 9(4) COMP-5 VALUE
+                                               82.
+          03 GS-FLD-NO-ERR-MSG               PIC 9(4) COMP-5 VALUE
+                                               83.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               84.
+          03 GS-FLD-NO-ERRO-VALIDACAO        PIC 9(4) COMP-5 VALUE
+                                               85.
+          03 GS-FLD-NO-ORDER                 PIC 9(4) COMP-5 VALUE
+                                               86.
+          03 GS-FLD-NO-ORDEM-IMPRESS         PIC 9(4) COMP-5 VALUE
+                                               87.
+          03 GS-FLD-NO-ORDEM-CIDADE          PIC 9(4) COMP-5 VALUE
+                                               88.
+          03 GS-FLD-NO-ANOTACAO              PIC 9(4) COMP-5 VALUE
+                                               89.
+          03 GS-FLD-NO-DATA-AGENDADA         PIC 9(4) COMP-5 VALUE
+                                               90.
+          03 GS-FLD-NO-OE-PAGOS              PIC 9(4) COMP-5 VALUE
+                                               91.
+          03 GS-FLD-NO-OE-MES-PAGOS          PIC 9(4) COMP-5 VALUE
+                                               92.
+          03 GS-FLD-NO-OE-JR-PAGOS           PIC 9(4) COMP-5 VALUE
+                                               93.
+          03 GS-FLD-NO-OE-TOT-PAGOS          PIC 9(4) COMP-5 VALUE
+                                               94.
+          03 GS-FLD-NO-OE-ATRASADO           PIC 9(4) COMP-5 VALUE
+                                               95.
+          03 GS-FLD-NO-OE-MES-ATRASADO       PIC 9(4) COMP-5 VALUE
+                                               96.
+          03 GS-FLD-NO-OE-JR-ATRASADO        PIC 9(4) COMP-5 VALUE
+                                               97.
+          03 GS-FLD-NO-OE-TOT-ATRASADO       PIC 9(4) COMP-5 VALUE
+                                               98.
+          03 GS-FLD-NO-OE-RESTANTE           PIC 9(4) COMP-5 VALUE
+                                               99.
+          03 GS-FLD-NO-OE-MES-RESTANTE       PIC 9(4) COMP-5 VALUE
+                                               100.
+          03 GS-FLD-NO-OE-JR-RESTANTE        PIC 9(4) COMP-5 VALUE
+                                               101.
+          03 GS-FLD-NO-OE-TOT-RESTANTE       PIC 9(4) COMP-5 VALUE
+                                               102.
+          03 GS-FLD-NO-OE-TOTAL              PIC 9(4) COMP-5 VALUE
+                                               103.
+          03 GS-FLD-NO-OE-JR-TOTAL           PIC 9(4) COMP-5 VALUE
+                                               104.
+          03 GS-FLD-NO-OE-TOT-TOTAL          PIC 9(4) COMP-5 VALUE
+                                               105.
+          03 GS-FLD-NO-OE-ASSINATURA         PIC 9(4) COMP-5 VALUE
+                                               106.
+          03 GS-FLD-NO-OE-DATA-ULT-EVENTO    PIC 9(4) COMP-5 VALUE
+                                               107.
+          03 GS-FLD-NO-OE-REPRESENTANTE      PIC 9(4) COMP-5 VALUE
+                                               108.
+          03 GS-FLD-NO-OE-TIPO-RECTO         PIC 9(4) COMP-5 VALUE
+                                               109.
+          03 GS-FLD-NO-OE-COND-RECTO         PIC 9(4) COMP-5 VALUE
+                                               110.
+          03 GS-FLD-NO-OE-COND-REAJUSTE      PIC 9(4) COMP-5 VALUE
+                                               111.
+          03 GS-FLD-NO-OE-MULTA              PIC 9(4) COMP-5 VALUE
+                                               112.
+          03 GS-FLD-NO-OE-PRESIDENTE         PIC 9(4) COMP-5 VALUE
+                                               113.
+          03 GS-FLD-NO-OE-FONE-PRESIDENTE    PIC 9(4) COMP-5 VALUE
+                                               114.
+          03 GS-FLD-NO-OE-TESOUREIRO         PIC 9(4) COMP-5 VALUE
+                                               115.
+          03 GS-FLD-NO-OE-FONE-TESOUREIRO    PIC 9(4) COMP-5 VALUE
+                                               116.
+          03 GS-FLD-NO-OE-PAGOS-COMP         PIC 9(4) COMP-5 VALUE
+                                               117.
+          03 GS-FLD-NO-OE-MES-PAGOS-COMP     PIC 9(4) COMP-5 VALUE
+                                               118.
+          03 GS-FLD-NO-OE-JR-PAGOS-COMP      PIC 9(4) COMP-5 VALUE
+                                               119.
+          03 GS-FLD-NO-OE-TOT-PAGOS-COMP     PIC 9(4) COMP-5 VALUE
+                                               120.
+          03 GS-FLD-NO-OE-ATRASADO-COMP      PIC 9(4) COMP-5 VALUE
+                                               121.
+          03 GS-FLD-NO-OE-MES-ATRASADO-COMP  PIC 9(4) COMP-5 VALUE
+                                               122.
+          03 GS-FLD-NO-OE-JR-ATRASADO-COMP   PIC 9(4) COMP-5 VALUE
+                                               123.
+          03 GS-FLD-NO-OE-TOT-ATRASADO-COMP  PIC 9(4) COMP-5 VALUE
+                                               124.
+          03 GS-FLD-NO-OE-TOTAL-COMP         PIC 9(4) COMP-5 VALUE
+                                               125.
+          03 GS-FLD-NO-OE-JR-TOTAL-COMP      PIC 9(4) COMP-5 VALUE
+                                               126.
+          03 GS-FLD-NO-OE-TOT-TOTAL-COMP     PIC 9(4) COMP-5 VALUE
+                                               127.
+          03 GS-FLD-NO-TAB-CURSO             PIC 9(4) COMP-5 VALUE
+                                               129.
+          03 GS-FLD-NO-TAB-TURMA             PIC 9(4) COMP-5 VALUE
+                                               130.
+          03 GS-FLD-NO-NAO-IDENTIFICADO      PIC 9(4) COMP-5 VALUE
+                                               131.
+          03 GS-FLD-NO-BRINDES               PIC 9(4) COMP-5 VALUE
+                                               132.
+          03 GS-FLD-NO-CUSTEIOS              PIC 9(4) COMP-5 VALUE
+                                               133.
+          03 GS-FLD-NO-EVENTOS               PIC 9(4) COMP-5 VALUE
+                                               134.
+          03 GS-FLD-NO-CONTATOS              PIC 9(4) COMP-5 VALUE
+                                               135.
+          03 GS-FLD-NO-CURSOS                PIC 9(4) COMP-5 VALUE
+                                               136.
+          03 GS-FLD-NO-CONVITES              PIC 9(4) COMP-5 VALUE
+                                               137.
+          03 GS-FLD-NO-COMISSAO              PIC 9(4) COMP-5 VALUE
+                                               138.
+          03 GS-FLD-NO-CREDITOS              PIC 9(4) COMP-5 VALUE
+                                               139.
+          03 GS-FLD-NO-REPORTAGENS           PIC 9(4) COMP-5 VALUE
+                                               140.
+          03 GS-FLD-NO-RESUMO                PIC 9(4) COMP-5 VALUE
+                                               141.
+          03 GS-FLD-NO-FORNECEDOR            PIC 9(4) COMP-5 VALUE
+                                               142.
+          03 GS-FLD-NO-DESC-FORNECEDOR       PIC 9(4) COMP-5 VALUE
+                                               143.
+          03 GS-FLD-NO-CONTA                 PIC 9(4) COMP-5 VALUE
+                                               144.
+          03 GS-FLD-NO-DESC-CONTA            PIC 9(4) COMP-5 VALUE
+                                               145.
+          03 GS-FLD-NO-BANCO                 PIC 9(4) COMP-5 VALUE
+                                               146.
+          03 GS-FLD-NO-AGENCIA               PIC 9(4) COMP-5 VALUE
+                                               147.
+          03 GS-FLD-NO-NR-CONTA              PIC 9(4) COMP-5 VALUE
+                                               148.
+          03 GS-FLD-NO-EXCEL-BRINDES         PIC 9(4) COMP-5 VALUE
+                                               149.
+          03 GS-FLD-NO-EXCEL-CUSTEIOS        PIC 9(4) COMP-5 VALUE
+                                               150.
+          03 GS-FLD-NO-EXCEL-REPORTAGENS     PIC 9(4) COMP-5 VALUE
+                                               151.
+          03 GS-FLD-NO-EXCEL-RESUMO          PIC 9(4) COMP-5 VALUE
+                                               152.
+          03 GS-FLD-NO-FLAG-CRITICA          PIC 9(4) COMP-5 VALUE
+                                               153.
+          03 GS-FLD-NO-UF                    PIC 9(4) COMP-5 VALUE
+                                               154.
+          03 GS-FLD-NO-2VIA                  PIC 9(4) COMP-5 VALUE
+                                               155.
+          03 GS-FLD-NO-SIGLA                 PIC 9(4) COMP-5 VALUE
+                                               156.
+          03 GS-FLD-NO-RELACAO-TURMAS        PIC 9(4) COMP-5 VALUE
+                                               157.
+          03 GS-FLD-NO-ALERTA                PIC 9(4) COMP-5 VALUE
+                                               158.
+          03 GS-FLD-NO-CONFIG-FLAG           PIC 9(4) COMP-5 VALUE
+                                               159.
+          03 GS-FLD-NO-CONFIG-VALUE          PIC 9(4) COMP-5 VALUE
+                                               160.
+          03 GS-FLD-NO-QUAL-TAB              PIC 9(4) COMP-5 VALUE
+                                               161.
+          03 GS-FLD-NO-LIBERADO              PIC 9(4) COMP-5 VALUE
+                                               162.
+          03 GS-FLD-NO-LIBERADO-C            PIC 9(4) COMP-5 VALUE
+                                               163.
+          03 GS-FLD-NO-QTDE-COPIAS           PIC 9(4) COMP-5 VALUE
+                                               164.
+          03 GS-FLD-NO-TIPO-PGTO             PIC 9(4) COMP-5 VALUE
+                                               165.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

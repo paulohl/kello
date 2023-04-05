@@ -1,0 +1,9 @@
+* Micro Focus Net Express            V3.1 revision 255 31-Jul-17 16:20 Page   1
+* mtp023.CBL
+* Options: NOLIST NOASMLIST OMF(OBJ) GNT(.\) OBJ(.\) gnt"mtp023.OBJ"
+*          obj"mtp023.OBJ" list"MTP023.LST" ERRLIST
+* Micro Focus Net Express            V3.1 revision 255 Compiler
+* Copyright (C) 1984-2002 Micro Focus International Ltd. URN AXCGG/AA0/00000
+*                                                        REF GNR-165060004AC
+* Total Messages:     0
+* Data:       10970     Code:       14582

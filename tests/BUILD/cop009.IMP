@@ -1,0 +1,769 @@
+Form GS
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char ','
+       Comma-Char '.'
+       Currency-Sign '$'
+       Error-File "erros.err"
+       Icon-File "icones.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+   End Details
+
+   Form Data
+           CODIGO Integer(5)
+           NOME Character(20)
+           VALOR Decimal(8.2)
+           MULT-FORM Character(5)
+           GERAR-PAGAR Character(5)
+           FORNEC1 Integer(6)
+           DESC1 Character(30)
+           FORNEC2 Integer(6)
+           DESC2 Character(30)
+           FORNEC3 Integer(6)
+           DESC3 Character(30)
+           FORNEC-G Integer(6)
+           DESC-G Character(30)
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           SAVE-FLG Integer(1)
+           CENTRALIZA Integer(1)
+           CLR-FLG Integer(1)
+           EXCLUI-FLG Integer(1)
+           ATIVO-INAT-FLG Integer(1)
+           CARREGA-ULT Integer(1)
+           CARREGA-LIST-BOX Integer(1)
+           PRINTER-FLG Integer(1)
+           LOAD-FLG Integer(1)
+           LE-FORNECEDOR Integer(1)
+           POPUP-FORNECEDOR Integer(1)
+   ***
+       End Group # FLAG-GROUP
+
+           LINDET Character(90)
+           CONT Integer(3)
+           CODIGO-SELECIONADO Character(3)
+           ORDER Integer(1)
+           MENSAGEM-ERRO Character(40)
+           ERR-MSG Character(40) Error-Field
+           ERRO-VALIDACAO Integer(1)
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+           DESC-SITUACAO Character(10)
+           SITUACAO Integer(1)
+   End Data
+
+   Data Validation CODIGO
+       Null Disallowed
+   End Validation # CODIGO
+
+   Data Validation NOME
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # NOME
+
+   Data Validation MULT-FORM
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # MULT-FORM
+
+   Data Validation GERAR-PAGAR
+       Null Disallowed
+           ErrMsgNo 3
+   End Validation # GERAR-PAGAR
+
+   Font-Record Stylename {font-001}
+       Typeface "MS Sans Serif"
+       Pointsize 8
+       Attributes BITMAPPED PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-004}
+       Typeface "Times New Roman"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (268,0)
+       Size  (2620,2188)
+       Display "COP009 - Cadastro de Custeio"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE CLIPPED
+       Icon "dsicon"
+   End Object  #PRINCIPAL
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,120)
+       Display "Código"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,220)
+       Display "Nome"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (72,1092)
+       Stylename {font-003}
+       Display "CODIG NOME                 VALOR-UNITARIO M.FO G.PG FORNE1 FOR\
+NE2 FORNE3 SITUAÇÃO"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,321)
+       Display "Valor"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,424)
+       Display "Mult.Form"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,525)
+       Display "Gerar a Pagar"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,628)
+       Display "Fornecedor.1"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,729)
+       Display "Fornecedor.2"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (128,832)
+       Display "Fornecedor.3"
+   End Object  #{NoName}
+
+   Object D-CODIGO
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,114)
+       Size  (172,60)
+       Masterfield CODIGO
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('Z')
+       Style AUTOSWIPE
+       Picture ZZZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE CR-TAB ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE CR-TAB ;
+           End Event # TAB
+           Procedure CR-TAB
+               SET-FLAG LOAD-FLG(1) ;
+               RETC ;
+               SET-FOCUS D-NOME ;
+           End Procedure # CR-TAB
+       End Dialog
+   End Object  #D-CODIGO
+
+   Object D-NOME
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,216)
+       Size  (664,60)
+       Masterfield NOME
+       Style AUTOSCROLL BORDER FIT-PICTURE RESIZE-CHAR('X')
+       Picture X(20)
+   End Object  #D-NOME
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,317)
+       Size  (432,60)
+       Masterfield VALOR
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('X')
+       Picture ZZ,ZZZ,ZZZ.ZZ
+   End Object  #EF1
+
+   Object SB1
+       Type SELECTION-BOX
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,420)
+       Size  (324,236)
+       Masterfield MULT-FORM
+       Picture X(5)
+       Style DROP-DOWN-LIST AUTOSCROLL
+       Style NO-AUTO-INSERT
+       Initial Text
+           "1-Sim"
+           "2-Não"
+       End Text
+   End Object  #SB1
+
+   Object SB2
+       Type SELECTION-BOX
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,520)
+       Size  (324,220)
+       Masterfield GERAR-PAGAR
+       Picture X(5)
+       Style DROP-DOWN-LIST AUTOSCROLL
+       Style NO-AUTO-INSERT
+       Initial Text
+           "1-Sim"
+           "2-Não"
+       End Text
+   End Object  #SB2
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,620)
+       Size  (260,60)
+       Masterfield FORNEC1
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('X')
+       Picture ZZZ,ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE LE-FORNEC ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE LE-FORNEC ;
+           End Event # TAB
+           Procedure LE-FORNEC
+               MOVE FORNEC1 FORNEC-G ;
+               SET-FLAG LE-FORNECEDOR(1) ;
+               RETC ;
+               MOVE DESC-G DESC1 ;
+               REFRESH-OBJECT EF5 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Procedure # LE-FORNEC
+           Event F2
+               SET-FLAG POPUP-FORNECEDOR(1) ;
+               RETC ;
+               MOVE FORNEC-G FORNEC1 ;
+               MOVE DESC-G DESC1 ;
+               REFRESH-OBJECT EF2 ;
+               REFRESH-OBJECT EF5 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF2
+
+   Object EF5
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (812,624)
+       Size  (932,56)
+       Masterfield DESC1
+       Style AUTOSCROLL BORDER RESIZE-CHAR('X') READ-ONLY
+       Picture X(30)
+   End Object  #EF5
+
+   Object EF3
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,720)
+       Size  (260,60)
+       Masterfield FORNEC2
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO FIT-PICTURE RESIZE-CHAR('X')
+       Picture ZZZ,ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE LE-FORNEC ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE LE-FORNEC ;
+           End Event # TAB
+           Procedure LE-FORNEC
+               MOVE FORNEC2 FORNEC-G ;
+               SET-FLAG LE-FORNECEDOR(1) ;
+               RETC ;
+               MOVE DESC-G DESC2 ;
+               REFRESH-OBJECT EF6 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Procedure # LE-FORNEC
+           Event F2
+               SET-FLAG POPUP-FORNECEDOR(1) ;
+               RETC ;
+               MOVE FORNEC-G FORNEC2 ;
+               MOVE DESC-G DESC2 ;
+               REFRESH-OBJECT EF3 ;
+               REFRESH-OBJECT EF6 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF3
+
+   Object EF6
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (812,720)
+       Size  (928,56)
+       Masterfield DESC2
+       Style AUTOSCROLL BORDER RESIZE-CHAR('X') READ-ONLY
+       Picture X(30)
+   End Object  #EF6
+
+   Object EF4
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (504,820)
+       Size  (260,60)
+       Masterfield FORNEC3
+       Style AUTOSCROLL BORDER BLANK-WHEN-ZERO RESIZE-CHAR('X')
+       Picture ZZZ,ZZZ
+       Dialog CASE(OFF)
+           Event CR
+               BRANCH-TO-PROCEDURE LE-FORNEC ;
+           End Event # CR
+           Event TAB
+               BRANCH-TO-PROCEDURE LE-FORNEC ;
+           End Event # TAB
+           Procedure LE-FORNEC
+               MOVE FORNEC3 FORNEC-G ;
+               SET-FLAG LE-FORNECEDOR(1) ;
+               RETC ;
+               MOVE DESC-G DESC3 ;
+               REFRESH-OBJECT EF7 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Procedure # LE-FORNEC
+           Event F2
+               SET-FLAG POPUP-FORNECEDOR(1) ;
+               RETC ;
+               MOVE FORNEC-G FORNEC3 ;
+               MOVE DESC-G DESC3 ;
+               REFRESH-OBJECT EF4 ;
+               REFRESH-OBJECT EF7 ;
+               SKIP-TO-NEXT-OBJECT 2 ;
+           End Event # F2
+       End Dialog
+   End Object  #EF4
+
+   Object EF7
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (812,816)
+       Size  (928,56)
+       Masterfield DESC3
+       Style AUTOSCROLL BORDER RESIZE-CHAR('X') READ-ONLY
+       Picture X(30)
+   End Object  #EF7
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2044,224)
+       Size  (432,100)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               VALIDATE PRINCIPAL ;
+               SET-FLAG SAVE-FLG(1) ;
+               RETC ;
+           End Procedure # OPCAO-SELECIONADA
+           Event VAL-ERROR
+               SET-FOCUS $EVENT-DATA ;
+               INVOKE-MESSAGE-BOX MBOX-ERROS ERR-MSG $EVENT-DATA ;
+               RETC ;
+           End Event # VAL-ERROR
+       End Dialog
+   End Object  #PB3
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2044,370)
+       Size  (432,100)
+       Display "~Limpar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG CLR-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB2
+
+   Object PB1
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2044,516)
+       Size  (432,100)
+       Display "~Exclusão"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               INVOKE-MESSAGE-BOX MBOX6 $NULL $REGISTER ;
+               IF= $REGISTER 6 EXCLUI-REGISTRO ;
+           End Event # BUTTON-SELECTED
+           Procedure EXCLUI-REGISTRO
+               SET-FLAG EXCLUI-FLG(1) ;
+               RETC ;
+           End Procedure # EXCLUI-REGISTRO
+       End Dialog
+   End Object  #PB1
+
+   Object PB6
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2044,808)
+       Size  (432,100)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB6
+
+   Object RB1
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Start (84,984)
+       Size  (332,96)
+       Display "~Numérico"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG ORDER ;
+               SET-FLAG CARREGA-ULT(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB1
+
+   Object RB2
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Control-Group 1
+       Start (500,988)
+       Size  (332,96)
+       Display "~Alfabético"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               CLEAR-FLAG ORDER ;
+               SET-FLAG CARREGA-ULT(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB2
+
+   Object GBOX2
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (48,936)
+       Size  (2516,144)
+       Display ""
+       Style COLOR("RED","MAGENTA")
+   End Object  #GBOX2
+
+   Object GBOX1
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (52,68)
+       Size  (2516,876)
+       Display ""
+   End Object  #GBOX1
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2224,980)
+       Size  (88,72)
+       Bitmap-Name "Helpbtn"
+       Style COLOR("","GRAY")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW AJUDA ;
+               SET-FOCUS AJUDA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SHOW-WINDOW AJUDA ;
+               SET-FOCUS AJUDA ;
+           End Event # CR
+       End Dialog
+   End Object  #PB5
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2356,984)
+       Size  (92,84)
+       Bitmap-Name "print1"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB4
+
+   Object LB1
+       Type LIST-BOX
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (56,1108)
+       Size  (2520,1028)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               GET-SELECTED-LIST-ITEM LB1 CONT 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET CONT ;
+               SET-FLAG CARREGA-LIST-BOX(1) ;
+               RETC ;
+               REFRESH-OBJECT PRINCIPAL ;
+           End Event # ITEM-ACCEPTED
+       End Dialog
+   End Object  #LB1
+
+   Object EF8
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (988,320)
+       Size  (944,64)
+       Style RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture x(30)
+       Display "Para cálculos estatisticos"
+   End Object  #EF8
+
+   Object EF9
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (852,424)
+       Size  (1036,64)
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture x(30)
+       Display "Se a qtde for p/ cada formando."
+   End Object  #EF9
+
+   Object EF10
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (852,524)
+       Size  (1020,64)
+       Style AUTOSCROLL RESIZE-CHAR('W') DISPLAY-FIELD COLOR("BLUE","")
+       Picture x(30)
+       Display "Se precisa ser programado pgto."
+   End Object  #EF10
+
+   Object EF11
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Start (712,120)
+       Size  (592,64)
+       Masterfield DESC-SITUACAO
+       Style RESIZE-CHAR('W') DISPLAY-FIELD
+       Picture X(10)
+   End Object  #EF11
+
+   Object PB7
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2044,662)
+       Size  (432,100)
+       Display "Ativo/Inativo"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               INVOKE-MESSAGE-BOX MBOX6 $NULL $REGISTER ;
+               IF= $REGISTER 6 EXCLUI-REGISTRO ;
+           End Event # BUTTON-SELECTED
+           Procedure EXCLUI-REGISTRO
+               SET-FLAG ATIVO-INAT-FLG(1) ;
+               RETC ;
+           End Procedure # EXCLUI-REGISTRO
+       End Dialog
+   End Object  #PB7
+
+   Object MBOX6
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(YES-NO) DEFAULT-BUTTON(1) NOTIFICATION
+       Display ""
+       Message "Tem certeza que quer excluir?"
+   End Object  #MBOX6
+
+   Object MBOX-ERROS
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Validação de Campos"
+   End Object  #MBOX-ERROS
+
+   Object AJUDA
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (620,640)
+       Size  (1256,676)
+       Display "Help"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+   End Object  #AJUDA
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (40,92)
+       Display "Cadastro de Brindes. Poderá ser mercadorias"
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (40,176)
+       Display "ou serviços oferecidos aos formandos."
+   End Object  #{NoName}
+
+   Object PB-AJUDA
+       Type PUSH-BUTTON
+       Parent AJUDA
+       Start (520,592)
+       Size  (228,96)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # CR
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # CLOSED-WINDOW
+       End Dialog
+   End Object  #PB-AJUDA
+
+   Object MBOX1
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Erro Manipulação Arquivo"
+   End Object  #MBOX1
+
+
+   Global Dialog CASE(OFF)
+       * COMANDOS PARA FECHAR A JANELA PRINCIPAL
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           SET-FLAG CENTRALIZA(1) ;
+           RETC ;
+       *
+           SET-FLAG CARREGA-ULT(1) ;
+           SET-BUTTON-STATE RB1 1 ;
+           DISABLE-OBJECT PB1 ;
+           RETC ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure SET-POSICAO-CURSOR
+           REFRESH-OBJECT PRINCIPAL ;
+           SET-FOCUS D-CODIGO ;
+       End Procedure # SET-POSICAO-CURSOR
+       Procedure SET-POSICAO-CURSOR1
+           REFRESH-OBJECT PRINCIPAL ;
+           SET-FOCUS D-NOME ;
+       End Procedure # SET-POSICAO-CURSOR1
+       Procedure INSERE-LIST
+           INSERT-LIST-ITEM LB1 LINDET CONT ;
+           SET-TOP-LIST-ITEM LB1 CONT ;
+           RETC ;
+       End Procedure # INSERE-LIST
+       Procedure EXIBE-ERRO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       *ENTER MESMA FUNCAO DO TAB
+       End Procedure # EXIBE-ERRO
+       Event CR
+           SKIP-TO-NEXT-OBJECT 1 ;
+       End Event # CR
+       Procedure DUPLICATE-EVENT-ESC
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-ESC
+       Procedure DUPLICATE-EVENT-CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-CLOSED-WINDOW
+       Procedure REFRESH-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           RETC ;
+       End Procedure # REFRESH-DATA
+       Procedure CLEAR-LIST-BOX
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX
+   End Dialog
+
+End Form

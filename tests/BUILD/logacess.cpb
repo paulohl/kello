@@ -1,0 +1,68 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 8.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 61.
+
+       01 DATA-BLOCK.
+          03 ACP-DTINI                       PIC 9(8).
+          03 ACP-DTFIM                       PIC 9(8).
+          03 ACP-USUARIO                     PIC X(5).
+          03 ACP-PROGRAMA                    PIC X(8).
+          03 POSICAO                         PIC 9(9).
+          03 TOTAL-ACESSOS                   PIC 9(18).
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 FLAG                            PIC X(15).
+          03 LINDET                          PIC X(100).
+          03 ORDEM                           PIC X(10).
+      ***
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+      ***
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-ACP-DTINI                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-ACP-DTFIM                PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-ACP-USUARIO              PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-ACP-PROGRAMA             PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-POSICAO                  PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-TOTAL-ACESSOS            PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-FLAG                     PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-LINDET                   PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-ORDEM                    PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               12.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
