@@ -5,7 +5,7 @@ https://www.kello.com.br/
 
 ## Task
 
-Project from UpWork: customer requested a detailed software auditing to understand what the package is, what it does, its features and, as high priority, the Data model and Data flow. 
+UpWork Customer: detailed software auditing to understand what the package is, what it does, its features and, as high priority, the Data model and Data flow. 
 The first package was retrieved from a Jump Drive and shared via OneDrive in .RAR format (fontes_kello.rar), containing approx. 3,000 files (source files, sub-routine - method, functions - source files, compiled .OBJ files, compiled .GS graphic user interface files, compiler output report files, configuration files).
 
 ## High Level Work Plan
