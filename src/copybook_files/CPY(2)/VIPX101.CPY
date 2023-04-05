@@ -1,6 +1,0 @@
-           SELECT VID101 ASSIGN TO PATH-VID101
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-VID101
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS NR-FITAS-V101.

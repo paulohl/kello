@@ -8,6 +8,6 @@
            05  VALOR-CREDITO-CC120      PIC 9(8)V99.
            05  VALOR-LIBERADO-CC120     PIC 9(8)V99.
            05  ATUALIZADO-CC-CC120      PIC 9.
-      *   ATUALIZADO-CC = 0 (NÆo foi atualizado no contas correntes)
+      *   ATUALIZADO-CC = 0 (NÃ†o foi atualizado no contas correntes)
       *                   1 (foi atualizado)
            05  DIGITADOR-CC120          PIC X(5).

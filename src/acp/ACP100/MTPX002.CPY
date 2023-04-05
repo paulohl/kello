@@ -1,0 +1,7 @@
+           SELECT MTD002 ASSIGN TO PATH-MTD002
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-MTD002
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-MT02
+                  ALTERNATE RECORD KEY IS NOME-MT02.

@@ -1,8 +1,0 @@
-           SELECT CGD004 ASSIGN TO PATH-CGD004
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-CG04
-                  ALTERNATE RECORD KEY IS COD-VENDEDOR-CG04
-                            WITH DUPLICATES
-                  STATUS IS ST-CGD004.

@@ -8,6 +8,6 @@
            05  VALOR-CREDITO-CC110      PIC 9(8)V99.
            05  VALOR-LIBERADO-CC110     PIC 9(8)V99.
            05  ATUALIZADO-CC-CC110      PIC 9.
-      *   ATUALIZADO-CC = 0 (Não foi atualizado no contas correntes)
+      *   ATUALIZADO-CC = 0 (NÃ£o foi atualizado no contas correntes)
       *                   1 (foi atualizado)
            05  DIGITADOR-CC110          PIC X(5).

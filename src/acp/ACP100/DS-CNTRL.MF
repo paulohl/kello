@@ -1,0 +1,92 @@
+
+      *****************************************************************
+      *
+      *  Dialog System Control Block (Using Micro Focus Constants).
+      *
+      *  For use with Dialog System Version 2.
+      *
+      *****************************************************************
+
+       01  DS-CONTROL-BLOCK.
+           03  DS-VERSION-NUMBERS.
+               05  DS-DATA-BLOCK-VERSION-NO    PIC 9(8) COMP-5.
+               05  DS-VERSION-NO               PIC 9(2) COMP-X.
+               05  FILLER                      PIC X.
+           03  DS-OUTPUT-FIELDS.
+               05  DS-SYSTEM-ERROR.
+                 07  DS-ERROR-CODE             PIC 9(4) COMP-5.
+                   88  DS-NO-ERROR               VALUE 0.
+                   88  DS-NOT-INITIALISED        VALUE 1.
+                   88  DS-CANNOT-OPEN-SET        VALUE 2.
+                   88  DS-ERROR-READING-FILE     VALUE 3.
+                   88  DS-INVALID-SET            VALUE 4.
+                   88  DS-CANNOT-CREATE-PANEL    VALUE 5.
+                   88  DS-DYNAMIC-ERROR          VALUE 6.
+                   88  DS-INVALID-FUNCTION       VALUE 7.
+                   88  DS-INVALID-PROC           VALUE 8.
+                   88  DS-VALIDATION-PROG-ERROR  VALUE 9.
+                   88  DS-DATA-BLOCK-VERNO-ERROR VALUE 10.
+                   88  DS-PUSH-LIMIT-REACHED     VALUE 11.
+                   88  DS-ERROR-FILE-MISSING     VALUE 12.
+                   88  DS-SUBSCRIPT-ERROR        VALUE 13.
+                   88  DS-PROC-LIMIT-REACHED     VALUE 14.
+                   88  DS-CTRL-BREAK-PRESSED     VALUE 15.
+                   88  DS-ERROR-ON-TRACE-FILE    VALUE 16.
+                   88  DS-SCREEN-MANAGER-ERROR   VALUE 17.
+                   88  DS-CANNOT-FIND-SCREENSET  VALUE 18.
+                   88  DS-INVALID-IDENTIFIER     VALUE 19.
+                   88  DS-BAD-PARAMETER          VALUE 20.
+                   88  DS-POSS-DSRUN-MISMATCH    VALUE 21.
+                   88  DS-CALLOUT-FAILED         VALUE 22.
+                   88  DS-NO-CONCURRENCY         VALUE 23.
+                   88  DS-INVALID-INSTANCE       VALUE 24.
+                   88  DS-ALREADY-INITIALISED    VALUE 25.
+                   88  DS-SYSTEM-MODULE-MISSING  VALUE 26.
+                   88  DS-OLE-ERROR              VALUE 27.
+                 07  DS-ERROR-DETAILS-1        PIC 9(4) COMP-5.
+                 07  DS-ERROR-DETAILS-2        PIC 9(4) COMP-5.
+               05  DS-VALIDATION-ERROR-NO      PIC 9(4) COMP-5.
+               05  DS-FIELD-COUNT              PIC 9(4) COMP-5.
+               05  DS-FIELD-OCCURRENCE         PIC 9(4) COMP-5.
+               05  DS-FIELD-NO                 PIC 9(4) COMP-5.
+               05  DS-WINDOW-NAME              PIC X(32).
+               05  DS-OBJECT-NAME              PIC X(32).
+               05  DS-FIELD-CHANGE             PIC 9(2) COMP-X.
+                 88 DS-FIELD-CHANGE-TRUE       VALUE 1.
+               05  DS-EXIT-FIELD               PIC 9(2) COMP-X.
+                 88 DS-EXIT-FIELD-TRUE         VALUE 1.
+               05  DS-SESSION-ID               PIC 9(9) COMP-5.
+               05  DS-OUTPUT-RESERVED          PIC X(6).
+           03  DS-INPUT-FIELDS.
+               05  DS-CONTROL                  PIC X.
+                 78  DS-CONTINUE               VALUE "C".
+                 78  DS-NEW-SET                VALUE "N".
+                 78  DS-LOAD-SYSTEM            VALUE "L".
+                 78  DS-QUIT-SET               VALUE "Q".
+                 78  DS-PUSH-SET               VALUE "S".
+                 78  DS-USE-SET                VALUE "U".
+                 78  DS-USE-INSTANCE-SET       VALUE "I".
+                 78  DS-PATHNAME               VALUE "P".
+                 78  DS-ERR-FILE-OPEN          VALUE "E".
+                 78  DS-USE-KWIT               VALUE "K".
+                 78  DS-USE-3D-CONTROLS        VALUE "3".
+               05  DS-CLEAR-DIALOG             PIC 9(2) COMP-X.
+               05  DS-CONTROL-PARAM            PIC 9(4) COMP-5.
+                 78  DS-CONTROL-PARAM-DEFAULT  VALUE 0.
+                 78  DS-SCREEN-NOCLEAR         VALUE 1.
+                 78  DS-IGNORE-DB-VER-NO       VALUE 2.
+                 78  DS-CHECK-CTRL-BREAK       VALUE 4.
+                 78  DS-NO-NAME-INFO           VALUE 8.
+                 78  DS-SMALL-TIMEOUT          VALUE 16.
+               05  DS-PROCEDURE                PIC X(32).
+               05  DS-PARAMETER-COUNT          PIC 9(2) COMP-X.
+               05  DS-SCREENEND-INSTANCE       PIC 9(2) COMP-X.
+               05  DS-INPUT-RESERVED           PIC X(8).
+               05  DS-SCREENEND-NAME.
+                 07  DS-SET-NAME-LENGTH        PIC 9(4) COMP-5.
+                 07  DS-SET-NAME               PIC X(256).
+
+      *****************************************************************
+      *   End of Control Block
+      *****************************************************************
+

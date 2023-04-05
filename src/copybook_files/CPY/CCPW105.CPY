@@ -1,4 +1,4 @@
-      * arquivo de salarios de funcion·rios
+      * arquivo de salarios de funcion√°rios
        FD  CCD105.
        01  REG-CCD105.
            05  DATA-MOVTO-CC105         PIC 9(8).
@@ -8,6 +8,6 @@
            05  SALARIO2-CC105           PIC 9(8)V99.
            05  VALOR-LIBERADO-CC105     PIC 9(8)V99.
            05  ATUALIZADO-CC-CC105      PIC 9.
-      *   ATUALIZADO-CC = 0 (N„o foi atualizado no contas correntes)
+      *   ATUALIZADO-CC = 0 (N√£o foi atualizado no contas correntes)
       *                   1 (foi atualizado)
            05  DIGITADOR-CC105          PIC X(5).

@@ -3,7 +3,7 @@
        PROGRAM-ID. ACP010.
       *AUTORA: MARELI AMANCIO VOLPATO
       *DATA: 14/03/2004
-      *DESCRIÇÃO: Cadastro de Tipo de atendimento à cliente
+      *DESCRIï¿½ï¿½O: Cadastro de Tipo de atendimento ï¿½ cliente
        ENVIRONMENT DIVISION.
        SPECIAL-NAMES.
        DECIMAL-POINT IS COMMA.
@@ -17,9 +17,10 @@
            SELECT RELAT ASSIGN TO PRINTER NOME-IMPRESSORA.
 
        DATA DIVISION.
+
        FILE SECTION.
-       COPY ACPW010.
-       COPY ACPW020.
+           COPY ACPW010.
+           COPY ACPW020.
        FD  RELAT
            LABEL RECORD IS OMITTED.
        01  REG-RELAT.
@@ -43,8 +44,8 @@
            05  ORDEM-W               PIC 9        VALUE ZEROS.
            05  TIPO-W                PIC X(13)    VALUE SPACES.
            05  TIPO1-W               PIC 9(03)    VALUE ZEROS.
-      *    ordem-w - flag que controla a ordem do relatorio - numérico
-      *    ou alfabético
+      *    ordem-w - flag que controla a ordem do relatorio - numï¿½rico
+      *    ou alfabï¿½tico
            05  HORA-W                PIC 9(8)     VALUE ZEROS.
            05  PAG-W                 PIC 9(2)     VALUE ZEROS.
            05  EMP-REFERENCIA.
@@ -81,7 +82,7 @@
            05  FILLER              PIC X(80)   VALUE ALL "=".
        01  CAB04.
            05  FILLER              PIC X(80)   VALUE
-           "TIPO                    COD DESCRIÇÃO".
+           "TIPO                    COD DESCRIï¿½ï¿½O".
 
        01  LINDET.
            05  LINDET-REL          PIC X(80)   VALUE SPACES.
@@ -194,7 +195,7 @@
        VALIDAR-ASSUNTO SECTION.
            MOVE GS-ASSUNTO(1:1) TO AUX-ASSUNTO
            IF AUX-ASSUNTO NOT NUMERIC
-               MOVE "Assunto Inválido" TO MENSAGEM
+               MOVE "Assunto Invï¿½lido" TO MENSAGEM
                MOVE "C" TO TIPO-MSG
                PERFORM EXIBIR-MENSAGEM.
 
@@ -264,7 +265,7 @@
                 SUBTRACT 1 FROM ULT-CODIGO
            END-IF.
        ERRO-GRAVACAO SECTION.
-           MOVE "ERRO GRAVAÇÃO" TO GS-MENSAGEM-ERRO
+           MOVE "ERRO GRAVAï¿½ï¿½O" TO GS-MENSAGEM-ERRO
            MOVE ST-ACD010       TO GS-MENSAGEM-ERRO(23: 2)
            PERFORM LOAD-SCREENSET
            PERFORM CARREGA-MENSAGEM-ERRO

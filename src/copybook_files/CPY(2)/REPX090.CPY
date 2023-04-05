@@ -1,7 +1,0 @@
-           SELECT red090 ASSIGN TO PATH-RED090
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-red090
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-r090
-                  ALTERNATE RECORD KEY IS NOME-R090 WITH DUPLICATES.

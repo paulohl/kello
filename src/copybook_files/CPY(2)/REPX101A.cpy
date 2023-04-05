@@ -1,6 +1,0 @@
-           SELECT REP101A ASSIGN TO PATH-REP101A
-                  ORGANIZATION IS INDEXED
-                  ACCESS MODE IS DYNAMIC
-                  STATUS IS ST-REP101A
-                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
-                  RECORD KEY IS CODIGO-REP101A.
