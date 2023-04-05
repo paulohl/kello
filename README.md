@@ -1,6 +1,7 @@
 # kello
 
 https://www.kello.com.br/
+
 ### Kello Imagens Business Operations Management System (in-house developed)
 
 ## Task
@@ -26,46 +27,41 @@ This business system was written using COBOL-85 syntax and most recently compile
 The system generates automatic printed reports and has Bank specific EDI transactions to generate Bank specific file formats for Accounts Receivable process (CEF Bank), to generate standard SBP payment slips (Banks HSBC and Itaú). 
 The application is an in-house developed CRM-like system, with detailed sales historic, prediction, seller, cash flow components, among others. 
 
-## Original Developers and Development Date Ranges
+### Original Developers and Development Date Ranges
 
   - MARELI AMANCIO VOLPATO 
-  -   29/06/1998
-  -   30/06/1998
-  -   03/07/1998
-  -   17/08/1998
-  -   28/08/1998
-  -   16/10/1998
-  -   19/10/1998
-  -   21/10/1998
-  -   26/10/1998
-  -   03/11/1998
-  -   13/11/1998
-  -   17/11/1998
-  -   08/02/1999
-  -   02/08/1999
-  -   28/08/2000
-  -   06/03/2003
-  -   06/09/2003      
-  -   18/09/2003
-  -   20/10/2003
-  -   16/11/2003
-  -   14/03/2004
-  -   04/04/2004
-  -   16/06/2004
-  -   
+    -   29/06/1998
+    -   30/06/1998
+    -   03/07/1998
+    -   17/08/1998
+    -   28/08/1998
+    -   16/10/1998
+    -   19/10/1998
+    -   21/10/1998
+    -   26/10/1998
+    -   03/11/1998
+    -   13/11/1998
+    -   17/11/1998
+    -   08/02/1999
+    -   02/08/1999
+    -   28/08/2000
+    -   06/03/2003
+    -   06/09/2003      
+    -   18/09/2003
+    -   20/10/2003
+    -   16/11/2003
+    -   14/03/2004
+    -   04/04/2004
+    -   16/06/2004
+
   - ALFREDO SAVIOLLI NETO
-  -   01/10/2004
-  -   04/03/2005
-  -   10/03/2005
-  -   28-04-2005
-  -   24-02-2010
-  -   25-03-2011
-  -   23-07-2012
-  -   16/03/2015
-  -   29-02-2016
-  - 
-  -   
-
-
-
+    -   01/10/2004
+    -   04/03/2005
+    -   10/03/2005
+    -   28-04-2005
+    -   24-02-2010
+    -   25-03-2011
+    -   23-07-2012
+    -   16/03/2015
+    -   29-02-2016
   
