@@ -52,9 +52,22 @@
        03  PB2                             PIC 9(8) COMP-X VALUE 43.
        03  EF28                            PIC 9(8) COMP-X VALUE 44.
        03  PB3                             PIC 9(8) COMP-X VALUE 45.
-       03  MBOX1                           PIC 9(8) COMP-X VALUE 46.
-       03  MBOX-ERROS                      PIC 9(8) COMP-X VALUE 47.
-       03  MBOX6                           PIC 9(8) COMP-X VALUE 48.
-       03  AJUDA                           PIC 9(8) COMP-X VALUE 49.
-       03  PB8                             PIC 9(8) COMP-X VALUE 50.
-       03  MBOX4                           PIC 9(8) COMP-X VALUE 51.
+       03  PB4                             PIC 9(8) COMP-X VALUE 46.
+       03  MBOX1                           PIC 9(8) COMP-X VALUE 47.
+       03  MBOX-ERROS                      PIC 9(8) COMP-X VALUE 48.
+       03  MBOX6                           PIC 9(8) COMP-X VALUE 49.
+       03  AJUDA                           PIC 9(8) COMP-X VALUE 50.
+       03  PB8                             PIC 9(8) COMP-X VALUE 51.
+       03  MBOX4                           PIC 9(8) COMP-X VALUE 52.
+       03  WIN1                            PIC 9(8) COMP-X VALUE 53.
+       03  USER1                           PIC 9(8) COMP-X VALUE 54.
+       03  EF33                            PIC 9(8) COMP-X VALUE 55.
+       03  EF31                            PIC 9(8) COMP-X VALUE 56.
+       03  EF32                            PIC 9(8) COMP-X VALUE 57.
+       03  SB2                             PIC 9(8) COMP-X VALUE 58.
+       03  EF29                            PIC 9(8) COMP-X VALUE 59.
+       03  EF30                            PIC 9(8) COMP-X VALUE 60.
+       03  GBOX7                           PIC 9(8) COMP-X VALUE 61.
+       03  PB5                             PIC 9(8) COMP-X VALUE 62.
+       03  GBOX9                           PIC 9(8) COMP-X VALUE 63.
+       03  CB2                             PIC 9(8) COMP-X VALUE 64.
