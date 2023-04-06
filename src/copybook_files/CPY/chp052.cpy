@@ -73,7 +73,10 @@
        03  SB2                             PIC 9(8) COMP-X VALUE 64.
        03  EF38                            PIC 9(8) COMP-X VALUE 65.
        03  EF-RECEBEDOR                    PIC 9(8) COMP-X VALUE 66.
-       03  PB19                            PIC 9(8) COMP-X VALUE 67.
-       03  PB20                            PIC 9(8) COMP-X VALUE 68.
-       03  LB3                             PIC 9(8) COMP-X VALUE 69.
-       03  EF25                            PIC 9(8) COMP-X VALUE 70.
+       03  EF28                            PIC 9(8) COMP-X VALUE 67.
+       03  EF30                            PIC 9(8) COMP-X VALUE 68.
+       03  PB19                            PIC 9(8) COMP-X VALUE 69.
+       03  PB20                            PIC 9(8) COMP-X VALUE 70.
+       03  LB3                             PIC 9(8) COMP-X VALUE 71.
+       03  EF25                            PIC 9(8) COMP-X VALUE 72.
+       03  EF29                            PIC 9(8) COMP-X VALUE 73.

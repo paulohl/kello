@@ -58,10 +58,11 @@
        03  PB18                            PIC 9(8) COMP-X VALUE 49.
        03  WIN1                            PIC 9(8) COMP-X VALUE 50.
        03  LB1                             PIC 9(8) COMP-X VALUE 51.
-       03  WIN2                            PIC 9(8) COMP-X VALUE 52.
-       03  EF33                            PIC 9(8) COMP-X VALUE 53.
-       03  EF39                            PIC 9(8) COMP-X VALUE 54.
-       03  EF40                            PIC 9(8) COMP-X VALUE 55.
-       03  EF41                            PIC 9(8) COMP-X VALUE 56.
-       03  EF15                            PIC 9(8) COMP-X VALUE 57.
-       03  GBOX1                           PIC 9(8) COMP-X VALUE 58.
+       03  EF16                            PIC 9(8) COMP-X VALUE 52.
+       03  WIN2                            PIC 9(8) COMP-X VALUE 53.
+       03  EF33                            PIC 9(8) COMP-X VALUE 54.
+       03  EF39                            PIC 9(8) COMP-X VALUE 55.
+       03  EF40                            PIC 9(8) COMP-X VALUE 56.
+       03  EF41                            PIC 9(8) COMP-X VALUE 57.
+       03  EF15                            PIC 9(8) COMP-X VALUE 58.
+       03  GBOX1                           PIC 9(8) COMP-X VALUE 59.
