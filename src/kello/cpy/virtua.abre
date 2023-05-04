@@ -1,0 +1,17 @@
+           IF LNK-INSTRUCAO-BOLETOS = 1
+              STRING LNK-PATH-SIS "PADRAO" "\VIRTUA"
+                  DELIMITED BY "*" INTO ARQUIVO-VIRTUA
+           ELSE
+              STRING LNK-PATH-SIS LNK-EMPRESA "\VIRTUA"
+                  DELIMITED BY "*" INTO ARQUIVO-VIRTUA
+           END-IF
+           OPEN I-O    VIRTUA
+           CLOSE       VIRTUA
+           OPEN INPUT  VIRTUA
+           IF FS-VIRTUA NOT EQUAL "00" AND "05" AND "35"
+              STRING "ERRO DE ABERTURA...VIRTUA" X"0DA0"
+                     "STATUS => " FS-VIRTUA INTO MENSAGEM
+              MOVE "C" TO TIPO-MSG
+              PERFORM 140-EXIBIR-MENSAGEM
+              MOVE  1  TO EXIT-FLAG
+              MOVE "N" TO ABRIU-GS.

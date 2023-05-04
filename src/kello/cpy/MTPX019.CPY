@@ -1,0 +1,14 @@
+           SELECT MTD019 ASSIGN TO PATH-MTD019
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-MTD019
+                  LOCK MODE IS AUTOMATIC
+                  WITH LOCK ON RECORD
+                  RECORD KEY IS ALBUM-MT19
+                  ALTERNATE RECORD KEY IS ALT-MT19 =
+                            DATAMOV-MT19, ALBUM-MT19
+                  ALTERNATE RECORD KEY IS CIDADE-MT19 WITH DUPLICATES
+                  ALTERNATE RECORD KEY IS ALT1-MT19 = CONTRATO-MT19
+                            CURSO-MT19 NOME-FORM-MT19 WITH DUPLICATES
+                  ALTERNATE RECORD KEY IS ALT2-MT19 = NOME-FORM-MT19
+                            CONTRATO-MT19 CURSO-MT19  WITH DUPLICATES.

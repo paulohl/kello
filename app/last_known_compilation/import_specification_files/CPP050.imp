@@ -1,0 +1,465 @@
+Form CPP050
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char '.'
+       Comma-Char ','
+       Currency-Sign '$'
+       Error-File "Erros.err"
+       Icon-File "icones.icn"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+       Stylename {Default-Font}
+   End Details
+
+   Form Data
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           CARREGA-LISTA Integer(1)
+           PRINTER-FLG Integer(1)
+           MUDAR-CABECALHO Integer(1)
+       End Group # FLAG-GROUP
+
+           FORMATO-RELATORIO Integer(1)
+           LINDET Character(130)
+           LINTOT Character(130)
+           PREVISTO Integer(1)
+           DEFINITIVO Integer(1)
+           A-PAGAR Integer(1)
+           SUSPENSA Integer(1)
+           ORDER Integer(1)
+           MENSAGEM-ERRO Character(40)
+           ERR-MSG Character(40) Error-Field
+           ERRO-VALIDACAO Integer(1)
+           LINHA-CABECALHO Character(200)
+   End Data
+
+   Font-Record Stylename {font-001}
+       Typeface "MS Sans Serif"
+       Pointsize 8
+       Attributes BITMAPPED PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {Default-Font}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED BOLD
+   End-Record
+
+   Font-Record Stylename {font-003}
+       Typeface "Times New Roman"
+       Pointsize 12
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Font-Record Stylename {font-004}
+       Typeface "Times New Roman"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (4,44)
+       Size  (3160,2120)
+       Display "CPP050 - Quadro geral de contas a pagar / Resumo por tipo de f\
+ornecedor"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE CLIPPED
+       Icon "dsicon"
+   End Object  #PRINCIPAL
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (796,584)
+       Display "Valor representado em milhares"
+       Stylename {font-003}
+   End Object  #{NoName}
+
+   Object PB3
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2284,248)
+       Size  (296,96)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               BRANCH-TO-PROCEDURE OPCAO-SELECIONADA ;
+           End Event # CR
+           Procedure OPCAO-SELECIONADA
+               GET-BUTTON-STATE CB1 PREVISTO ;
+               GET-BUTTON-STATE CB2 DEFINITIVO ;
+               GET-BUTTON-STATE CB3 A-PAGAR ;
+               GET-BUTTON-STATE CB4 SUSPENSA ;
+               SET-FLAG CARREGA-LISTA(1) ;
+               RETC ;
+               SET-FOCUS LB1 ;
+           End Procedure # OPCAO-SELECIONADA
+       End Dialog
+   End Object  #PB3
+
+   Object PB2
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2284,396)
+       Size  (296,96)
+       Display "~Fechar"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PB2
+
+   Object GBOX1
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (28,68)
+       Size  (3072,524)
+       Display ""
+   End Object  #GBOX1
+
+   Object PB5
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Stylename {font-001}
+       Start (2736,304)
+       Size  (96,80)
+       Bitmap-Name "Helpbtn"
+       Style COLOR("","GRAY")
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SHOW-WINDOW AJUDA ;
+               SET-FOCUS AJUDA ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               SHOW-WINDOW AJUDA ;
+               SET-FOCUS AJUDA ;
+           End Event # CR
+       End Dialog
+   End Object  #PB5
+
+   Object PB4
+       Type PUSH-BUTTON
+       Parent PRINCIPAL
+       Start (2896,308)
+       Size  (100,92)
+       Bitmap-Name "print1"
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               SET-FLAG PRINTER-FLG(1) ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #PB4
+
+   Object LB1
+       Type LIST-BOX
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (20,676)
+       Size  (3104,1332)
+       Style DISABLE-HORIZONTAL
+   End Object  #LB1
+
+   Object GBOX2
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (136,128)
+       Size  (640,428)
+       Display "Conta"
+   End Object  #GBOX2
+
+   Object CB1
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Start (252,272)
+       Display "~Previsto"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+       * BUTTON-SELECTED
+       *     GET-BUTTON-STATE CB1 $REGISTER
+       *     IF= $REGISTER 1 CONTINUA
+       *   CONTINUA
+       *     MOVE 1 PREVISTO
+       End Dialog
+   End Object  #CB1
+
+   Object CB2
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Start (252,400)
+       Display "~Definitivo"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+       * BUTTON-SELECTED
+       *     GET-BUTTON-STATE CB2 $REGISTER
+       *     IF= $REGISTER 1 CONTINUA
+       *   CONTINUA
+       *     MOVE 1 DEFINITIVO
+       End Dialog
+   End Object  #CB2
+
+   Object GBOX3
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (848,128)
+       Size  (640,428)
+       Display "Situação"
+   End Object  #GBOX3
+
+   Object CB3
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Start (960,272)
+       Display "~A pagar"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+       * BUTTON-SELECTED
+       *     GET-BUTTON-STATE CB3 $REGISTER
+       *     IF= $REGISTER 1 CONTINUA
+       *   CONTINUA
+       *     MOVE 1 A-PAGAR
+       End Dialog
+   End Object  #CB3
+
+   Object CB4
+       Type CHECK-BOX
+       Parent PRINCIPAL
+       Start (956,400)
+       Display "~Suspensas"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+       * BUTTON-SELECTED
+       *     GET-BUTTON-STATE CB4 $REGISTER
+       *     IF= $REGISTER 1 CONTINUA
+       *   CONTINUA
+       *     MOVE 1 SUSPENSA
+       End Dialog
+   End Object  #CB4
+
+   Object GBOX4
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (2676,268)
+       Size  (388,136)
+       Display ""
+   End Object  #GBOX4
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (8,2072)
+       Size  (3088,56)
+       Masterfield LINTOT
+       Style BORDER RESIZE-CHAR('X') READ-ONLY COLOR("LIGHT BLUE","")
+       Picture X(130)
+   End Object  #EF1
+
+   Object GBOX5
+       Type GROUP-BOX
+       Parent PRINCIPAL
+       Start (1560,132)
+       Size  (672,428)
+       Display "Formato"
+   End Object  #GBOX5
+
+   Object RB1
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Start (1600,260)
+       Display "Tipo de Fornecedor"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 1 FORMATO-RELATORIO ;
+               SET-FLAG MUDAR-CABECALHO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF2 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB1
+
+   Object RB2
+       Type RADIO-BUTTON
+       Parent PRINCIPAL
+       Start (1600,412)
+       Display "Contas de Apuração"
+       Style FIT-TEXT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               MOVE 2 FORMATO-RELATORIO ;
+               SET-FLAG MUDAR-CABECALHO(1) ;
+               RETC ;
+               REFRESH-OBJECT EF2 ;
+           End Event # BUTTON-SELECTED
+       End Dialog
+   End Object  #RB2
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {Default-Font}
+       Start (4,652)
+       Size  (3072,56)
+       Masterfield LINHA-CABECALHO
+       Style AUTOSCROLL RESIZE-CHAR('W')
+       Picture X(200)
+   End Object  #EF2
+
+   Object MBOX6
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(YES-NO) DEFAULT-BUTTON(1) NOTIFICATION
+       Display ""
+       Message "Tem certeza que quer excluir?"
+   End Object  #MBOX6
+
+   Object MBOX-ERROS
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Validação de Campos"
+   End Object  #MBOX-ERROS
+
+   Object AJUDA
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (868,424)
+       Size  (1520,808)
+       Display "Help"
+       Style SIZE-BORDER TITLEBAR SYSTEM-MENU
+       Icon "new-trap-icon"
+   End Object  #AJUDA
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (44,92)
+       Display "Resumo por tipo de fornecedor."
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent AJUDA
+       Start (44,184)
+       Display "Valores estão sendo divididos por 1000."
+   End Object  #{NoName}
+
+   Object PB-AJUDA
+       Type PUSH-BUTTON
+       Parent AJUDA
+       Start (648,756)
+       Size  (228,96)
+       Display "~OK"
+       Style DEFAULT
+       Dialog CASE(OFF)
+           Event BUTTON-SELECTED
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # BUTTON-SELECTED
+           Event CR
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # CR
+           Event CLOSED-WINDOW
+               UNSHOW-WINDOW AJUDA PRINCIPAL ;
+               RETC ;
+           End Event # CLOSED-WINDOW
+       End Dialog
+   End Object  #PB-AJUDA
+
+   Object MBOX1
+       Type MESSAGE-BOX
+       Parent PRINCIPAL
+       Style MOVABLE BUTTONS(OK) DEFAULT-BUTTON(1) NOTIFICATION
+       Display "Erro Manipulação Arquivo"
+   End Object  #MBOX1
+
+
+   Global Dialog CASE(OFF)
+       * COMANDOS PARA FECHAR A JANELA PRINCIPAL
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event SCREENSET-INITIALIZED
+           MOVE 1 FORMATO-RELATORIO ;
+           SET-BUTTON-STATE RB1 1 ;
+           SET-FOCUS CB1 ;
+           SET-BUTTON-STATE CB1 1 ;
+           SET-BUTTON-STATE CB2 1 ;
+           SET-BUTTON-STATE CB3 1 ;
+           SET-FLAG MUDAR-CABECALHO(1) ;
+           RETC ;
+           REFRESH-OBJECT EF2 ;
+           RETC ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure SET-POSICAO-CURSOR
+           REFRESH-OBJECT PRINCIPAL ;
+       *SET-FOCUS D-CODIGO
+       End Procedure # SET-POSICAO-CURSOR
+       Procedure SET-POSICAO-CURSOR1
+           REFRESH-OBJECT PRINCIPAL ;
+           SET-FOCUS CB1 ;
+       End Procedure # SET-POSICAO-CURSOR1
+       Procedure INSERE-LIST
+           INCREMENT $REGISTER ;
+           INSERT-LIST-ITEM LB1 LINDET $REGISTER ;
+           SET-TOP-LIST-ITEM LB1 $REGISTER ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # INSERE-LIST
+       Procedure INSERE-TOTAL
+           REFRESH-OBJECT EF1 ;
+           RETC ;
+       End Procedure # INSERE-TOTAL
+       Procedure EXIBE-ERRO
+           INVOKE-MESSAGE-BOX MBOX1 MENSAGEM-ERRO $REGISTER ;
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       *ENTER MESMA FUNCAO DO TAB
+       End Procedure # EXIBE-ERRO
+       Event CR
+           SKIP-TO-NEXT-OBJECT 1 ;
+       End Event # CR
+       Procedure DUPLICATE-EVENT-ESC
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-ESC
+       Procedure DUPLICATE-EVENT-CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Procedure # DUPLICATE-EVENT-CLOSED-WINDOW
+       Procedure REFRESH-DATA
+           REFRESH-OBJECT PRINCIPAL ;
+           RETC ;
+       End Procedure # REFRESH-DATA
+       Procedure CLEAR-LIST-BOX
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX
+   End Dialog
+
+End Form

@@ -1,0 +1,193 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CBP105-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 51.
+
+       01 CBP105-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CBP105-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 143.
+
+       01 CBP105-DATA-BLOCK.
+      *Controle de cheques
+          03 CBP105-BANCO-CH                 PIC 9(6).
+          03 CBP105-NOME-BANCO-CH            PIC X(30).
+          03 CBP105-NR-CHEQUE-CH             PIC 9(6).
+          03 CBP105-NOMINAL-A-CH             PIC 9(6).
+          03 CBP105-NOME-NOMINAL-A-CH        PIC X(30).
+          03 CBP105-VALOR                    PIC 9(8)V9(2).
+          03 CBP105-VENCTO                   PIC 9(8).
+          03 CBP105-TIPO-VENCTO              PIC X(10).
+          03 CBP105-FLAG-CRITICA             PIC 9.
+             88 CBP105-FLAG-CRITICA-TRUE     VALUE 1.
+          03 CBP105-ACHOU-NR-CH              PIC 9.
+             88 CBP105-ACHOU-NR-CH-TRUE      VALUE 1.
+          03 CBP105-EMITIR-CH                PIC 9.
+             88 CBP105-EMITIR-CH-TRUE        VALUE 1.
+          03 CBP105-CONFIRME-CH              PIC 9.
+             88 CBP105-CONFIRME-CH-TRUE      VALUE 1.
+          03 CBP105-CANCELAR-CH              PIC 9.
+             88 CBP105-CANCELAR-CH-TRUE      VALUE 1.
+          03 CBP105-BANCOW                   PIC 9(6).
+          03 CBP105-NOME-BANCOW              PIC X(30).
+          03 CBP105-FLAG-GROUP.
+             05 CBP105-EXIT-FLG              PIC 9.
+                88 CBP105-EXIT-FLG-TRUE      VALUE 1.
+             05 CBP105-SAVE-FLG              PIC 9.
+                88 CBP105-SAVE-FLG-TRUE      VALUE 1.
+             05 CBP105-CENTRALIZA            PIC 9.
+                88 CBP105-CENTRALIZA-TRUE    VALUE 1.
+             05 CBP105-CLR-FLG               PIC 9.
+                88 CBP105-CLR-FLG-TRUE       VALUE 1.
+             05 CBP105-LOAD-FLG              PIC 9.
+                88 CBP105-LOAD-FLG-TRUE      VALUE 1.
+             05 CBP105-TELA-POP-UP           PIC 9.
+                88 CBP105-TELA-POP-UP-TRUE   VALUE 1.
+             05 CBP105-TELA-VALOR            PIC 9.
+                88 CBP105-TELA-VALOR-TRUE    VALUE 1.
+             05 CBP105-POPUP-BANCO           PIC 9.
+                88 CBP105-POPUP-BANCO-TRUE   VALUE 1.
+             05 CBP105-POPUP-FORNEC          PIC 9.
+                88 CBP105-POPUP-FORNEC-TRUE  VALUE 1.
+             05 CBP105-VERIF-NR-CHEQUE       PIC 9.
+                88 CBP105-VERIF-NR-CHEQUE-TRUE VALUE 1.
+             05 CBP105-IMPRIMIR-CHEQUE       PIC 9.
+                88 CBP105-IMPRIMIR-CHEQUE-TRUE VALUE 1.
+             05 CBP105-GRAVAR-CHEQUE         PIC 9.
+                88 CBP105-GRAVAR-CHEQUE-TRUE VALUE 1.
+             05 CBP105-VALIDA-CH             PIC 9.
+                88 CBP105-VALIDA-CH-TRUE     VALUE 1.
+             05 CBP105-LER-BANCO             PIC 9.
+                88 CBP105-LER-BANCO-TRUE     VALUE 1.
+             05 CBP105-LER-FORNEC            PIC 9.
+                88 CBP105-LER-FORNEC-TRUE    VALUE 1.
+             05 CBP105-VERIF-APAGAR          PIC 9.
+                88 CBP105-VERIF-APAGAR-TRUE  VALUE 1.
+             05 CBP105-VERIF-PROX-CHEQUE     PIC 9.
+                88 CBP105-VERIF-PROX-CHEQUE-TRUE VALUE 1.
+             05 CBP105-VERIF-SEL-APAGAR      PIC 9.
+                88 CBP105-VERIF-SEL-APAGAR-TRUE VALUE 1.
+          03 CBP105-ACHOU-APAGAR             PIC 9.
+             88 CBP105-ACHOU-APAGAR-TRUE     VALUE 1.
+          03 CBP105-VERIF-VALOR              PIC 9.
+             88 CBP105-VERIF-VALOR-TRUE      VALUE 1.
+          03 CBP105-SEQ-SEL-APAGAR           PIC 9(5).
+          03 CBP105-LINDET                   PIC X(105).
+          03 CBP105-BAIXA-A-PAGAR            PIC 9.
+             88 CBP105-BAIXA-A-PAGAR-TRUE    VALUE 1.
+          03 CBP105-CONT                     PIC 9(3).
+          03 CBP105-ORDER                    PIC 9.
+             88 CBP105-ORDER-TRUE            VALUE 1.
+          03 CBP105-MENSAGEM-ERRO            PIC X(40).
+          03 CBP105-ERR-MSG                  PIC X(40).
+      ***
+          03 CBP105-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CBP105-CONFIG-VALUE             PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CBP105-FIELD-NUMBERS.
+          03 CBP105-FLD-NO-BANCO-CH          PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CBP105-FLD-NO-NOME-BANCO-CH     PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CBP105-FLD-NO-NR-CHEQUE-CH      PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CBP105-FLD-NO-NOMINAL-A-CH      PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CBP105-FLD-NO-NOME-NOMINAL-A-C  PIC 9(4) COMP-5 VALUE
+                                               5.
+      * Field NOME-NOMINAL-A-CH has been truncated
+          03 CBP105-FLD-NO-VALOR             PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CBP105-FLD-NO-VENCTO            PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CBP105-FLD-NO-TIPO-VENCTO       PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CBP105-FLD-NO-FLAG-CRITICA      PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CBP105-FLD-NO-ACHOU-NR-CH       PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CBP105-FLD-NO-EMITIR-CH         PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CBP105-FLD-NO-CONFIRME-CH       PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CBP105-FLD-NO-CANCELAR-CH       PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CBP105-FLD-NO-BANCOW            PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CBP105-FLD-NO-NOME-BANCOW       PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CBP105-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CBP105-FLD-NO-SAVE-FLG          PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CBP105-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CBP105-FLD-NO-CLR-FLG           PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CBP105-FLD-NO-LOAD-FLG          PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CBP105-FLD-NO-TELA-POP-UP       PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CBP105-FLD-NO-TELA-VALOR        PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CBP105-FLD-NO-POPUP-BANCO       PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 CBP105-FLD-NO-POPUP-FORNEC      PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 CBP105-FLD-NO-VERIF-NR-CHEQUE   PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 CBP105-FLD-NO-IMPRIMIR-CHEQUE   PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 CBP105-FLD-NO-GRAVAR-CHEQUE     PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 CBP105-FLD-NO-VALIDA-CH         PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 CBP105-FLD-NO-LER-BANCO         PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 CBP105-FLD-NO-LER-FORNEC        PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 CBP105-FLD-NO-VERIF-APAGAR      PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 CBP105-FLD-NO-VERIF-PROX-CHEQU  PIC 9(4) COMP-5 VALUE
+                                               33.
+      * Field VERIF-PROX-CHEQUE has been truncated
+          03 CBP105-FLD-NO-VERIF-SEL-APAGAR  PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 CBP105-FLD-NO-ACHOU-APAGAR      PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 CBP105-FLD-NO-VERIF-VALOR       PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 CBP105-FLD-NO-SEQ-SEL-APAGAR    PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 CBP105-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 CBP105-FLD-NO-BAIXA-A-PAGAR     PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 CBP105-FLD-NO-CONT              PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 CBP105-FLD-NO-ORDER             PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 CBP105-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 CBP105-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 CBP105-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 CBP105-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               45.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

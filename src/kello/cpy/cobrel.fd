@@ -1,0 +1,15 @@
+      *
+       FD  ATDEF LABEL RECORD IS STANDARD
+                 VALUE OF FILE-ID IS WS-LABEL-DEF.
+      *
+       01  ATDEF-R1                    PIC  X(1000).
+      *
+       FD  ATVAR LABEL RECORD IS STANDARD
+                 VALUE OF FILE-ID IS WS-LABEL-VAR.
+      *
+       01  ATVAR-R1                    PIC  X(1000).
+      *
+       FD  ATGRF LABEL RECORD IS STANDARD
+                 VALUE OF FILE-ID IS WS-LABEL-GRF.
+      *
+       01  ATGRF-R1                    PIC  X(1000).

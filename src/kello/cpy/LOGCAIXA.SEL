@@ -1,0 +1,15 @@
+           SELECT LOGCAIXA ASSIGN       TO ARQUIVO-LOGCAIXA
+                           ORGANIZATION IS          INDEXED
+                           ACCESS MODE  IS          DYNAMIC
+                           RECORD KEY   IS   CHAVE-LOGCAIXA
+                           ALTERNATE    RECORD          KEY
+                           IS CHAVE-CX100-LOGCAIXA =
+                              DATA-MOV-LOGCAIXA
+                              SEQ-LOGCAIXA
+                              DATA-LANCAMENTO-LOGCAIXA
+                              HORA-LANCAMENTO-LOGCAIXA
+                              SEQUENCIA-LANCAMENTO-LOGCAIXA
+                           WITH                  DUPLICATES
+                           LOCK   MODE  IS        AUTOMATIC
+                           WITH   LOCK  ON           RECORD
+                           FILE STATUS  IS      FS-LOGCAIXA.

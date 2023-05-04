@@ -1,0 +1,114 @@
+<DebugState xmlns="x-schema:dbgsch01.xml" Version="1">
+    <ProgramData Name="C:\DESENVOL\KELLO\DEBUG\CAP001.idy">
+        <BreakpointSection/>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="IND-RESULTADO" ExamineLine="0000002264" ExamineCol="029">
+                <ExamineText>
+                    <![CDATA[                   ADD 2 TO IND-RESULTADO
+           END-PERFORM.
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="MATRIZ-LIN (1, 1)" ExamineLine="0000002257" ExamineCol="001">
+                <ExamineText>
+                    <![CDATA[MATRIZ-LIN(IND-COL IND-LIN).
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="SOMA-COL (2)" ExamineLine="0000002276" ExamineCol="001">
+                <ExamineText>
+                    <![CDATA[SOMA-COL(IND-COL).
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="IND-ITEM" ExamineLine="0000002280" ExamineCol="034">
+                <ExamineText>
+                    <![CDATA[                   ADD  2     TO IND-ITEM
+      *            MOVE ZEROS TO WS-SOMA
+      *            COMPUTE WS-SOMA =
+      *                    SOMA-COL-R(1) + SOMA-COL-R(2) + SOMA-COL-R(3)
+      *            MOVE WS-SOMA TO WS-SENHA(IND-ITEM:1)
+      *            ADD  1 TO IND-ITEM
+           END-PERFORM.
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="WS-SENHA (3:2)" ExamineLine="0000002280" ExamineCol="001">
+                <ExamineText>
+                    <![CDATA[WS-SENHA(IND-ITEM:2).
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="WS-SENHA" ExamineLine="0000002280" ExamineCol="001">
+                <ExamineText>
+                    <![CDATA[WS-SENHA.
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="WS-SENHA1" ExamineLine="0000002296" ExamineCol="037">
+                <ExamineText>
+                    <![CDATA[           ADD ANO-EMPR          TO WS-SENHA1
+           ADD ANO-EMPR          TO WS-SENHA2
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="WS-SENHA2" ExamineLine="0000002297" ExamineCol="037">
+                <ExamineText>
+                    <![CDATA[           ADD ANO-EMPR          TO WS-SENHA2
+           ADD ANO-EMPR          TO WS-SENHA3
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="WS-SENHA3" ExamineLine="0000002298" ExamineCol="037">
+                <ExamineText>
+                    <![CDATA[           ADD ANO-EMPR          TO WS-SENHA3
+           MULTIPLY WS-SENHA1 BY MES-EMPR GIVING WS-SENHA1
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="AUX-SENHA-EMPR" ExamineLine="0000002313" ExamineCol="001">
+                <ExamineText>
+                    <![CDATA[AUX-SENHA-EMPR.
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\DESENVOL\KELLO\DEBUG\GALHOMTD001.idy">
+        <BreakpointSection/>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="STATUS-CODE" ExamineLine="0000000859" ExamineCol="041">
+                <ExamineText>
+                    <![CDATA[                              returning status-code
+
+           STRING PATH-MTD001 ".idx" DELIMITED BY " " INTO PATH-MTD001
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="PATH-MTD001A" ExamineLine="0000000855" ExamineCol="043">
+                <ExamineText>
+                    <![CDATA[           MOVE EMPRESA-REF            TO PATH-MTD001A
+
+           call "CBL_RENAME_FILE" using PATH-MTD001
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="PATH-MTD001" ExamineLine="0000000851" ExamineCol="043">
+                <ExamineText>
+                    <![CDATA[           MOVE EMPRESA-REF            TO PATH-MTD001
+
+           MOVE CODIGO-CA001           TO EMP-REC
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="CODIGO-CA001" ExamineLine="0000000835" ExamineCol="049">
+                <ExamineText>
+                    <![CDATA[                      DISPLAY "CODIGO-CA001 = " CODIGO-CA001 STOP " "
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+</DebugState>

@@ -1,0 +1,559 @@
+       01 DET-001.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.01 Transitional//EN>".
+
+       01 DET-002.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<html><head><title>".
+
+       01 DET-003.
+          05 CAMPO-001                            PIC X(60)
+             value "KELLO FORMATURAS - Etiquetas".
+
+       01 DET-004.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</title>".
+
+       01 DET-005.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<meta http-equiv=Content-Type content=text/html; ".
+
+       01 DET-006.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "charset= charset=iso-8859-1>".
+
+       01 DET-009.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</head>".
+
+       01 DET-012.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<table width=798 border=0 cellpadding=0 cellspacing=0><tr>".
+
+       01 DET-013.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=56 valign=middle><div align=center><strong>".
+
+       01 DET-014.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-015.
+          05 CAMPO-004                            PIC X(60).
+
+       01 DET-016.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div><div align=center><font size=6>".
+
+       01 DET-017.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong></strong></font></div></td><td></td>".
+
+       01 DET-018.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td valign=middle><div align=center><strong><font size=6>".
+
+       01 DET-019.
+          05 CAMPO-005                            PIC X(60).
+
+       01 DET-020.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div><div align=center><font size=6>".
+
+       01 DET-021.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong></strong></font></div></td><td></td>".
+
+       01 DET-022.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td valign=middle><div align=center><font size=6><strong>".
+
+       01 DET-023.
+          05 CAMPO-006                            PIC X(60).
+
+       01 DET-024.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</strong></font></div><div align=center><font size=6>".
+
+       01 DET-025.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong></strong></font></div></td></tr><tr><td height=42>".
+
+       01 DET-026.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-027.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=47 valign=middle><div align=center><font size=6>".
+
+       01 DET-028.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong>".
+
+       01 DET-029.
+          05 CAMPO-007                            PIC X(60).
+
+       01 DET-030.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</strong></font></div><div align=center><font size=5>".
+
+       01 DET-031.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong></strong></font></div></td><td></td>".
+
+       01 DET-032.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td valign=middle><div align=center><font size=6><strong>".
+
+       01 DET-033.
+          05 CAMPO-008                            PIC X(60).
+
+       01 DET-034.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</strong></font></div><div align=center><strong>".
+
+       01 DET-035.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=5></font></strong></div></td><td></td>".
+
+       01 DET-036.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td valign=middle><div align=center><font size=6><strong>".
+
+       01 DET-037.
+          05 CAMPO-009                            PIC X(60).
+
+       01 DET-038.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</strong></font></div><div align=center><font size=5>".
+
+       01 DET-039.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong></strong></font></div></td></tr><tr><td height=44>".
+
+       01 DET-040.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-041.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=62 valign=middle><div align=center><font size=6>".
+
+       01 DET-042.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong>".
+
+       01 DET-043.
+          05 CAMPO-010                            PIC X(60).
+
+       01 DET-044.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</strong></font></div></td><td></td><td valign=middle>".
+
+       01 DET-045.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-046.
+          05 CAMPO-011                            PIC X(60).
+
+       01 DET-047.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-048.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-049.
+          05 CAMPO-012                            PIC X(60).
+
+       01 DET-050.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=46></td><td>".
+
+       01 DET-051.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-052.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=49 valign=middle><div align=center><strong>".
+
+       01 DET-053.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-054.
+          05 CAMPO-013                            PIC X(60).
+
+       01 DET-055.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-056.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-057.
+          05 CAMPO-014                            PIC X(60).
+
+       01 DET-058.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-059.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-060.
+          05 CAMPO-015                            PIC X(60).
+
+       01 DET-061.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=46></td><td>".
+
+       01 DET-062.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-063.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=58 valign=middle><div align=center><font size=6>".
+
+       01 DET-064.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<strong>".
+
+       01 DET-065.
+          05 CAMPO-016                            PIC X(60).
+
+       01 DET-066.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</strong></font></div></td><td></td><td valign=middle>".
+
+       01 DET-067.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-068.
+          05 CAMPO-017                            PIC X(60).
+
+       01 DET-069.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-070.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-071.
+          05 CAMPO-018                            PIC X(60).
+
+       01 DET-072.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=36></td><td>".
+
+       01 DET-073.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-074.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=47 valign=middle><div align=center><strong>".
+
+       01 DET-075.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-076.
+          05 CAMPO-019                            PIC X(60).
+
+       01 DET-077.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-078.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-079.
+          05 CAMPO-020                            PIC X(60).
+
+       01 DET-080.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-081.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-082.
+          05 CAMPO-021                            PIC X(60).
+
+       01 DET-083.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=34></td><td>".
+
+       01 DET-084.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-085.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=68 valign=middle><div align=center><strong>".
+
+       01 DET-086.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-087.
+          05 CAMPO-022                            PIC X(60).
+
+       01 DET-088.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-089.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-090.
+          05 CAMPO-023                            PIC X(60).
+
+       01 DET-091.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-092.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-093.
+          05 CAMPO-024                            PIC X(60).
+
+       01 DET-094.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=42></td><td>".
+
+       01 DET-095.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-096.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=58 valign=middle><div align=center><strong>".
+
+       01 DET-097.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-098.
+          05 CAMPO-025                            PIC X(60).
+
+       01 DET-099.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-100.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-101.
+          05 CAMPO-026                            PIC X(60).
+
+       01 DET-102.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-103.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-104.
+          05 CAMPO-027                            PIC X(60).
+
+       01 DET-105.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=45></td><td>".
+
+       01 DET-106.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-107.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=36 valign=middle><div align=center><strong>".
+
+       01 DET-108.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-109.
+          05 CAMPO-028                            PIC X(60).
+
+       01 DET-110.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-111.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-112.
+          05 CAMPO-029                            PIC X(60).
+
+       01 DET-113.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-114.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-115.
+          05 CAMPO-030                            PIC X(60).
+
+       01 DET-116.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=54></td><td>".
+
+       01 DET-117.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr><tr>".
+
+       01 DET-118.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<td height=57 valign=middle><div align=center><strong>".
+
+       01 DET-119.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<font size=6>".
+
+       01 DET-120.
+          05 CAMPO-031                            PIC X(60).
+
+       01 DET-121.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-122.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-123.
+          05 CAMPO-032                            PIC X(60).
+
+       01 DET-124.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td><td></td><td valign=middle>".
+
+       01 DET-125.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "<div align=center><strong><font size=6>".
+
+       01 DET-126.
+          05 CAMPO-033                            PIC X(60).
+
+       01 DET-127.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</font></strong></div></td></tr><tr><td height=15></td><td>".
+
+       01 DET-128.
+          05 FILLER                               PIC X(70)
+             VALUE
+       "</td><td></td><td></td><td></td></tr></table></body></html>".
+

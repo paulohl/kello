@@ -1,0 +1,261 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 180.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 66.
+
+       01 DATA-BLOCK.
+          03 ACP-NUMERO                      PIC 9(11).
+          03 ACP-CONTRATO                    PIC 9(8).
+          03 DESC-NOME-FORMANDO              PIC X(30).
+          03 DESC-NOME-COMPRADOR             PIC X(30).
+          03 ACP-CIDADE                      PIC 9(4).
+          03 DESC-CIDADE                     PIC X(30).
+          03 ACP-SEQ-ORIG                    PIC 9(2).
+          03 ACP-DOC-ORIG                    PIC X(15).
+          03 ACP-PARCELA-ORIG                PIC 9(4).
+          03 ACP-TIPO-ORIG                   PIC X(4).
+          03 ACP-BANCO-ORIG                  PIC 9(3).
+          03 ACP-VALOR-ORIG                  PIC 9(5)V9(2).
+          03 ACP-VENCTO-ORIG                 PIC 9(8).
+          03 ACP-OBS-ORIG                    PIC X(10).
+          03 ACP-DTDEP1                      PIC 9(8).
+          03 ACP-DTDEP2                      PIC 9(8).
+          03 ACP-DTDEP3                      PIC 9(8).
+          03 ACP-DTDEP4                      PIC 9(8).
+          03 ACP-AGENCIA1                    PIC X(20).
+          03 ACP-AGENCIA2                    PIC X(20).
+          03 ACP-AGENCIA3                    PIC X(20).
+          03 ACP-AGENCIA4                    PIC X(20).
+          03 ACP-VLRORIG1                    PIC 9(5)V9(2).
+          03 ACP-VLRORIG2                    PIC 9(5)V9(2).
+          03 ACP-VLRORIG3                    PIC 9(5)V9(2).
+          03 ACP-VLRORIG4                    PIC 9(5)V9(2).
+          03 ACP-JUROS1                      PIC 9(3)V9(2).
+          03 ACP-JUROS2                      PIC 9(3)V9(2).
+          03 ACP-JUROS3                      PIC 9(3)V9(2).
+          03 ACP-JUROS4                      PIC 9(3)V9(2).
+          03 ACP-DESCONTO1                   PIC 9(3)V9(2).
+          03 ACP-DESCONTO2                   PIC 9(3)V9(2).
+          03 ACP-DESCONTO3                   PIC 9(3)V9(2).
+          03 ACP-DESCONTO4                   PIC 9(3)V9(2).
+          03 ACP-VLRTOTAL1                   PIC 9(5)V9(2).
+          03 ACP-VLRTOTAL2                   PIC 9(5)V9(2).
+          03 ACP-VLRTOTAL3                   PIC 9(5)V9(2).
+          03 ACP-VLRTOTAL4                   PIC 9(5)V9(2).
+          03 ACP-SEQ-NOVO                    PIC 9(2).
+          03 ACP-DOC-NOVO                    PIC X(15).
+          03 ACP-PARCELA-NOVO                PIC 9(4).
+          03 ACP-TIPO-NOVO                   PIC X(4).
+          03 ACP-BANCO-NOVO                  PIC 9(3).
+          03 ACP-VALOR-NOVO                  PIC 9(5)V9(2).
+          03 ACP-VENCTO-NOVO                 PIC 9(8).
+          03 ACP-OBS-NOVO                    PIC X(10).
+          03 ACP-OBSERVACAO1                 PIC X(70).
+          03 ACP-OBSERVACAO2                 PIC X(70).
+          03 ACP-OBSERVACAO3                 PIC X(70).
+          03 ACP-OBSERVACAO4                 PIC X(70).
+          03 ACP-OBSERVACAO5                 PIC X(70).
+          03 ACP-OBSERVACAO6                 PIC X(70).
+          03 ACP-OBSERVACAO7                 PIC X(70).
+          03 ACP-OBSERVACAO8                 PIC X(70).
+          03 ACP-OBSERVACAO9                 PIC X(70).
+          03 ACP-OBSERVACAO10                PIC X(70).
+          03 ACP-DATA-EMITENTE               PIC 9(8).
+          03 FLAG-GROUP.
+             05 EXIT-FLG                     PIC 9.
+                88 EXIT-FLG-TRUE             VALUE 1.
+             05 CENTRALIZA                   PIC 9.
+                88 CENTRALIZA-TRUE           VALUE 1.
+             05 SAVE-FLG                     PIC 9.
+                88 SAVE-FLG-TRUE             VALUE 1.
+             05 CLR-FLG                      PIC 9.
+                88 CLR-FLG-TRUE              VALUE 1.
+             05 CRITICAR                     PIC 9.
+                88 CRITICAR-TRUE             VALUE 1.
+             05 CARREGA-SB                   PIC 9.
+                88 CARREGA-SB-TRUE           VALUE 1.
+             05 SUGESTAO                     PIC 9.
+                88 SUGESTAO-TRUE             VALUE 1.
+          03 FLAG-CRITICA                    PIC 9.
+             88 FLAG-CRITICA-TRUE            VALUE 1.
+          03 TIPO-GRAVACAO                   PIC 9.
+             88 TIPO-GRAVACAO-TRUE           VALUE 1.
+          03 LINDET                          PIC X(110).
+          03 DS-FOCO                         PIC x(8) COMP-X.
+          03 CAMPO-CRITICA                   PIC X(30).
+          03 LINHA-AVISO                     PIC X(150).
+          03 ARQ-EXPLORER                    PIC X(200).
+          03 NUMERO-LINHA                    PIC 9(2).
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-ACP-NUMERO               PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-ACP-CONTRATO             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-DESC-NOME-FORMANDO       PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-DESC-NOME-COMPRADOR      PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-ACP-CIDADE               PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-DESC-CIDADE              PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-ACP-SEQ-ORIG             PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-ACP-DOC-ORIG             PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-ACP-PARCELA-ORIG         PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-ACP-TIPO-ORIG            PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-ACP-BANCO-ORIG           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-ACP-VALOR-ORIG           PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-ACP-VENCTO-ORIG          PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-ACP-OBS-ORIG             PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-ACP-DTDEP1               PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-ACP-DTDEP2               PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-ACP-DTDEP3               PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-ACP-DTDEP4               PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-ACP-AGENCIA1             PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-ACP-AGENCIA2             PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-ACP-AGENCIA3             PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-ACP-AGENCIA4             PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FLD-NO-ACP-VLRORIG1             PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FLD-NO-ACP-VLRORIG2             PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-ACP-VLRORIG3             PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-ACP-VLRORIG4             PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-ACP-JUROS1               PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-ACP-JUROS2               PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-ACP-JUROS3               PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-ACP-JUROS4               PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FLD-NO-ACP-DESCONTO1            PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FLD-NO-ACP-DESCONTO2            PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FLD-NO-ACP-DESCONTO3            PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FLD-NO-ACP-DESCONTO4            PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FLD-NO-ACP-VLRTOTAL1            PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 FLD-NO-ACP-VLRTOTAL2            PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 FLD-NO-ACP-VLRTOTAL3            PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 FLD-NO-ACP-VLRTOTAL4            PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FLD-NO-ACP-SEQ-NOVO             PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 FLD-NO-ACP-DOC-NOVO             PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 FLD-NO-ACP-PARCELA-NOVO         PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FLD-NO-ACP-TIPO-NOVO            PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FLD-NO-ACP-BANCO-NOVO           PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 FLD-NO-ACP-VALOR-NOVO           PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FLD-NO-ACP-VENCTO-NOVO          PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FLD-NO-ACP-OBS-NOVO             PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FLD-NO-ACP-OBSERVACAO1          PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FLD-NO-ACP-OBSERVACAO2          PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 FLD-NO-ACP-OBSERVACAO3          PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FLD-NO-ACP-OBSERVACAO4          PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 FLD-NO-ACP-OBSERVACAO5          PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 FLD-NO-ACP-OBSERVACAO6          PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 FLD-NO-ACP-OBSERVACAO7          PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 FLD-NO-ACP-OBSERVACAO8          PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 FLD-NO-ACP-OBSERVACAO9          PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 FLD-NO-ACP-OBSERVACAO10         PIC 9(4) COMP-5 VALUE
+                                               56.
+          03 FLD-NO-ACP-DATA-EMITENTE        PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 FLD-NO-EXIT-FLG                 PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 FLD-NO-CENTRALIZA               PIC 9(4) COMP-5 VALUE
+                                               60.
+          03 FLD-NO-SAVE-FLG                 PIC 9(4) COMP-5 VALUE
+                                               61.
+          03 FLD-NO-CLR-FLG                  PIC 9(4) COMP-5 VALUE
+                                               62.
+          03 FLD-NO-CRITICAR                 PIC 9(4) COMP-5 VALUE
+                                               63.
+          03 FLD-NO-CARREGA-SB               PIC 9(4) COMP-5 VALUE
+                                               64.
+          03 FLD-NO-SUGESTAO                 PIC 9(4) COMP-5 VALUE
+                                               65.
+          03 FLD-NO-FLAG-CRITICA             PIC 9(4) COMP-5 VALUE
+                                               66.
+          03 FLD-NO-TIPO-GRAVACAO            PIC 9(4) COMP-5 VALUE
+                                               67.
+          03 FLD-NO-LINDET                   PIC 9(4) COMP-5 VALUE
+                                               68.
+          03 FLD-NO-DS-FOCO                  PIC 9(4) COMP-5 VALUE
+                                               69.
+          03 FLD-NO-CAMPO-CRITICA            PIC 9(4) COMP-5 VALUE
+                                               70.
+          03 FLD-NO-LINHA-AVISO              PIC 9(4) COMP-5 VALUE
+                                               71.
+          03 FLD-NO-ARQ-EXPLORER             PIC 9(4) COMP-5 VALUE
+                                               72.
+          03 FLD-NO-NUMERO-LINHA             PIC 9(4) COMP-5 VALUE
+                                               73.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               74.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               75.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

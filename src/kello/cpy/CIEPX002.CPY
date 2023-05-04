@@ -1,0 +1,11 @@
+           SELECT CIED002 ASSIGN TO "\PROGRAMA\KELLO\PADRAO\CIED002"
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  STATUS IS ST-CIED002
+                  RECORD KEY IS CODIGO-CI02
+                  ALTERNATE RECORD KEY IS DESCRICAO-CI02
+                  ALTERNATE RECORD KEY IS RESPONSAVEL-CI02
+                                 WITH DUPLICATES
+                  ALTERNATE RECORD KEY IS SUPERIOR-CI02
+                                 WITH DUPLICATES.

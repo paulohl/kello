@@ -1,0 +1,10 @@
+           SELECT  COD060 ASSIGN TO PATH-COD060
+                   ORGANIZATION IS INDEXED
+                   ACCESS MODE IS DYNAMIC
+                   STATUS IS ST-COD060
+                   LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                   RECORD KEY IS CHAVE-CO60 = NR-CONTRATO-CO60 ITEM-CO60
+                   ALTERNATE RECORD KEY IS DATAREALIZA-CO60
+                             WITH DUPLICATES
+                   ALTERNATE RECORD KEY IS ALT1-CO60 = NR-CONTRATO-CO60
+                             DATAREALIZA-CO60 ITEM-CO60.

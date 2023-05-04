@@ -1,0 +1,351 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 174.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 17.
+
+       01 DATA-BLOCK.
+          03 ACP-ATENDIMENTO                 PIC 9(8).
+          03 ACP-ULT-USUARIO                 PIC X(5).
+          03 ACP-DT-ABERTURA                 PIC 9(8).
+          03 ACP-HR-ABERTURA                 PIC X(10).
+          03 ACP-DT-ENCERRAMENTO             PIC 9(8).
+          03 ACP-HR-ENCERRAMENTO             PIC X(10).
+          03 ACP-ATENDIMENTO1                PIC 9(6).
+          03 DESC-ATENDIMENTO1               PIC X(50).
+          03 ACP-ATENDIMENTO2                PIC 9(6).
+          03 DESC-ATENDIMENTO2               PIC X(50).
+          03 ACP-ADICIONAL1                  PIC 9(6).
+          03 DESC-ADICIONAL1                 PIC X(50).
+          03 ACP-ADICIONAL2                  PIC 9(6).
+          03 DESC-ADICIONAL2                 PIC X(50).
+          03 ACP-ADICIONAL3                  PIC 9(6).
+          03 DESC-ADICIONAL3                 PIC X(50).
+          03 ACP-STATUS-ATUAL                PIC X(15).
+          03 ACP-DESCRICAO-SUMARIA           PIC X(8000).
+          03 ACP-CLIENTE                     PIC 9(8).
+          03 ACP-FORMANDO                    PIC X(30).
+          03 ACP-COMPRADOR                   PIC X(30).
+          03 ACP-DTNASC                      PIC 9(8).
+          03 ACP-CPF                         PIC 9(11).
+          03 ACP-RG                          PIC X(16).
+          03 ACP-ENDERECO-COM                PIC X(30).
+          03 ACP-BAIRRO-COM                  PIC X(15).
+          03 ACP-CEP-COM                     PIC 9(8).
+          03 ACP-CIDADE-COM                  PIC 9(4).
+          03 DESC-CIDADE-COM                 PIC X(20).
+          03 ACP-ESTADO-COM                  PIC X(2).
+          03 ACP-DDD-COM                     PIC 9(2).
+          03 ACP-TELEFONE-COM                PIC 9(8).
+          03 ACP-CELULAR-COM                 PIC 9(8).
+          03 ACP-E-MAIL-COM                  PIC X(30).
+          03 ACP-ENDERECO-ENT                PIC X(30).
+          03 ACP-BAIRRO-ENT                  PIC X(15).
+          03 ACP-CEP-ENT                     PIC 9(8).
+          03 ACP-CIDADE-ENT                  PIC 9(4).
+          03 DESC-CIDADE-ENT                 PIC X(20).
+          03 ACP-ESTADO-ENT                  PIC X(2).
+          03 ACP-PROCEDIMENTO-KAC            PIC 9(6).
+          03 DESC-PROCEDIMENTO-KAC           PIC X(60).
+          03 ACP-INFORMACAO-KAC              PIC X(80).
+          03 ACP-PROCEDIMENTO-AREA           PIC 9(6).
+          03 DESC-PROCEDIMENTO-AREA          PIC X(60).
+          03 ACP-DESC-SUMARIA                PIC X(80).
+          03 ACP-INFORMACAO-AREA             PIC X(80).
+          03 ACP-RETORNO                     PIC X(80).
+          03 ACP-PAI                         PIC X(30).
+          03 ACP-MAE                         PIC X(30).
+          03 ACP-ENDERECO-RES                PIC X(30).
+          03 ACP-BAIRRO-RES                  PIC X(15).
+          03 ACP-CEP-RES                     PIC 9(8).
+          03 ACP-CIDADE-RES                  PIC 9(4).
+          03 DESC-CIDADE-RES                 PIC X(20).
+          03 ACP-ESTADO-RES                  PIC X(2).
+          03 ACP-DDD-RES                     PIC 9(2).
+          03 ACP-TELEFONE-RES                PIC 9(8).
+          03 ACP-CELULAR-RES                 PIC 9(8).
+          03 ACP-EMAIL-RES                   PIC X(30).
+          03 ACP-SITUACAO                    PIC X(15).
+          03 LINHA-DETALHE                   PIC X(80).
+          03 NUMERO-ATENDIMENTO              PIC 9.
+             88 NUMERO-ATENDIMENTO-TRUE      VALUE 1.
+          03 NUMERO-CIDADE                   PIC 9.
+             88 NUMERO-CIDADE-TRUE           VALUE 1.
+          03 NUMERO-PROCEDIMENTO             PIC 9.
+             88 NUMERO-PROCEDIMENTO-TRUE     VALUE 1.
+          03 NUMERO-INFORMACAO               PIC 9.
+             88 NUMERO-INFORMACAO-TRUE       VALUE 1.
+          03 FLAG-GROUP.
+             05 EXIT-FLG                     PIC 9.
+                88 EXIT-FLG-TRUE             VALUE 1.
+             05 CENTRALIZA                   PIC 9.
+                88 CENTRALIZA-TRUE           VALUE 1.
+             05 SAVE-FLG                     PIC 9.
+                88 SAVE-FLG-TRUE             VALUE 1.
+             05 CLR-FLG                      PIC 9.
+                88 CLR-FLG-TRUE              VALUE 1.
+             05 VALIDA                       PIC 9.
+                88 VALIDA-TRUE               VALUE 1.
+             05 CONSULTA-ATENDIMENTO         PIC 9.
+                88 CONSULTA-ATENDIMENTO-TRUE VALUE 1.
+             05 LE-ATENDIMENTO               PIC 9.
+                88 LE-ATENDIMENTO-TRUE       VALUE 1.
+             05 LE-CLIENTE                   PIC 9.
+                88 LE-CLIENTE-TRUE           VALUE 1.
+             05 LE-CIDADE                    PIC 9.
+                88 LE-CIDADE-TRUE            VALUE 1.
+             05 LE-PROCEDIMENTO              PIC 9.
+                88 LE-PROCEDIMENTO-TRUE      VALUE 1.
+             05 CHAMA-POP-UP-AT              PIC 9.
+                88 CHAMA-POP-UP-AT-TRUE      VALUE 1.
+             05 CHAMA-POP-UP-CLI             PIC 9.
+                88 CHAMA-POP-UP-CLI-TRUE     VALUE 1.
+             05 CHAMA-POP-UP-CID             PIC 9.
+                88 CHAMA-POP-UP-CID-TRUE     VALUE 1.
+             05 CHAMA-POP-UP-PRO             PIC 9.
+                88 CHAMA-POP-UP-PRO-TRUE     VALUE 1.
+             05 INCLUIR-PROCEDIMENTO         PIC 9.
+                88 INCLUIR-PROCEDIMENTO-TRUE VALUE 1.
+             05 INCLUIR-INFORMACAO           PIC 9.
+                88 INCLUIR-INFORMACAO-TRUE   VALUE 1.
+             05 EXCLUI-FLG                   PIC 9.
+                88 EXCLUI-FLG-TRUE           VALUE 1.
+             05 LOAD-FLG                     PIC 9.
+                88 LOAD-FLG-TRUE             VALUE 1.
+             05 CARREGA-ULT                  PIC 9.
+                88 CARREGA-ULT-TRUE          VALUE 1.
+          03 CAMPO-CRITICA                   PIC X(20).
+          03 FLAG-CRITICA                    PIC 9.
+             88 FLAG-CRITICA-TRUE            VALUE 1.
+          03 TEXTO-REFERENCIA                PIC X(110).
+          03 TIPO-GRAVACAO                   PIC 9.
+             88 TIPO-GRAVACAO-TRUE           VALUE 1.
+          03 OPCAO-POP-UP                    PIC 9.
+             88 OPCAO-POP-UP-TRUE            VALUE 1.
+          03 LINDET                          PIC X(110).
+          03 CONT                            PIC 9(3).
+          03 MENSAGEM-ERRO                   PIC X(40).
+          03 ERR-MSG                         PIC X(40).
+          03 ERRO                            PIC 9.
+             88 ERRO-TRUE                    VALUE 1.
+          03 ANOTACAO                        PIC X(640).
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-ACP-ATENDIMENTO          PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-ACP-ULT-USUARIO          PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-ACP-DT-ABERTURA          PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-ACP-HR-ABERTURA          PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-ACP-DT-ENCERRAMENTO      PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-ACP-HR-ENCERRAMENTO      PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-ACP-ATENDIMENTO1         PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-DESC-ATENDIMENTO1        PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-ACP-ATENDIMENTO2         PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-DESC-ATENDIMENTO2        PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-ACP-ADICIONAL1           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-DESC-ADICIONAL1          PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-ACP-ADICIONAL2           PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-DESC-ADICIONAL2          PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-ACP-ADICIONAL3           PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-DESC-ADICIONAL3          PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-ACP-STATUS-ATUAL         PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-ACP-DESCRICAO-SUMARIA    PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-ACP-CLIENTE              PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-ACP-FORMANDO             PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-ACP-COMPRADOR            PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-ACP-DTNASC               PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FLD-NO-ACP-CPF                  PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FLD-NO-ACP-RG                   PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-ACP-ENDERECO-COM         PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-ACP-BAIRRO-COM           PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-ACP-CEP-COM              PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-ACP-CIDADE-COM           PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-DESC-CIDADE-COM          PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-ACP-ESTADO-COM           PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FLD-NO-ACP-DDD-COM              PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FLD-NO-ACP-TELEFONE-COM         PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FLD-NO-ACP-CELULAR-COM          PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FLD-NO-ACP-E-MAIL-COM           PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FLD-NO-ACP-ENDERECO-ENT         PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 FLD-NO-ACP-BAIRRO-ENT           PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 FLD-NO-ACP-CEP-ENT              PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 FLD-NO-ACP-CIDADE-ENT           PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FLD-NO-DESC-CIDADE-ENT          PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 FLD-NO-ACP-ESTADO-ENT           PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 FLD-NO-ACP-PROCEDIMENTO-KAC     PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FLD-NO-DESC-PROCEDIMENTO-KAC    PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FLD-NO-ACP-INFORMACAO-KAC       PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 FLD-NO-ACP-PROCEDIMENTO-AREA    PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FLD-NO-DESC-PROCEDIMENTO-AREA   PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FLD-NO-ACP-DESC-SUMARIA         PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FLD-NO-ACP-INFORMACAO-AREA      PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FLD-NO-ACP-RETORNO              PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 FLD-NO-ACP-PAI                  PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FLD-NO-ACP-MAE                  PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 FLD-NO-ACP-ENDERECO-RES         PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 FLD-NO-ACP-BAIRRO-RES           PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 FLD-NO-ACP-CEP-RES              PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 FLD-NO-ACP-CIDADE-RES           PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 FLD-NO-DESC-CIDADE-RES          PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 FLD-NO-ACP-ESTADO-RES           PIC 9(4) COMP-5 VALUE
+                                               56.
+          03 FLD-NO-ACP-DDD-RES              PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 FLD-NO-ACP-TELEFONE-RES         PIC 9(4) COMP-5 VALUE
+                                               58.
+          03 FLD-NO-ACP-CELULAR-RES          PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 FLD-NO-ACP-EMAIL-RES            PIC 9(4) COMP-5 VALUE
+                                               60.
+          03 FLD-NO-ACP-SITUACAO             PIC 9(4) COMP-5 VALUE
+                                               61.
+          03 FLD-NO-LINHA-DETALHE            PIC 9(4) COMP-5 VALUE
+                                               62.
+          03 FLD-NO-NUMERO-ATENDIMENTO       PIC 9(4) COMP-5 VALUE
+                                               63.
+          03 FLD-NO-NUMERO-CIDADE            PIC 9(4) COMP-5 VALUE
+                                               64.
+          03 FLD-NO-NUMERO-PROCEDIMENTO      PIC 9(4) COMP-5 VALUE
+                                               65.
+          03 FLD-NO-NUMERO-INFORMACAO        PIC 9(4) COMP-5 VALUE
+                                               66.
+          03 FLD-NO-EXIT-FLG                 PIC 9(4) COMP-5 VALUE
+                                               68.
+          03 FLD-NO-CENTRALIZA               PIC 9(4) COMP-5 VALUE
+                                               69.
+          03 FLD-NO-SAVE-FLG                 PIC 9(4) COMP-5 VALUE
+                                               70.
+          03 FLD-NO-CLR-FLG                  PIC 9(4) COMP-5 VALUE
+                                               71.
+          03 FLD-NO-VALIDA                   PIC 9(4) COMP-5 VALUE
+                                               72.
+          03 FLD-NO-CONSULTA-ATENDIMENTO     PIC 9(4) COMP-5 VALUE
+                                               73.
+          03 FLD-NO-LE-ATENDIMENTO           PIC 9(4) COMP-5 VALUE
+                                               74.
+          03 FLD-NO-LE-CLIENTE               PIC 9(4) COMP-5 VALUE
+                                               75.
+          03 FLD-NO-LE-CIDADE                PIC 9(4) COMP-5 VALUE
+                                               76.
+          03 FLD-NO-LE-PROCEDIMENTO          PIC 9(4) COMP-5 VALUE
+                                               77.
+          03 FLD-NO-CHAMA-POP-UP-AT          PIC 9(4) COMP-5 VALUE
+                                               78.
+          03 FLD-NO-CHAMA-POP-UP-CLI         PIC 9(4) COMP-5 VALUE
+                                               79.
+          03 FLD-NO-CHAMA-POP-UP-CID         PIC 9(4) COMP-5 VALUE
+                                               80.
+          03 FLD-NO-CHAMA-POP-UP-PRO         PIC 9(4) COMP-5 VALUE
+                                               81.
+          03 FLD-NO-INCLUIR-PROCEDIMENTO     PIC 9(4) COMP-5 VALUE
+                                               82.
+          03 FLD-NO-INCLUIR-INFORMACAO       PIC 9(4) COMP-5 VALUE
+                                               83.
+          03 FLD-NO-EXCLUI-FLG               PIC 9(4) COMP-5 VALUE
+                                               84.
+          03 FLD-NO-LOAD-FLG                 PIC 9(4) COMP-5 VALUE
+                                               85.
+          03 FLD-NO-CARREGA-ULT              PIC 9(4) COMP-5 VALUE
+                                               86.
+          03 FLD-NO-CAMPO-CRITICA            PIC 9(4) COMP-5 VALUE
+                                               87.
+          03 FLD-NO-FLAG-CRITICA             PIC 9(4) COMP-5 VALUE
+                                               88.
+          03 FLD-NO-TEXTO-REFERENCIA         PIC 9(4) COMP-5 VALUE
+                                               89.
+          03 FLD-NO-TIPO-GRAVACAO            PIC 9(4) COMP-5 VALUE
+                                               90.
+          03 FLD-NO-OPCAO-POP-UP             PIC 9(4) COMP-5 VALUE
+                                               91.
+          03 FLD-NO-LINDET                   PIC 9(4) COMP-5 VALUE
+                                               92.
+          03 FLD-NO-CONT                     PIC 9(4) COMP-5 VALUE
+                                               93.
+          03 FLD-NO-MENSAGEM-ERRO            PIC 9(4) COMP-5 VALUE
+                                               94.
+          03 FLD-NO-ERR-MSG                  PIC 9(4) COMP-5 VALUE
+                                               95.
+          03 FLD-NO-ERRO                     PIC 9(4) COMP-5 VALUE
+                                               96.
+          03 FLD-NO-ANOTACAO                 PIC 9(4) COMP-5 VALUE
+                                               97.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               98.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               99.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

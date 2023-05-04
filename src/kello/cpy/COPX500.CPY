@@ -1,0 +1,9 @@
+           SELECT  COD500 ASSIGN TO PATH-COD500
+                   ORGANIZATION IS INDEXED
+                   ACCESS MODE IS DYNAMIC
+                   STATUS IS ST-COD500
+                   LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                   RECORD KEY IS CHAVE-CO500 =
+                      NR-CONTRATO-CO500 ITEM-CO500
+                   ALTERNATE RECORD KEY IS ALT2-CO500 =
+                      DATA-AGENDA-CO500 USUARIO-CO500 WITH DUPLICATES.

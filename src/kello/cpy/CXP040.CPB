@@ -1,0 +1,75 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CXP040-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 27.
+
+       01 CXP040-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CXP040-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 154.
+
+       01 CXP040-DATA-BLOCK.
+          03 CXP040-MESANO-INI               PIC 9(6).
+          03 CXP040-MESANO-FIM               PIC 9(6).
+          03 CXP040-FLAG-GROUP.
+             05 CXP040-GERA-FLG              PIC 9.
+                88 CXP040-GERA-FLG-TRUE      VALUE 1.
+             05 CXP040-CENTRALIZA            PIC 9.
+                88 CXP040-CENTRALIZA-TRUE    VALUE 1.
+             05 CXP040-EXIT-FLG              PIC 9.
+                88 CXP040-EXIT-FLG-TRUE      VALUE 1.
+             05 CXP040-CLR-FLG               PIC 9.
+                88 CXP040-CLR-FLG-TRUE       VALUE 1.
+          03 CXP040-MENSAGEM-ERRO            PIC X(40).
+          03 CXP040-ERR-MSG                  PIC X(40).
+          03 CXP040-ERRO-VALIDACAO           PIC 9.
+             88 CXP040-ERRO-VALIDACAO-TRUE   VALUE 1.
+          03 CXP040-MENSAGEM                 PIC X(40).
+          03 CXP040-ORDEM                    PIC 9.
+             88 CXP040-ORDEM-TRUE            VALUE 1.
+          03 CXP040-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CXP040-CONFIG-VALUE             PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CXP040-FIELD-NUMBERS.
+          03 CXP040-FLD-NO-MESANO-INI        PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CXP040-FLD-NO-MESANO-FIM        PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CXP040-FLD-NO-GERA-FLG          PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CXP040-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CXP040-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CXP040-FLD-NO-CLR-FLG           PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CXP040-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CXP040-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CXP040-FLD-NO-ERRO-VALIDACAO    PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CXP040-FLD-NO-MENSAGEM          PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CXP040-FLD-NO-ORDEM             PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CXP040-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CXP040-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               14.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

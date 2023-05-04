@@ -1,0 +1,219 @@
+Form CXP020T
+   Screenset Details
+       First-Window PRINCIPAL
+       Decimal-Char '.'
+       Comma-Char ','
+       Currency-Sign '$'
+       Error-File "erros.err"
+       Icon-File "ICONES.ICN"
+       OLE-BASENAME "DSOLE"
+       Style FLAG-88 ANSI PREFIXED GRID(1,1)
+       Stylename {Default-Font}
+   End Details
+
+   Form Data
+           LOCALIZACAO Character(60)
+           MENSAGEM-ERRO Character(40)
+           LINDET Character(60)
+           CONT Integer(18)
+
+       Group FLAG-GROUP Vertical Occurs 1
+           EXIT-FLG Integer(1)
+           CARREGA-LIST-BOX Integer(1)
+           ITEM-SELECIONADO Integer(1)
+           LOCALIZA Integer(1)
+           PROXIMA Integer(1)
+           CENTRALIZA Integer(1)
+       End Group # FLAG-GROUP
+
+           CONFIG-FLAG Integer(4) Computational-5
+           CONFIG-VALUE Integer(4) Computational-5
+   End Data
+
+   Font-Record Stylename {font-001}
+       Typeface "Courier New"
+       Pointsize 8
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {font-002}
+       Typeface "Courier New"
+       Pointsize 10
+       Attributes VECTOR MONOSPACED
+   End-Record
+
+   Font-Record Stylename {Default-Font}
+       Typeface "Arial"
+       Pointsize 10
+       Attributes VECTOR PROPORTIONAL BOLD
+   End-Record
+
+   Object PRINCIPAL
+       Type WINDOW
+       Parent DESKTOP
+       Start (624,312)
+       Size  (2008,1848)
+       Display "Consulta Cadastro Conta Apuração - PopUp"
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE MAXIMIZE CLIPPED
+       Icon "dsicon"
+       Dialog CASE(OFF)
+           Event WINDOW-CREATED
+       *SET-FOCUS SB1
+           End Event # WINDOW-CREATED
+           Event CR
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               SET-FLAG ITEM-SELECIONADO(1) ;
+               RETC ;
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #PRINCIPAL
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (104,1798)
+       Display "F2 - Localização de Palavras"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object {NoName}
+       Type TEXT
+       Parent PRINCIPAL
+       Start (1132,1798)
+       Display "F3 - Localizar a Próxima"
+       Stylename {Default-Font}
+   End Object  #{NoName}
+
+   Object LB1
+       Type LIST-BOX
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (40,164)
+       Size  (1932,1548)
+       Style DISABLE-HORIZONTAL
+       Dialog CASE(OFF)
+           Event ITEM-ACCEPTED
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               SET-FLAG ITEM-SELECIONADO(1) ;
+               RETC ;
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # ITEM-ACCEPTED
+           Event CR
+               GET-SELECTED-LIST-ITEM LB1 $REGISTER 0 ;
+               RETRIEVE-LIST-ITEM LB1 LINDET $REGISTER ;
+               SET-FLAG ITEM-SELECIONADO(1) ;
+               RETC ;
+               SET-FLAG EXIT-FLG(1) ;
+               RETC ;
+           End Event # CR
+       End Dialog
+   End Object  #LB1
+
+   Object EF2
+       Type ENTRY-FIELD
+       Parent PRINCIPAL
+       Stylename {font-002}
+       Start (44,120)
+       Size  (1900,64)
+       Masterfield LOCALIZACAO
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W') UPPER AUTOSWIPE
+       Picture X(60)
+       Dialog CASE(OFF)
+           Event CR
+               EXECUTE-PROCEDURE LOCALIZAR ;
+           End Event # CR
+           Event TAB
+               EXECUTE-PROCEDURE LOCALIZAR ;
+           End Event # TAB
+           Procedure LOCALIZAR
+               SET-FLAG LOCALIZA(1) ;
+               RETC ;
+               SET-FOCUS LB1 ;
+           End Procedure # LOCALIZAR
+       End Dialog
+   End Object  #EF2
+
+   Object WIN1
+       Type WINDOW
+       Parent PRINCIPAL
+       Start (228,120)
+       Size  (1188,560)
+       Display ""
+       Style BORDER TITLEBAR SYSTEM-MENU MINIMIZE MAXIMIZE CLIPPED
+   End Object  #WIN1
+
+   Object EF1
+       Type ENTRY-FIELD
+       Parent WIN1
+       Stylename {font-002}
+       Start (48,176)
+       Size  (1112,64)
+       Masterfield MENSAGEM-ERRO
+       Style AUTOSCROLL BORDER RESIZE-CHAR('W')
+       Picture X(40)
+   End Object  #EF1
+
+
+   Global Dialog CASE(OFF)
+       Event ESC
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # ESC
+       Event CLOSED-WINDOW
+           SET-FLAG EXIT-FLG(1) ;
+           RETC ;
+       End Event # CLOSED-WINDOW
+       Event SCREENSET-INITIALIZED
+           CALLOUT-PARAMETER 1 CONFIG-FLAG $NULL ;
+           CALLOUT-PARAMETER 2 CONFIG-VALUE $NULL ;
+           MOVE 15 CONFIG-FLAG ;
+           MOVE 1 CONFIG-VALUE ;
+           CALLOUT "dsrtcfg" 3 $PARMLIST ;
+       *
+           SET-FLAG CENTRALIZA(1) ;
+           RETC ;
+       *
+           SET-FLAG CARREGA-LIST-BOX(1) ;
+           RETC ;
+           REFRESH-OBJECT LB1 ;
+           SET-FOCUS EF2 ;
+       End Event # SCREENSET-INITIALIZED
+       Procedure INSERE-LIST
+           INSERT-LIST-ITEM LB1 LINDET CONT ;
+           RETC ;
+       End Procedure # INSERE-LIST
+       Procedure CLEAR-LIST-BOX
+           CLEAR-OBJECT LB1 ;
+           REFRESH-OBJECT LB1 ;
+           RETC ;
+       End Procedure # CLEAR-LIST-BOX
+       Event TAB
+           SET-FOCUS EF2 ;
+       End Event # TAB
+       Event F2
+           SET-FOCUS EF2 ;
+       End Event # F2
+       Event F3
+           SET-FLAG PROXIMA(1) ;
+           RETC ;
+       End Event # F3
+       Procedure LER-APURACAO
+           RETRIEVE-LIST-ITEM LB1 LINDET CONT ;
+           RETC ;
+       End Procedure # LER-APURACAO
+       Procedure SELECIONAR-APURACAO
+           SET-LIST-ITEM-STATE LB1 1 CONT ;
+           RETC ;
+       End Procedure # SELECIONAR-APURACAO
+       Procedure DESMARCAR-APURACAO
+           SET-LIST-ITEM-STATE LB1 0 CONT ;
+           RETC ;
+       End Procedure # DESMARCAR-APURACAO
+   End Dialog
+
+End Form

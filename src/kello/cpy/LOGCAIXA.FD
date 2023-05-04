@@ -1,0 +1,29 @@
+       FD LOGCAIXA.
+       01 REG-LOGCAIXA.
+          05 CHAVE-LOGCAIXA.
+             10 DATA-LANCAMENTO-LOGCAIXA        PIC 9(08).
+             10 HORA-LANCAMENTO-LOGCAIXA        PIC 9(04).
+             10 SEQUENCIA-LANCAMENTO-LOGCAIXA   PIC 9(04).
+          05 REGISTRO-CX100.
+             10 SEQ-LOGCAIXA                    PIC 9(04).
+             10 DATA-MOV-LOGCAIXA               PIC 9(08).
+             10 TIPO-LCTO-LOGCAIXA              PIC 99.
+      * Tipo-lcto < 50 - saídas     e tipo-lcto >= 50 - entradas
+             10 HISTORICO-LOGCAIXA              PIC X(30).
+             10 DOCUMENTO-LOGCAIXA              PIC X(10).
+             10 VALOR-LOGCAIXA                  PIC 9(10)V99.
+             10 CONTAPART-LOGCAIXA              PIC 9(06).
+             10 CONTA-REDUZ-LOGCAIXA            PIC 9(03).
+             10 CONTABIL-LOGCAIXA               PIC 9.
+      * será usado no futuro - para informar se o lancto é contábil
+             10 RESPONSAVEL-LOGCAIXA            PIC X(5).
+             10 SEQ-DESM-LOGCAIXA               PIC 9(4).
+      * operacao-logcaixa =
+      *               "I" = Inclusão
+      *               "T" = Exclusão de Registro c/ Problema na data
+      *               "E" = Exclusão
+          05  USUARIO-LOGCAIXA                  PIC X(05).
+          05  OPERACAO-LOGCAIXA                 PIC X(01).
+          05  IP-MAQUINA-LOGCAIXA               PIC X(20).
+          05  MAC-MAQUINA-LOGCAIXA              PIC X(20).
+          05  HOST-LOGCAIXA                     PIC x(10).

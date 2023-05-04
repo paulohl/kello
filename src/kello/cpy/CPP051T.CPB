@@ -1,0 +1,232 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CPP051-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 57.
+
+       01 CPP051-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CPP051-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 226.
+
+       01 CPP051-DATA-BLOCK.
+          03 CPP051-VENCTO-INI               PIC 9(8).
+          03 CPP051-VENCTO-FIM               PIC 9(8).
+          03 CPP051-FLAG-GROUP.
+             05 CPP051-EXIT-FLG              PIC 9.
+                88 CPP051-EXIT-FLG-TRUE      VALUE 1.
+             05 CPP051-PRINTER-FLG           PIC 9.
+                88 CPP051-PRINTER-FLG-TRUE   VALUE 1.
+             05 CPP051-INVERTE-DATA-FLG      PIC 9.
+                88 CPP051-INVERTE-DATA-FLG-TRUE VALUE 1.
+             05 CPP051-CARREGA-LISTA-FLG     PIC 9.
+                88 CPP051-CARREGA-LISTA-FLG-TRUE VALUE 1.
+             05 CPP051-GRAVA-WORK-FLG        PIC 9.
+                88 CPP051-GRAVA-WORK-FLG-TRUE VALUE 1.
+             05 CPP051-ITEM-SELECIONADO      PIC 9.
+                88 CPP051-ITEM-SELECIONADO-TRUE VALUE 1.
+             05 CPP051-REGRAVA-DADOS         PIC 9.
+                88 CPP051-REGRAVA-DADOS-TRUE VALUE 1.
+             05 CPP051-LE-FORNEC             PIC 9.
+                88 CPP051-LE-FORNEC-TRUE     VALUE 1.
+             05 CPP051-LE-PORTADOR           PIC 9.
+                88 CPP051-LE-PORTADOR-TRUE   VALUE 1.
+             05 CPP051-LE-TIPO-FORN          PIC 9.
+                88 CPP051-LE-TIPO-FORN-TRUE  VALUE 1.
+             05 CPP051-LE-COD-APUR           PIC 9.
+                88 CPP051-LE-COD-APUR-TRUE   VALUE 1.
+             05 CPP051-CHAMAR-POP-UP         PIC 9.
+                88 CPP051-CHAMAR-POP-UP-TRUE VALUE 1.
+             05 CPP051-ACHAR-VENCTO          PIC 9.
+                88 CPP051-ACHAR-VENCTO-TRUE  VALUE 1.
+             05 CPP051-CENTRALIZA            PIC 9.
+                88 CPP051-CENTRALIZA-TRUE    VALUE 1.
+          03 CPP051-OPCAO-POP-UP             PIC 9.
+             88 CPP051-OPCAO-POP-UP-TRUE     VALUE 1.
+          03 CPP051-ORDEM                    PIC 9.
+             88 CPP051-ORDEM-TRUE            VALUE 1.
+          03 CPP051-DESCR-ORDEM              PIC X(20).
+          03 CPP051-EXIBE-VENCTO             PIC 9(8).
+          03 CPP051-LINDET                   PIC X(120).
+          03 CPP051-CABECALHO                PIC X(30).
+          03 CPP051-MENSAGEM-ERRO            PIC X(40).
+          03 CPP051-PREVISTO                 PIC 9.
+             88 CPP051-PREVISTO-TRUE         VALUE 1.
+          03 CPP051-DEFINITIVO               PIC 9.
+             88 CPP051-DEFINITIVO-TRUE       VALUE 1.
+          03 CPP051-SUSPENSO                 PIC 9.
+             88 CPP051-SUSPENSO-TRUE         VALUE 1.
+          03 CPP051-DATA-MOVTO               PIC 9(8).
+          03 CPP051-COD-FORN                 PIC 9(6).
+          03 CPP051-NR-DOCTO                 PIC X(10).
+          03 CPP051-DESCRICAO                PIC X(30).
+          03 CPP051-TIPO-CONTA               PIC X(12).
+          03 CPP051-TIPO-FORN                PIC 9(2).
+          03 CPP051-TAXA                     PIC 9(2)V9(2).
+          03 CPP051-PORTADOR                 PIC 9(2).
+          03 CPP051-TIPO-MOEDA               PIC X(7).
+          03 CPP051-COD-APURACAO             PIC 9(5).
+          03 CPP051-RESPONSAVEL              PIC X(5).
+          03 CPP051-DATA-EMISSAO             PIC 9(8).
+          03 CPP051-DATA-VENCTO              PIC 9(8).
+          03 CPP051-JUROS-MORA               PIC 9(6)V9(2).
+          03 CPP051-MULTA-ATRASO             PIC 9(6)V9(2).
+          03 CPP051-VALOR-TOTAL              PIC 9(8)V9(2).
+          03 CPP051-DESCR-TIPO-FORN          PIC X(20).
+          03 CPP051-DESCR-PORTADOR           PIC X(20).
+          03 CPP051-DESCR-APURACAO           PIC X(20).
+          03 CPP051-DESCR-FORN               PIC X(30).
+          03 CPP051-PREV-DEF                 PIC X(12).
+          03 CPP051-SITUACAO                 PIC 9.
+             88 CPP051-SITUACAO-TRUE         VALUE 1.
+          03 CPP051-ERR-MSG                  PIC X(40).
+          03 CPP051-IMP-FORN                 PIC 9(6).
+          03 CPP051-IMP-DESC-FORN            PIC X(30).
+          03 CPP051-IMP-PORT                 PIC 9(2).
+          03 CPP051-IMP-DESC-PORT            PIC X(30).
+          03 CPP051-IMP-TIPO-FORN            PIC 9(2).
+          03 CPP051-IMP-DESC-TIPO-FORN       PIC X(30).
+          03 CPP051-TOTAL-PERIODO            PIC 9(8)V9(2).
+          03 CPP051-TOTAL-VENCIDO            PIC 9(8)V9(2).
+          03 CPP051-TOTAL-AVENCER            PIC 9(8)V9(2).
+          03 CPP051-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CPP051-CONFIG-VALUE             PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CPP051-FIELD-NUMBERS.
+          03 CPP051-FLD-NO-VENCTO-INI        PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CPP051-FLD-NO-VENCTO-FIM        PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CPP051-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CPP051-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CPP051-FLD-NO-INVERTE-DATA-FLG  PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CPP051-FLD-NO-CARREGA-LISTA-FL  PIC 9(4) COMP-5 VALUE
+                                               7.
+      * Field CARREGA-LISTA-FLG has been truncated
+          03 CPP051-FLD-NO-GRAVA-WORK-FLG    PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CPP051-FLD-NO-ITEM-SELECIONADO  PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CPP051-FLD-NO-REGRAVA-DADOS     PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CPP051-FLD-NO-LE-FORNEC         PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CPP051-FLD-NO-LE-PORTADOR       PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CPP051-FLD-NO-LE-TIPO-FORN      PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CPP051-FLD-NO-LE-COD-APUR       PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CPP051-FLD-NO-CHAMAR-POP-UP     PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CPP051-FLD-NO-ACHAR-VENCTO      PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 CPP051-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CPP051-FLD-NO-OPCAO-POP-UP      PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CPP051-FLD-NO-ORDEM             PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CPP051-FLD-NO-DESCR-ORDEM       PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CPP051-FLD-NO-EXIBE-VENCTO      PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CPP051-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CPP051-FLD-NO-CABECALHO         PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CPP051-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 CPP051-FLD-NO-PREVISTO          PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 CPP051-FLD-NO-DEFINITIVO        PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 CPP051-FLD-NO-SUSPENSO          PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 CPP051-FLD-NO-DATA-MOVTO        PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 CPP051-FLD-NO-COD-FORN          PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 CPP051-FLD-NO-NR-DOCTO          PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 CPP051-FLD-NO-DESCRICAO         PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 CPP051-FLD-NO-TIPO-CONTA        PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 CPP051-FLD-NO-TIPO-FORN         PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 CPP051-FLD-NO-TAXA              PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 CPP051-FLD-NO-PORTADOR          PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 CPP051-FLD-NO-TIPO-MOEDA        PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 CPP051-FLD-NO-COD-APURACAO      PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 CPP051-FLD-NO-RESPONSAVEL       PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 CPP051-FLD-NO-DATA-EMISSAO      PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 CPP051-FLD-NO-DATA-VENCTO       PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 CPP051-FLD-NO-JUROS-MORA        PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 CPP051-FLD-NO-MULTA-ATRASO      PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 CPP051-FLD-NO-VALOR-TOTAL       PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 CPP051-FLD-NO-DESCR-TIPO-FORN   PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 CPP051-FLD-NO-DESCR-PORTADOR    PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 CPP051-FLD-NO-DESCR-APURACAO    PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 CPP051-FLD-NO-DESCR-FORN        PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 CPP051-FLD-NO-PREV-DEF          PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 CPP051-FLD-NO-SITUACAO          PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 CPP051-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 CPP051-FLD-NO-IMP-FORN          PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 CPP051-FLD-NO-IMP-DESC-FORN     PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 CPP051-FLD-NO-IMP-PORT          PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 CPP051-FLD-NO-IMP-DESC-PORT     PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 CPP051-FLD-NO-IMP-TIPO-FORN     PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 CPP051-FLD-NO-IMP-DESC-TIPO-FO  PIC 9(4) COMP-5 VALUE
+                                               56.
+      * Field IMP-DESC-TIPO-FORN has been truncated
+          03 CPP051-FLD-NO-TOTAL-PERIODO     PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 CPP051-FLD-NO-TOTAL-VENCIDO     PIC 9(4) COMP-5 VALUE
+                                               58.
+          03 CPP051-FLD-NO-TOTAL-AVENCER     PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 CPP051-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               60.
+          03 CPP051-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               61.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

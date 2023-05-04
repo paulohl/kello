@@ -1,0 +1,90 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 30.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 184.
+
+       01 GS-DATA-BLOCK.
+          03 GS-FLAG-GROUP.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-CARREGA-LISTA             PIC 9.
+                88 GS-CARREGA-LISTA-TRUE     VALUE 1.
+             05 GS-PRINTER-FLG               PIC 9.
+                88 GS-PRINTER-FLG-TRUE       VALUE 1.
+          03 GS-CARTEIRA.
+             05 GS-SIMPLES                   PIC 9.
+                88 GS-SIMPLES-TRUE           VALUE 1.
+             05 GS-CAUCAO                    PIC 9.
+                88 GS-CAUCAO-TRUE            VALUE 1.
+             05 GS-DESCONTO                  PIC 9.
+                88 GS-DESCONTO-TRUE          VALUE 1.
+          03 GS-VENCTO-INI                   PIC 9(8).
+          03 GS-VENCTO-FIM                   PIC 9(8).
+          03 GS-LINDET                       PIC X(130).
+          03 GS-PREVISTO                     PIC 9.
+             88 GS-PREVISTO-TRUE             VALUE 1.
+          03 GS-DEFINITIVO                   PIC 9.
+             88 GS-DEFINITIVO-TRUE           VALUE 1.
+          03 GS-A-PAGAR                      PIC 9.
+             88 GS-A-PAGAR-TRUE              VALUE 1.
+          03 GS-SUSPENSA                     PIC 9.
+             88 GS-SUSPENSA-TRUE             VALUE 1.
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-ERR-MSG                      PIC X(40).
+          03 GS-ERRO-VALIDACAO               PIC 9.
+             88 GS-ERRO-VALIDACAO-TRUE       VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-CARREGA-LISTA         PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-PRINTER-FLG           PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-SIMPLES               PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-CAUCAO                PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-DESCONTO              PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 GS-FLD-NO-VENCTO-INI            PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-VENCTO-FIM            PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-LINDET                PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-PREVISTO              PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 GS-FLD-NO-DEFINITIVO            PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 GS-FLD-NO-A-PAGAR               PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-SUSPENSA              PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-ERR-MSG               PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-ERRO-VALIDACAO        PIC 9(4) COMP-5 VALUE
+                                               18.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

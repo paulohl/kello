@@ -1,0 +1,199 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 69.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 154.
+
+       01 DATA-BLOCK.
+          03 TAB-90.
+             04 TAB-90-ITEM                  OCCURS 12.
+                05 TAB-CODIGO                PIC 9(9).
+                05 TAB-NOME                  PIC X(40).
+                05 TAB-CIDADE                PIC X(20).
+                05 TAB-ESTADO                PIC X(2).
+                05 TAB-CONTRATO              PIC 9(4).
+                05 TAB-CURSO                 PIC 9(3).
+                05 TAB-DOCUMENTO             PIC X(25).
+          03 DS-TIPO                         PIC X(20).
+          03 DS-CLIENTE                      PIC X(50).
+          03 FLAG-SELECT                     PIC 9.
+             88 FLAG-SELECT-TRUE             VALUE 1.
+          03 LINHA                           PIC 9(2).
+          03 LINHA-AUX                       PIC 9(2).
+          03 LINHA-STATUS                    PIC X(30).
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 EXIBE-PAGINA                    PIC X.
+          03 LINHA-LABEL                     PIC X(80).
+          03 FUN-COBOL                       PIC X.
+          03 DS-MSG                          PIC X(3).
+          03 OPCAO                           PIC 9.
+             88 OPCAO-TRUE                   VALUE 1.
+          03 ACP-CGC                         PIC 9(14).
+          03 TAB-PROCURA.
+             04 TAB-PROCURA-ITEM             OCCURS 40.
+                05 TAB-POS                   PIC X.
+          03 IND                             PIC 9(2).
+          03 DESC-ENDERECO                   PIC X(60).
+          03 DESC-OPCAO                      PIC X(25).
+          03 ACP-OPCAO                       PIC 9(6).
+          03 DET-CODIGO                      PIC 9(6).
+          03 DET-RAZAO                       PIC X(60).
+          03 DET-NOME                        PIC X(60).
+          03 DET-ENDERECO                    PIC X(60).
+          03 DET-BAIRRO                      PIC X(25).
+          03 DET-CEP                         PIC X(15).
+          03 DET-TELEFONE                    PIC X(20).
+          03 DET-PRACA                       PIC X(20).
+          03 DET-VENDEDOR                    PIC X(30).
+          03 DET-CIDADE                      PIC X(30).
+          03 DET-CNPJ                        PIC 9(14).
+          03 DET-REFER-ENDER                 PIC X(60).
+          03 DET-COMPRADOR                   PIC X(30).
+          03 DET-OBSERVACAO                  PIC X(60).
+          03 DET-RAMO                        PIC X(30).
+          03 DET-IE                          PIC X(20).
+          03 DET-ULTCOMPRA                   PIC 9(8).
+          03 DET-RG                          PIC X(20).
+          03 DET-CPF                         PIC 9(11).
+          03 DESCRICAO-OPCAO                 PIC X(50).
+          03 FLAG-CRITICA                    PIC 9.
+             88 FLAG-CRITICA-TRUE            VALUE 1.
+          03 DET-TELEFONE-COM                PIC X(20).
+          03 DET-CELULAR                     PIC X(20).
+          03 DET-EMAIL                       PIC X(60).
+          03 DET-LIMITE                      PIC 9(6)V9(2).
+          03 DET-DTNASC                      PIC 9(8).
+          03 ACP-CPF                         PIC 9(11).
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-TAB-CODIGO               PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-TAB-NOME                 PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-TAB-CIDADE               PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-TAB-ESTADO               PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-TAB-CONTRATO             PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-TAB-CURSO                PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-TAB-DOCUMENTO            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-DS-TIPO                  PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-DS-CLIENTE               PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-FLAG-SELECT              PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-LINHA                    PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-LINHA-AUX                PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-LINHA-STATUS             PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-EXIBE-PAGINA             PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-LINHA-LABEL              PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-FUN-COBOL                PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-DS-MSG                   PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-OPCAO                    PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-ACP-CGC                  PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-TAB-POS                  PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FLD-NO-IND                      PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-DESC-ENDERECO            PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-DESC-OPCAO               PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-ACP-OPCAO                PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-DET-CODIGO               PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-DET-RAZAO                PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-DET-NOME                 PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FLD-NO-DET-ENDERECO             PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FLD-NO-DET-BAIRRO               PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FLD-NO-DET-CEP                  PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FLD-NO-DET-TELEFONE             PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FLD-NO-DET-PRACA                PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 FLD-NO-DET-VENDEDOR             PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 FLD-NO-DET-CIDADE               PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 FLD-NO-DET-CNPJ                 PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FLD-NO-DET-REFER-ENDER          PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 FLD-NO-DET-COMPRADOR            PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 FLD-NO-DET-OBSERVACAO           PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FLD-NO-DET-RAMO                 PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FLD-NO-DET-IE                   PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 FLD-NO-DET-ULTCOMPRA            PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FLD-NO-DET-RG                   PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FLD-NO-DET-CPF                  PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FLD-NO-DESCRICAO-OPCAO          PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FLD-NO-FLAG-CRITICA             PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 FLD-NO-DET-TELEFONE-COM         PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FLD-NO-DET-CELULAR              PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 FLD-NO-DET-EMAIL                PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 FLD-NO-DET-LIMITE               PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 FLD-NO-DET-DTNASC               PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 FLD-NO-ACP-CPF                  PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               56.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

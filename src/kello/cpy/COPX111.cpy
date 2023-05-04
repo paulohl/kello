@@ -1,0 +1,6 @@
+           SELECT COD111 ASSIGN TO PATH-COD111
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-COD111
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-COP111.

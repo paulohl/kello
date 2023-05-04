@@ -1,0 +1,64 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 3.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 39.
+
+       01 DATA-BLOCK.
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 NOME-PROG                       PIC X(12).
+          03 FUN-DIALOG                      PIC X.
+          03 FUN-COBOL                       PIC X.
+          03 FLAG-CRITICA                    PIC 9.
+             88 FLAG-CRITICA-TRUE            VALUE 1.
+          03 LABEL-WIN                       PIC X(120).
+          03 DS-USUARIO                      PIC X(15).
+          03 DS-SENHA                        PIC X(6).
+          03 DS-OK                           PIC X.
+          03 DS-OK-EMP                       PIC X.
+          03 DS-SEL-EMP                      PIC X(2).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-NOME-PROG                PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-FUN-DIALOG               PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-FUN-COBOL                PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-FLAG-CRITICA             PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-LABEL-WIN                PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-DS-USUARIO               PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-DS-SENHA                 PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-DS-OK                    PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-DS-OK-EMP                PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-DS-SEL-EMP               PIC 9(4) COMP-5 VALUE
+                                               11.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

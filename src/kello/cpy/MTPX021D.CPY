@@ -1,0 +1,6 @@
+           SELECT  MTD021D ASSIGN TO PATH-MTD021D
+                   ORGANIZATION IS INDEXED
+                   ACCESS MODE IS DYNAMIC
+                   LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                   STATUS IS ST-MTD021D
+                   RECORD KEY IS CHAVE-MT21D.

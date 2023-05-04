@@ -1,0 +1,5 @@
+      *  Cadastro de Modelos
+       FD  CADMOD.
+       01  REG-CADMOD.
+           05  CADMOD-CODIGO            PIC 9(04).
+           05  CADMOD-NOME              PIC X(40).

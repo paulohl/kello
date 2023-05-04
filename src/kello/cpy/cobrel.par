@@ -1,0 +1,32 @@
+      *
+      * Parametros da funcao INIT:
+      *      1) Nome do arquivo de definicao de formulario
+      *      2) Quantidade de paginas do relatorio (opcional)
+      *      3) Status de retorno
+       01  LK-INIT.
+           03  LK-I-ARQUIVO            PIC  X(128).
+           03  LK-I-QTDE               PIC  9(05).
+           03  LK-I-STATUS             PIC  X(02).
+      * Parametros da funcao ADD:
+      *      1) Nome do arquivo de variaveis
+      *      2) Status de retorno
+       01  LK-ADD.
+           03  LK-A-ARQUIVO            PIC  X(128).
+           03  LK-A-STATUS             PIC  X(02).
+      * Parametros da funcao GRAPH:
+      *      1) Nome do arquivo de definicao do grafico
+      *      2) Nome do arquivo de saida (obrigatoriamente extensao BMP)
+      *      3) Status de retorno
+       01  LK-GRAPH.
+           03  LK-G-ARQUIVO            PIC  X(128).
+           03  LK-G-BMP                PIC  X(128).
+           03  LK-G-STATUS             PIC  X(02).
+      * Parametros da funcao PRINT:
+      *      1) Visualizacao inicial:
+      *            1 - tela inteira
+      *            2 - largura inteira
+      *            3 - 100%
+      *      2) Status de retorno
+       01  LK-PRINT.
+           03  LK-P-VISUAL             PIC  9(01).
+           03  LK-P-STATUS             PIC  X(02).

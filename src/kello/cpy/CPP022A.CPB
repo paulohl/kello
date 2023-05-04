@@ -1,0 +1,446 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CPP020-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 101.
+
+       01 CPP020-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CPP020-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 13.
+
+       01 CPP020-DATA-BLOCK.
+          03 CPP020-DATA-MOVTO               PIC 9(8).
+          03 CPP020-COD-FORN                 PIC 9(6).
+          03 CPP020-DESCR-FORN               PIC X(30).
+          03 CPP020-NR-DOCTO                 PIC X(10).
+          03 CPP020-TIPO-FORN                PIC 9(2).
+          03 CPP020-DESCR-TIPO-FORN          PIC X(20).
+          03 CPP020-TAXA                     PIC 9(2)V9(2).
+          03 CPP020-DESCRICAO                PIC X(30).
+          03 CPP020-PORTADOR                 PIC 9(4).
+          03 CPP020-DESCR-PORTADOR           PIC X(20).
+          03 CPP020-TIPO-MOEDA               PIC X(7).
+          03 CPP020-COD-APURACAO             PIC 9(5).
+          03 CPP020-DESCR-APURACAO           PIC X(20).
+          03 CPP020-TIPO-CONTA-APUR          PIC 9.
+             88 CPP020-TIPO-CONTA-APUR-TRUE  VALUE 1.
+          03 CPP020-RESPONSAVEL              PIC X(5).
+          03 CPP020-DATA-EMISSAO             PIC 9(8).
+          03 CPP020-DATA-VENCTO              PIC 9(8).
+          03 CPP020-JUROS-MORA               PIC 9(6)V9(2).
+          03 CPP020-MULTA-ATRASO             PIC 9(6)V9(2).
+          03 CPP020-PREV-DEF                 PIC X(12).
+          03 CPP020-VALOR-TOTAL              PIC 9(8)V9(2).
+          03 CPP020-SITUACAO                 PIC 9.
+             88 CPP020-SITUACAO-TRUE         VALUE 1.
+          03 CPP020-TIPO-CONTA               PIC X(12).
+          03 CPP020-TIPO-CONTAW              PIC 9.
+             88 CPP020-TIPO-CONTAW-TRUE      VALUE 1.
+          03 CPP020-TIPO-GRAVACAO            PIC 9.
+             88 CPP020-TIPO-GRAVACAO-TRUE    VALUE 1.
+          03 CPP020-DIGITADOR                PIC X(5).
+          03 CPP020-VENCTO-INV               PIC 9(8).
+          03 CPP020-EMISSAO-INV              PIC 9(8).
+          03 CPP020-BANCO-CH                 PIC 9(6).
+          03 CPP020-DESC-BANCO-CH            PIC X(30).
+          03 CPP020-NR-CHEQUE-CH             PIC 9(6).
+          03 CPP020-EMISSAO-CH               PIC 9(8).
+          03 CPP020-VENCTO-CH                PIC 9(8).
+          03 CPP020-NOMINAL-A-CH             PIC 9(6).
+          03 CPP020-NOME-CH                  PIC X(30).
+          03 CPP020-VALOR-CH                 PIC 9(8)V9(2).
+          03 CPP020-SITUACAO-CH              PIC 9(2).
+          03 CPP020-DESC-SITUACAO-CH         PIC X(30).
+      * TIPO-GRAVACAO = 0-GRAVA 1-REGRAVA
+          03 CPP020-GRUPO-DESMEMBRADO.
+             04 CPP020-GRUPO-DESMEMBRADO-ITEM OCCURS 10.
+                05 CPP020-COD-APUR-GR        PIC 9(5).
+                05 CPP020-DESC-APUR-GR       PIC X(30).
+                05 CPP020-VALOR-GR           PIC 9(8)V9(2).
+          03 CPP020-GRUPO.
+             04 CPP020-GRUPO-ITEM            OCCURS 24.
+                05 CPP020-NR                 PIC 9(2).
+                05 CPP020-VENCTO             PIC 9(8).
+                05 CPP020-VALOR              PIC 9(8)V9(2).
+          03 CPP020-OBSERVACAO               PIC X(120).
+          03 CPP020-QT-PARCELA               PIC 9(2).
+          03 CPP020-PRAZO-MEDIO              PIC 9(2).
+          03 CPP020-FLAG-GROUP.
+             05 CPP020-EXIT-FLG              PIC 9.
+                88 CPP020-EXIT-FLG-TRUE      VALUE 1.
+             05 CPP020-SAVE-FLG              PIC 9.
+                88 CPP020-SAVE-FLG-TRUE      VALUE 1.
+             05 CPP020-CENTRALIZA            PIC 9.
+                88 CPP020-CENTRALIZA-TRUE    VALUE 1.
+             05 CPP020-CLR-FLG               PIC 9.
+                88 CPP020-CLR-FLG-TRUE       VALUE 1.
+             05 CPP020-EXCLUI-FLG            PIC 9.
+                88 CPP020-EXCLUI-FLG-TRUE    VALUE 1.
+             05 CPP020-CANCELA-FLG           PIC 9.
+                88 CPP020-CANCELA-FLG-TRUE   VALUE 1.
+             05 CPP020-SUSPENDE-FLG          PIC 9.
+                88 CPP020-SUSPENDE-FLG-TRUE  VALUE 1.
+             05 CPP020-LOAD-FLG              PIC 9.
+                88 CPP020-LOAD-FLG-TRUE      VALUE 1.
+             05 CPP020-CARREGA-DATA          PIC 9.
+                88 CPP020-CARREGA-DATA-TRUE  VALUE 1.
+             05 CPP020-CARREGA-LIST-BOX      PIC 9.
+                88 CPP020-CARREGA-LIST-BOX-TRUE VALUE 1.
+             05 CPP020-CARREGA-ULT           PIC 9.
+                88 CPP020-CARREGA-ULT-TRUE   VALUE 1.
+             05 CPP020-EMISSAO-VENCTO        PIC 9.
+                88 CPP020-EMISSAO-VENCTO-TRUE VALUE 1.
+             05 CPP020-PRINTER-FLG           PIC 9.
+                88 CPP020-PRINTER-FLG-TRUE   VALUE 1.
+             05 CPP020-CHAMAR-APURACAO       PIC 9.
+                88 CPP020-CHAMAR-APURACAO-TRUE VALUE 1.
+             05 CPP020-INICIALIZAR           PIC 9.
+                88 CPP020-INICIALIZAR-TRUE   VALUE 1.
+             05 CPP020-LE-FORNEC             PIC 9.
+                88 CPP020-LE-FORNEC-TRUE     VALUE 1.
+             05 CPP020-LE-NOMINAL            PIC 9.
+                88 CPP020-LE-NOMINAL-TRUE    VALUE 1.
+             05 CPP020-LE-PORTADOR           PIC 9.
+                88 CPP020-LE-PORTADOR-TRUE   VALUE 1.
+             05 CPP020-LE-TIPO-FORNEC        PIC 9.
+                88 CPP020-LE-TIPO-FORNEC-TRUE VALUE 1.
+             05 CPP020-LE-COD-APURACAO       PIC 9.
+                88 CPP020-LE-COD-APURACAO-TRUE VALUE 1.
+             05 CPP020-LE-COD-APURACAO1      PIC 9.
+                88 CPP020-LE-COD-APURACAO1-TRUE VALUE 1.
+             05 CPP020-LE-BANCO              PIC 9.
+                88 CPP020-LE-BANCO-TRUE      VALUE 1.
+             05 CPP020-LE-SITUACAO           PIC 9.
+                88 CPP020-LE-SITUACAO-TRUE   VALUE 1.
+             05 CPP020-LE-CONTA              PIC 9.
+                88 CPP020-LE-CONTA-TRUE      VALUE 1.
+             05 CPP020-DIVIDE-PARCELA        PIC 9.
+                88 CPP020-DIVIDE-PARCELA-TRUE VALUE 1.
+             05 CPP020-VERIF-TOT-PARC        PIC 9.
+                88 CPP020-VERIF-TOT-PARC-TRUE VALUE 1.
+             05 CPP020-VERIF-DOCTO           PIC 9.
+                88 CPP020-VERIF-DOCTO-TRUE   VALUE 1.
+             05 CPP020-VERIF-TOT-DESM        PIC 9.
+                88 CPP020-VERIF-TOT-DESM-TRUE VALUE 1.
+             05 CPP020-VERIFICA-TALAO        PIC 9.
+                88 CPP020-VERIFICA-TALAO-TRUE VALUE 1.
+             05 CPP020-CHAMAR-POP-UP         PIC 9.
+                88 CPP020-CHAMAR-POP-UP-TRUE VALUE 1.
+             05 CPP020-ITEM-SELECIONADO      PIC 9.
+                88 CPP020-ITEM-SELECIONADO-TRUE VALUE 1.
+             05 CPP020-ITEM-SELEC-APUR       PIC 9.
+                88 CPP020-ITEM-SELEC-APUR-TRUE VALUE 1.
+             05 CPP020-VERIF-PROGRAMACAO     PIC 9.
+                88 CPP020-VERIF-PROGRAMACAO-TRUE VALUE 1.
+             05 CPP020-ITEM-SELEC-PROG       PIC 9.
+                88 CPP020-ITEM-SELEC-PROG-TRUE VALUE 1.
+             05 CPP020-VERIF-DESM            PIC 9.
+                88 CPP020-VERIF-DESM-TRUE    VALUE 1.
+             05 CPP020-SELECIONA-IMPRESSAO   PIC 9.
+                88 CPP020-SELECIONA-IMPRESSAO-TRUE VALUE 1.
+             05 CPP020-VER-VENCTO            PIC 9.
+                88 CPP020-VER-VENCTO-TRUE    VALUE 1.
+          03 CPP020-ERRO-NR-CHEQUE           PIC 9.
+             88 CPP020-ERRO-NR-CHEQUE-TRUE   VALUE 1.
+          03 CPP020-DESMEMBRAR               PIC 9.
+             88 CPP020-DESMEMBRAR-TRUE       VALUE 1.
+          03 CPP020-ACHOU-DESMEMBRAR         PIC 9.
+             88 CPP020-ACHOU-DESMEMBRAR-TRUE VALUE 1.
+          03 CPP020-COD-APURACAOW            PIC 9(5).
+          03 CPP020-DESCRICAO-APUR           PIC X(30).
+          03 CPP020-OPCAO-POP-UP             PIC 9.
+             88 CPP020-OPCAO-POP-UP-TRUE     VALUE 1.
+          03 CPP020-VLR-TOT-PARCELA          PIC 9(8)V9(2).
+          03 CPP020-OP-ALTER-PERMANENT       PIC 9.
+             88 CPP020-OP-ALTER-PERMANENT-TRUE VALUE 1.
+          03 CPP020-TOTAL-DESMEMBRADO        PIC 9(8)V9(2).
+          03 CPP020-PARCELA                  PIC 9.
+             88 CPP020-PARCELA-TRUE          VALUE 1.
+          03 CPP020-GRAVA-OBS                PIC 9.
+             88 CPP020-GRAVA-OBS-TRUE        VALUE 1.
+          03 CPP020-LINDET                   PIC X(150).
+          03 CPP020-LINDET1                  PIC X(150).
+          03 CPP020-LINDET2                  PIC X(150).
+          03 CPP020-CONT                     PIC 9(18).
+          03 CPP020-CONT-POPUP               PIC 9(18).
+          03 CPP020-CONT-POPUP-APUR          PIC 9(18).
+          03 CPP020-CONT-PROGRAMACAO         PIC 9(18).
+          03 CPP020-SEQ-SELECIONADA          PIC 9(5).
+          03 CPP020-MENSAGEM-ERRO            PIC X(40).
+          03 CPP020-ERR-MSG                  PIC X(40).
+          03 CPP020-ERRO-VALIDACAO           PIC 9.
+             88 CPP020-ERRO-VALIDACAO-TRUE   VALUE 1.
+          03 CPP020-ERRO                     PIC 9.
+             88 CPP020-ERRO-TRUE             VALUE 1.
+          03 CPP020-ACP-DEPTO                PIC X(20).
+          03 CPP020-ACP-BANCO                PIC 9(4).
+          03 CPP020-ACP-AGENCIA              PIC X(9).
+          03 CPP020-ACP-CONTA                PIC X(15).
+          03 CPP020-ACP-TIPO                 PIC 9.
+             88 CPP020-ACP-TIPO-TRUE         VALUE 1.
+          03 CPP020-TIPO-CONTA-BANCO         PIC 9.
+             88 CPP020-TIPO-CONTA-BANCO-TRUE VALUE 1.
+          03 CPP020-TITULAR-CONTA            PIC X(40).
+          03 CPP020-FLAG-CRITICA             PIC 9.
+             88 CPP020-FLAG-CRITICA-TRUE     VALUE 1.
+          03 CPP020-LIBERADO                 PIC X.
+          03 CPP020-CONFIG-VALUE             PIC x(4) COMP-5.
+          03 CPP020-CONFIG-FLAG              PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CPP020-FIELD-NUMBERS.
+          03 CPP020-FLD-NO-DATA-MOVTO        PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CPP020-FLD-NO-COD-FORN          PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CPP020-FLD-NO-DESCR-FORN        PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CPP020-FLD-NO-NR-DOCTO          PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CPP020-FLD-NO-TIPO-FORN         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CPP020-FLD-NO-DESCR-TIPO-FORN   PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CPP020-FLD-NO-TAXA              PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CPP020-FLD-NO-DESCRICAO         PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CPP020-FLD-NO-PORTADOR          PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CPP020-FLD-NO-DESCR-PORTADOR    PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CPP020-FLD-NO-TIPO-MOEDA        PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CPP020-FLD-NO-COD-APURACAO      PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CPP020-FLD-NO-DESCR-APURACAO    PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CPP020-FLD-NO-TIPO-CONTA-APUR   PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CPP020-FLD-NO-RESPONSAVEL       PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CPP020-FLD-NO-DATA-EMISSAO      PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 CPP020-FLD-NO-DATA-VENCTO       PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CPP020-FLD-NO-JUROS-MORA        PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CPP020-FLD-NO-MULTA-ATRASO      PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CPP020-FLD-NO-PREV-DEF          PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CPP020-FLD-NO-VALOR-TOTAL       PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CPP020-FLD-NO-SITUACAO          PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CPP020-FLD-NO-TIPO-CONTA        PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CPP020-FLD-NO-TIPO-CONTAW       PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 CPP020-FLD-NO-TIPO-GRAVACAO     PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 CPP020-FLD-NO-DIGITADOR         PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 CPP020-FLD-NO-VENCTO-INV        PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 CPP020-FLD-NO-EMISSAO-INV       PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 CPP020-FLD-NO-BANCO-CH          PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 CPP020-FLD-NO-DESC-BANCO-CH     PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 CPP020-FLD-NO-NR-CHEQUE-CH      PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 CPP020-FLD-NO-EMISSAO-CH        PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 CPP020-FLD-NO-VENCTO-CH         PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 CPP020-FLD-NO-NOMINAL-A-CH      PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 CPP020-FLD-NO-NOME-CH           PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 CPP020-FLD-NO-VALOR-CH          PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 CPP020-FLD-NO-SITUACAO-CH       PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 CPP020-FLD-NO-DESC-SITUACAO-CH  PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 CPP020-FLD-NO-COD-APUR-GR       PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 CPP020-FLD-NO-DESC-APUR-GR      PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 CPP020-FLD-NO-VALOR-GR          PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 CPP020-FLD-NO-NR                PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 CPP020-FLD-NO-VENCTO            PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 CPP020-FLD-NO-VALOR             PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 CPP020-FLD-NO-OBSERVACAO        PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 CPP020-FLD-NO-QT-PARCELA        PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 CPP020-FLD-NO-PRAZO-MEDIO       PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 CPP020-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 CPP020-FLD-NO-SAVE-FLG          PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 CPP020-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 CPP020-FLD-NO-CLR-FLG           PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 CPP020-FLD-NO-EXCLUI-FLG        PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 CPP020-FLD-NO-CANCELA-FLG       PIC 9(4) COMP-5 VALUE
+                                               56.
+          03 CPP020-FLD-NO-SUSPENDE-FLG      PIC 9(4) COMP-5 VALUE
+                                               57.
+          03 CPP020-FLD-NO-LOAD-FLG          PIC 9(4) COMP-5 VALUE
+                                               58.
+          03 CPP020-FLD-NO-CARREGA-DATA      PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 CPP020-FLD-NO-CARREGA-LIST-BOX  PIC 9(4) COMP-5 VALUE
+                                               60.
+          03 CPP020-FLD-NO-CARREGA-ULT       PIC 9(4) COMP-5 VALUE
+                                               61.
+          03 CPP020-FLD-NO-EMISSAO-VENCTO    PIC 9(4) COMP-5 VALUE
+                                               62.
+          03 CPP020-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               63.
+          03 CPP020-FLD-NO-CHAMAR-APURACAO   PIC 9(4) COMP-5 VALUE
+                                               64.
+          03 CPP020-FLD-NO-INICIALIZAR       PIC 9(4) COMP-5 VALUE
+                                               65.
+          03 CPP020-FLD-NO-LE-FORNEC         PIC 9(4) COMP-5 VALUE
+                                               66.
+          03 CPP020-FLD-NO-LE-NOMINAL        PIC 9(4) COMP-5 VALUE
+                                               67.
+          03 CPP020-FLD-NO-LE-PORTADOR       PIC 9(4) COMP-5 VALUE
+                                               68.
+          03 CPP020-FLD-NO-LE-TIPO-FORNEC    PIC 9(4) COMP-5 VALUE
+                                               69.
+          03 CPP020-FLD-NO-LE-COD-APURACAO   PIC 9(4) COMP-5 VALUE
+                                               70.
+          03 CPP020-FLD-NO-LE-COD-APURACAO1  PIC 9(4) COMP-5 VALUE
+                                               71.
+          03 CPP020-FLD-NO-LE-BANCO          PIC 9(4) COMP-5 VALUE
+                                               72.
+          03 CPP020-FLD-NO-LE-SITUACAO       PIC 9(4) COMP-5 VALUE
+                                               73.
+          03 CPP020-FLD-NO-LE-CONTA          PIC 9(4) COMP-5 VALUE
+                                               74.
+          03 CPP020-FLD-NO-DIVIDE-PARCELA    PIC 9(4) COMP-5 VALUE
+                                               75.
+          03 CPP020-FLD-NO-VERIF-TOT-PARC    PIC 9(4) COMP-5 VALUE
+                                               76.
+          03 CPP020-FLD-NO-VERIF-DOCTO       PIC 9(4) COMP-5 VALUE
+                                               77.
+          03 CPP020-FLD-NO-VERIF-TOT-DESM    PIC 9(4) COMP-5 VALUE
+                                               78.
+          03 CPP020-FLD-NO-VERIFICA-TALAO    PIC 9(4) COMP-5 VALUE
+                                               79.
+          03 CPP020-FLD-NO-CHAMAR-POP-UP     PIC 9(4) COMP-5 VALUE
+                                               80.
+          03 CPP020-FLD-NO-ITEM-SELECIONADO  PIC 9(4) COMP-5 VALUE
+                                               81.
+          03 CPP020-FLD-NO-ITEM-SELEC-APUR   PIC 9(4) COMP-5 VALUE
+                                               82.
+          03 CPP020-FLD-NO-VERIF-PROGRAMACA  PIC 9(4) COMP-5 VALUE
+                                               83.
+      * Field VERIF-PROGRAMACAO has been truncated
+          03 CPP020-FLD-NO-ITEM-SELEC-PROG   PIC 9(4) COMP-5 VALUE
+                                               84.
+          03 CPP020-FLD-NO-VERIF-DESM        PIC 9(4) COMP-5 VALUE
+                                               85.
+          03 CPP020-FLD-NO-SELECIONA-IMPRES  PIC 9(4) COMP-5 VALUE
+                                               86.
+      * Field SELECIONA-IMPRESSAO has been truncated
+          03 CPP020-FLD-NO-VER-VENCTO        PIC 9(4) COMP-5 VALUE
+                                               87.
+          03 CPP020-FLD-NO-ERRO-NR-CHEQUE    PIC 9(4) COMP-5 VALUE
+                                               88.
+          03 CPP020-FLD-NO-DESMEMBRAR        PIC 9(4) COMP-5 VALUE
+                                               89.
+          03 CPP020-FLD-NO-ACHOU-DESMEMBRAR  PIC 9(4) COMP-5 VALUE
+                                               90.
+          03 CPP020-FLD-NO-COD-APURACAOW     PIC 9(4) COMP-5 VALUE
+                                               91.
+          03 CPP020-FLD-NO-DESCRICAO-APUR    PIC 9(4) COMP-5 VALUE
+                                               92.
+          03 CPP020-FLD-NO-OPCAO-POP-UP      PIC 9(4) COMP-5 VALUE
+                                               93.
+          03 CPP020-FLD-NO-VLR-TOT-PARCELA   PIC 9(4) COMP-5 VALUE
+                                               94.
+          03 CPP020-FLD-NO-OP-ALTER-PERMANE  PIC 9(4) COMP-5 VALUE
+                                               95.
+      * Field OP-ALTER-PERMANENT has been truncated
+          03 CPP020-FLD-NO-TOTAL-DESMEMBRAD  PIC 9(4) COMP-5 VALUE
+                                               96.
+      * Field TOTAL-DESMEMBRADO has been truncated
+          03 CPP020-FLD-NO-PARCELA           PIC 9(4) COMP-5 VALUE
+                                               97.
+          03 CPP020-FLD-NO-GRAVA-OBS         PIC 9(4) COMP-5 VALUE
+                                               98.
+          03 CPP020-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               99.
+          03 CPP020-FLD-NO-LINDET1           PIC 9(4) COMP-5 VALUE
+                                               100.
+          03 CPP020-FLD-NO-LINDET2           PIC 9(4) COMP-5 VALUE
+                                               101.
+          03 CPP020-FLD-NO-CONT              PIC 9(4) COMP-5 VALUE
+                                               102.
+          03 CPP020-FLD-NO-CONT-POPUP        PIC 9(4) COMP-5 VALUE
+                                               103.
+          03 CPP020-FLD-NO-CONT-POPUP-APUR   PIC 9(4) COMP-5 VALUE
+                                               104.
+          03 CPP020-FLD-NO-CONT-PROGRAMACAO  PIC 9(4) COMP-5 VALUE
+                                               105.
+          03 CPP020-FLD-NO-SEQ-SELECIONADA   PIC 9(4) COMP-5 VALUE
+                                               106.
+          03 CPP020-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               107.
+          03 CPP020-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               108.
+          03 CPP020-FLD-NO-ERRO-VALIDACAO    PIC 9(4) COMP-5 VALUE
+                                               109.
+          03 CPP020-FLD-NO-ERRO              PIC 9(4) COMP-5 VALUE
+                                               110.
+          03 CPP020-FLD-NO-ACP-DEPTO         PIC 9(4) COMP-5 VALUE
+                                               111.
+          03 CPP020-FLD-NO-ACP-BANCO         PIC 9(4) COMP-5 VALUE
+                                               112.
+          03 CPP020-FLD-NO-ACP-AGENCIA       PIC 9(4) COMP-5 VALUE
+                                               113.
+          03 CPP020-FLD-NO-ACP-CONTA         PIC 9(4) COMP-5 VALUE
+                                               114.
+          03 CPP020-FLD-NO-ACP-TIPO          PIC 9(4) COMP-5 VALUE
+                                               115.
+          03 CPP020-FLD-NO-TIPO-CONTA-BANCO  PIC 9(4) COMP-5 VALUE
+                                               116.
+          03 CPP020-FLD-NO-TITULAR-CONTA     PIC 9(4) COMP-5 VALUE
+                                               117.
+          03 CPP020-FLD-NO-FLAG-CRITICA      PIC 9(4) COMP-5 VALUE
+                                               118.
+          03 CPP020-FLD-NO-LIBERADO          PIC 9(4) COMP-5 VALUE
+                                               119.
+          03 CPP020-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               120.
+          03 CPP020-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               121.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

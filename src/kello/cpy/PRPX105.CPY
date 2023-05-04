@@ -1,0 +1,6 @@
+           SELECT PRD105 ASSIGN TO PATH-PRD105
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-PRD105
+                  LOCK MODE IS AUTOMATIC WITH LOCK ON RECORD
+                  RECORD KEY IS NR-PLAN-PR105.

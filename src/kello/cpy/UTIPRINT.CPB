@@ -1,0 +1,57 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 3.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 16.
+
+       01 GS-DATA-BLOCK.
+          03 GS-ACP-CAMINHO                  PIC X(100).
+          03 GS-FLAG-GROUP.
+             05 GS-IMPRIME-TEXTO             PIC 9.
+                88 GS-IMPRIME-TEXTO-TRUE     VALUE 1.
+             05 GS-IMPRIME-HTML              PIC 9.
+                88 GS-IMPRIME-HTML-TRUE      VALUE 1.
+             05 GS-IMPRIME-HP                PIC 9.
+                88 GS-IMPRIME-HP-TRUE        VALUE 1.
+             05 GS-IMPRIME-EPSON             PIC 9.
+                88 GS-IMPRIME-EPSON-TRUE     VALUE 1.
+             05 GS-IMPRIME-LEXMARK           PIC 9.
+                88 GS-IMPRIME-LEXMARK-TRUE   VALUE 1.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-ACP-CAMINHO           PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-IMPRIME-TEXTO         PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-IMPRIME-HTML          PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-IMPRIME-HP            PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 GS-FLD-NO-IMPRIME-EPSON         PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-IMPRIME-LEXMARK       PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               8.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

@@ -1,0 +1,63 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CXP030T-DATA-BLOCK-VERSION-NO      PIC 9(8) COMP-5
+                                             VALUE 8.
+
+       01 CXP030T-VERSION-NO                 PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CXP030T-SET-BUILD-NO               PIC 9(4) COMP-5
+                                             VALUE 63.
+
+       01 CXP030T-DATA-BLOCK.
+          03 CXP030T-MENSAGEM-ERRO           PIC X(40).
+          03 CXP030T-LINDET                  PIC X(40).
+          03 CXP030T-CONT                    PIC 9(4).
+          03 CXP030T-FLAG-GROUP.
+             05 CXP030T-EXIT-FLG             PIC 9.
+                88 CXP030T-EXIT-FLG-TRUE     VALUE 1.
+             05 CXP030T-CARREGA-LIST-BOX     PIC 9.
+                88 CXP030T-CARREGA-LIST-BOX-TRUE VALUE 1.
+             05 CXP030T-ITEM-SELECIONADO     PIC 9.
+                88 CXP030T-ITEM-SELECIONADO-TRUE VALUE 1.
+             05 CXP030T-CENTRALIZA           PIC 9.
+                88 CXP030T-CENTRALIZA-TRUE   VALUE 1.
+          03 CXP030T-CONFIG-FLAG             PIC x(4) COMP-5.
+          03 CXP030T-CONFIG-VALUE            PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CXP030T-FIELD-NUMBERS.
+          03 CXP030T-FLD-NO-MENSAGEM-ERRO    PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CXP030T-FLD-NO-LINDET           PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CXP030T-FLD-NO-CONT             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CXP030T-FLD-NO-EXIT-FLG         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CXP030T-FLD-NO-CARREGA-LIST-BO  PIC 9(4) COMP-5 VALUE
+                                               6.
+      * Field CARREGA-LIST-BOX has been truncated
+          03 CXP030T-FLD-NO-ITEM-SELECIONAD  PIC 9(4) COMP-5 VALUE
+                                               7.
+      * Field ITEM-SELECIONADO has been truncated
+          03 CXP030T-FLD-NO-CENTRALIZA       PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CXP030T-FLD-NO-CONFIG-FLAG      PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CXP030T-FLD-NO-CONFIG-VALUE     PIC 9(4) COMP-5 VALUE
+                                               10.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

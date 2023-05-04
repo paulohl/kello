@@ -1,0 +1,90 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 69.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 116.
+
+       01 DATA-BLOCK.
+          03 TAB-90.
+             04 TAB-90-ITEM                  OCCURS 13.
+                05 TAB-CODIGO                PIC 9(14).
+                05 TAB-NOME                  PIC X(50).
+                05 TAB-VALOR                 PIC 9(6)V9(2).
+          03 DS-CLIENTE                      PIC X(50).
+          03 FLAG-SELECT                     PIC 9.
+             88 FLAG-SELECT-TRUE             VALUE 1.
+          03 LINHA                           PIC 9(2).
+          03 LINHA-AUX                       PIC 9(2).
+          03 LINHA-STATUS                    PIC X(30).
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 EXIBE-PAGINA                    PIC X.
+          03 LINHA-LABEL                     PIC X(80).
+          03 FUN-COBOL                       PIC X.
+          03 DS-MSG                          PIC X(3).
+          03 OPCAO                           PIC 9.
+             88 OPCAO-TRUE                   VALUE 1.
+          03 ACP-CGC                         PIC 9(14).
+          03 TAB-PROCURA.
+             04 TAB-PROCURA-ITEM             OCCURS 40.
+                05 TAB-POS                   PIC X.
+          03 IND                             PIC 9(2).
+          03 JA                              PIC X.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-TAB-CODIGO               PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-TAB-NOME                 PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-TAB-VALOR                PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-DS-CLIENTE               PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-FLAG-SELECT              PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-LINHA                    PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-LINHA-AUX                PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-LINHA-STATUS             PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-EXIBE-PAGINA             PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-LINHA-LABEL              PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-FUN-COBOL                PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-DS-MSG                   PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-OPCAO                    PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-ACP-CGC                  PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-TAB-POS                  PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-IND                      PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-JA                       PIC 9(4) COMP-5 VALUE
+                                               20.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

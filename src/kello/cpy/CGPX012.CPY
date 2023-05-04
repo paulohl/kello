@@ -1,0 +1,6 @@
+           SELECT CGD012 ASSIGN TO PATH-CGD012
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-CG12
+                  STATUS IS ST-CGD012.

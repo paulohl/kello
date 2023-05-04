@@ -1,0 +1,7 @@
+           SELECT CHD012 ASSIGN TO PATH-CHD012
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-CHD012
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-CH12
+                  ALTERNATE KEY IS DESCR-ORIGEM-CH12.

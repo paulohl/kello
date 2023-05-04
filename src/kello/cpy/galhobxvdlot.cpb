@@ -1,0 +1,94 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 GS-DATA-BLOCK-VERSION-NO           PIC 9(8) COMP-5
+                                             VALUE 48.
+
+       01 GS-VERSION-NO                      PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 GS-SET-BUILD-NO                    PIC 9(4) COMP-5
+                                             VALUE 232.
+
+       01 GS-DATA-BLOCK.
+          03 GS-NR-CONTRATO                  PIC 9(4).
+          03 GS-ALBUM-INI                    PIC 9(4).
+          03 GS-ALBUM-FIM                    PIC 9(4).
+          03 GS-DATA-VENDA                   PIC 9(8).
+          03 GS-MES-INI                      PIC 9(6).
+          03 GS-MES-FIM                      PIC 9(6).
+          03 GS-UF                           PIC X(2).
+          03 GS-OPCAO                        PIC 9.
+             88 GS-OPCAO-TRUE                VALUE 1.
+      ******
+          03 GS-ALBUM                        PIC 9(8).
+          03 GS-CAMINHO-ARQUIVO              PIC X(50).
+          03 GS-ARQUIVO-LOG                  PIC X(50).
+          03 GS-FLAG-CRITICA                 PIC 9.
+             88 GS-FLAG-CRITICA-TRUE         VALUE 1.
+          03 GS-FLAG-GROUP.
+             05 GS-VALIDA-CAMINHO            PIC 9.
+                88 GS-VALIDA-CAMINHO-TRUE    VALUE 1.
+             05 GS-EXIT-FLG                  PIC 9.
+                88 GS-EXIT-FLG-TRUE          VALUE 1.
+             05 GS-ALTERA-FLG                PIC 9.
+                88 GS-ALTERA-FLG-TRUE        VALUE 1.
+             05 GS-CENTRALIZA                PIC 9.
+                88 GS-CENTRALIZA-TRUE        VALUE 1.
+          03 GS-MENSAGEM-ERRO                PIC X(40).
+          03 GS-CONFIG-FLAG                  PIC x(4) COMP-5.
+          03 GS-CONFIG-VALUE                 PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 GS-FIELD-NUMBERS.
+          03 GS-FLD-NO-NR-CONTRATO           PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 GS-FLD-NO-ALBUM-INI             PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 GS-FLD-NO-ALBUM-FIM             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 GS-FLD-NO-DATA-VENDA            PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 GS-FLD-NO-MES-INI               PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 GS-FLD-NO-MES-FIM               PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 GS-FLD-NO-UF                    PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 GS-FLD-NO-OPCAO                 PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 GS-FLD-NO-ALBUM                 PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 GS-FLD-NO-CAMINHO-ARQUIVO       PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 GS-FLD-NO-ARQUIVO-LOG           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 GS-FLD-NO-FLAG-CRITICA          PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 GS-FLD-NO-VALIDA-CAMINHO        PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 GS-FLD-NO-EXIT-FLG              PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 GS-FLD-NO-ALTERA-FLG            PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 GS-FLD-NO-CENTRALIZA            PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 GS-FLD-NO-MENSAGEM-ERRO         PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 GS-FLD-NO-CONFIG-FLAG           PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 GS-FLD-NO-CONFIG-VALUE          PIC 9(4) COMP-5 VALUE
+                                               20.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

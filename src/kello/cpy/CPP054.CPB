@@ -1,0 +1,88 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CPP054-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 30.
+
+       01 CPP054-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CPP054-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 185.
+
+       01 CPP054-DATA-BLOCK.
+          03 CPP054-FLAG-GROUP.
+             05 CPP054-EXIT-FLG              PIC 9.
+                88 CPP054-EXIT-FLG-TRUE      VALUE 1.
+             05 CPP054-CARREGA-LISTA         PIC 9.
+                88 CPP054-CARREGA-LISTA-TRUE VALUE 1.
+             05 CPP054-PRINTER-FLG           PIC 9.
+                88 CPP054-PRINTER-FLG-TRUE   VALUE 1.
+             05 CPP054-CENTRALIZA            PIC 9.
+                88 CPP054-CENTRALIZA-TRUE    VALUE 1.
+          03 CPP054-VENCTO-INI               PIC 9(8).
+          03 CPP054-VENCTO-FIM               PIC 9(8).
+          03 CPP054-LINDET                   PIC X(130).
+          03 CPP054-PREVISTO                 PIC 9.
+             88 CPP054-PREVISTO-TRUE         VALUE 1.
+          03 CPP054-DEFINITIVO               PIC 9.
+             88 CPP054-DEFINITIVO-TRUE       VALUE 1.
+          03 CPP054-A-PAGAR                  PIC 9.
+             88 CPP054-A-PAGAR-TRUE          VALUE 1.
+          03 CPP054-SUSPENSA                 PIC 9.
+             88 CPP054-SUSPENSA-TRUE         VALUE 1.
+          03 CPP054-MENSAGEM-ERRO            PIC X(40).
+          03 CPP054-ERR-MSG                  PIC X(40).
+          03 CPP054-ERRO-VALIDACAO           PIC 9.
+             88 CPP054-ERRO-VALIDACAO-TRUE   VALUE 1.
+      ***
+          03 CPP054-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CPP054-CONFIG-VALUE             PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CPP054-FIELD-NUMBERS.
+          03 CPP054-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CPP054-FLD-NO-CARREGA-LISTA     PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CPP054-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CPP054-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CPP054-FLD-NO-VENCTO-INI        PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CPP054-FLD-NO-VENCTO-FIM        PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CPP054-FLD-NO-LINDET            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CPP054-FLD-NO-PREVISTO          PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CPP054-FLD-NO-DEFINITIVO        PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CPP054-FLD-NO-A-PAGAR           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CPP054-FLD-NO-SUSPENSA          PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CPP054-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CPP054-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CPP054-FLD-NO-ERRO-VALIDACAO    PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CPP054-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 CPP054-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               17.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

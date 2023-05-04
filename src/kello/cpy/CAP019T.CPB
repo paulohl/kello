@@ -1,0 +1,63 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CAP019T-DATA-BLOCK-VERSION-NO      PIC 9(8) COMP-5
+                                             VALUE 8.
+
+       01 CAP019T-VERSION-NO                 PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CAP019T-SET-BUILD-NO               PIC 9(4) COMP-5
+                                             VALUE 62.
+
+       01 CAP019T-DATA-BLOCK.
+          03 CAP019T-MENSAGEM-ERRO           PIC X(40).
+          03 CAP019T-LINDET                  PIC X(40).
+          03 CAP019T-CONT                    PIC 9(4).
+          03 CAP019T-FLAG-GROUP.
+             05 CAP019T-EXIT-FLG             PIC 9.
+                88 CAP019T-EXIT-FLG-TRUE     VALUE 1.
+             05 CAP019T-CARREGA-LIST-BOX     PIC 9.
+                88 CAP019T-CARREGA-LIST-BOX-TRUE VALUE 1.
+             05 CAP019T-ITEM-SELECIONADO     PIC 9.
+                88 CAP019T-ITEM-SELECIONADO-TRUE VALUE 1.
+             05 CAP019T-CENTRALIZA           PIC 9.
+                88 CAP019T-CENTRALIZA-TRUE   VALUE 1.
+          03 CAP019T-CONFIG-FLAG             PIC x(4) COMP-5.
+          03 CAP019T-CONFIG-VALUE            PIC x(4) COMP-5.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CAP019T-FIELD-NUMBERS.
+          03 CAP019T-FLD-NO-MENSAGEM-ERRO    PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CAP019T-FLD-NO-LINDET           PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CAP019T-FLD-NO-CONT             PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CAP019T-FLD-NO-EXIT-FLG         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CAP019T-FLD-NO-CARREGA-LIST-BO  PIC 9(4) COMP-5 VALUE
+                                               6.
+      * Field CARREGA-LIST-BOX has been truncated
+          03 CAP019T-FLD-NO-ITEM-SELECIONAD  PIC 9(4) COMP-5 VALUE
+                                               7.
+      * Field ITEM-SELECIONADO has been truncated
+          03 CAP019T-FLD-NO-CENTRALIZA       PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CAP019T-FLD-NO-CONFIG-FLAG      PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CAP019T-FLD-NO-CONFIG-VALUE     PIC 9(4) COMP-5 VALUE
+                                               10.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

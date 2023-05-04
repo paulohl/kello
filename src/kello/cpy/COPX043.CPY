@@ -1,0 +1,5 @@
+           SELECT COD043 ASSIGN TO PATH-COD043
+                  ORGANIZATION INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  RECORD KEY IS CHAVE-CO43 = SEQ-CO43 ITEM-CO43
+                  STATUS IS ST-COD043.

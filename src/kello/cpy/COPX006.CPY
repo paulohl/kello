@@ -1,0 +1,6 @@
+           SELECT  COD006 ASSIGN TO PATH-COD006
+                   ORGANIZATION IS INDEXED
+                   ACCESS MODE IS DYNAMIC
+                   LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                   STATUS IS ST-COD006
+                   RECORD KEY IS NR-CONTRATO-CO06.

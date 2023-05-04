@@ -1,0 +1,6 @@
+           SELECT COD102 ASSIGN TO PATH-COD102
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  STATUS IS ST-COD102
+                  LOCK MODE IS MANUAL WITH LOCK ON RECORD
+                  RECORD KEY IS CODIGO-COP102.

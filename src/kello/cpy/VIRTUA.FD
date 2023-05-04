@@ -1,0 +1,15 @@
+      *----------------------------------------------------------------*
+      *  FD DO ARQUIVO DE INSTRUÇÕES DA VIRTUA
+      *----------------------------------------------------------------*
+
+       fd VIRTUA.
+       01 reg-VIRTUA.
+          05 VIRTUA-chave.
+             10 VIRTUA-codigo       pic 9(06).
+
+          05 VIRTUA-nosso-numero    pic 9(08).
+          05 VIRTUA-portador        pic 9(04).
+          05 VIRTUA-cod-empresa     pic 9(04).
+          05 filler                 pic x(196).
+
+

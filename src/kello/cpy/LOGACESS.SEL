@@ -1,0 +1,18 @@
+           SELECT LOGACESS ASSIGN TO ARQUIVO-LOGACESS
+                  ORGANIZATION IS INDEXED
+                  ACCESS MODE IS DYNAMIC
+                  LOCK MODE IS AUTOMATIC
+                  WITH LOCK ON RECORD
+                  RECORD KEY IS LOGACESS-CHAVE =
+                  LOGACESS-USUARIO
+                  LOGACESS-PERIODO
+                  ALTERNATE RECORD KEY IS
+                  LOGACESS-CH-PROGRAMA =
+                  LOGACESS-PROGRAMA
+                  LOGACESS-PERIODO
+                  ALTERNATE RECORD KEY IS
+                  LOGACESS-CH-DATA =
+                  LOGACESS-PERIODO
+                  LOGACESS-PROGRAMA
+                  WITH DUPLICATES
+                  STATUS IS FS-LOGACESS.

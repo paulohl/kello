@@ -1,0 +1,130 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CAP002-DATA-BLOCK-VERSION-NO       PIC 9(8) COMP-5
+                                             VALUE 13.
+
+       01 CAP002-VERSION-NO                  PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CAP002-SET-BUILD-NO                PIC 9(4) COMP-5
+                                             VALUE 103.
+
+       01 CAP002-DATA-BLOCK.
+          03 CAP002-CODIGO                   PIC 9(3).
+          03 CAP002-NOME                     PIC X(30).
+          03 CAP002-REDUZIDO                 PIC X(5).
+          03 CAP002-IMPRESSORA               PIC X(12).
+          03 CAP002-SENHA                    PIC 9(4).
+          03 CAP002-FLAG-GROUP.
+             05 CAP002-EXIT-FLG              PIC 9.
+                88 CAP002-EXIT-FLG-TRUE      VALUE 1.
+             05 CAP002-CENTRALIZA            PIC 9.
+                88 CAP002-CENTRALIZA-TRUE    VALUE 1.
+             05 CAP002-SAVE-FLG              PIC 9.
+                88 CAP002-SAVE-FLG-TRUE      VALUE 1.
+             05 CAP002-CLR-FLG               PIC 9.
+                88 CAP002-CLR-FLG-TRUE       VALUE 1.
+             05 CAP002-EXCLUI-FLG            PIC 9.
+                88 CAP002-EXCLUI-FLG-TRUE    VALUE 1.
+             05 CAP002-LOAD-FLG              PIC 9.
+                88 CAP002-LOAD-FLG-TRUE      VALUE 1.
+             05 CAP002-CARREGA-ULT           PIC 9.
+                88 CAP002-CARREGA-ULT-TRUE   VALUE 1.
+             05 CAP002-CARREGA-LIST-BOX      PIC 9.
+                88 CAP002-CARREGA-LIST-BOX-TRUE VALUE 1.
+             05 CAP002-PRINTER-FLG           PIC 9.
+                88 CAP002-PRINTER-FLG-TRUE   VALUE 1.
+             05 CAP002-LE-USUARIO            PIC 9.
+                88 CAP002-LE-USUARIO-TRUE    VALUE 1.
+             05 CAP002-POPUP-USUARIO         PIC 9.
+                88 CAP002-POPUP-USUARIO-TRUE VALUE 1.
+             05 CAP002-VALIDA-STATUS         PIC 9.
+                88 CAP002-VALIDA-STATUS-TRUE VALUE 1.
+          03 CAP002-MENSAGEM-ERRO            PIC X(40).
+          03 CAP002-ERR-MSG                  PIC X(40).
+          03 CAP002-CONFIG-FLAG              PIC x(4) COMP-5.
+          03 CAP002-CONFIG-VALUE             PIC x(4) COMP-5.
+          03 CAP002-LISTVIEW-EMPRESA OBJECT REFERENCE.
+      ***********
+          03 CAP002-DATA-CADASTRO            PIC 9(8).
+          03 CAP002-USUARIO-CADASTRO         PIC X(5).
+          03 CAP002-STATUS                   PIC X(10).
+          03 CAP002-DATA-BLOQUEIO            PIC 9(8).
+          03 CAP002-DEPARTAMENTO             PIC X(30).
+          03 CAP002-SOLICITANTE              PIC X(5).
+          03 CAP002-DESC-SOLICITANTE         PIC X(50).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CAP002-FIELD-NUMBERS.
+          03 CAP002-FLD-NO-CODIGO            PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CAP002-FLD-NO-NOME              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CAP002-FLD-NO-REDUZIDO          PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CAP002-FLD-NO-IMPRESSORA        PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CAP002-FLD-NO-SENHA             PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CAP002-FLD-NO-EXIT-FLG          PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CAP002-FLD-NO-CENTRALIZA        PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CAP002-FLD-NO-SAVE-FLG          PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 CAP002-FLD-NO-CLR-FLG           PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CAP002-FLD-NO-EXCLUI-FLG        PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CAP002-FLD-NO-LOAD-FLG          PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CAP002-FLD-NO-CARREGA-ULT       PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CAP002-FLD-NO-CARREGA-LIST-BOX  PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CAP002-FLD-NO-PRINTER-FLG       PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CAP002-FLD-NO-LE-USUARIO        PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 CAP002-FLD-NO-POPUP-USUARIO     PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CAP002-FLD-NO-VALIDA-STATUS     PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CAP002-FLD-NO-MENSAGEM-ERRO     PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CAP002-FLD-NO-ERR-MSG           PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CAP002-FLD-NO-CONFIG-FLAG       PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CAP002-FLD-NO-CONFIG-VALUE      PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CAP002-FLD-NO-LISTVIEW-EMPRESA  PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CAP002-FLD-NO-DATA-CADASTRO     PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 CAP002-FLD-NO-USUARIO-CADASTRO  PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 CAP002-FLD-NO-STATUS            PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 CAP002-FLD-NO-DATA-BLOQUEIO     PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 CAP002-FLD-NO-DEPARTAMENTO      PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 CAP002-FLD-NO-SOLICITANTE       PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 CAP002-FLD-NO-DESC-SOLICITANTE  PIC 9(4) COMP-5 VALUE
+                                               30.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

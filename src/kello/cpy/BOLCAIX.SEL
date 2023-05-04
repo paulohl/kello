@@ -1,0 +1,15 @@
+           SELECT BOLCAIX ASSIGN       TO ARQUIVO-BOLCAIX
+                         ORGANIZATION IS        INDEXED
+                         ACCESS MODE  IS        DYNAMIC
+                         RECORD KEY   IS   BOLCAIX-CHAVE
+                         ALTERNATE    RECORD        KEY
+                         IS BOLCAIX-NOME-BANCO
+                         WITH                DUPLICATES
+                         ALTERNATE    RECORD        KEY
+                         IS BOLCAIX-CH-BANCO =
+                            BOLCAIX-NUM-BANCO
+                            BOLCAIX-EMPRESA
+                         WITH                 DUPLICATES
+                         LOCK MODE    IS       AUTOMATIC
+                         WITH LOCK    ON          RECORD
+                         FILE STATUS  IS      FS-BOLCAIX.
