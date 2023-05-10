@@ -76,9 +76,11 @@ Also, known executable build of "EnotaNFCeCNG_2.0", developed using Telerik (htt
 Among the XML files, one can find the directpry structure to create to replicate the las known running instalation. Below, two screenshots of the main interface application window and the window that pops up when a certificate is requested.
 
 ![alt text](https://github.com/paulohl/kello/blob/main/app_aux/EnotaNFCeCNG_2.0/screenshots/Screenshot_main_window.png "Main interface window")
+
 The main data entry window when running the .EXE file
 
 ![alt text](https://github.com/paulohl/kello/blob/main/app_aux/EnotaNFCeCNG_2.0/screenshots/Screenshotdigital_certificate.png "Digital Certificate generation")
+
 The window that pops up when when the "generate certificate" button is clicked on
 
 
